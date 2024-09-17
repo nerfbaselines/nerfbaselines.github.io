@@ -209,7 +209,7 @@
   
 </a>
 <div class="sidebar-brand-links">
-  <a href="https://jkulhanek.com/nerfbaselines/"><i class="ti ti-globe"></i> Website</a> &middot;
+  <a href="https://nerfbaselines.github.io/"><i class="ti ti-globe"></i> Website</a> &middot;
   <a href="https://github.com/jkulhanek/nerfbaselines"><i class="ti ti-brand-github-filled"></i> GitHub</a> &middot;
   <a href="https://arxiv.org/pdf/2406.17345.pdf"><i class="ti ti-file-type-pdf"></i> Paper</a>
 </div><form class="sidebar-search-container" method="get" action="search.html" role="search">
@@ -453,6 +453,24 @@
 It was designed for unbounded object-centric 360-degree capture and handles anti-aliasing well.
 It is, however slower to train and render compared to other approaches.</p>
 </section>
+<section id="instant-ngp">
+<h2>Instant NGP<a class="headerlink" href="#instant-ngp" title="Link to this heading">¶</a></h2>
+<p class="rubric">Instant Neural Graphics Primitives with a Multiresolution Hash Encoding</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Thomas Müller, Alex Evans, Christoph Schied, Alexander Keller</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf">https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://nvlabs.github.io/instant-ngp/">https://nvlabs.github.io/instant-ngp/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">instant-ngp</dd>
+</dl>
+<p>Instant-NGP is a method that uses hash-grid and a shallow MLP to accelerate training and rendering.
+This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
+</section>
 <section id="tetra-nerf">
 <h2>Tetra-NeRF<a class="headerlink" href="#tetra-nerf" title="Link to this heading">¶</a></h2>
 <p class="rubric">Tetra-NeRF: Representing Neural Radiance Fields Using Tetrahedra</p>
@@ -487,24 +505,6 @@ It is, however slower to train and render compared to other approaches.</p>
 <dd class="field-even">nerfacto</dd>
 </dl>
 <p>NerfStudio (Nerfacto) is a method based on Instant-NGP which combines several improvements from different papers to achieve good quality on real-world scenes captured under normal conditions. It is fast to train (12 min) and render speed is ~1 FPS.</p>
-</section>
-<section id="instant-ngp">
-<h2>Instant NGP<a class="headerlink" href="#instant-ngp" title="Link to this heading">¶</a></h2>
-<p class="rubric">Instant Neural Graphics Primitives with a Multiresolution Hash Encoding</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Thomas Müller, Alex Evans, Christoph Schied, Alexander Keller</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf">https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://nvlabs.github.io/instant-ngp/">https://nvlabs.github.io/instant-ngp/</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">instant-ngp</dd>
-</dl>
-<p>Instant-NGP is a method that uses hash-grid and a shallow MLP to accelerate training and rendering.
-This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
 </section>
 <section id="gaussian-splatting">
 <h2>Gaussian Splatting<a class="headerlink" href="#gaussian-splatting" title="Link to this heading">¶</a></h2>
@@ -568,7 +568,7 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
                 <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
             </svg>
         </a>
-              <a class="muted-link " href="https://jkulhanek.com/nerfbaselines" aria-label="Website">
+              <a class="muted-link " href="https://nerfbaselines.github.io" aria-label="Website">
             <svg viewBox="2 2 21 21" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" />
             </svg>
@@ -594,9 +594,9 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
             <ul>
 <li><a class="reference internal" href="#">Methods</a><ul>
 <li><a class="reference internal" href="#mipnerf360">Mip-NeRF 360</a></li>
+<li><a class="reference internal" href="#instant-ngp">Instant NGP</a></li>
 <li><a class="reference internal" href="#tetra-nerf">Tetra-NeRF</a></li>
 <li><a class="reference internal" href="#nerfacto">NerfStudio</a></li>
-<li><a class="reference internal" href="#instant-ngp">Instant NGP</a></li>
 <li><a class="reference internal" href="#gaussian-splatting">Gaussian Splatting</a></li>
 </ul>
 </li>
