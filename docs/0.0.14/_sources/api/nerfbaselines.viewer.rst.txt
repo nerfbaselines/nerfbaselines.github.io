@@ -1,0 +1,26 @@
+nerfbaselines.viewer
+====================
+.. automodule:: nerfbaselines.viewer
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+nerfbaselines.viewer.nerfstudio
+-------------------------------
+
+.. automodule:: nerfbaselines.viewer.nerfstudio
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+nerfbaselines.viewer.viser
+--------------------------
+
+.. automodule:: nerfbaselines.viewer.viser
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:

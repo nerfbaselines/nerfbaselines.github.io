@@ -1,0 +1,2702 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 --><title>Index - NerfBaselines documentation</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=3d61a3a1" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">NerfBaselines  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+    <span class="sidebar-brand-text">NerfBaselines  documentation<span class="sidebar-brand-version">Version: 1.2.2</span></span>
+  </div>
+  
+</a>
+<div class="sidebar-brand-links">
+  <a href="https://jkulhanek.com/nerfbaselines/"><i class="ti ti-globe"></i> Website</a> &middot;
+  <a href="https://github.com/jkulhanek/nerfbaselines"><i class="ti ti-brand-github-filled"></i> GitHub</a> &middot;
+  <a href="https://arxiv.org/pdf/2406.17345.pdf"><i class="ti ti-file-type-pdf"></i> Paper</a>
+</div><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-custom-data.html">Using custom data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="adding-new-methods.html">Adding new methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-dataset-loader.html">Custom dataset loader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding-new-datasets.html">Adding new datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends.html">Isolated backends</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">CLI</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/modules.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.html">nerfbaselines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.backends.html">nerfbaselines.backends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.cameras.html">nerfbaselines.cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.datasets.html">nerfbaselines.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.evaluation.html">nerfbaselines.evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.io.html">nerfbaselines.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.logging.html">nerfbaselines.logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.metrics.html">nerfbaselines.metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.results.html">nerfbaselines.results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.training.html">nerfbaselines.training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.utils.html">nerfbaselines.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.viewer.html">nerfbaselines.viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.web.html">nerfbaselines.web</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    Version: 1.2.2
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Versions</dt>
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/dev/">dev</a></dd>
+        
+      
+        
+        
+          
+        
+        
+        
+        <dd class="rst-current-item"><a href="/nerfbaselines/docs/">latest</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.2.1/">1.2.1</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.2.0/">1.2.0</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.1.0/">1.1.0</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.0.2/">1.0.2</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.0.1/">1.0.1</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.0.0/">1.0.0</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.15/">0.0.15</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.14/">0.0.14</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.13/">0.0.13</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.12/">0.0.12</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.11/">0.0.11</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.10/">0.0.10</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.9/">0.0.9</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.8/">0.0.8</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.7/">0.0.7</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.6/">0.0.6</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.5/">0.0.5</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.4/">0.0.4</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.3/">0.0.3</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.2/">0.0.2</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.1/">0.0.1</a></dd>
+        
+      
+    </dl>
+  </div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#Symbols"><strong>Symbols</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#K"><strong>K</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#Q"><strong>Q</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#V"><strong>V</strong></a> | <a href="#W"><strong>W</strong></a></div>
+</section>
+<section id="Symbols" class="genindex-section">
+  <h2>Symbols</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    --backend
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-backend">nerfbaselines-export-demo command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-backend">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-backend">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-backend">nerfbaselines-install-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-backend">nerfbaselines-render command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-backend">nerfbaselines-render-trajectory command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-backend">nerfbaselines-shell command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-backend">nerfbaselines-test-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-backend">nerfbaselines-train command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-backend">nerfbaselines-viewer command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --base-path
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-base-path">nerfbaselines-web-build command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --checkpoint
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-checkpoint">nerfbaselines-export-demo command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-checkpoint">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-checkpoint">nerfbaselines-render command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-checkpoint">nerfbaselines-render-trajectory command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-checkpoint">nerfbaselines-train command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-checkpoint">nerfbaselines-viewer command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --data
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-data">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-data">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-data">nerfbaselines-render command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-data">nerfbaselines-test-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-data">nerfbaselines-train command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-data">nerfbaselines-viewer command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-data">nerfbaselines-web-build command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-dev-data">nerfbaselines-web-dev command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --dataset
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-dataset">nerfbaselines-generate-dataset-results command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --datasets
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-datasets">nerfbaselines-web-build command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-dev-datasets">nerfbaselines-web-dev command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --disable-output-artifact
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-disable-output-artifact">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --docs
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-docs">nerfbaselines-web-build command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-dev-docs">nerfbaselines-web-dev command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --eval-all-iters
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-eval-all-iters">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --eval-few-iters
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-eval-few-iters">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --force
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-force">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-force">nerfbaselines-install-method command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --force-output-artifact
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-force-output-artifact">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --full
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-full">nerfbaselines-test-method command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --inplace
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-inplace">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --input
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-input">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --logger
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-logger">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --method
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-method">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-method">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-method">nerfbaselines-install-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-method">nerfbaselines-shell command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-method">nerfbaselines-test-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-method">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --method-links
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-method-links">nerfbaselines-generate-dataset-results command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --new-checkpoint
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-new-checkpoint">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --output
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-o">nerfbaselines-download-dataset command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-evaluate-o">nerfbaselines-evaluate command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-o">nerfbaselines-export-demo command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-output">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-output">nerfbaselines-generate-dataset-results command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-output">nerfbaselines-render command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-output">nerfbaselines-render-trajectory command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-output">nerfbaselines-train command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-output">nerfbaselines-web-build command line option</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    --output-names
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-output-names">nerfbaselines-render-trajectory command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --output-type
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-output-type">nerfbaselines-generate-dataset-results command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --port
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-port">nerfbaselines-viewer command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --presets
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-presets">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-presets">nerfbaselines-test-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-presets">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --rebuild-checkpoint
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-rebuild-checkpoint">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --rerun-evaluation
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-rerun-evaluation">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --rerun-render
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-rerun-render">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --resolution
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-resolution">nerfbaselines-render-trajectory command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --results
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-results">nerfbaselines-generate-dataset-results command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --save-iters
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-save-iters">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --set
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-set">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-set">nerfbaselines-test-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-set">nerfbaselines-train command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --spec
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-spec">nerfbaselines-install-method command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --split
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-split">nerfbaselines-render command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --steps
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-steps">nerfbaselines-test-method command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --trajectory
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-trajectory">nerfbaselines-render-trajectory command line option</a>
+</li>
+        </ul></li>
+        <li>
+    --verbose
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-v">nerfbaselines-download-dataset command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-v">nerfbaselines-export-demo command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-v">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-v">nerfbaselines-install-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-v">nerfbaselines-render command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-v">nerfbaselines-render-trajectory command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">nerfbaselines-shell command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-v">nerfbaselines-test-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-v">nerfbaselines-train command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-v">nerfbaselines-viewer command line option</a>
+</li>
+        </ul></li>
+        <li>
+    -o
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-o">nerfbaselines-download-dataset command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-evaluate-o">nerfbaselines-evaluate command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-o">nerfbaselines-export-demo command line option</a>
+</li>
+        </ul></li>
+        <li>
+    -v
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-v">nerfbaselines-download-dataset command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-v">nerfbaselines-export-demo command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">nerfbaselines-fix-checkpoint command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-v">nerfbaselines-fix-output-artifact command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-v">nerfbaselines-install-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-v">nerfbaselines-render command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-v">nerfbaselines-render-trajectory command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">nerfbaselines-shell command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-v">nerfbaselines-test-method command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-v">nerfbaselines-train command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-v">nerfbaselines-viewer command line option</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="A" class="genindex-section">
+  <h2>A</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol.accumulate_metrics">accumulate_metrics() (nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.DefaultEvaluationProtocol.accumulate_metrics">(nerfbaselines.evaluation.DefaultEvaluationProtocol method)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.EvaluationProtocol.accumulate_metrics">(nerfbaselines.EvaluationProtocol method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Logger.add_embedding">add_embedding() (nerfbaselines.Logger method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerEvent.add_embedding">(nerfbaselines.LoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLogger.add_embedding">(nerfbaselines.logging.BaseLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLoggerEvent.add_embedding">(nerfbaselines.logging.BaseLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLoggerEvent.add_embedding">(nerfbaselines.logging.TensorboardLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLoggerEvent.add_embedding">(nerfbaselines.logging.WandbLoggerEvent method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Logger.add_event">add_event() (nerfbaselines.Logger method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLogger.add_event">(nerfbaselines.logging.BaseLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.ConcatLogger.add_event">(nerfbaselines.logging.ConcatLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLogger.add_event">(nerfbaselines.logging.TensorboardLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLogger.add_event">(nerfbaselines.logging.WandbLogger method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerEvent.add_histogram">add_histogram() (nerfbaselines.LoggerEvent method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLoggerEvent.add_histogram">(nerfbaselines.logging.TensorboardLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLoggerEvent.add_histogram">(nerfbaselines.logging.WandbLoggerEvent method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLogger.add_hparams">add_hparams() (nerfbaselines.logging.BaseLogger method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.ConcatLogger.add_hparams">(nerfbaselines.logging.ConcatLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLogger.add_hparams">(nerfbaselines.logging.TensorboardLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLogger.add_hparams">(nerfbaselines.logging.WandbLogger method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Logger.add_image">add_image() (nerfbaselines.Logger method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerEvent.add_image">(nerfbaselines.LoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLogger.add_image">(nerfbaselines.logging.BaseLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLoggerEvent.add_image">(nerfbaselines.logging.BaseLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLoggerEvent.add_image">(nerfbaselines.logging.TensorboardLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLoggerEvent.add_image">(nerfbaselines.logging.WandbLoggerEvent method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerEvent.add_plot">add_plot() (nerfbaselines.LoggerEvent method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLoggerEvent.add_plot">(nerfbaselines.logging.BaseLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLoggerEvent.add_plot">(nerfbaselines.logging.WandbLoggerEvent method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Logger.add_scalar">add_scalar() (nerfbaselines.Logger method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerEvent.add_scalar">(nerfbaselines.LoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLogger.add_scalar">(nerfbaselines.logging.BaseLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLoggerEvent.add_scalar">(nerfbaselines.logging.BaseLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLoggerEvent.add_scalar">(nerfbaselines.logging.TensorboardLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLoggerEvent.add_scalar">(nerfbaselines.logging.WandbLoggerEvent method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Logger.add_text">add_text() (nerfbaselines.Logger method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerEvent.add_text">(nerfbaselines.LoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLogger.add_text">(nerfbaselines.logging.BaseLogger method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLoggerEvent.add_text">(nerfbaselines.logging.BaseLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLoggerEvent.add_text">(nerfbaselines.logging.TensorboardLoggerEvent method)</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLoggerEvent.add_text">(nerfbaselines.logging.WandbLoggerEvent method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe.appearance">appearance (nerfbaselines.TrajectoryKeyframe attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrame.appearance_weights">appearance_weights (nerfbaselines.TrajectoryFrame attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.appearances">appearances (nerfbaselines.Trajectory attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.apply">apply() (nerfbaselines.GenericCameras method)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.apply_colormap">apply_colormap() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.apply_transform">apply_transform() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.apptainer">apptainer (nerfbaselines.MethodSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackend">ApptainerBackend (class in nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackendSpec">ApptainerBackendSpec (class in nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.MetricInfo.ascending">ascending (nerfbaselines.results.MetricInfo attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="B" class="genindex-section">
+  <h2>B</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.Backend">Backend (class in nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.backends_order">backends_order (nerfbaselines.MethodSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLogger">BaseLogger (class in nerfbaselines.logging)</a>
+</li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.BaseLoggerEvent">BaseLoggerEvent (class in nerfbaselines.logging)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.batch_size">batch_size (nerfbaselines.ModelInfo attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.web.html#nerfbaselines.web.build">build() (in module nerfbaselines.web)</a>
+</li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.build_evaluation_protocol">build_evaluation_protocol() (in module nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.build_logger">build_logger() (in module nerfbaselines.training)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.build_method_class">build_method_class() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.build_script">build_script (nerfbaselines.backends.DockerBackendSpec attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.camera_model">camera_model (nerfbaselines.Trajectory attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.camera_model_from_int">camera_model_from_int() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.camera_model_to_int">camera_model_to_int() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.camera_models">camera_models (nerfbaselines.GenericCameras property)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Cameras">Cameras (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.cameras">cameras (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.cameras">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.CancellationToken.cancel">cancel() (nerfbaselines.utils.CancellationToken method)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.CancellationToken.cancel_if_requested">cancel_if_requested() (nerfbaselines.utils.CancellationToken method)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.CancellationToken">CancellationToken (class in nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.CancelledException">CancelledException</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.cat">cat() (nerfbaselines.GenericCameras class method)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol.close">close() (nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.close">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    COMMAND
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-arg-COMMAND">nerfbaselines-shell command line option</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.compile_dataset_results">compile_dataset_results() (in module nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.compute_metrics">compute_metrics() (in module nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.ConcatLogger">ConcatLogger (class in nerfbaselines.logging)</a>
+</li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.ConcatLoggerEvent">ConcatLoggerEvent (class in nerfbaselines.logging)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.conda">conda (nerfbaselines.MethodSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackendSpec.conda_spec">conda_spec (nerfbaselines.backends.ApptainerBackendSpec attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.conda_spec">(nerfbaselines.backends.DockerBackendSpec attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.CondaBackend">CondaBackend (class in nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.CondaBackendSpec">CondaBackendSpec (class in nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol.connect_worker">connect_worker() (nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.connect_worker">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.ConnectionClosed">ConnectionClosed</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.convert_image_dtype">convert_image_dtype() (in module nerfbaselines.utils)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    DATASET
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-arg-DATASET">nerfbaselines-download-dataset command line option</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset">Dataset (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.dataset_index_select">dataset_index_select() (in module nerfbaselines.datasets)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.dataset_load_features">dataset_load_features() (in module nerfbaselines.datasets)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo">DatasetInfo (class in nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetLoaderSpec">DatasetLoaderSpec (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetNotFoundError">DatasetNotFoundError</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpec">DatasetSpec (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata">DatasetSpecMetadata (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.default_appearance">default_appearance (nerfbaselines.ImageSetInterpolationSource attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.default_appearance">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackendSpec.default_cuda_archs">default_cuda_archs (nerfbaselines.backends.ApptainerBackendSpec attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.default_cuda_archs">(nerfbaselines.backends.DockerBackendSpec attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.default_fov">default_fov (nerfbaselines.ImageSetInterpolationSource attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.default_fov">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.default_metric">default_metric (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.default_metric">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.default_transition_duration">default_transition_duration (nerfbaselines.ImageSetInterpolationSource attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.default_transition_duration">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.DefaultEvaluationProtocol">DefaultEvaluationProtocol (class in nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.description">description (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.description">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.MetricInfo.description">(nerfbaselines.results.MetricInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.deserialize_nb_info">deserialize_nb_info() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.distortion_parameters">distortion_parameters (nerfbaselines.GenericCameras property)</a>
+</li>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.dmpix_ssim">dmpix_ssim() (in module nerfbaselines.metrics)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.docker">docker (nerfbaselines.MethodSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackend">DockerBackend (class in nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec">DockerBackendSpec (class in nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.blender.download_blender_dataset">download_blender_dataset() (in module nerfbaselines.datasets.blender)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.download_dataset">download_dataset() (in module nerfbaselines.datasets)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpec.download_dataset_function">download_dataset_function (nerfbaselines.DatasetSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.llff.download_llff_dataset">download_llff_dataset() (in module nerfbaselines.datasets.llff)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.mipnerf360.download_mipnerf360_dataset">download_mipnerf360_dataset() (in module nerfbaselines.datasets.mipnerf360)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.nerfstudio.download_nerfstudio_dataset">download_nerfstudio_dataset() (in module nerfbaselines.datasets.nerfstudio)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.phototourism.download_phototourism_dataset">download_phototourism_dataset() (in module nerfbaselines.datasets.phototourism)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.seathru_nerf.download_seathru_nerf_dataset">download_seathru_nerf_dataset() (in module nerfbaselines.datasets.seathru_nerf)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.tanksandtemples.download_tanksandtemples_dataset">download_tanksandtemples_dataset() (in module nerfbaselines.datasets.tanksandtemples)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DownloadDatasetFunction">DownloadDatasetFunction (class in nerfbaselines)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.OptimizeEmbeddingOutput.embedding">embedding (nerfbaselines.OptimizeEmbeddingOutput attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOptions.embedding">(nerfbaselines.RenderOptions attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrameAppearance.embedding">(nerfbaselines.TrajectoryFrameAppearance attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrameAppearance.embedding_train_index">embedding_train_index (nerfbaselines.TrajectoryFrameAppearance attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackendSpec.environment_name">environment_name (nerfbaselines.backends.ApptainerBackendSpec attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.CondaBackendSpec.environment_name">(nerfbaselines.backends.CondaBackendSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.environment_name">(nerfbaselines.backends.DockerBackendSpec attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.eval_all">eval_all() (in module nerfbaselines.training)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer.eval_all">(nerfbaselines.training.Trainer method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.eval_batch_size">eval_batch_size (nerfbaselines.ModelInfo attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.eval_few">eval_few() (in module nerfbaselines.training)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer.eval_few">(nerfbaselines.training.Trainer method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.evaluate">evaluate() (in module nerfbaselines.evaluation)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol.evaluate">(nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol method)</a>
+</li>
+          <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.DefaultEvaluationProtocol.evaluate">(nerfbaselines.evaluation.DefaultEvaluationProtocol method)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.EvaluationProtocol.evaluate">(nerfbaselines.EvaluationProtocol method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpec.evaluation_protocol">evaluation_protocol (nerfbaselines.DatasetSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.EvaluationProtocolSpec.evaluation_protocol_class">evaluation_protocol_class (nerfbaselines.EvaluationProtocolSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.EvaluationProtocol">EvaluationProtocol (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.EvaluationProtocolSpec">EvaluationProtocolSpec (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.Indices.every_iters">every_iters() (nerfbaselines.utils.Indices class method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="F" class="genindex-section">
+  <h2>F</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.format_duration">format_duration() (in module nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.format_memory">format_memory() (in module nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.forward_port">forward_port() (in module nerfbaselines.backends)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe.fov">fov (nerfbaselines.TrajectoryKeyframe attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.fps">fps (nerfbaselines.Trajectory attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.frames">frames (nerfbaselines.Trajectory attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras">GenericCameras (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.get_backend">get_backend() (in module nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.get_checkpoint_sha">get_checkpoint_sha() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.get_dataset_info">get_dataset_info() (in module nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_dataset_loader_spec">get_dataset_loader_spec() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_dataset_spec">get_dataset_spec() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_evaluation_protocol_spec">get_evaluation_protocol_spec() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.get_forwarded_ports">get_forwarded_ports() (in module nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.get_image_pixels">get_image_pixels() (in module nerfbaselines.cameras)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.get_implemented_backends">get_implemented_backends() (in module nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Method.get_info">get_info() (nerfbaselines.Method method)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer.get_logger">get_logger() (nerfbaselines.training.Trainer method)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_logger_spec">get_logger_spec() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Method.get_method_info">get_method_info() (nerfbaselines.Method class method)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.get_method_info_from_spec">get_method_info_from_spec() (in module nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.get_method_sha">get_method_sha() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_method_spec">get_method_spec() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.get_metrics_hash">get_metrics_hash() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.get_mounts">get_mounts() (in module nerfbaselines.backends)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol.get_name">get_name() (nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.DefaultEvaluationProtocol.get_name">(nerfbaselines.evaluation.DefaultEvaluationProtocol method)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.EvaluationProtocol.get_name">(nerfbaselines.EvaluationProtocol method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.get_predictions_sha">get_predictions_sha() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.get_presets_and_config_overrides">get_presets_and_config_overrides() (in module nerfbaselines.training)</a>
+</li>
+        <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.get_rays">get_rays() (in module nerfbaselines.cameras)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.get_resources_utilization_info">get_resources_utilization_info() (in module nerfbaselines.training)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_supported_dataset_loaders">get_supported_dataset_loaders() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_supported_datasets">get_supported_datasets() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_supported_evaluation_protocols">get_supported_evaluation_protocols() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_supported_loggers">get_supported_loggers() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.get_supported_methods">get_supported_methods() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.get_torch_checkpoint_sha">get_torch_checkpoint_sha() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Method.get_train_embedding">get_train_embedding() (nerfbaselines.Method method)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.get_transform_and_scale">get_transform_and_scale() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol.get_worker_configuration">get_worker_configuration() (nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.get_worker_configuration">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.ResourcesUtilizationInfo.gpu_memory">gpu_memory (nerfbaselines.training.ResourcesUtilizationInfo attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.ResourcesUtilizationInfo.gpu_name">gpu_name (nerfbaselines.training.ResourcesUtilizationInfo attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackendSpec.home_path">home_path (nerfbaselines.backends.ApptainerBackendSpec attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.home_path">(nerfbaselines.backends.DockerBackendSpec attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.hparams">hparams (nerfbaselines.ModelInfo attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="I" class="genindex-section">
+  <h2>I</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetLoaderSpec.id">id (nerfbaselines.DatasetLoaderSpec attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpec.id">(nerfbaselines.DatasetSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.id">(nerfbaselines.DatasetSpecMetadata attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.EvaluationProtocolSpec.id">(nerfbaselines.EvaluationProtocolSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerSpec.id">(nerfbaselines.LoggerSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.id">(nerfbaselines.MethodSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.id">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.MetricInfo.id">(nerfbaselines.results.MetricInfo attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.SceneInfo.id">(nerfbaselines.results.SceneInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackendSpec.image">image (nerfbaselines.backends.ApptainerBackendSpec attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.image">(nerfbaselines.backends.DockerBackendSpec attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.image_paths">image_paths (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.image_paths">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.image_paths_root">image_paths_root (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.image_paths_root">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.image_size">image_size (nerfbaselines.Trajectory attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.image_sizes">image_sizes (nerfbaselines.GenericCameras property)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.image_to_srgb">image_to_srgb() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.images">images (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.images">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.images_points3D_indices">images_points3D_indices (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.images_points3D_indices">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource">ImageSetInterpolationSource (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.implementation_status">implementation_status (nerfbaselines.MethodSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.Indices">Indices (class in nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackend.install">install() (nerfbaselines.backends.ApptainerBackend method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.Backend.install">(nerfbaselines.backends.Backend method)</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.CondaBackend.install">(nerfbaselines.backends.CondaBackend method)</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackend.install">(nerfbaselines.backends.DockerBackend method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.CondaBackendSpec.install_script">install_script (nerfbaselines.backends.CondaBackendSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.Backend.instance_call">instance_call() (nerfbaselines.backends.Backend method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.SimpleBackend.instance_call">(nerfbaselines.backends.SimpleBackend method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.Backend.instance_del">instance_del() (nerfbaselines.backends.Backend method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.SimpleBackend.instance_del">(nerfbaselines.backends.SimpleBackend method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.interpolate_bilinear">interpolate_bilinear() (in module nerfbaselines.cameras)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.interpolation">interpolation (nerfbaselines.ImageSetInterpolationSource attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.interpolation">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.intrinsics">intrinsics (nerfbaselines.GenericCameras property)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrame.intrinsics">(nerfbaselines.TrajectoryFrame attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.invert_transform">invert_transform() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.is_cycle">is_cycle (nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.item">item() (nerfbaselines.GenericCameras method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="K" class="genindex-section">
+  <h2>K</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.keyframes">keyframes (nerfbaselines.ImageSetInterpolationSource attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.keyframes">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource">KochanekBartelsInterpolationSource (class in nerfbaselines)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="L" class="genindex-section">
+  <h2>L</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.licenses">licenses (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.licenses">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.LicenseSpec">LicenseSpec (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.link">link (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.OutputArtifact.link">(nerfbaselines.OutputArtifact attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.link">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.MetricInfo.link">(nerfbaselines.results.MetricInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.blender.load_blender_dataset">load_blender_dataset() (in module nerfbaselines.datasets.blender)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.bundler.load_bundler_dataset">load_bundler_dataset() (in module nerfbaselines.datasets.bundler)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.colmap.load_colmap_dataset">load_colmap_dataset() (in module nerfbaselines.datasets.colmap)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.load_dataset">load_dataset() (in module nerfbaselines.datasets)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetLoaderSpec.load_dataset_function">load_dataset_function (nerfbaselines.DatasetLoaderSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.llff.load_llff_dataset">load_llff_dataset() (in module nerfbaselines.datasets.llff)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.load_metrics_from_results">load_metrics_from_results() (in module nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.mipnerf360.load_mipnerf360_dataset">load_mipnerf360_dataset() (in module nerfbaselines.datasets.mipnerf360)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.nerfonthego.load_nerfonthego_dataset">load_nerfonthego_dataset() (in module nerfbaselines.datasets.nerfonthego)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.nerfstudio.load_nerfstudio_dataset">load_nerfstudio_dataset() (in module nerfbaselines.datasets.nerfstudio)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.phototourism.load_phototourism_dataset">load_phototourism_dataset() (in module nerfbaselines.datasets.phototourism)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.seathru_nerf.load_seathru_nerf_dataset">load_seathru_nerf_dataset() (in module nerfbaselines.datasets.seathru_nerf)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.tanksandtemples.load_tanksandtemples_dataset">load_tanksandtemples_dataset() (in module nerfbaselines.datasets.tanksandtemples)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.load_trajectory">load_trajectory() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.LoadDatasetFunction">LoadDatasetFunction (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.loaded_checkpoint">loaded_checkpoint (nerfbaselines.ModelInfo attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.loaded_step">loaded_step (nerfbaselines.ModelInfo attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.log_metrics">log_metrics() (in module nerfbaselines.logging)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Logger">Logger (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerSpec.logger_class">logger_class (nerfbaselines.LoggerSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerEvent">LoggerEvent (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.LoggerSpec">LoggerSpec (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.lpips">lpips() (in module nerfbaselines.metrics)</a>
+</li>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.lpips_alex">lpips_alex() (in module nerfbaselines.metrics)</a>
+</li>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.lpips_vgg">lpips_vgg() (in module nerfbaselines.metrics)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.mae">mae() (in module nerfbaselines.metrics)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.make_image_grid">make_image_grid() (in module nerfbaselines.training)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.ResourcesUtilizationInfo.memory">memory (nerfbaselines.training.ResourcesUtilizationInfo attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.metadata">metadata (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpec.metadata">(nerfbaselines.DatasetSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.metadata">(nerfbaselines.GenericCameras property)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.metadata">(nerfbaselines.MethodSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.metadata">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Method">Method (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.method_class">method_class (nerfbaselines.MethodSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodInfo.method_id">method_id (nerfbaselines.MethodInfo attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.method_id">(nerfbaselines.ModelInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodInfo">MethodInfo (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec">MethodSpec (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.MetricInfo">MetricInfo (class in nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.metrics">metrics (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.OptimizeEmbeddingOutput.metrics">(nerfbaselines.OptimizeEmbeddingOutput attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.metrics">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.MetricsAccumulator">MetricsAccumulator (class in nerfbaselines.training)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo">ModelInfo (class in nerfbaselines)</a>
+</li>
+        <li>
+    module
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#module-nerfbaselines">nerfbaselines</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#module-nerfbaselines.backends">nerfbaselines.backends</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#module-nerfbaselines.backends.protocol_shm_pickle">nerfbaselines.backends.protocol_shm_pickle</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#module-nerfbaselines.backends.protocol_tcp_pickle">nerfbaselines.backends.protocol_tcp_pickle</a>
+</li>
+          <li><a href="api/nerfbaselines.cameras.html#module-nerfbaselines.cameras">nerfbaselines.cameras</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets">nerfbaselines.datasets</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.blender">nerfbaselines.datasets.blender</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.bundler">nerfbaselines.datasets.bundler</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.colmap">nerfbaselines.datasets.colmap</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.llff">nerfbaselines.datasets.llff</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.mipnerf360">nerfbaselines.datasets.mipnerf360</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.nerfonthego">nerfbaselines.datasets.nerfonthego</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.nerfstudio">nerfbaselines.datasets.nerfstudio</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.phototourism">nerfbaselines.datasets.phototourism</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.seathru_nerf">nerfbaselines.datasets.seathru_nerf</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.tanksandtemples">nerfbaselines.datasets.tanksandtemples</a>
+</li>
+          <li><a href="api/nerfbaselines.evaluation.html#module-nerfbaselines.evaluation">nerfbaselines.evaluation</a>
+</li>
+          <li><a href="api/nerfbaselines.io.html#module-nerfbaselines.io">nerfbaselines.io</a>
+</li>
+          <li><a href="api/nerfbaselines.logging.html#module-nerfbaselines.logging">nerfbaselines.logging</a>
+</li>
+          <li><a href="api/nerfbaselines.metrics.html#module-nerfbaselines.metrics">nerfbaselines.metrics</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#module-nerfbaselines.results">nerfbaselines.results</a>
+</li>
+          <li><a href="api/nerfbaselines.training.html#module-nerfbaselines.training">nerfbaselines.training</a>
+</li>
+          <li><a href="api/nerfbaselines.utils.html#module-nerfbaselines.utils">nerfbaselines.utils</a>
+</li>
+          <li><a href="api/nerfbaselines.viewer.html#module-nerfbaselines.viewer">nerfbaselines.viewer</a>
+</li>
+          <li><a href="api/nerfbaselines.web.html#module-nerfbaselines.web">nerfbaselines.web</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.mount">mount() (in module nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.mse">mse() (in module nerfbaselines.metrics)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="N" class="genindex-section">
+  <h2>N</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackend.name">name (nerfbaselines.backends.ApptainerBackend attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.Backend.name">(nerfbaselines.backends.Backend attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.CondaBackend.name">(nerfbaselines.backends.CondaBackend attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackend.name">(nerfbaselines.backends.DockerBackend attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.SimpleBackend.name">(nerfbaselines.backends.SimpleBackend attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.name">(nerfbaselines.DatasetSpecMetadata attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.LicenseSpec.name">(nerfbaselines.LicenseSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOutputType.name">(nerfbaselines.RenderOutputType attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.name">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.MetricInfo.name">(nerfbaselines.results.MetricInfo attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.SceneInfo.name">(nerfbaselines.results.SceneInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.nears_fars">nears_fars (nerfbaselines.GenericCameras property)</a>
+</li>
+        <li>
+    nerfbaselines
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#module-nerfbaselines">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-download-dataset command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-o">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-o">-o</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-v">-v</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-download-dataset-arg-DATASET">DATASET</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-evaluate command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-evaluate-o">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-evaluate-o">-o</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-evaluate-arg-PREDICTIONS">PREDICTIONS</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-export-demo command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-checkpoint">--checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-o">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-o">-o</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-v">-v</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-fix-checkpoint command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-checkpoint">--checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-method">--method</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-new-checkpoint">--new-checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-presets">--presets</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-set">--set</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">-v</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-fix-output-artifact command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-force">--force</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-inplace">--inplace</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-input">--input</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-method">--method</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-output">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-rebuild-checkpoint">--rebuild-checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-rerun-evaluation">--rerun-evaluation</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-rerun-render">--rerun-render</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-v">-v</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-generate-dataset-results command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-dataset">--dataset</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-method-links">--method-links</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-output">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-output-type">--output-type</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-results">--results</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-install-method command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-force">--force</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-method">--method</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-spec">--spec</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-v">-v</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-render command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-checkpoint">--checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-output">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-split">--split</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-v">-v</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-render-trajectory command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-checkpoint">--checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-output">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-output-names">--output-names</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-resolution">--resolution</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-trajectory">--trajectory</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-render-trajectory-v">-v</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-shell command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-method">--method</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">-v</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-shell-arg-COMMAND">COMMAND</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-test-method command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-full">--full</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-method">--method</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-presets">--presets</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-set">--set</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-steps">--steps</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-test-method-v">-v</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    nerfbaselines-train command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-checkpoint">--checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-disable-output-artifact">--disable-output-artifact</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-eval-all-iters">--eval-all-iters</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-eval-few-iters">--eval-few-iters</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-force-output-artifact">--force-output-artifact</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-logger">--logger</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-method">--method</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-output">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-presets">--presets</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-save-iters">--save-iters</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-set">--set</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-train-v">-v</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-viewer command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-checkpoint">--checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-port">--port</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-viewer-v">-v</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-web-build command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-base-path">--base-path</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-datasets">--datasets</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-docs">--docs</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-build-output">--output</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-web-dev command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-dev-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-dev-datasets">--datasets</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-web-dev-docs">--docs</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.backends
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#module-nerfbaselines.backends">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.backends.protocol_shm_pickle
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#module-nerfbaselines.backends.protocol_shm_pickle">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.backends.protocol_tcp_pickle
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#module-nerfbaselines.backends.protocol_tcp_pickle">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.cameras
+
+        <ul>
+          <li><a href="api/nerfbaselines.cameras.html#module-nerfbaselines.cameras">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.blender
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.blender">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.bundler
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.bundler">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.colmap
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.colmap">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.llff
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.llff">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.mipnerf360
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.mipnerf360">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.nerfonthego
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.nerfonthego">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.nerfstudio
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.nerfstudio">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.phototourism
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.phototourism">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.seathru_nerf
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.seathru_nerf">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.datasets.tanksandtemples
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.tanksandtemples">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.evaluation
+
+        <ul>
+          <li><a href="api/nerfbaselines.evaluation.html#module-nerfbaselines.evaluation">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.io
+
+        <ul>
+          <li><a href="api/nerfbaselines.io.html#module-nerfbaselines.io">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.logging
+
+        <ul>
+          <li><a href="api/nerfbaselines.logging.html#module-nerfbaselines.logging">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.metrics
+
+        <ul>
+          <li><a href="api/nerfbaselines.metrics.html#module-nerfbaselines.metrics">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.results
+
+        <ul>
+          <li><a href="api/nerfbaselines.results.html#module-nerfbaselines.results">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.training
+
+        <ul>
+          <li><a href="api/nerfbaselines.training.html#module-nerfbaselines.training">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.utils
+
+        <ul>
+          <li><a href="api/nerfbaselines.utils.html#module-nerfbaselines.utils">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.viewer
+
+        <ul>
+          <li><a href="api/nerfbaselines.viewer.html#module-nerfbaselines.viewer">module</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines.web
+
+        <ul>
+          <li><a href="api/nerfbaselines.web.html#module-nerfbaselines.web">module</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.NerfEvaluationProtocol">NerfEvaluationProtocol (class in nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol">NerfWEvaluationProtocol (class in nerfbaselines.datasets.phototourism)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.new_cameras">new_cameras() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.new_dataset">new_dataset() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.new_nb_info">new_nb_info() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.num_iterations">num_iterations (nerfbaselines.ModelInfo attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer.num_iterations">(nerfbaselines.training.Trainer property)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.numpy_from_base64">numpy_from_base64() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.numpy_to_base64">numpy_to_base64() (in module nerfbaselines.io)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="O" class="genindex-section">
+  <h2>O</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.open_any">open_any() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.open_any_directory">open_any_directory() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Method.optimize_embedding">optimize_embedding() (nerfbaselines.Method method)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.OptimizeEmbeddingOutput">OptimizeEmbeddingOutput (class in nerfbaselines)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.output_artifacts">output_artifacts (nerfbaselines.MethodSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOptions.output_type_dtypes">output_type_dtypes (nerfbaselines.RenderOptions attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.OutputArtifact">OutputArtifact (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOptions.outputs">outputs (nerfbaselines.RenderOptions attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.pad_poses">pad_poses() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.padded_stack">padded_stack() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.paper_authors">paper_authors (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.paper_authors">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.paper_link">paper_link (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.paper_link">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.paper_title">paper_title (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.paper_title">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.path_is_video">path_is_video() (in module nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.points3D_rgb">points3D_rgb (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.points3D_rgb">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.points3D_xyz">points3D_xyz (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.points3D_xyz">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.MetricsAccumulator.pop">pop() (nerfbaselines.training.MetricsAccumulator method)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrame.pose">pose (nerfbaselines.TrajectoryFrame attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe.pose">(nerfbaselines.TrajectoryKeyframe attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.poses">poses (nerfbaselines.GenericCameras property)</a>
+</li>
+        <li>
+    PREDICTIONS
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-evaluate-arg-PREDICTIONS">nerfbaselines-evaluate command line option</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.presets">presets (nerfbaselines.MethodSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.project">project() (in module nerfbaselines.cameras)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol.protocol_name">protocol_name (nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol property)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.protocol_name">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol property)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.psnr">psnr() (in module nerfbaselines.metrics)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackendSpec.python_path">python_path (nerfbaselines.backends.ApptainerBackendSpec attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.python_path">(nerfbaselines.backends.DockerBackendSpec attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.CondaBackendSpec.python_version">python_version (nerfbaselines.backends.CondaBackendSpec attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="Q" class="genindex-section">
+  <h2>Q</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.quaternion_conjugate">quaternion_conjugate() (in module nerfbaselines.utils)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.quaternion_multiply">quaternion_multiply() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.quaternion_to_rotation_matrix">quaternion_to_rotation_matrix() (in module nerfbaselines.utils)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.read_image">read_image() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol.receive">receive() (nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.receive">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.register">register() (in module nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol.render">render() (nerfbaselines.datasets.phototourism.NerfWEvaluationProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.DefaultEvaluationProtocol.render">(nerfbaselines.evaluation.DefaultEvaluationProtocol method)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.EvaluationProtocol.render">(nerfbaselines.EvaluationProtocol method)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.Method.render">(nerfbaselines.Method method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.render_all_images">render_all_images() (in module nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.render_frames">render_frames() (in module nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.render_markdown_dataset_results_table">render_markdown_dataset_results_table() (in module nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.OptimizeEmbeddingOutput.render_output">render_output (nerfbaselines.OptimizeEmbeddingOutput attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOptions">RenderOptions (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOutputType">RenderOutputType (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.replace">replace() (nerfbaselines.GenericCameras method)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.replace_user">replace_user (nerfbaselines.backends.DockerBackendSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodInfo.required_features">required_features (nerfbaselines.MethodInfo attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.required_features">(nerfbaselines.MethodSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.required_features">(nerfbaselines.ModelInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.ResourcesUtilizationInfo">ResourcesUtilizationInfo (class in nerfbaselines.training)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.rotate_spherical_harmonics">rotate_spherical_harmonics() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.rotation_matrix_to_quaternion">rotation_matrix_to_quaternion() (in module nerfbaselines.utils)</a>
+</li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.run_inside_eval_container">run_inside_eval_container() (in module nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.run_on_host">run_on_host() (in module nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.viewer.html#nerfbaselines.viewer.run_viser_viewer">run_viser_viewer() (in module nerfbaselines.viewer)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.sampling_mask_paths">sampling_mask_paths (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.sampling_mask_paths">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.sampling_mask_paths_root">sampling_mask_paths_root (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.sampling_mask_paths_root">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.sampling_masks">sampling_masks (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.sampling_masks">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Method.save">save() (nerfbaselines.Method method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer.save">(nerfbaselines.training.Trainer method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_cameras_npz">save_cameras_npz() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_depth">save_depth() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_evaluation_results">save_evaluation_results() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_image">save_image() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_output_artifact">save_output_artifact() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_predictions">save_predictions() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_trajectory">save_trajectory() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.SceneInfo">SceneInfo (class in nerfbaselines.results)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.scenes">scenes (nerfbaselines.DatasetSpecMetadata attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.scenes">(nerfbaselines.results.DatasetInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol.send">send() (nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.send">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.serialize_evaluation_results">serialize_evaluation_results() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.serialize_nb_info">serialize_nb_info() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol">SharedMemoryProtocol (class in nerfbaselines.backends.protocol_shm_pickle)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackend.shell">shell() (nerfbaselines.backends.ApptainerBackend method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.Backend.shell">(nerfbaselines.backends.Backend method)</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.CondaBackend.shell">(nerfbaselines.backends.CondaBackend method)</a>
+</li>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackend.shell">(nerfbaselines.backends.DockerBackend method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.SimpleBackend">SimpleBackend (class in nerfbaselines.backends)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.source">source (nerfbaselines.Trajectory attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.ssim">ssim() (in module nerfbaselines.metrics)</a>
+</li>
+        <li><a href="api/nerfbaselines.web.html#nerfbaselines.web.start_dev_server">start_dev_server() (in module nerfbaselines.web)</a>
+</li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol.start_host">start_host() (nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.start_host">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.Backend.static_call">static_call() (nerfbaselines.backends.Backend method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.SimpleBackend.static_call">(nerfbaselines.backends.SimpleBackend method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodInfo.supported_camera_models">supported_camera_models (nerfbaselines.MethodInfo attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.supported_camera_models">(nerfbaselines.MethodSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.supported_camera_models">(nerfbaselines.ModelInfo attribute)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodInfo.supported_outputs">supported_outputs (nerfbaselines.MethodInfo attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.supported_outputs">(nerfbaselines.MethodSpec attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.supported_outputs">(nerfbaselines.ModelInfo attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol">TCPPickleProtocol (class in nerfbaselines.backends.protocol_tcp_pickle)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.tension">tension (nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLogger">TensorboardLogger (class in nerfbaselines.logging)</a>
+</li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLoggerEvent">TensorboardLoggerEvent (class in nerfbaselines.logging)</a>
+</li>
+        <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.torchmetrics_ssim">torchmetrics_ssim() (in module nerfbaselines.metrics)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer.train">train() (nerfbaselines.training.Trainer method)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Method.train_iteration">train_iteration() (nerfbaselines.Method method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer.train_iteration">(nerfbaselines.training.Trainer method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer">Trainer (class in nerfbaselines.training)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory">Trajectory (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.trajectory_get_cameras">trajectory_get_cameras() (in module nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.trajectory_get_embeddings">trajectory_get_embeddings() (in module nerfbaselines.evaluation)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrame">TrajectoryFrame (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrameAppearance">TrajectoryFrameAppearance (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe">TrajectoryKeyframe (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe.transition_duration">transition_duration (nerfbaselines.TrajectoryKeyframe attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.type">type (nerfbaselines.ImageSetInterpolationSource attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.type">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
+</li>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOutputType.type">(nerfbaselines.RenderOutputType attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="U" class="genindex-section">
+  <h2>U</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.undistort_camera">undistort_camera() (in module nerfbaselines.cameras)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset">UnloadedDataset (class in nerfbaselines)</a>
+</li>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.unpad_poses">unpad_poses() (in module nerfbaselines.utils)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.unproject">unproject() (in module nerfbaselines.cameras)</a>
+</li>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.MetricsAccumulator.update">update() (nerfbaselines.training.MetricsAccumulator method)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.LicenseSpec.url">url (nerfbaselines.LicenseSpec attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="V" class="genindex-section">
+  <h2>V</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.visualize_depth">visualize_depth() (in module nerfbaselines.utils)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="W" class="genindex-section">
+  <h2>W</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol.wait_for_worker">wait_for_worker() (nerfbaselines.backends.protocol_shm_pickle.SharedMemoryProtocol method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.wait_for_worker">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol method)</a>
+</li>
+        </ul></li>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLogger">WandbLogger (class in nerfbaselines.logging)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLoggerEvent">WandbLoggerEvent (class in nerfbaselines.logging)</a>
+</li>
+        <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.warp_image_between_cameras">warp_image_between_cameras() (in module nerfbaselines.cameras)</a>
+</li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.wget">wget() (in module nerfbaselines.io)</a>
+</li>
+        <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.with_supported_camera_models">with_supported_camera_models() (in module nerfbaselines.evaluation)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Jonas Kulhanek
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/jkulhanek/nerfbaselines" aria-label="GitHub">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+        </a>
+              <a class="muted-link " href="https://jkulhanek.com/nerfbaselines" aria-label="Website">
+            <svg viewBox="2 2 21 21" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" />
+            </svg>
+        </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

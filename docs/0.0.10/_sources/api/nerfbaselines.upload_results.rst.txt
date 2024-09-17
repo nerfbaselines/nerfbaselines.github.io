@@ -1,0 +1,6 @@
+nerfbaselines.upload\_results
+=============================
+.. automodule:: nerfbaselines.upload_results
+   :members:
+   :undoc-members:
+   :show-inheritance:

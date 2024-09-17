@@ -1,0 +1,1388 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method Instant NGP</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/nerfbaselines/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/nerfbaselines/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/nerfbaselines/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      Instant NGP<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    Instant-NGP is a method that uses hash-grid and a shallow MLP to accelerate training and rendering.
+This method trains very fast (~6 min) and renders also fast ~3 FPS.
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://nvlabs.github.io/instant-ngp/" class="text-blue link-underline">https://nvlabs.github.io/instant-ngp/</a></div>
+      
+      
+      <div>Paper: <a href="https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf" class="text-blue link-underline">Instant Neural Graphics Primitives with a Multiresolution Hash Encoding</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Thomas Müller, Alex Evans, Christoph Schied, Alexander Keller</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=mipnerf360 class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Mip-NeRF 360
+      </h2>
+      <p class="text-justify">Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/garden.zip" title="Download checkpoint and predictions for scene garden" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="4" class="w120">garden</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">24.78</span>
+
+</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">0.654</span>
+
+</td>
+        
+        <td data-sort-value="83"><span class="table__allowcopy">0.346</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">3m 57s</span>
+
+</td>
+        <td data-sort-value="22"><span class="table__allowcopy">6.86 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/bicycle.zip" title="Download checkpoint and predictions for scene bicycle" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">bicycle</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">23.00</span>
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">0.526</span>
+
+</td>
+        
+        <td data-sort-value="88"><span class="table__allowcopy">0.489</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">3m 37s</span>
+
+</td>
+        <td data-sort-value="20"><span class="table__allowcopy">6.29 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/flowers.zip" title="Download checkpoint and predictions for scene flowers" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="3" class="w120">flowers</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">20.54</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">0.462</span>
+
+</td>
+        
+        <td data-sort-value="87"><span class="table__allowcopy">0.478</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">4m 2s</span>
+
+</td>
+        <td data-sort-value="19"><span class="table__allowcopy">6.26 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/treehill.zip" title="Download checkpoint and predictions for scene treehill" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="8" class="w120">treehill</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">22.36</span>
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">0.528</span>
+
+</td>
+        
+        <td data-sort-value="89"><span class="table__allowcopy">0.526</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">3m 40s</span>
+
+</td>
+        <td data-sort-value="21"><span class="table__allowcopy">6.51 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/stump.zip" title="Download checkpoint and predictions for scene stump" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="7" class="w120">stump</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">23.84</span>
+
+</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">0.590</span>
+
+</td>
+        
+        <td data-sort-value="86"><span class="table__allowcopy">0.439</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">3m 52s</span>
+
+</td>
+        <td data-sort-value="18"><span class="table__allowcopy">6.07 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/kitchen.zip" title="Download checkpoint and predictions for scene kitchen" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="5" class="w120">kitchen</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">29.02</span>
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">0.844</span>
+
+</td>
+        
+        <td data-sort-value="81"><span class="table__allowcopy">0.255</span>
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">4m 19s</span>
+
+</td>
+        <td data-sort-value="24"><span class="table__allowcopy">9.52 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/bonsai.zip" title="Download checkpoint and predictions for scene bonsai" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">bonsai</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">30.30</span>
+
+</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">0.890</span>
+
+</td>
+        
+        <td data-sort-value="82"><span class="table__allowcopy">0.295</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">3m 33s</span>
+
+</td>
+        <td data-sort-value="25"><span class="table__allowcopy">9.61 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/counter.zip" title="Download checkpoint and predictions for scene counter" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">counter</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">26.56</span>
+
+</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">0.812</span>
+
+</td>
+        
+        <td data-sort-value="84"><span class="table__allowcopy">0.373</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">4m 10s</span>
+
+</td>
+        <td data-sort-value="23"><span class="table__allowcopy">9.25 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/mipnerf360/room.zip" title="Download checkpoint and predictions for scene room" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="6" class="w120">room</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">29.16</span>
+
+</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">0.850</span>
+
+</td>
+        
+        <td data-sort-value="85"><span class="table__allowcopy">0.383</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">3m 59s</span>
+
+</td>
+        <td data-sort-value="26"><span class="table__allowcopy">9.73 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">25.51</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.684</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.398</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">3m 54s</span>
+
+</td>
+        <td><span class="table__allowcopy">7.79 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id=blender class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Blender
+      </h2>
+      <p class="text-justify">Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/blender/lego.zip" title="Download checkpoint and predictions for scene lego" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="4" class="w120">lego</td>
+        
+        <td data-sort-value="54"><span class="table__allowcopy">35.65</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 36.39</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="44"><span class="table__allowcopy">0.981</span>
+
+</td>
+        
+        <td data-sort-value="57"><span class="table__allowcopy">0.020</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">2m 41s</span>
+
+</td>
+        <td data-sort-value="15"><span class="table__allowcopy">2.59 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/blender/drums.zip" title="Download checkpoint and predictions for scene drums" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">drums</td>
+        
+        <td data-sort-value="48"><span class="table__allowcopy">24.57</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 26.02</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="41"><span class="table__allowcopy">0.930</span>
+
+</td>
+        
+        <td data-sort-value="62"><span class="table__allowcopy">0.109</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">2m 6s</span>
+
+</td>
+        <td data-sort-value="13"><span class="table__allowcopy">2.58 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/blender/ficus.zip" title="Download checkpoint and predictions for scene ficus" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">ficus</td>
+        
+        <td data-sort-value="50"><span class="table__allowcopy">30.29</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 33.51</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="43"><span class="table__allowcopy">0.972</span>
+
+</td>
+        
+        <td data-sort-value="59"><span class="table__allowcopy">0.031</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">1m 58s</span>
+
+</td>
+        <td data-sort-value="10"><span class="table__allowcopy">2.58 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/blender/hotdog.zip" title="Download checkpoint and predictions for scene hotdog" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="3" class="w120">hotdog</td>
+        
+        <td data-sort-value="55"><span class="table__allowcopy">37.02</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 37.4</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="45"><span class="table__allowcopy">0.982</span>
+
+</td>
+        
+        <td data-sort-value="60"><span class="table__allowcopy">0.037</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">2m 33s</span>
+
+</td>
+        <td data-sort-value="14"><span class="table__allowcopy">2.58 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/blender/materials.zip" title="Download checkpoint and predictions for scene materials" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="5" class="w120">materials</td>
+        
+        <td data-sort-value="49"><span class="table__allowcopy">28.96</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 29.78</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="42"><span class="table__allowcopy">0.944</span>
+
+</td>
+        
+        <td data-sort-value="61"><span class="table__allowcopy">0.069</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">2m 11s</span>
+
+</td>
+        <td data-sort-value="11"><span class="table__allowcopy">2.58 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/blender/mic.zip" title="Download checkpoint and predictions for scene mic" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="6" class="w120">mic</td>
+        
+        <td data-sort-value="53"><span class="table__allowcopy">35.41</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 36.22</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="47"><span class="table__allowcopy">0.989</span>
+
+</td>
+        
+        <td data-sort-value="56"><span class="table__allowcopy">0.016</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">2m 25s</span>
+
+</td>
+        <td data-sort-value="8"><span class="table__allowcopy">2.47 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/blender/ship.zip" title="Download checkpoint and predictions for scene ship" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="7" class="w120">ship</td>
+        
+        <td data-sort-value="51"><span class="table__allowcopy">30.61</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 31.1</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="40"><span class="table__allowcopy">0.892</span>
+
+</td>
+        
+        <td data-sort-value="63"><span class="table__allowcopy">0.136</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">2m 24s</span>
+
+</td>
+        <td data-sort-value="12"><span class="table__allowcopy">2.58 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/blender/chair.zip" title="Download checkpoint and predictions for scene chair" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">chair</td>
+        
+        <td data-sort-value="52"><span class="table__allowcopy">35.07</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 35.0</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="46"><span class="table__allowcopy">0.984</span>
+
+</td>
+        
+        <td data-sort-value="58"><span class="table__allowcopy">0.023</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">2m 49s</span>
+
+</td>
+        <td data-sort-value="9"><span class="table__allowcopy">2.57 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">32.20</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 33.18</span>
+  <p>Instant-NGP trained and evaluated on black background instead of white.</p>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">0.959</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.055</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">2m 23s</span>
+
+</td>
+        <td><span class="table__allowcopy">2.57 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id=tanksandtemples class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Tanks and Temples
+      </h2>
+      <p class="text-justify">Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (ascending)">LPIPS <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/auditorium.zip" title="Download checkpoint and predictions for scene auditorium" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">auditorium</td>
+        
+        <td data-sort-value="49"><span class="table__allowcopy">20.67</span>
+
+</td>
+        
+        <td data-sort-value="33"><span class="table__allowcopy">0.761</span>
+
+</td>
+        
+        <td data-sort-value="143"><span class="table__allowcopy">0.429</span>
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">4m 31s</span>
+
+</td>
+        <td data-sort-value="46"><span class="table__allowcopy">3.92 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/ballroom.zip" title="Download checkpoint and predictions for scene ballroom" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">ballroom</td>
+        
+        <td data-sort-value="51"><span class="table__allowcopy">21.62</span>
+
+</td>
+        
+        <td data-sort-value="26"><span class="table__allowcopy">0.652</span>
+
+</td>
+        
+        <td data-sort-value="138"><span class="table__allowcopy">0.352</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">4m 5s</span>
+
+</td>
+        <td data-sort-value="53"><span class="table__allowcopy">4.02 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/courtroom.zip" title="Download checkpoint and predictions for scene courtroom" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="6" class="w120">courtroom</td>
+        
+        <td data-sort-value="46"><span class="table__allowcopy">19.44</span>
+
+</td>
+        
+        <td data-sort-value="24"><span class="table__allowcopy">0.640</span>
+
+</td>
+        
+        <td data-sort-value="145"><span class="table__allowcopy">0.448</span>
+
+</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">4m 35s</span>
+
+</td>
+        <td data-sort-value="48"><span class="table__allowcopy">3.93 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/museum.zip" title="Download checkpoint and predictions for scene museum" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="14" class="w120">museum</td>
+        
+        <td data-sort-value="42"><span class="table__allowcopy">15.19</span>
+
+</td>
+        
+        <td data-sort-value="21"><span class="table__allowcopy">0.471</span>
+
+</td>
+        
+        <td data-sort-value="146"><span class="table__allowcopy">0.606</span>
+
+</td>
+        
+        <td data-sort-value="20"><span class="table__allowcopy">5m 53s</span>
+
+</td>
+        <td data-sort-value="47"><span class="table__allowcopy">3.93 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/palace.zip" title="Download checkpoint and predictions for scene palace" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="15" class="w120">palace</td>
+        
+        <td data-sort-value="44"><span class="table__allowcopy">19.09</span>
+
+</td>
+        
+        <td data-sort-value="28"><span class="table__allowcopy">0.668</span>
+
+</td>
+        
+        <td data-sort-value="144"><span class="table__allowcopy">0.440</span>
+
+</td>
+        
+        <td data-sort-value="18"><span class="table__allowcopy">4m 46s</span>
+
+</td>
+        <td data-sort-value="60"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/temple.zip" title="Download checkpoint and predictions for scene temple" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="18" class="w120">temple</td>
+        
+        <td data-sort-value="43"><span class="table__allowcopy">17.84</span>
+
+</td>
+        
+        <td data-sort-value="30"><span class="table__allowcopy">0.689</span>
+
+</td>
+        
+        <td data-sort-value="142"><span class="table__allowcopy">0.424</span>
+
+</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">4m 40s</span>
+
+</td>
+        <td data-sort-value="50"><span class="table__allowcopy">3.94 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/family.zip" title="Download checkpoint and predictions for scene family" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="7" class="w120">family</td>
+        
+        <td data-sort-value="55"><span class="table__allowcopy">22.59</span>
+
+</td>
+        
+        <td data-sort-value="32"><span class="table__allowcopy">0.761</span>
+
+</td>
+        
+        <td data-sort-value="130"><span class="table__allowcopy">0.235</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">3m 42s</span>
+
+</td>
+        <td data-sort-value="43"><span class="table__allowcopy">3.42 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/francis.zip" title="Download checkpoint and predictions for scene francis" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="8" class="w120">francis</td>
+        
+        <td data-sort-value="59"><span class="table__allowcopy">24.38</span>
+
+</td>
+        
+        <td data-sort-value="39"><span class="table__allowcopy">0.824</span>
+
+</td>
+        
+        <td data-sort-value="131"><span class="table__allowcopy">0.265</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">4m 10s</span>
+
+</td>
+        <td data-sort-value="51"><span class="table__allowcopy">3.94 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/horse.zip" title="Download checkpoint and predictions for scene horse" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="9" class="w120">horse</td>
+        
+        <td data-sort-value="54"><span class="table__allowcopy">21.82</span>
+
+</td>
+        
+        <td data-sort-value="38"><span class="table__allowcopy">0.784</span>
+
+</td>
+        
+        <td data-sort-value="129"><span class="table__allowcopy">0.225</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">3m 47s</span>
+
+</td>
+        <td data-sort-value="42"><span class="table__allowcopy">3.42 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/lighthouse.zip" title="Download checkpoint and predictions for scene lighthouse" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="11" class="w120">lighthouse</td>
+        
+        <td data-sort-value="52"><span class="table__allowcopy">21.65</span>
+
+</td>
+        
+        <td data-sort-value="34"><span class="table__allowcopy">0.765</span>
+
+</td>
+        
+        <td data-sort-value="133"><span class="table__allowcopy">0.281</span>
+
+</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">4m 35s</span>
+
+</td>
+        <td data-sort-value="54"><span class="table__allowcopy">4.02 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/m60.zip" title="Download checkpoint and predictions for scene m60" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="12" class="w120">m60</td>
+        
+        <td data-sort-value="60"><span class="table__allowcopy">25.82</span>
+
+</td>
+        
+        <td data-sort-value="40"><span class="table__allowcopy">0.832</span>
+
+</td>
+        
+        <td data-sort-value="126"><span class="table__allowcopy">0.202</span>
+
+</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">4m 34s</span>
+
+</td>
+        <td data-sort-value="55"><span class="table__allowcopy">4.04 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/panther.zip" title="Download checkpoint and predictions for scene panther" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="16" class="w120">panther</td>
+        
+        <td data-sort-value="62"><span class="table__allowcopy">26.81</span>
+
+</td>
+        
+        <td data-sort-value="41"><span class="table__allowcopy">0.844</span>
+
+</td>
+        
+        <td data-sort-value="127"><span class="table__allowcopy">0.208</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">4m 29s</span>
+
+</td>
+        <td data-sort-value="56"><span class="table__allowcopy">4.04 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/playground.zip" title="Download checkpoint and predictions for scene playground" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="17" class="w120">playground</td>
+        
+        <td data-sort-value="58"><span class="table__allowcopy">23.33</span>
+
+</td>
+        
+        <td data-sort-value="31"><span class="table__allowcopy">0.696</span>
+
+</td>
+        
+        <td data-sort-value="137"><span class="table__allowcopy">0.344</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">4m 14s</span>
+
+</td>
+        <td data-sort-value="52"><span class="table__allowcopy">3.97 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/train.zip" title="Download checkpoint and predictions for scene train" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="19" class="w120">train</td>
+        
+        <td data-sort-value="48"><span class="table__allowcopy">20.01</span>
+
+</td>
+        
+        <td data-sort-value="27"><span class="table__allowcopy">0.658</span>
+
+</td>
+        
+        <td data-sort-value="135"><span class="table__allowcopy">0.334</span>
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">4m 39s</span>
+
+</td>
+        <td data-sort-value="49"><span class="table__allowcopy">3.94 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/barn.zip" title="Download checkpoint and predictions for scene barn" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">barn</td>
+        
+        <td data-sort-value="61"><span class="table__allowcopy">25.90</span>
+
+</td>
+        
+        <td data-sort-value="36"><span class="table__allowcopy">0.772</span>
+
+</td>
+        
+        <td data-sort-value="132"><span class="table__allowcopy">0.271</span>
+
+</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">4m 41s</span>
+
+</td>
+        <td data-sort-value="59"><span class="table__allowcopy">4.31 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/caterpillar.zip" title="Download checkpoint and predictions for scene caterpillar" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="3" class="w120">caterpillar</td>
+        
+        <td data-sort-value="53"><span class="table__allowcopy">21.72</span>
+
+</td>
+        
+        <td data-sort-value="23"><span class="table__allowcopy">0.633</span>
+
+</td>
+        
+        <td data-sort-value="139"><span class="table__allowcopy">0.360</span>
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">4m 30s</span>
+
+</td>
+        <td data-sort-value="58"><span class="table__allowcopy">4.22 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/church.zip" title="Download checkpoint and predictions for scene church" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="4" class="w120">church</td>
+        
+        <td data-sort-value="47"><span class="table__allowcopy">19.92</span>
+
+</td>
+        
+        <td data-sort-value="25"><span class="table__allowcopy">0.650</span>
+
+</td>
+        
+        <td data-sort-value="141"><span class="table__allowcopy">0.419</span>
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">4m 21s</span>
+
+</td>
+        <td data-sort-value="61"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/courthouse.zip" title="Download checkpoint and predictions for scene courthouse" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="5" class="w120">courthouse</td>
+        
+        <td data-sort-value="50"><span class="table__allowcopy">20.80</span>
+
+</td>
+        
+        <td data-sort-value="29"><span class="table__allowcopy">0.681</span>
+
+</td>
+        
+        <td data-sort-value="140"><span class="table__allowcopy">0.414</span>
+
+</td>
+        
+        <td data-sort-value="19"><span class="table__allowcopy">4m 55s</span>
+
+</td>
+        <td data-sort-value="62"><span class="table__allowcopy">6.72 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/ignatius.zip" title="Download checkpoint and predictions for scene ignatius" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="10" class="w120">ignatius</td>
+        
+        <td data-sort-value="45"><span class="table__allowcopy">19.40</span>
+
+</td>
+        
+        <td data-sort-value="22"><span class="table__allowcopy">0.613</span>
+
+</td>
+        
+        <td data-sort-value="136"><span class="table__allowcopy">0.343</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">3m 58s</span>
+
+</td>
+        <td data-sort-value="45"><span class="table__allowcopy">3.81 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/meetingroom.zip" title="Download checkpoint and predictions for scene meetingroom" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="13" class="w120">meetingroom</td>
+        
+        <td data-sort-value="57"><span class="table__allowcopy">23.24</span>
+
+</td>
+        
+        <td data-sort-value="37"><span class="table__allowcopy">0.783</span>
+
+</td>
+        
+        <td data-sort-value="134"><span class="table__allowcopy">0.326</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">3m 59s</span>
+
+</td>
+        <td data-sort-value="57"><span class="table__allowcopy">4.18 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/instant-ngp/tanksandtemples/truck.zip" title="Download checkpoint and predictions for scene truck" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="20" class="w120">truck</td>
+        
+        <td data-sort-value="56"><span class="table__allowcopy">22.85</span>
+
+</td>
+        
+        <td data-sort-value="35"><span class="table__allowcopy">0.770</span>
+
+</td>
+        
+        <td data-sort-value="128"><span class="table__allowcopy">0.216</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">4m 20s</span>
+
+</td>
+        <td data-sort-value="44"><span class="table__allowcopy">3.77 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">21.62</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.712</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.340</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">4m 27s</span>
+
+</td>
+        <td><span class="table__allowcopy">4.13 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>

@@ -1,0 +1,6 @@
+nerfbaselines.render\_trajectory
+================================
+.. automodule:: nerfbaselines.render_trajectory
+   :members:
+   :undoc-members:
+   :show-inheritance:

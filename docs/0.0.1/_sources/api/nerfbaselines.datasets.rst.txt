@@ -1,0 +1,6 @@
+nerfbaselines.datasets
+======================
+.. automodule:: nerfbaselines.datasets
+   :members:
+   :undoc-members:
+   :show-inheritance:

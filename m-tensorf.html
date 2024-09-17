@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method TensoRF</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/nerfbaselines/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/nerfbaselines/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/nerfbaselines/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      TensoRF<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    TensoRF factorizes the radiance field into a multiple compact low-rank tensor components. It was designed and tester primarily on Blender, LLFF, and NSVF datasets.
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://apchenstu.github.io/TensoRF/" class="text-blue link-underline">https://apchenstu.github.io/TensoRF/</a></div>
+      
+      
+      <div>Paper: <a href="https://arxiv.org/pdf/2203.09517.pdf" class="text-blue link-underline">TensoRF: Tensorial Radiance Fields</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Anpei Chen, Zexiang Xu, Andreas Geiger, Jingyi Yu, Hao Su</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=blender class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Blender
+      </h2>
+      <p class="text-justify">Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/tensorf/blender/lego.zip" title="Download checkpoint and predictions for scene lego" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="4" class="w120">lego</td>
+        
+        <td data-sort-value="78"><span class="table__allowcopy">36.49</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 36.46</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="61"><span class="table__allowcopy">0.983</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.983</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="41"><span class="table__allowcopy">0.022</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.018</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="43"><span class="table__allowcopy">10m 1s</span>
+
+</td>
+        <td data-sort-value="86"><span class="table__allowcopy">20.53 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/tensorf/blender/drums.zip" title="Download checkpoint and predictions for scene drums" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">drums</td>
+        
+        <td data-sort-value="72"><span class="table__allowcopy">26.01</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 26.01</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="57"><span class="table__allowcopy">0.936</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.937</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="46"><span class="table__allowcopy">0.076</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.073</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="42"><span class="table__allowcopy">8m 56s</span>
+
+</td>
+        <td data-sort-value="84"><span class="table__allowcopy">19.67 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/tensorf/blender/ficus.zip" title="Download checkpoint and predictions for scene ficus" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">ficus</td>
+        
+        <td data-sort-value="75"><span class="table__allowcopy">34.06</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 33.99</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="59"><span class="table__allowcopy">0.982</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.982</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="43"><span class="table__allowcopy">0.029</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.022</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="44"><span class="table__allowcopy">10m 45s</span>
+
+</td>
+        <td data-sort-value="80"><span class="table__allowcopy">7.28 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/tensorf/blender/hotdog.zip" title="Download checkpoint and predictions for scene hotdog" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="3" class="w120">hotdog</td>
+        
+        <td data-sort-value="79"><span class="table__allowcopy">37.49</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 37.41</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="60"><span class="table__allowcopy">0.982</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.982</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="44"><span class="table__allowcopy">0.033</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.032</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="45"><span class="table__allowcopy">11m 18s</span>
+
+</td>
+        <td data-sort-value="85"><span class="table__allowcopy">19.77 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/tensorf/blender/materials.zip" title="Download checkpoint and predictions for scene materials" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="5" class="w120">materials</td>
+        
+        <td data-sort-value="73"><span class="table__allowcopy">30.08</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 30.12</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="58"><span class="table__allowcopy">0.952</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.952</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="45"><span class="table__allowcopy">0.059</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.058</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="47"><span class="table__allowcopy">14m 55s</span>
+
+</td>
+        <td data-sort-value="87"><span class="table__allowcopy">21.09 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/tensorf/blender/mic.zip" title="Download checkpoint and predictions for scene mic" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="6" class="w120">mic</td>
+        
+        <td data-sort-value="76"><span class="table__allowcopy">34.85</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 34.61</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="63"><span class="table__allowcopy">0.988</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.988</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="40"><span class="table__allowcopy">0.021</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.015</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="40"><span class="table__allowcopy">8m 8s</span>
+
+</td>
+        <td data-sort-value="81"><span class="table__allowcopy">11.21 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/tensorf/blender/ship.zip" title="Download checkpoint and predictions for scene ship" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="7" class="w120">ship</td>
+        
+        <td data-sort-value="74"><span class="table__allowcopy">30.69</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 30.77</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="56"><span class="table__allowcopy">0.894</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.895</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="47"><span class="table__allowcopy">0.141</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.138</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="46"><span class="table__allowcopy">13m 19s</span>
+
+</td>
+        <td data-sort-value="83"><span class="table__allowcopy">18.80 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/tensorf/blender/chair.zip" title="Download checkpoint and predictions for scene chair" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">chair</td>
+        
+        <td data-sort-value="77"><span class="table__allowcopy">35.72</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 35.76</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="62"><span class="table__allowcopy">0.984</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.985</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="42"><span class="table__allowcopy">0.027</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.022</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="41"><span class="table__allowcopy">8m 56s</span>
+
+</td>
+        <td data-sort-value="82"><span class="table__allowcopy">12.60 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">33.17</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 33.14</span>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">0.963</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.963</span>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">0.051</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.047</span>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">10m 47s</span>
+
+</td>
+        <td><span class="table__allowcopy">16.37 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>

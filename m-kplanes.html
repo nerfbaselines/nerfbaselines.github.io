@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method K-Planes</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/nerfbaselines/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/nerfbaselines/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/nerfbaselines/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      K-Planes<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    K-Planes is a NeRF-based method representing d-dimensional space using 2 planes allowing for a seamless way to go from static (d=3) to dynamic (d=4) scenes.
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://sarafridov.github.io/K-Planes/" class="text-blue link-underline">https://sarafridov.github.io/K-Planes/</a></div>
+      
+      
+      <div>Paper: <a href="https://arxiv.org/pdf/2301.10241" class="text-blue link-underline">K-Planes: Explicit Radiance Fields in Space, Time, and Appearance</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Sara Fridovich-Keil, Giacomo Meanti, Frederik Warburg, Benjamin Recht, Angjoo Kanazawa</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=blender class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Blender
+      </h2>
+      <p class="text-justify">Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/blender/lego.zip" title="Download checkpoint and predictions for scene lego" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="4" class="w120">lego</td>
+        
+        <td data-sort-value="62"><span class="table__allowcopy">35.73</span>
+
+</td>
+        
+        <td data-sort-value="53"><span class="table__allowcopy">0.981</span>
+
+</td>
+        
+        <td data-sort-value="83"><span class="table__allowcopy">0.047</span>
+
+</td>
+        
+        <td data-sort-value="66"><span class="table__allowcopy">23m 54s</span>
+
+</td>
+        <td data-sort-value="64"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/blender/drums.zip" title="Download checkpoint and predictions for scene drums" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">drums</td>
+        
+        <td data-sort-value="56"><span class="table__allowcopy">25.68</span>
+
+</td>
+        
+        <td data-sort-value="49"><span class="table__allowcopy">0.938</span>
+
+</td>
+        
+        <td data-sort-value="86"><span class="table__allowcopy">0.096</span>
+
+</td>
+        
+        <td data-sort-value="71"><span class="table__allowcopy">24m 10s</span>
+
+</td>
+        <td data-sort-value="65"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/blender/ficus.zip" title="Download checkpoint and predictions for scene ficus" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">ficus</td>
+        
+        <td data-sort-value="59"><span class="table__allowcopy">31.31</span>
+
+</td>
+        
+        <td data-sort-value="51"><span class="table__allowcopy">0.974</span>
+
+</td>
+        
+        <td data-sort-value="84"><span class="table__allowcopy">0.052</span>
+
+</td>
+        
+        <td data-sort-value="64"><span class="table__allowcopy">23m 37s</span>
+
+</td>
+        <td data-sort-value="66"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/blender/hotdog.zip" title="Download checkpoint and predictions for scene hotdog" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="3" class="w120">hotdog</td>
+        
+        <td data-sort-value="63"><span class="table__allowcopy">36.46</span>
+
+</td>
+        
+        <td data-sort-value="52"><span class="table__allowcopy">0.981</span>
+
+</td>
+        
+        <td data-sort-value="81"><span class="table__allowcopy">0.033</span>
+
+</td>
+        
+        <td data-sort-value="65"><span class="table__allowcopy">23m 38s</span>
+
+</td>
+        <td data-sort-value="67"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/blender/materials.zip" title="Download checkpoint and predictions for scene materials" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="5" class="w120">materials</td>
+        
+        <td data-sort-value="57"><span class="table__allowcopy">29.41</span>
+
+</td>
+        
+        <td data-sort-value="50"><span class="table__allowcopy">0.949</span>
+
+</td>
+        
+        <td data-sort-value="85"><span class="table__allowcopy">0.070</span>
+
+</td>
+        
+        <td data-sort-value="67"><span class="table__allowcopy">24m 1s</span>
+
+</td>
+        <td data-sort-value="68"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/blender/mic.zip" title="Download checkpoint and predictions for scene mic" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="6" class="w120">mic</td>
+        
+        <td data-sort-value="60"><span class="table__allowcopy">33.95</span>
+
+</td>
+        
+        <td data-sort-value="55"><span class="table__allowcopy">0.988</span>
+
+</td>
+        
+        <td data-sort-value="80"><span class="table__allowcopy">0.019</span>
+
+</td>
+        
+        <td data-sort-value="68"><span class="table__allowcopy">24m 6s</span>
+
+</td>
+        <td data-sort-value="69"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/blender/ship.zip" title="Download checkpoint and predictions for scene ship" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="7" class="w120">ship</td>
+        
+        <td data-sort-value="58"><span class="table__allowcopy">30.72</span>
+
+</td>
+        
+        <td data-sort-value="48"><span class="table__allowcopy">0.897</span>
+
+</td>
+        
+        <td data-sort-value="87"><span class="table__allowcopy">0.141</span>
+
+</td>
+        
+        <td data-sort-value="69"><span class="table__allowcopy">24m 8s</span>
+
+</td>
+        <td data-sort-value="70"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/blender/chair.zip" title="Download checkpoint and predictions for scene chair" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">chair</td>
+        
+        <td data-sort-value="61"><span class="table__allowcopy">34.85</span>
+
+</td>
+        
+        <td data-sort-value="54"><span class="table__allowcopy">0.983</span>
+
+</td>
+        
+        <td data-sort-value="82"><span class="table__allowcopy">0.036</span>
+
+</td>
+        
+        <td data-sort-value="70"><span class="table__allowcopy">24m 9s</span>
+
+</td>
+        <td data-sort-value="71"><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">32.27</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.961</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.062</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">23m 58s</span>
+
+</td>
+        <td><span class="table__allowcopy">4.64 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id=phototourism class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Photo Tourism
+      </h2>
+      <p class="text-justify">Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (ascending)">LPIPS <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/phototourism/sacre-coeur.zip" title="Download checkpoint and predictions for scene Sacre Coeur" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">Sacre Coeur</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">19.96</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.762</span>
+
+</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">0.299</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">24m 26s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">3.62 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/phototourism/trevi-fountain.zip" title="Download checkpoint and predictions for scene Trevi Fountain" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">Trevi Fountain</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">19.70</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.662</span>
+
+</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">0.388</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">24m 44s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">3.59 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/kplanes/phototourism/brandenburg-gate.zip" title="Download checkpoint and predictions for scene Brandenburg Gate" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">Brandenburg Gate</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">23.65</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.859</span>
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">0.253</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">24m 40s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">3.56 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">21.10</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.761</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.313</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">24m 37s</span>
+
+</td>
+        <td><span class="table__allowcopy">3.59 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>

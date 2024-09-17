@@ -1,0 +1,6 @@
+nerfbaselines.training
+======================
+.. automodule:: nerfbaselines.training
+   :members:
+   :undoc-members:
+   :show-inheritance:

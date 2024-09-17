@@ -1,0 +1,7 @@
+# NerfBaselines Documentation
+```{toctree}
+:maxdepth: 2
+:caption: Reference
+CLI <cli>
+API <api/nerfbaselines>
+```

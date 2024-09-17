@@ -1,0 +1,35 @@
+nerfbaselines.backends
+======================
+.. automodule:: nerfbaselines.backends
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+nerfbaselines.backends.apptainer
+--------------------------------
+
+.. automodule:: nerfbaselines.backends.apptainer
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+nerfbaselines.backends.conda
+----------------------------
+
+.. automodule:: nerfbaselines.backends.conda
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+nerfbaselines.backends.docker
+-----------------------------
+
+.. automodule:: nerfbaselines.backends.docker
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:

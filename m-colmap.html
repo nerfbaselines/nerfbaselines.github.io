@@ -1,0 +1,1395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method COLMAP</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/nerfbaselines/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/nerfbaselines/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/nerfbaselines/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      COLMAP<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    COLMAP Multi-View Stereo (MVS) is a general-purpose, end-to-end image-based 3D reconstruction pipeline.
+It uses the point cloud if available, otherwise it runs a sparse reconstruction to obtained.
+The reconstruction consists of a stereo matching step, followed by a multi-view stereo step to obtain a dense point cloud.
+Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the point cloud.
+
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://colmap.github.io/" class="text-blue link-underline">https://colmap.github.io/</a></div>
+      
+      
+      <div>Paper: <a href="https://demuc.de/papers/schoenberger2016mvs.pdf" class="text-blue link-underline">Pixelwise View Selection for Unstructured Multi-View Stereo</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Johannes Lutz Schőnberger, Enliang Zheng, Marc Pollefeys, Jan-Michael Frahm</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=mipnerf360 class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Mip-NeRF 360
+      </h2>
+      <p class="text-justify">Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/garden.zip" title="Download checkpoint and predictions for scene garden" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/garden_demo/params.json" title="Online demo for scene garden" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="4" class="w120">garden</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">18.87</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">0.468</span>
+
+</td>
+        
+        <td data-sort-value="90"><span class="table__allowcopy">0.477</span>
+
+</td>
+        
+        <td data-sort-value="73"><span class="table__allowcopy">1h 35m 12s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/bicycle.zip" title="Download checkpoint and predictions for scene bicycle" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/bicycle_demo/params.json" title="Online demo for scene bicycle" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">bicycle</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">18.29</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.352</span>
+
+</td>
+        
+        <td data-sort-value="96"><span class="table__allowcopy">0.644</span>
+
+</td>
+        
+        <td data-sort-value="76"><span class="table__allowcopy">3h 19m 55s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/flowers.zip" title="Download checkpoint and predictions for scene flowers" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/flowers_demo/params.json" title="Online demo for scene flowers" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="3" class="w120">flowers</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">14.50</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.257</span>
+
+</td>
+        
+        <td data-sort-value="95"><span class="table__allowcopy">0.634</span>
+
+</td>
+        
+        <td data-sort-value="74"><span class="table__allowcopy">1h 51m 21s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/treehill.zip" title="Download checkpoint and predictions for scene treehill" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/treehill_demo/params.json" title="Online demo for scene treehill" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="8" class="w120">treehill</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">15.73</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.340</span>
+
+</td>
+        
+        <td data-sort-value="98"><span class="table__allowcopy">0.726</span>
+
+</td>
+        
+        <td data-sort-value="72"><span class="table__allowcopy">1h 6m 41s</span>
+
+</td>
+        <td data-sort-value="3"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/stump.zip" title="Download checkpoint and predictions for scene stump" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/stump_demo/params.json" title="Online demo for scene stump" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="7" class="w120">stump</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">19.65</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.366</span>
+
+</td>
+        
+        <td data-sort-value="97"><span class="table__allowcopy">0.646</span>
+
+</td>
+        
+        <td data-sort-value="75"><span class="table__allowcopy">3h 6m 50s</span>
+
+</td>
+        <td data-sort-value="4"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/kitchen.zip" title="Download checkpoint and predictions for scene kitchen" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/kitchen_demo/params.json" title="Online demo for scene kitchen" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="5" class="w120">kitchen</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">17.35</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">0.497</span>
+
+</td>
+        
+        <td data-sort-value="93"><span class="table__allowcopy">0.575</span>
+
+</td>
+        
+        <td data-sort-value="77"><span class="table__allowcopy">3h 31m 29s</span>
+
+</td>
+        <td data-sort-value="5"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/bonsai.zip" title="Download checkpoint and predictions for scene bonsai" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/bonsai_demo/params.json" title="Online demo for scene bonsai" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="1" class="w120">bonsai</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">14.06</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.548</span>
+
+</td>
+        
+        <td data-sort-value="94"><span class="table__allowcopy">0.586</span>
+
+</td>
+        
+        <td data-sort-value="79"><span class="table__allowcopy">3h 45m 27s</span>
+
+</td>
+        <td data-sort-value="6"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/counter.zip" title="Download checkpoint and predictions for scene counter" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/counter_demo/params.json" title="Online demo for scene counter" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="2" class="w120">counter</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">15.04</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.549</span>
+
+</td>
+        
+        <td data-sort-value="92"><span class="table__allowcopy">0.520</span>
+
+</td>
+        
+        <td data-sort-value="78"><span class="table__allowcopy">3h 45m 10s</span>
+
+</td>
+        <td data-sort-value="7"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/mipnerf360/room.zip" title="Download checkpoint and predictions for scene room" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/room_demo/params.json" title="Online demo for scene room" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="6" class="w120">room</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">16.55</span>
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">0.628</span>
+
+</td>
+        
+        <td data-sort-value="91"><span class="table__allowcopy">0.505</span>
+
+</td>
+        
+        <td data-sort-value="80"><span class="table__allowcopy">3h 54m 6s</span>
+
+</td>
+        <td data-sort-value="8"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">16.67</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.445</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.590</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">2h 52m 55s</span>
+
+</td>
+        <td><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id=blender class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Blender
+      </h2>
+      <p class="text-justify">Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/blender/lego.zip" title="Download checkpoint and predictions for scene lego" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/blender/lego_demo/params.json" title="Online demo for scene lego" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="4" class="w120">lego</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">12.31</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.776</span>
+
+</td>
+        
+        <td data-sort-value="109"><span class="table__allowcopy">0.220</span>
+
+</td>
+        
+        <td data-sort-value="78"><span class="table__allowcopy">2h 5m 25s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/blender/drums.zip" title="Download checkpoint and predictions for scene drums" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/blender/drums_demo/params.json" title="Online demo for scene drums" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="1" class="w120">drums</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">8.06</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.657</span>
+
+</td>
+        
+        <td data-sort-value="110"><span class="table__allowcopy">0.296</span>
+
+</td>
+        
+        <td data-sort-value="79"><span class="table__allowcopy">2h 14m 38s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/blender/ficus.zip" title="Download checkpoint and predictions for scene ficus" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/blender/ficus_demo/params.json" title="Online demo for scene ficus" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="2" class="w120">ficus</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">15.12</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.838</span>
+
+</td>
+        
+        <td data-sort-value="104"><span class="table__allowcopy">0.143</span>
+
+</td>
+        
+        <td data-sort-value="72"><span class="table__allowcopy">39m 23s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/blender/hotdog.zip" title="Download checkpoint and predictions for scene hotdog" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/blender/hotdog_demo/params.json" title="Online demo for scene hotdog" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="3" class="w120">hotdog</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">12.21</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">0.831</span>
+
+</td>
+        
+        <td data-sort-value="108"><span class="table__allowcopy">0.195</span>
+
+</td>
+        
+        <td data-sort-value="76"><span class="table__allowcopy">1h 13m 26s</span>
+
+</td>
+        <td data-sort-value="3"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/blender/materials.zip" title="Download checkpoint and predictions for scene materials" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/blender/materials_demo/params.json" title="Online demo for scene materials" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="5" class="w120">materials</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">14.56</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">0.802</span>
+
+</td>
+        
+        <td data-sort-value="107"><span class="table__allowcopy">0.193</span>
+
+</td>
+        
+        <td data-sort-value="77"><span class="table__allowcopy">1h 42m 37s</span>
+
+</td>
+        <td data-sort-value="4"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/blender/mic.zip" title="Download checkpoint and predictions for scene mic" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/blender/mic_demo/params.json" title="Online demo for scene mic" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="6" class="w120">mic</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">9.29</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.765</span>
+
+</td>
+        
+        <td data-sort-value="106"><span class="table__allowcopy">0.182</span>
+
+</td>
+        
+        <td data-sort-value="75"><span class="table__allowcopy">1h 13m 24s</span>
+
+</td>
+        <td data-sort-value="5"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/blender/ship.zip" title="Download checkpoint and predictions for scene ship" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/blender/ship_demo/params.json" title="Online demo for scene ship" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="7" class="w120">ship</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">10.02</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.616</span>
+
+</td>
+        
+        <td data-sort-value="111"><span class="table__allowcopy">0.335</span>
+
+</td>
+        
+        <td data-sort-value="74"><span class="table__allowcopy">48m 3s</span>
+
+</td>
+        <td data-sort-value="6"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/blender/chair.zip" title="Download checkpoint and predictions for scene chair" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/blender/chair_demo/params.json" title="Online demo for scene chair" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">chair</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">15.42</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.847</span>
+
+</td>
+        
+        <td data-sort-value="105"><span class="table__allowcopy">0.148</span>
+
+</td>
+        
+        <td data-sort-value="73"><span class="table__allowcopy">47m 35s</span>
+
+</td>
+        <td data-sort-value="7"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">12.12</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.766</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.214</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">1h 20m 34s</span>
+
+</td>
+        <td><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id=tanksandtemples class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Tanks and Temples
+      </h2>
+      <p class="text-justify">Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (ascending)">LPIPS <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/auditorium.zip" title="Download checkpoint and predictions for scene auditorium" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/auditorium_demo/params.json" title="Online demo for scene auditorium" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">auditorium</td>
+        
+        <td data-sort-value="18"><span class="table__allowcopy">14.55</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.390</span>
+
+</td>
+        
+        <td data-sort-value="161"><span class="table__allowcopy">0.637</span>
+
+</td>
+        
+        <td data-sort-value="114"><span class="table__allowcopy">3h 17m 31s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/ballroom.zip" title="Download checkpoint and predictions for scene ballroom" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/ballroom_demo/params.json" title="Online demo for scene ballroom" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="1" class="w120">ballroom</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">14.09</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">0.408</span>
+
+</td>
+        
+        <td data-sort-value="147"><span class="table__allowcopy">0.466</span>
+
+</td>
+        
+        <td data-sort-value="118"><span class="table__allowcopy">3h 34m 34s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/courtroom.zip" title="Download checkpoint and predictions for scene courtroom" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/courtroom_demo/params.json" title="Online demo for scene courtroom" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="6" class="w120">courtroom</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">14.48</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.371</span>
+
+</td>
+        
+        <td data-sort-value="152"><span class="table__allowcopy">0.537</span>
+
+</td>
+        
+        <td data-sort-value="117"><span class="table__allowcopy">3h 24m 16s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/museum.zip" title="Download checkpoint and predictions for scene museum" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/museum_demo/params.json" title="Online demo for scene museum" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="14" class="w120">museum</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">14.16</span>
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">0.418</span>
+
+</td>
+        
+        <td data-sort-value="148"><span class="table__allowcopy">0.495</span>
+
+</td>
+        
+        <td data-sort-value="115"><span class="table__allowcopy">3h 18m 47s</span>
+
+</td>
+        <td data-sort-value="3"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/palace.zip" title="Download checkpoint and predictions for scene palace" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/palace_demo/params.json" title="Online demo for scene palace" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="15" class="w120">palace</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">9.08</span>
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">0.407</span>
+
+</td>
+        
+        <td data-sort-value="166"><span class="table__allowcopy">0.784</span>
+
+</td>
+        
+        <td data-sort-value="113"><span class="table__allowcopy">3h 8m 22s</span>
+
+</td>
+        <td data-sort-value="4"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/temple.zip" title="Download checkpoint and predictions for scene temple" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/temple_demo/params.json" title="Online demo for scene temple" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="18" class="w120">temple</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">7.32</span>
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">0.408</span>
+
+</td>
+        
+        <td data-sort-value="160"><span class="table__allowcopy">0.617</span>
+
+</td>
+        
+        <td data-sort-value="112"><span class="table__allowcopy">3h 5m 14s</span>
+
+</td>
+        <td data-sort-value="5"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/family.zip" title="Download checkpoint and predictions for scene family" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/family_demo/params.json" title="Online demo for scene family" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="7" class="w120">family</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">10.28</span>
+
+</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">0.440</span>
+
+</td>
+        
+        <td data-sort-value="154"><span class="table__allowcopy">0.550</span>
+
+</td>
+        
+        <td data-sort-value="105"><span class="table__allowcopy">2h 33m 22s</span>
+
+</td>
+        <td data-sort-value="6"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/francis.zip" title="Download checkpoint and predictions for scene francis" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/francis_demo/params.json" title="Online demo for scene francis" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="8" class="w120">francis</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">8.33</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.302</span>
+
+</td>
+        
+        <td data-sort-value="163"><span class="table__allowcopy">0.686</span>
+
+</td>
+        
+        <td data-sort-value="107"><span class="table__allowcopy">2h 40m 27s</span>
+
+</td>
+        <td data-sort-value="7"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/horse.zip" title="Download checkpoint and predictions for scene horse" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/horse_demo/params.json" title="Online demo for scene horse" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="9" class="w120">horse</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">6.35</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.404</span>
+
+</td>
+        
+        <td data-sort-value="157"><span class="table__allowcopy">0.563</span>
+
+</td>
+        
+        <td data-sort-value="108"><span class="table__allowcopy">2h 41m 33s</span>
+
+</td>
+        <td data-sort-value="8"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/lighthouse.zip" title="Download checkpoint and predictions for scene lighthouse" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/lighthouse_demo/params.json" title="Online demo for scene lighthouse" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="11" class="w120">lighthouse</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">10.68</span>
+
+</td>
+        
+        <td data-sort-value="18"><span class="table__allowcopy">0.514</span>
+
+</td>
+        
+        <td data-sort-value="162"><span class="table__allowcopy">0.665</span>
+
+</td>
+        
+        <td data-sort-value="109"><span class="table__allowcopy">2h 46m 8s</span>
+
+</td>
+        <td data-sort-value="9"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/m60.zip" title="Download checkpoint and predictions for scene m60" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/m60_demo/params.json" title="Online demo for scene m60" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="12" class="w120">m60</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">14.19</span>
+
+</td>
+        
+        <td data-sort-value="19"><span class="table__allowcopy">0.547</span>
+
+</td>
+        
+        <td data-sort-value="155"><span class="table__allowcopy">0.550</span>
+
+</td>
+        
+        <td data-sort-value="125"><span class="table__allowcopy">10h 54m 40s</span>
+
+</td>
+        <td data-sort-value="10"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/panther.zip" title="Download checkpoint and predictions for scene panther" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/panther_demo/params.json" title="Online demo for scene panther" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="16" class="w120">panther</td>
+        
+        <td data-sort-value="19"><span class="table__allowcopy">14.78</span>
+
+</td>
+        
+        <td data-sort-value="20"><span class="table__allowcopy">0.594</span>
+
+</td>
+        
+        <td data-sort-value="151"><span class="table__allowcopy">0.524</span>
+
+</td>
+        
+        <td data-sort-value="123"><span class="table__allowcopy">10h 32m 2s</span>
+
+</td>
+        <td data-sort-value="11"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/playground.zip" title="Download checkpoint and predictions for scene playground" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/playground_demo/params.json" title="Online demo for scene playground" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="17" class="w120">playground</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">13.30</span>
+
+</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">0.455</span>
+
+</td>
+        
+        <td data-sort-value="159"><span class="table__allowcopy">0.615</span>
+
+</td>
+        
+        <td data-sort-value="124"><span class="table__allowcopy">10h 52m 56s</span>
+
+</td>
+        <td data-sort-value="12"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/train.zip" title="Download checkpoint and predictions for scene train" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/train_demo/params.json" title="Online demo for scene train" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="19" class="w120">train</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">11.83</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">0.396</span>
+
+</td>
+        
+        <td data-sort-value="167"><span class="table__allowcopy">0.813</span>
+
+</td>
+        
+        <td data-sort-value="121"><span class="table__allowcopy">9h 18m 35s</span>
+
+</td>
+        <td data-sort-value="13"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/barn.zip" title="Download checkpoint and predictions for scene barn" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/barn_demo/params.json" title="Online demo for scene barn" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="2" class="w120">barn</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">8.97</span>
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">0.479</span>
+
+</td>
+        
+        <td data-sort-value="150"><span class="table__allowcopy">0.520</span>
+
+</td>
+        
+        <td data-sort-value="119"><span class="table__allowcopy">8h 15m 20s</span>
+
+</td>
+        <td data-sort-value="14"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/caterpillar.zip" title="Download checkpoint and predictions for scene caterpillar" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/caterpillar_demo/params.json" title="Online demo for scene caterpillar" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="3" class="w120">caterpillar</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">12.67</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.376</span>
+
+</td>
+        
+        <td data-sort-value="165"><span class="table__allowcopy">0.771</span>
+
+</td>
+        
+        <td data-sort-value="116"><span class="table__allowcopy">3h 20m 10s</span>
+
+</td>
+        <td data-sort-value="15"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/church.zip" title="Download checkpoint and predictions for scene church" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/church_demo/params.json" title="Online demo for scene church" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="4" class="w120">church</td>
+        
+        <td data-sort-value="20"><span class="table__allowcopy">15.67</span>
+
+</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">0.425</span>
+
+</td>
+        
+        <td data-sort-value="149"><span class="table__allowcopy">0.514</span>
+
+</td>
+        
+        <td data-sort-value="120"><span class="table__allowcopy">9h 2m 32s</span>
+
+</td>
+        <td data-sort-value="16"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/courthouse.zip" title="Download checkpoint and predictions for scene courthouse" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/courthouse_demo/params.json" title="Online demo for scene courthouse" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="5" class="w120">courthouse</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">9.09</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">0.397</span>
+
+</td>
+        
+        <td data-sort-value="164"><span class="table__allowcopy">0.737</span>
+
+</td>
+        
+        <td data-sort-value="122"><span class="table__allowcopy">9h 30m 56s</span>
+
+</td>
+        <td data-sort-value="17"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/ignatius.zip" title="Download checkpoint and predictions for scene ignatius" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/ignatius_demo/params.json" title="Online demo for scene ignatius" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="10" class="w120">ignatius</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">12.74</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.400</span>
+
+</td>
+        
+        <td data-sort-value="156"><span class="table__allowcopy">0.551</span>
+
+</td>
+        
+        <td data-sort-value="111"><span class="table__allowcopy">2h 54m 26s</span>
+
+</td>
+        <td data-sort-value="18"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/meetingroom.zip" title="Download checkpoint and predictions for scene meetingroom" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/meetingroom_demo/params.json" title="Online demo for scene meetingroom" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="13" class="w120">meetingroom</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">14.38</span>
+
+</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">0.509</span>
+
+</td>
+        
+        <td data-sort-value="158"><span class="table__allowcopy">0.591</span>
+
+</td>
+        
+        <td data-sort-value="110"><span class="table__allowcopy">2h 48m 23s</span>
+
+</td>
+        <td data-sort-value="19"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/colmap/tanksandtemples/truck.zip" title="Download checkpoint and predictions for scene truck" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          <a href="./demos/mesh/?p=https://huggingface.co/datasets/jkulhanek/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/truck_demo/params.json" title="Online demo for scene truck" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="20" class="w120">truck</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">13.35</span>
+
+</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">0.507</span>
+
+</td>
+        
+        <td data-sort-value="153"><span class="table__allowcopy">0.545</span>
+
+</td>
+        
+        <td data-sort-value="106"><span class="table__allowcopy">2h 39m 37s</span>
+
+</td>
+        <td data-sort-value="20"><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">11.92</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.436</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.606</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">5h 16m 11s</span>
+
+</td>
+        <td><span class="table__allowcopy">0.00 MB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>

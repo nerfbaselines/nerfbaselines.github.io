@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method GS-W</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/nerfbaselines/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/nerfbaselines/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/nerfbaselines/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      GS-W<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    Official GS-W implementation - 3DGS modified to handle appearance changes and transient objects. A reference view used to provide appearance conditioning. Note, that the method uses huge appearance embeddings (per-Gaussian) and appearance modeling has a large memory footprint.
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://eastbeanzhang.github.io/GS-W/" class="text-blue link-underline">https://eastbeanzhang.github.io/GS-W/</a></div>
+      
+      
+      <div>Paper: <a href="https://arxiv.org/pdf/2403.15704.pdf" class="text-blue link-underline">Gaussian in the Wild: 3D Gaussian Splatting for Unconstrained Image Collections</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Dongbin Zhang, Chuming Wang, Weitao Wang, Peihao Li, Minghan Qin, Haoqian Wang</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=phototourism class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Photo Tourism
+      </h2>
+      <p class="text-justify">Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (ascending)">LPIPS <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/gaussian-splatting-wild/phototourism/sacre-coeur.zip" title="Download checkpoint and predictions for scene Sacre Coeur" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">Sacre Coeur</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">19.73</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 23.24</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.824</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.8632</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">0.210</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's LPIPS: 0.13</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">1h 8m 56s</span>
+
+</td>
+        <td data-sort-value="12"><span class="table__allowcopy">18.80 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/gaussian-splatting-wild/phototourism/trevi-fountain.zip" title="Download checkpoint and predictions for scene Trevi Fountain" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">Trevi Fountain</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">20.06</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 22.91</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.724</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.8014</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">0.272</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's LPIPS: 0.1563</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">1h 21m 34s</span>
+
+</td>
+        <td data-sort-value="14"><span class="table__allowcopy">27.92 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/gaussian-splatting-wild/phototourism/brandenburg-gate.zip" title="Download checkpoint and predictions for scene Brandenburg Gate" class="ti table__action ti-download ti-blue"></a>
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">Brandenburg Gate</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">24.35</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 27.96</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">0.903</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.9319</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">0.155</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's LPIPS: 0.0862</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">1h 10m 60s</span>
+
+</td>
+        <td data-sort-value="13"><span class="table__allowcopy">19.06 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">21.38</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 24.70</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">0.817</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.865</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">0.213</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's LPIPS: 0.124</span>
+  <p>The original paper reports metrics for test images where the appearance embedding is estimated from the full test image, not just the left half as in the official evaluation protocol. The reported numbers are computed using the official evaluation protocol and are, therefore, lower than the numbers reported in the paper.</p>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">1h 13m 50s</span>
+
+</td>
+        <td><span class="table__allowcopy">21.93 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>

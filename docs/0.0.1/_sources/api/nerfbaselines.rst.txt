@@ -1,0 +1,6 @@
+nerfbaselines
+=============
+.. automodule:: nerfbaselines
+   :members:
+   :undoc-members:
+   :show-inheritance:

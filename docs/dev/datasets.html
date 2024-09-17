@@ -1,0 +1,703 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Datasets" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="datasets.html" />
+<meta property="og:site_name" content="NerfBaselines" />
+<meta property="og:description" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman,, Paper, https://arxiv.org/pdf/..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="/_images/social_previews/summary_datasets_8c9c5d1c.png" />
+<meta property="og:image:alt" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Pete..." />
+<meta name="description" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman,, Paper, https://arxiv.org/pdf/..." />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="nerfbaselines" href="cli.html" /><link rel="prev" title="Methods" href="methods.html" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
+        <title>Datasets - NerfBaselines documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=3d61a3a1" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">NerfBaselines  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+    <span class="sidebar-brand-text">NerfBaselines  documentation<span class="sidebar-brand-version">Version: dev</span></span>
+  </div>
+  
+</a>
+<div class="sidebar-brand-links">
+  <a href="https://jkulhanek.com/nerfbaselines/"><i class="ti ti-globe"></i> Website</a> &middot;
+  <a href="https://github.com/jkulhanek/nerfbaselines"><i class="ti ti-brand-github-filled"></i> GitHub</a> &middot;
+  <a href="https://arxiv.org/pdf/2406.17345.pdf"><i class="ti ti-file-type-pdf"></i> Paper</a>
+</div><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-custom-data.html">Using custom data</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="adding-new-methods.html">Adding new methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-dataset-loader.html">Custom dataset loader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding-new-datasets.html">Adding new datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends.html">Isolated backends</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">CLI</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/modules.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.html">nerfbaselines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.backends.html">nerfbaselines.backends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.cameras.html">nerfbaselines.cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.datasets.html">nerfbaselines.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.evaluation.html">nerfbaselines.evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.io.html">nerfbaselines.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.logging.html">nerfbaselines.logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.metrics.html">nerfbaselines.metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.results.html">nerfbaselines.results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.training.html">nerfbaselines.training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.utils.html">nerfbaselines.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.viewer.html">nerfbaselines.viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.web.html">nerfbaselines.web</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+<div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    Version: dev
+    <span class="fa fa-caret-down"></span>
+  </span>
+  <div class="rst-other-versions">
+    <dl>
+      <dt>Versions</dt>
+      
+        
+        
+          
+        
+        
+        
+        <dd class="rst-current-item"><a href="/nerfbaselines/docs/dev/">dev</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/">latest</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.2.1/">1.2.1</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.2.0/">1.2.0</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.1.0/">1.1.0</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.0.2/">1.0.2</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.0.1/">1.0.1</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/1.0.0/">1.0.0</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.15/">0.0.15</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.14/">0.0.14</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.13/">0.0.13</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.12/">0.0.12</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.11/">0.0.11</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.10/">0.0.10</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.9/">0.0.9</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.8/">0.0.8</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.7/">0.0.7</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.6/">0.0.6</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.5/">0.0.5</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.4/">0.0.4</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.3/">0.0.3</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.2/">0.0.2</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/nerfbaselines/docs/0.0.1/">0.0.1</a></dd>
+        
+      
+    </dl>
+  </div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="datasets">
+<h1>Datasets<a class="headerlink" href="#datasets" title="Link to this heading">¶</a></h1>
+<section id="mipnerf360">
+<h2>Mip-NeRF 360<a class="headerlink" href="#mipnerf360" title="Link to this heading">¶</a></h2>
+<p class="rubric">Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2111.12077.pdf">https://arxiv.org/pdf/2111.12077.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://jonbarron.info/mipnerf360/">https://jonbarron.info/mipnerf360/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">Mip-NeRF 360</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/jkulhanek/nerfbaselines/blob/ef9a4a3/nerfbaselines/evaluation.py#L256-L258">nerf (source code)</a></p>
+</dd>
+</dl>
+<p>Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
+</section>
+<section id="tanksandtemples">
+<h2>Tanks and Temples<a class="headerlink" href="#tanksandtemples" title="Link to this heading">¶</a></h2>
+<p class="rubric">Tanks and Temples: Benchmarking Large-Scale Scene Reconstruction</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Arno Knapitsch, Jaesik Park, Qian-Yi Zhou, Vladlen Koltun</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://storage.googleapis.com/t2-downloads/paper/tanks-and-temples.pdf">https://storage.googleapis.com/t2-downloads/paper/tanks-and-temples.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://www.tanksandtemples.org/">https://www.tanksandtemples.org/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">Tanks and Temples</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/jkulhanek/nerfbaselines/blob/ef9a4a3/nerfbaselines/evaluation.py#L218-L253">default (source code)</a></p>
+</dd>
+</dl>
+<p>Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.</p>
+</section>
+<section id="seathru-nerf">
+<h2>SeaThru-NeRF<a class="headerlink" href="#seathru-nerf" title="Link to this heading">¶</a></h2>
+<p class="rubric">SeaThru-NeRF: Neural Radiance Fields in Scattering Media</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Deborah Levy, Amit Peleg, Naama Pearl, Dan Rosenbaum, Derya Akkaynak, Tali Treibitz, Simon Korman</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://openaccess.thecvf.com/content/CVPR2023/papers/Levy_SeaThru-NeRF_Neural_Radiance_Fields_in_Scattering_Media_CVPR_2023_paper.pdf">https://openaccess.thecvf.com/content/CVPR2023/papers/Levy_SeaThru-NeRF_Neural_Radiance_Fields_in_Scattering_Media_CVPR_2023_paper.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://sea-thru-nerf.github.io/">https://sea-thru-nerf.github.io/</a></p>
+</dd>
+<dt class="field-even">Licenses<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/deborahLevy130/seathru_NeRF/master/LICENSE">Apache 2.0</a></p>
+</dd>
+<dt class="field-odd">ID<span class="colon">:</span></dt>
+<dd class="field-odd">SeaThru-NeRF</dd>
+<dt class="field-even">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/jkulhanek/nerfbaselines/blob/ef9a4a3/nerfbaselines/evaluation.py#L218-L253">default (source code)</a></p>
+</dd>
+</dl>
+<p>SeaThru-NeRF dataset contains four underwater forward-facing scenes.</p>
+</section>
+<section id="phototourism">
+<h2>Photo Tourism<a class="headerlink" href="#phototourism" title="Link to this heading">¶</a></h2>
+<p class="rubric">Photo Tourism: Exploring Photo Collections in 3D</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Noah Snavely, Steven M. Seitz, Richard Szeliski</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://phototour.cs.washington.edu/Photo_Tourism.pdf">https://phototour.cs.washington.edu/Photo_Tourism.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://phototour.cs.washington.edu/">https://phototour.cs.washington.edu/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">Photo Tourism</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/jkulhanek/nerfbaselines/blob/ef9a4a3/nerfbaselines/datasets/phototourism.py#L211-L255">nerfw (source code)</a></p>
+</dd>
+</dl>
+<p>Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.</p>
+</section>
+<section id="blender">
+<h2>Blender<a class="headerlink" href="#blender" title="Link to this heading">¶</a></h2>
+<p class="rubric">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2003.08934.pdf">https://arxiv.org/pdf/2003.08934.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://www.matthewtancik.com/nerf">https://www.matthewtancik.com/nerf</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">Blender</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/jkulhanek/nerfbaselines/blob/ef9a4a3/nerfbaselines/evaluation.py#L256-L258">nerf (source code)</a></p>
+</dd>
+</dl>
+<p>Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
+</section>
+<section id="llff">
+<h2>LLFF<a class="headerlink" href="#llff" title="Link to this heading">¶</a></h2>
+<p class="rubric">LLFF: A Large-Scale, Long-Form Video Dataset for 3D Scene Understanding</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Ben Mildenhall, Pratul P. Srinivasan, Rodrigo Ortiz-Cayon, Nima Khademi Kalantari, Ravi Ramamoorthi, Ren Ng, Abhishek Kar</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/1905.00889.pdf">https://arxiv.org/pdf/1905.00889.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://bmild.github.io/llff/">https://bmild.github.io/llff/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">LLFF</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/jkulhanek/nerfbaselines/blob/ef9a4a3/nerfbaselines/evaluation.py#L256-L258">nerf (source code)</a></p>
+</dd>
+</dl>
+<p>LLFF is a dataset of forward-facing scenes with a small variation in camera pose. NeRF methods usually use NDC-space parametrization for the scene representation.</p>
+</section>
+<section id="nerfstudio">
+<h2>Nerfstudio<a class="headerlink" href="#nerfstudio" title="Link to this heading">¶</a></h2>
+<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://nerf.studio">https://nerf.studio</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">Nerfstudio</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/jkulhanek/nerfbaselines/blob/ef9a4a3/nerfbaselines/evaluation.py#L218-L253">default (source code)</a></p>
+</dd>
+</dl>
+<p>Nerfstudio Dataset includes 10 in-the-wild captures obtained using either a mobile phone or a mirror-less camera with a fisheye lens. We processed the data using either COLMAP or the Polycam app to obtain camera poses and intrinsic parameters.</p>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="cli.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">nerfbaselines</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="methods.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Methods</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Jonas Kulhanek
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/jkulhanek/nerfbaselines" aria-label="GitHub">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+        </a>
+              <a class="muted-link " href="https://jkulhanek.com/nerfbaselines" aria-label="Website">
+            <svg viewBox="2 2 21 21" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" />
+            </svg>
+        </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Datasets</a><ul>
+<li><a class="reference internal" href="#mipnerf360">Mip-NeRF 360</a></li>
+<li><a class="reference internal" href="#tanksandtemples">Tanks and Temples</a></li>
+<li><a class="reference internal" href="#seathru-nerf">SeaThru-NeRF</a></li>
+<li><a class="reference internal" href="#phototourism">Photo Tourism</a></li>
+<li><a class="reference internal" href="#blender">Blender</a></li>
+<li><a class="reference internal" href="#llff">LLFF</a></li>
+<li><a class="reference internal" href="#nerfstudio">Nerfstudio</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    </body>
+</html>

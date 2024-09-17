@@ -1,0 +1,35 @@
+nerfbaselines.datasets
+======================
+.. automodule:: nerfbaselines.datasets
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+nerfbaselines.datasets.colmap
+-----------------------------
+
+.. automodule:: nerfbaselines.datasets.colmap
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+nerfbaselines.datasets.mipnerf360
+---------------------------------
+
+.. automodule:: nerfbaselines.datasets.mipnerf360
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+nerfbaselines.datasets.nerfstudio
+---------------------------------
+
+.. automodule:: nerfbaselines.datasets.nerfstudio
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
