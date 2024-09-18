@@ -14,10 +14,9 @@
 </div>
 </div>
 
-
 NerfBaselines is a framework for **evaluating and comparing existing NeRF and 3DGS methods**. Currently, most official implementations use different dataset loaders, evaluation protocols, and metrics, which renders benchmarking difficult. Therefore, this project aims to provide a **unified interface** for running and evaluating methods on different datasets in a consistent way using the same metrics. But instead of reimplementing the methods, **we use the official implementations** and wrap them so that they can be run easily using the same interface.
 
-Please visit the <a href="https://nerfbaselines.github.io">project page to see the results</a> of implemented methods on dataset benchmarks.<br/>
+Please visit the <a href="https://nerfbaselines.github.io/">project page to see the results</a> of implemented methods on dataset benchmarks.<br/>
 
 <h3 style="margin-top:1em;text-align:center">
 <a href="https://nerfbaselines.github.io/"><img style="height:1em;position:relative;top:0.12em" src='data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="2 2 21 21" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" /></svg>' /> Web</a> &nbsp;&nbsp;|&nbsp;&nbsp;
@@ -31,10 +30,14 @@ Please visit the <a href="https://nerfbaselines.github.io">project page to see t
 - **Reproducibility**: All methods are run using the official implementations.
 - **Easy to use**: The CLI is easy to use and requires minimal setup.
 - **Extensible**: New methods can be added easily by wrapping the official implementation.
-- **Public benchmarks**: The results of all methods (and checkpoints) are available on [the website](https://nerfbaselines.github.io).
+- **Public benchmarks**: The results of all methods (and checkpoints) are available on [the website](https://nerfbaselines.github.io/).
 
 For the full list of implemented methods, see the [methods](methods.md) section.
 For the full list of available datasets (datasets which support automatic download), see the [datasets](datasets.md) section.
+
+```{tip}
+NerfBaselines now supports online demos for 3DGS-based methods. Check out the demos on the [benchmark page](https://nerfbaselines.github.io/)!
+```
 
 ## Contents
 The documentation is organized into several sections with increasing level of detail and difficulty:
