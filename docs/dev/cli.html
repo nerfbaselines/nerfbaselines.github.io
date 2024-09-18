@@ -476,11 +476,6 @@
 <span id="cmdoption-nerfbaselines-download-dataset-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-download-dataset-o" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-download-dataset-v">
-<span id="cmdoption-nerfbaselines-download-dataset-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-download-dataset-v" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
 <p class="rubric">Arguments</p>
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-download-dataset-arg-DATASET">
@@ -528,14 +523,15 @@
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-v">
-<span id="cmdoption-nerfbaselines-export-demo-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-v" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-data" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-train-embedding">
+<span class="sig-name descname"><span class="pre">--train-embedding</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;train_embedding&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-train-embedding" title="Link to this definition">¶</a></dt>
+<dd><p>Select the train embedding index to use for the demo.</p>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-set">
@@ -673,11 +669,6 @@
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-output-artifact-v">
-<span id="cmdoption-nerfbaselines-fix-output-artifact-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-output-artifact-v" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-output-artifact-force">
 <span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-output-artifact-force" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
@@ -760,7 +751,7 @@
 <span class="sig-name descname"><span class="pre">--method</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;method&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method-method" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>zipnerf | tensorf | wild-gaussians | nerfw-reimpl | tetra-nerf | gaussian-opacity-fields | mipnerf360 | gaussian-splatting | camp | gsplat | kplanes | nerf | scaffold-gs | mip-splatting | gaussian-splatting-wild | 2d-gaussian-splatting | nerfonthego | nerfacto | colmap | seathru-nerf | instant-ngp</p>
+<dd class="field-odd"><p>gaussian-splatting | seathru-nerf | gaussian-opacity-fields | 2d-gaussian-splatting | nerfacto | wild-gaussians | nerfw-reimpl | zipnerf | scaffold-gs | tetra-nerf | camp | colmap | gaussian-splatting-wild | kplanes | mipnerf360 | nerfonthego | instant-ngp | tensorf | gsplat | mip-splatting | nerf</p>
 </dd>
 </dl>
 </dd></dl>
@@ -775,11 +766,6 @@
 <span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method-force" title="Link to this definition">¶</a></dt>
 <dd><p>Overwrite existing specs</p>
 </dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-method-v">
-<span id="cmdoption-nerfbaselines-install-method-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method-v" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-method-backend">
@@ -828,11 +814,6 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-split">
 <span class="sig-name descname"><span class="pre">--split</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;split&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-split" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-v">
-<span id="cmdoption-nerfbaselines-render-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-v" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="std option">
@@ -892,11 +873,6 @@
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-trajectory-v">
-<span id="cmdoption-nerfbaselines-render-trajectory-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-trajectory-v" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-trajectory-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-trajectory-backend" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -928,7 +904,7 @@
 <dd><p><strong>Required</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>zipnerf | tensorf | wild-gaussians | nerfw-reimpl | tetra-nerf | gaussian-opacity-fields | mipnerf360 | gaussian-splatting | camp | gsplat | kplanes | nerf | scaffold-gs | mip-splatting | gaussian-splatting-wild | 2d-gaussian-splatting | nerfonthego | nerfacto | colmap | seathru-nerf | instant-ngp</p>
+<dd class="field-odd"><p>gaussian-splatting | seathru-nerf | gaussian-opacity-fields | 2d-gaussian-splatting | nerfacto | wild-gaussians | nerfw-reimpl | zipnerf | scaffold-gs | tetra-nerf | camp | colmap | gaussian-splatting-wild | kplanes | mipnerf360 | nerfonthego | instant-ngp | tensorf | gsplat | mip-splatting | nerf</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1082,11 +1058,6 @@
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-v">
-<span id="cmdoption-nerfbaselines-train-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-v" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-save-iters">
 <span class="sig-name descname"><span class="pre">--save-iters</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;save_iters&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-save-iters" title="Link to this definition">¶</a></dt>
 <dd><p>When to save the model</p>
@@ -1162,11 +1133,6 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-viewer-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-viewer-data" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-viewer-v">
-<span id="cmdoption-nerfbaselines-viewer-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-viewer-v" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="std option">

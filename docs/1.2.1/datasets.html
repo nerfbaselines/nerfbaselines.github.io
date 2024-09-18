@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="datasets.html" />
 <meta property="og:site_name" content="NerfBaselines" />
-<meta property="og:description" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman,, Paper, https://arxiv.org/pdf/..." />
+<meta property="og:description" content="Blender: NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis Authors, Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng,, Paper, ..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_datasets_8c9c5d1c.png" />
-<meta property="og:image:alt" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Pete..." />
-<meta name="description" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman,, Paper, https://arxiv.org/pdf/..." />
+<meta property="og:image" content="/_images/social_previews/summary_datasets_86afce87.png" />
+<meta property="og:image:alt" content="Blender: NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis Authors, Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Ba..." />
+<meta name="description" content="Blender: NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis Authors, Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng,, Paper, ..." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="nerfbaselines" href="cli.html" /><link rel="prev" title="Methods" href="methods.html" />
 
@@ -462,6 +462,46 @@
         <article role="main" id="furo-main-content">
           <section id="datasets">
 <h1>Datasets<a class="headerlink" href="#datasets" title="Link to this heading">¶</a></h1>
+<section id="blender">
+<h2>Blender<a class="headerlink" href="#blender" title="Link to this heading">¶</a></h2>
+<p class="rubric">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2003.08934.pdf">https://arxiv.org/pdf/2003.08934.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://www.matthewtancik.com/nerf">https://www.matthewtancik.com/nerf</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">Blender</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/3f5fb28/nerfbaselines/evaluation.py#L256-L258">nerf (source code)</a></p>
+</dd>
+</dl>
+<p>Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
+</section>
+<section id="nerfstudio">
+<h2>Nerfstudio<a class="headerlink" href="#nerfstudio" title="Link to this heading">¶</a></h2>
+<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://nerf.studio">https://nerf.studio</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">Nerfstudio</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/3f5fb28/nerfbaselines/evaluation.py#L218-L253">default (source code)</a></p>
+</dd>
+</dl>
+<p>Nerfstudio Dataset includes 10 in-the-wild captures obtained using either a mobile phone or a mirror-less camera with a fisheye lens. We processed the data using either COLMAP or the Polycam app to obtain camera poses and intrinsic parameters.</p>
+</section>
 <section id="mipnerf360">
 <h2>Mip-NeRF 360<a class="headerlink" href="#mipnerf360" title="Link to this heading">¶</a></h2>
 <p class="rubric">Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</p>
@@ -545,26 +585,6 @@
 </dl>
 <p>Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.</p>
 </section>
-<section id="blender">
-<h2>Blender<a class="headerlink" href="#blender" title="Link to this heading">¶</a></h2>
-<p class="rubric">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2003.08934.pdf">https://arxiv.org/pdf/2003.08934.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.matthewtancik.com/nerf">https://www.matthewtancik.com/nerf</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">Blender</dd>
-<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/3f5fb28/nerfbaselines/evaluation.py#L256-L258">nerf (source code)</a></p>
-</dd>
-</dl>
-<p>Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
-</section>
 <section id="llff">
 <h2>LLFF<a class="headerlink" href="#llff" title="Link to this heading">¶</a></h2>
 <p class="rubric">LLFF: A Large-Scale, Long-Form Video Dataset for 3D Scene Understanding</p>
@@ -584,26 +604,6 @@
 </dd>
 </dl>
 <p>LLFF is a dataset of forward-facing scenes with a small variation in camera pose. NeRF methods usually use NDC-space parametrization for the scene representation.</p>
-</section>
-<section id="nerfstudio">
-<h2>Nerfstudio<a class="headerlink" href="#nerfstudio" title="Link to this heading">¶</a></h2>
-<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://nerf.studio">https://nerf.studio</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">Nerfstudio</dd>
-<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/3f5fb28/nerfbaselines/evaluation.py#L218-L253">default (source code)</a></p>
-</dd>
-</dl>
-<p>Nerfstudio Dataset includes 10 in-the-wild captures obtained using either a mobile phone or a mirror-less camera with a fisheye lens. We processed the data using either COLMAP or the Polycam app to obtain camera poses and intrinsic parameters.</p>
 </section>
 </section>
 
@@ -675,13 +675,13 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Datasets</a><ul>
+<li><a class="reference internal" href="#blender">Blender</a></li>
+<li><a class="reference internal" href="#nerfstudio">Nerfstudio</a></li>
 <li><a class="reference internal" href="#mipnerf360">Mip-NeRF 360</a></li>
 <li><a class="reference internal" href="#tanksandtemples">Tanks and Temples</a></li>
 <li><a class="reference internal" href="#seathru-nerf">SeaThru-NeRF</a></li>
 <li><a class="reference internal" href="#phototourism">Photo Tourism</a></li>
-<li><a class="reference internal" href="#blender">Blender</a></li>
 <li><a class="reference internal" href="#llff">LLFF</a></li>
-<li><a class="reference internal" href="#nerfstudio">Nerfstudio</a></li>
 </ul>
 </li>
 </ul>
