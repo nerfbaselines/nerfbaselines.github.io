@@ -1,0 +1,26 @@
+nerfbaselines.backends
+======================
+.. automodule:: nerfbaselines.backends
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+nerfbaselines.backends.protocol\_shm\_pickle
+--------------------------------------------
+
+.. automodule:: nerfbaselines.backends.protocol_shm_pickle
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+nerfbaselines.backends.protocol\_tcp\_pickle
+--------------------------------------------
+
+.. automodule:: nerfbaselines.backends.protocol_tcp_pickle
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:

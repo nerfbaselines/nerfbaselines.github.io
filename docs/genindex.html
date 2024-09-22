@@ -8,8 +8,9 @@
 <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=3d61a3a1" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=5792dc8b" />
     
     
 
@@ -191,7 +192,7 @@
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
-    <span class="sidebar-brand-text">NerfBaselines  documentation<span class="sidebar-brand-version">Version: 1.2.3</span></span>
+    <span class="sidebar-brand-text">NerfBaselines  documentation<span class="sidebar-brand-version">Version: 1.2.4</span></span>
   </div>
   
 </a>
@@ -244,7 +245,7 @@
 </div>
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    Version: 1.2.3
+    Version: 1.2.4
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
@@ -265,6 +266,13 @@
         
         
         <dd class="rst-current-item"><a href="/docs/">latest</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/docs/1.2.3/">1.2.3</a></dd>
         
       
         
@@ -469,6 +477,8 @@
         <ul>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-backend">nerfbaselines-export-demo command line option</a>
 </li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-backend">nerfbaselines-export-mesh command line option</a>
+</li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-backend">nerfbaselines-fix-checkpoint command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-backend">nerfbaselines-fix-output-artifact command line option</a>
@@ -501,6 +511,8 @@
         <ul>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-checkpoint">nerfbaselines-export-demo command line option</a>
 </li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-checkpoint">nerfbaselines-export-mesh command line option</a>
+</li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-checkpoint">nerfbaselines-fix-checkpoint command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-render-checkpoint">nerfbaselines-render command line option</a>
@@ -517,6 +529,8 @@
 
         <ul>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-data">nerfbaselines-export-demo command line option</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-data">nerfbaselines-export-mesh command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-data">nerfbaselines-fix-checkpoint command line option</a>
 </li>
@@ -668,6 +682,8 @@
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-o">nerfbaselines-export-demo command line option</a>
 </li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-o">nerfbaselines-export-mesh command line option</a>
+</li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-output">nerfbaselines-fix-output-artifact command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-generate-dataset-results-output">nerfbaselines-generate-dataset-results command line option</a>
@@ -761,6 +777,8 @@
         <ul>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-set">nerfbaselines-export-demo command line option</a>
 </li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-set">nerfbaselines-export-mesh command line option</a>
+</li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-set">nerfbaselines-fix-checkpoint command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-test-method-set">nerfbaselines-test-method command line option</a>
@@ -807,6 +825,8 @@
     --verbose
 
         <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-v">nerfbaselines-export-mesh command line option</a>
+</li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">nerfbaselines-fix-checkpoint command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">nerfbaselines-shell command line option</a>
@@ -824,11 +844,15 @@
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-o">nerfbaselines-export-demo command line option</a>
 </li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-o">nerfbaselines-export-mesh command line option</a>
+</li>
         </ul></li>
         <li>
     -v
 
         <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-v">nerfbaselines-export-mesh command line option</a>
+</li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">nerfbaselines-fix-checkpoint command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">nerfbaselines-shell command line option</a>
@@ -1548,19 +1572,13 @@
 </li>
         <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.load_metrics_from_results">load_metrics_from_results() (in module nerfbaselines.results)</a>
 </li>
-        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.mipnerf360.load_mipnerf360_dataset">load_mipnerf360_dataset() (in module nerfbaselines.datasets.mipnerf360)</a>
-</li>
-        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.nerfonthego.load_nerfonthego_dataset">load_nerfonthego_dataset() (in module nerfbaselines.datasets.nerfonthego)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.nerfonthego.load_nerfonthego_dataset">load_nerfonthego_dataset() (in module nerfbaselines.datasets.nerfonthego)</a>
+</li>
         <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.nerfstudio.load_nerfstudio_dataset">load_nerfstudio_dataset() (in module nerfbaselines.datasets.nerfstudio)</a>
 </li>
-        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.phototourism.load_phototourism_dataset">load_phototourism_dataset() (in module nerfbaselines.datasets.phototourism)</a>
-</li>
         <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.seathru_nerf.load_seathru_nerf_dataset">load_seathru_nerf_dataset() (in module nerfbaselines.datasets.seathru_nerf)</a>
-</li>
-        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.tanksandtemples.load_tanksandtemples_dataset">load_tanksandtemples_dataset() (in module nerfbaselines.datasets.tanksandtemples)</a>
 </li>
         <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.load_trajectory">load_trajectory() (in module nerfbaselines.io)</a>
 </li>
@@ -1781,6 +1799,27 @@
           <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-train-embedding">--train-embedding</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-demo-o">-o</a>
+</li>
+        </ul></li>
+        <li>
+    nerfbaselines-export-mesh command line option
+
+        <ul>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-backend">--backend</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-checkpoint">--checkpoint</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-data">--data</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-o">--output</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-set">--set</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-v">--verbose</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-o">-o</a>
+</li>
+          <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-v">-v</a>
 </li>
         </ul></li>
         <li>
