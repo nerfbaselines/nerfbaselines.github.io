@@ -1,0 +1,957 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method 3DGS-MCMC</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      3DGS-MCMC<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    3DGS-MCMC reinterprets 3D Gaussian Splatting as MCMC sampling, introducing noise-based updates and removing heuristic cloning strategies, leading to improved rendering quality, efficient Gaussian use, and robustness to initialization. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks and web demos.
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://ubc-vision.github.io/3dgs-mcmc/" class="text-blue link-underline">https://ubc-vision.github.io/3dgs-mcmc/</a></div>
+      
+      
+      <div>Paper: <a href="https://ubc-vision.github.io/3dgs-mcmc/paper.pdf" class="text-blue link-underline">3D Gaussian Splatting as Markov Chain Monte Carlo</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Shakiba Kheradmand, Daniel Rebain, Gopal Sharma, Weiwei Sun, Yang-Che Tseng, Hossam Isack, Abhishek Kar, Andrea Tagliasacchi, Kwang Moo Yi</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=mipnerf360 class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Mip-NeRF 360
+      </h2>
+      <p class="text-justify">Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/garden.zip" title="Download checkpoint and predictions for scene garden" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Fgarden_demo%2Fparams.json" title="Online demo for scene garden" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="4" class="w120">garden</td>
+        
+        <td data-sort-value="76"><span class="table__allowcopy">27.81</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 28.16</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="49"><span class="table__allowcopy">0.877</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.89</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="63"><span class="table__allowcopy">0.109</span>
+
+</td>
+        
+        <td data-sort-value="70"><span class="table__allowcopy">48m 5s</span>
+
+</td>
+        <td data-sort-value="79"><span class="table__allowcopy">35.23 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/bicycle.zip" title="Download checkpoint and predictions for scene bicycle" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Fbicycle_demo%2Fparams.json" title="Online demo for scene bicycle" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">bicycle</td>
+        
+        <td data-sort-value="74"><span class="table__allowcopy">25.69</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 26.15</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="47"><span class="table__allowcopy">0.799</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.81</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="65"><span class="table__allowcopy">0.194</span>
+
+</td>
+        
+        <td data-sort-value="71"><span class="table__allowcopy">49m 28s</span>
+
+</td>
+        <td data-sort-value="80"><span class="table__allowcopy">38.87 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/flowers.zip" title="Download checkpoint and predictions for scene flowers" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Fflowers_demo%2Fparams.json" title="Online demo for scene flowers" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="3" class="w120">flowers</td>
+        
+        <td data-sort-value="72"><span class="table__allowcopy">19.38</span>
+
+</td>
+        
+        <td data-sort-value="45"><span class="table__allowcopy">0.420</span>
+
+</td>
+        
+        <td data-sort-value="71"><span class="table__allowcopy">0.572</span>
+
+</td>
+        
+        <td data-sort-value="64"><span class="table__allowcopy">10m 20s</span>
+
+</td>
+        <td data-sort-value="72"><span class="table__allowcopy">5.53 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/treehill.zip" title="Download checkpoint and predictions for scene treehill" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Ftreehill_demo%2Fparams.json" title="Online demo for scene treehill" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="8" class="w120">treehill</td>
+        
+        <td data-sort-value="73"><span class="table__allowcopy">21.94</span>
+
+</td>
+        
+        <td data-sort-value="46"><span class="table__allowcopy">0.550</span>
+
+</td>
+        
+        <td data-sort-value="70"><span class="table__allowcopy">0.567</span>
+
+</td>
+        
+        <td data-sort-value="63"><span class="table__allowcopy">10m 16s</span>
+
+</td>
+        <td data-sort-value="73"><span class="table__allowcopy">5.58 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/stump.zip" title="Download checkpoint and predictions for scene stump" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Fstump_demo%2Fparams.json" title="Online demo for scene stump" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="7" class="w120">stump</td>
+        
+        <td data-sort-value="75"><span class="table__allowcopy">27.38</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 27.8</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="48"><span class="table__allowcopy">0.811</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.82</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="66"><span class="table__allowcopy">0.200</span>
+
+</td>
+        
+        <td data-sort-value="68"><span class="table__allowcopy">40m 48s</span>
+
+</td>
+        <td data-sort-value="78"><span class="table__allowcopy">34.43 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/kitchen.zip" title="Download checkpoint and predictions for scene kitchen" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Fkitchen_demo%2Fparams.json" title="Online demo for scene kitchen" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="5" class="w120">kitchen</td>
+        
+        <td data-sort-value="78"><span class="table__allowcopy">31.91</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 32.27</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="52"><span class="table__allowcopy">0.933</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.94</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="64"><span class="table__allowcopy">0.148</span>
+
+</td>
+        
+        <td data-sort-value="69"><span class="table__allowcopy">42m 32s</span>
+
+</td>
+        <td data-sort-value="76"><span class="table__allowcopy">20.35 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/bonsai.zip" title="Download checkpoint and predictions for scene bonsai" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Fbonsai_demo%2Fparams.json" title="Online demo for scene bonsai" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="1" class="w120">bonsai</td>
+        
+        <td data-sort-value="80"><span class="table__allowcopy">32.66</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 32.88</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="53"><span class="table__allowcopy">0.947</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.95</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="67"><span class="table__allowcopy">0.236</span>
+
+</td>
+        
+        <td data-sort-value="65"><span class="table__allowcopy">35m 14s</span>
+
+</td>
+        <td data-sort-value="74"><span class="table__allowcopy">14.88 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/counter.zip" title="Download checkpoint and predictions for scene counter" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Fcounter_demo%2Fparams.json" title="Online demo for scene counter" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="2" class="w120">counter</td>
+        
+        <td data-sort-value="77"><span class="table__allowcopy">29.32</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 29.51</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="50"><span class="table__allowcopy">0.916</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.92</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="68"><span class="table__allowcopy">0.238</span>
+
+</td>
+        
+        <td data-sort-value="66"><span class="table__allowcopy">38m 44s</span>
+
+</td>
+        <td data-sort-value="77"><span class="table__allowcopy">20.42 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/mipnerf360/room.zip" title="Download checkpoint and predictions for scene room" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fmipnerf360%2Froom_demo%2Fparams.json" title="Online demo for scene room" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="6" class="w120">room</td>
+        
+        <td data-sort-value="79"><span class="table__allowcopy">32.05</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 32.48</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="51"><span class="table__allowcopy">0.927</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.94</span>
+  <p>Authors evaluated on larger images which were downscaled to the target size (avoiding JPEG compression artifacts) instead of using the official provided downscaled images. As mentioned in the 3DGS paper, this increases results slightly ~0.5 dB PSNR.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="69"><span class="table__allowcopy">0.262</span>
+
+</td>
+        
+        <td data-sort-value="67"><span class="table__allowcopy">40m 43s</span>
+
+</td>
+        <td data-sort-value="75"><span class="table__allowcopy">18.96 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">27.57</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.798</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.281</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">35m 8s</span>
+
+</td>
+        <td><span class="table__allowcopy">21.58 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id=blender class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Blender
+      </h2>
+      <p class="text-justify">Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/blender/lego.zip" title="Download checkpoint and predictions for scene lego" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fblender%2Flego_demo%2Fparams.json" title="Online demo for scene lego" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="4" class="w120">lego</td>
+        
+        <td data-sort-value="67"><span class="table__allowcopy">34.40</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 36.01</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="99"><span class="table__allowcopy">0.979</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.98</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="36"><span class="table__allowcopy">0.026</span>
+
+</td>
+        
+        <td data-sort-value="20"><span class="table__allowcopy">5m 44s</span>
+
+</td>
+        <td data-sort-value="66"><span class="table__allowcopy">3.82 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/blender/drums.zip" title="Download checkpoint and predictions for scene drums" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fblender%2Fdrums_demo%2Fparams.json" title="Online demo for scene drums" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="1" class="w120">drums</td>
+        
+        <td data-sort-value="64"><span class="table__allowcopy">26.03</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 26.29</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="97"><span class="table__allowcopy">0.953</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.95</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="38"><span class="table__allowcopy">0.049</span>
+
+</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">5m 41s</span>
+
+</td>
+        <td data-sort-value="65"><span class="table__allowcopy">3.80 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/blender/ficus.zip" title="Download checkpoint and predictions for scene ficus" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fblender%2Fficus_demo%2Fparams.json" title="Online demo for scene ficus" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="2" class="w120">ficus</td>
+        
+        <td data-sort-value="68"><span class="table__allowcopy">34.54</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 35.07</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="102"><span class="table__allowcopy">0.987</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.99</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="33"><span class="table__allowcopy">0.014</span>
+
+</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">5m 9s</span>
+
+</td>
+        <td data-sort-value="64"><span class="table__allowcopy">3.71 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/blender/hotdog.zip" title="Download checkpoint and predictions for scene hotdog" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fblender%2Fhotdog_demo%2Fparams.json" title="Online demo for scene hotdog" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="3" class="w120">hotdog</td>
+        
+        <td data-sort-value="71"><span class="table__allowcopy">37.35</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 37.82</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="100"><span class="table__allowcopy">0.986</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.99</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="35"><span class="table__allowcopy">0.026</span>
+
+</td>
+        
+        <td data-sort-value="23"><span class="table__allowcopy">8m 26s</span>
+
+</td>
+        <td data-sort-value="71"><span class="table__allowcopy">4.18 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/blender/materials.zip" title="Download checkpoint and predictions for scene materials" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fblender%2Fmaterials_demo%2Fparams.json" title="Online demo for scene materials" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="5" class="w120">materials</td>
+        
+        <td data-sort-value="65"><span class="table__allowcopy">30.09</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 30.59</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="98"><span class="table__allowcopy">0.962</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.96</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="37"><span class="table__allowcopy">0.044</span>
+
+</td>
+        
+        <td data-sort-value="21"><span class="table__allowcopy">6m 12s</span>
+
+</td>
+        <td data-sort-value="68"><span class="table__allowcopy">3.89 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/blender/mic.zip" title="Download checkpoint and predictions for scene mic" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fblender%2Fmic_demo%2Fparams.json" title="Online demo for scene mic" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="6" class="w120">mic</td>
+        
+        <td data-sort-value="70"><span class="table__allowcopy">36.10</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 37.29</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="103"><span class="table__allowcopy">0.992</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.99</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="32"><span class="table__allowcopy">0.008</span>
+
+</td>
+        
+        <td data-sort-value="19"><span class="table__allowcopy">5m 43s</span>
+
+</td>
+        <td data-sort-value="69"><span class="table__allowcopy">3.92 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/blender/ship.zip" title="Download checkpoint and predictions for scene ship" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fblender%2Fship_demo%2Fparams.json" title="Online demo for scene ship" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="7" class="w120">ship</td>
+        
+        <td data-sort-value="66"><span class="table__allowcopy">30.59</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 30.82</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="96"><span class="table__allowcopy">0.906</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.91</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="39"><span class="table__allowcopy">0.134</span>
+
+</td>
+        
+        <td data-sort-value="22"><span class="table__allowcopy">7m 11s</span>
+
+</td>
+        <td data-sort-value="70"><span class="table__allowcopy">3.93 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/3dgs-mcmc/blender/chair.zip" title="Download checkpoint and predictions for scene chair" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="./demos/3dgs/?p=https%3A%2F%2Fhuggingface.co%2Fdatasets%2Fjkulhanek%2Fnerfbaselines-supplementary%2Fresolve%2Fmain%2F3dgs-mcmc%2Fblender%2Fchair_demo%2Fparams.json" title="Online demo for scene chair" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">chair</td>
+        
+        <td data-sort-value="69"><span class="table__allowcopy">35.45</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 36.51</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="101"><span class="table__allowcopy">0.986</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.99</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="34"><span class="table__allowcopy">0.020</span>
+
+</td>
+        
+        <td data-sort-value="18"><span class="table__allowcopy">5m 41s</span>
+
+</td>
+        <td data-sort-value="67"><span class="table__allowcopy">3.86 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">33.07</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 33.80</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">0.969</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.970</span>
+  <p>Exact hyperparameters for Blender dataset are not provided in the released source code. The default parameters were used in NerfBaselines likely leading to worse results.</p>
+</div>
+
+
+</td>
+        
+        <td><span class="table__allowcopy">0.040</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">6m 13s</span>
+
+</td>
+        <td><span class="table__allowcopy">3.89 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>
