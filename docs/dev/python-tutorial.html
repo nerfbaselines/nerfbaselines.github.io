@@ -22,6 +22,7 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
     <link rel="stylesheet" type="text/css" href="_static/styles.css?v=5792dc8b" />
     
@@ -224,7 +225,6 @@
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-custom-data.html">Using custom data</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Python tutorial</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#using-trainer-class">Using Trainer class</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
 <ul>
@@ -483,6 +483,7 @@
           <section id="python-tutorial">
 <h1>Python tutorial<a class="headerlink" href="#python-tutorial" title="Link to this heading">¶</a></h1>
 <p>Apart from the CLI, NerfBaselines also provides a Python API that allows you to interact with the methods programmatically. This tutorial will guide you through the process of using the Python API to train a method, evaluate it, and visualize the results.</p>
+<p class="sd-text-left"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-outline-primary reference external" href="https://colab.research.google.com/github/nerfbaselines/nerfbaselines/blob/main/docs/python-tutorial.ipynb"><span>Open in Colab</span></a></p>
 <section id="rendering-images">
 <h2>Rendering images<a class="headerlink" href="#rendering-images" title="Link to this heading">¶</a></h2>
 <p>In this section, we will demonstrate how to render custom images using the Python API. We assume you already have a checkpoint of your model obtained either by downloading the checkpoint from <a class="reference external" href="https://nerfbaselines.github.io">nerfbaselines.github.io</a>, by running the <code class="docutils literal notranslate"><span class="pre">nerfbaselines</span> <span class="pre">train</span></code> command, or by training the method using the Python API shown at the end of this tutorial.</p>
@@ -722,9 +723,8 @@ Number of points at initialisation :  54275 [22/09 22:13:51]
 </details>
 </div>
 </section>
-</section>
 <section id="using-trainer-class">
-<h1>Using Trainer class<a class="headerlink" href="#using-trainer-class" title="Link to this heading">¶</a></h1>
+<h2>Using Trainer class<a class="headerlink" href="#using-trainer-class" title="Link to this heading">¶</a></h2>
 <p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Trainer</span></code> class provides a high-level interface for training a method, and it takes care of loading the dataset, creating the model, and saving the checkpoints. The following code snippet extends the previous example and optimizes the model using the <code class="xref py py-class docutils literal notranslate"><span class="pre">Trainer</span></code> class.</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input above-output-prompt docutils container">
@@ -858,6 +858,7 @@ training: 100%|██████████| 100/100 [00:53&lt;00:00,  1.87it/
 </details>
 </div>
 </section>
+</section>
 
         </article>
       </div>
@@ -929,9 +930,9 @@ training: 100%|██████████| 100/100 [00:53&lt;00:00,  1.87it/
 <li><a class="reference internal" href="#">Python tutorial</a><ul>
 <li><a class="reference internal" href="#rendering-images">Rendering images</a></li>
 <li><a class="reference internal" href="#training-a-method">Training a method</a></li>
+<li><a class="reference internal" href="#using-trainer-class">Using Trainer class</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#using-trainer-class">Using Trainer class</a></li>
 </ul>
 
           </div>
@@ -947,5 +948,6 @@ training: 100%|██████████| 100/100 [00:53&lt;00:00,  1.87it/
     <script src="_static/scripts/furo.js?v=5fa4622c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
     </body>
 </html>
