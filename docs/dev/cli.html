@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="cli.html" />
 <meta property="og:site_name" content="NerfBaselines" />
-<meta property="og:description" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Options Environment variables fix-checkpoint: Options Environment variables fix-output-artifact: Options Environment var..." />
+<meta property="og:description" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Export a demo from a trained model. The interactive demo will be a website (index.html) that can be opened in the browse..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_cli_48652110.png" />
-<meta property="og:image:alt" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Options Environment variables fix-checkpoint: Options Environment variables fix-..." />
-<meta name="description" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Options Environment variables fix-checkpoint: Options Environment variables fix-output-artifact: Options Environment var..." />
+<meta property="og:image" content="/_images/social_previews/summary_cli_d5b5a258.png" />
+<meta property="og:image:alt" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Export a demo from a trained model. The interactive demo will be a website (inde..." />
+<meta name="description" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Export a demo from a trained model. The interactive demo will be a website (index.html) that can be opened in the browse..." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="API Reference" href="api/modules.html" /><link rel="prev" title="Datasets" href="datasets.html" />
 
@@ -513,6 +513,7 @@
 </section>
 <section id="nerfbaselines-export-demo">
 <h2>export-demo<a class="headerlink" href="#nerfbaselines-export-demo" title="Link to this heading">¶</a></h2>
+<p>Export a demo from a trained model. The interactive demo will be a website (index.html) that can be opened in the browser. Only some methods support this feature.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>export-demo<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -562,6 +563,63 @@
 <span class="sig-name descname"><span class="pre">NERFBASELINES_BACKEND</span></span></dt>
 <dd><blockquote>
 <div><p>Provide a default for <a class="reference internal" href="#cmdoption-nerfbaselines-export-demo-backend"><code class="xref std std-option docutils literal notranslate"><span class="pre">--backend</span></code></a></p>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="nerfbaselines-export-mesh">
+<h2>export-mesh<a class="headerlink" href="#nerfbaselines-export-mesh" title="Link to this heading">¶</a></h2>
+<p>Export a mesh from a trained model. Only some methods support this feature.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>export-mesh<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-checkpoint">
+<span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-checkpoint" title="Link to this definition">¶</a></dt>
+<dd><p><strong>Required</strong> Path to the checkpoint directory. This directory should contain the nb-info.json file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-o">
+<span id="cmdoption-nerfbaselines-export-mesh-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-o" title="Link to this definition">¶</a></dt>
+<dd><p><strong>Required</strong> Path to a directory to save the mesh.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-v">
+<span id="cmdoption-nerfbaselines-export-mesh-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-v" title="Link to this definition">¶</a></dt>
+<dd><p>Enable verbose logging</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-data">
+<span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-data" title="Link to this definition">¶</a></dt>
+<dd><p>Path to a dataset to use for exporting the mesh. This is required for some methods.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-set">
+<span class="sig-name descname"><span class="pre">--set</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;options&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-set" title="Link to this definition">¶</a></dt>
+<dd><p>Set a parameter for mesh export.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-backend">
+<span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-backend" title="Link to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>conda | docker | apptainer | python</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Environment variables</p>
+<dl class="std envvar" id="nerfbaselines-export-mesh-backend-name-nerfbaselines-backend">
+<dt class="sig sig-object std">
+<span class="sig-name descname"><span class="pre">NERFBASELINES_BACKEND</span></span></dt>
+<dd><blockquote>
+<div><p>Provide a default for <a class="reference internal" href="#cmdoption-nerfbaselines-export-mesh-backend"><code class="xref std std-option docutils literal notranslate"><span class="pre">--backend</span></code></a></p>
 </div></blockquote>
 </dd></dl>
 
@@ -758,7 +816,7 @@
 <span class="sig-name descname"><span class="pre">--method</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;method&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method-method" title="Link to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>nerf | nerfw-reimpl | kplanes | mipnerf360 | tetra-nerf | scaffold-gs | gaussian-splatting | colmap | gsplat | zipnerf | instant-ngp | wild-gaussians | 2d-gaussian-splatting | gaussian-splatting-wild | mip-splatting | gaussian-opacity-fields | camp | tensorf | seathru-nerf | nerfacto | nerfonthego</p>
+<dd class="field-odd"><p>gaussian-splatting | gsplat | nerfw-reimpl | scaffold-gs | tetra-nerf | zipnerf | mip-splatting | instant-ngp | nerfacto | mipnerf360 | seathru-nerf | gaussian-splatting-wild | camp | colmap | nerf | tensorf | 2d-gaussian-splatting | gaussian-opacity-fields | wild-gaussians | nerfonthego | kplanes</p>
 </dd>
 </dl>
 </dd></dl>
@@ -911,7 +969,7 @@
 <dd><p><strong>Required</strong></p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>nerf | nerfw-reimpl | kplanes | mipnerf360 | tetra-nerf | scaffold-gs | gaussian-splatting | colmap | gsplat | zipnerf | instant-ngp | wild-gaussians | 2d-gaussian-splatting | gaussian-splatting-wild | mip-splatting | gaussian-opacity-fields | camp | tensorf | seathru-nerf | nerfacto | nerfonthego</p>
+<dd class="field-odd"><p>gaussian-splatting | gsplat | nerfw-reimpl | scaffold-gs | tetra-nerf | zipnerf | mip-splatting | instant-ngp | nerfacto | mipnerf360 | seathru-nerf | gaussian-splatting-wild | camp | colmap | nerf | tensorf | 2d-gaussian-splatting | gaussian-opacity-fields | wild-gaussians | nerfonthego | kplanes</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1318,6 +1376,7 @@
 <li><a class="reference internal" href="#nerfbaselines-download-dataset">download-dataset</a></li>
 <li><a class="reference internal" href="#nerfbaselines-evaluate">evaluate</a></li>
 <li><a class="reference internal" href="#nerfbaselines-export-demo">export-demo</a></li>
+<li><a class="reference internal" href="#nerfbaselines-export-mesh">export-mesh</a></li>
 <li><a class="reference internal" href="#nerfbaselines-fix-checkpoint">fix-checkpoint</a></li>
 <li><a class="reference internal" href="#nerfbaselines-fix-output-artifact">fix-output-artifact</a></li>
 <li><a class="reference internal" href="#nerfbaselines-generate-dataset-results">generate-dataset-results</a></li>
