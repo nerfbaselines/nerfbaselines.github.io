@@ -471,26 +471,6 @@
 </dl>
 <p>Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object.</p>
 </section>
-<section id="nerfstudio">
-<h2>Nerfstudio<a class="headerlink" href="#nerfstudio" title="Link to this heading">¶</a></h2>
-<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://nerf.studio">https://nerf.studio</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">Nerfstudio</dd>
-<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/befbbd5/nerfbaselines/evaluation.py#L179-L213">default (source code)</a></p>
-</dd>
-</dl>
-<p>Nerfstudio Dataset includes 10 in-the-wild captures obtained using either a mobile phone or a mirror-less camera with a fisheye lens. We processed the data using either COLMAP or the Polycam app to obtain camera poses and intrinsic parameters.</p>
-</section>
 <section id="mipnerf360">
 <h2>Mip-NeRF 360<a class="headerlink" href="#mipnerf360" title="Link to this heading">¶</a></h2>
 <p class="rubric">Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</p>
@@ -510,6 +490,26 @@
 </dd>
 </dl>
 <p>Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
+</section>
+<section id="nerfstudio">
+<h2>Nerfstudio<a class="headerlink" href="#nerfstudio" title="Link to this heading">¶</a></h2>
+<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://nerf.studio">https://nerf.studio</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">Nerfstudio</dd>
+<dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/befbbd5/nerfbaselines/evaluation.py#L179-L213">default (source code)</a></p>
+</dd>
+</dl>
+<p>Nerfstudio Dataset includes 10 in-the-wild captures obtained using either a mobile phone or a mirror-less camera with a fisheye lens. We processed the data using either COLMAP or the Polycam app to obtain camera poses and intrinsic parameters.</p>
 </section>
 <section id="tanksandtemples">
 <h2>Tanks and Temples<a class="headerlink" href="#tanksandtemples" title="Link to this heading">¶</a></h2>
@@ -602,8 +602,8 @@
             <ul>
 <li><a class="reference internal" href="#">Datasets</a><ul>
 <li><a class="reference internal" href="#blender">Blender</a></li>
-<li><a class="reference internal" href="#nerfstudio">Nerfstudio</a></li>
 <li><a class="reference internal" href="#mipnerf360">Mip-NeRF 360</a></li>
+<li><a class="reference internal" href="#nerfstudio">Nerfstudio</a></li>
 <li><a class="reference internal" href="#tanksandtemples">Tanks and Temples</a></li>
 </ul>
 </li>

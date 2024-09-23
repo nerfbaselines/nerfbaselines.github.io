@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="methods.html" />
 <meta property="og:site_name" content="NerfBaselines" />
-<meta property="og:description" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman,, Paper, https://arxiv.org/pdf/..." />
+<meta property="og:description" content="Zip-NeRF: CamP: Camera Preconditioning for Neural Radiance Fields Authors, Keunhong Park, Philipp Henzler, Ben Mildenhall, Jonathan T. Barron, Ricardo Martin-Brualla,, Paper, https://arxiv.org/pdf/..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_methods_22b6eee0.png" />
-<meta property="og:image:alt" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Pete..." />
-<meta name="description" content="Mip-NeRF 360: Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields Authors, Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman,, Paper, https://arxiv.org/pdf/..." />
+<meta property="og:image" content="/_images/social_previews/summary_methods_bfe8a6f8.png" />
+<meta property="og:image:alt" content="Zip-NeRF: CamP: Camera Preconditioning for Neural Radiance Fields Authors, Keunhong Park, Philipp Henzler, Ben Mildenhall, Jonathan T. Barron, Ricardo Martin..." />
+<meta name="description" content="Zip-NeRF: CamP: Camera Preconditioning for Neural Radiance Fields Authors, Keunhong Park, Philipp Henzler, Ben Mildenhall, Jonathan T. Barron, Ricardo Martin-Brualla,, Paper, https://arxiv.org/pdf/..." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="nerfbaselines" href="cli.html" /><link rel="prev" title="NerfBaselines Documentation" href="index.html" />
 
@@ -450,78 +450,6 @@
         <article role="main" id="furo-main-content">
           <section id="methods">
 <h1>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h1>
-<section id="mipnerf360">
-<h2>Mip-NeRF 360<a class="headerlink" href="#mipnerf360" title="Link to this heading">¶</a></h2>
-<p class="rubric">Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2111.12077.pdf">https://arxiv.org/pdf/2111.12077.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://jonbarron.info/mipnerf360/">https://jonbarron.info/mipnerf360/</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">mipnerf360</dd>
-</dl>
-<p>Official Mip-NeRF 360 implementation addapted to handle different camera distortion/intrinsic parameters.
-It was designed for unbounded object-centric 360-degree capture and handles anti-aliasing well.
-It is, however slower to train and render compared to other approaches.</p>
-</section>
-<section id="tetra-nerf">
-<h2>Tetra-NeRF<a class="headerlink" href="#tetra-nerf" title="Link to this heading">¶</a></h2>
-<p class="rubric">Tetra-NeRF: Representing Neural Radiance Fields Using Tetrahedra</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Jonas Kulhanek, Torsten Sattler</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2304.09987.pdf">https://arxiv.org/pdf/2304.09987.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://jkulhanek.com/tetra-nerf">https://jkulhanek.com/tetra-nerf</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">tetra-nerf</dd>
-</dl>
-<p>Tetra-NeRF is a method that represents the scene as tetrahedral mesh obtained using Delaunay tetrahedralization. The input point cloud has to be provided (for COLMAP datasets the point cloud is automatically extracted). This is the official implementation
-    from the paper.</p>
-</section>
-<section id="nerfacto">
-<h2>NerfStudio<a class="headerlink" href="#nerfacto" title="Link to this heading">¶</a></h2>
-<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.nerf.studio/">https://docs.nerf.studio/</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">nerfacto</dd>
-</dl>
-<p>NerfStudio (Nerfacto) is a method based on Instant-NGP which combines several improvements from different papers to achieve good quality on real-world scenes captured under normal conditions. It is fast to train (12 min) and render speed is ~1 FPS.</p>
-</section>
-<section id="zipnerf">
-<h2>Zip-NeRF<a class="headerlink" href="#zipnerf" title="Link to this heading">¶</a></h2>
-<p class="rubric">Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields</p>
-<dl class="field-list simple">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2304.06706.pdf">https://arxiv.org/pdf/2304.06706.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://jonbarron.info/zipnerf/">https://jonbarron.info/zipnerf/</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">zipnerf</dd>
-</dl>
-<p>Zip-NeRF is a radiance field method which addresses the aliasing problem in the case of hash-grid based methods (iNGP-based).
-Instead of sampling along the ray it samples along a spiral path - approximating integration along the frustum. </p>
-</section>
 <section id="camp">
 <h2>Zip-NeRF<a class="headerlink" href="#camp" title="Link to this heading">¶</a></h2>
 <p class="rubric">CamP: Camera Preconditioning for Neural Radiance Fields</p>
@@ -538,6 +466,23 @@ Instead of sampling along the ray it samples along a spiral path - approximating
 <dd class="field-even">camp</dd>
 </dl>
 <p>CamP is an extension of Zip-NeRF which adds pose refinement to the training process. </p>
+</section>
+<section id="gaussian-splatting">
+<h2>Gaussian Splatting<a class="headerlink" href="#gaussian-splatting" title="Link to this heading">¶</a></h2>
+<p class="rubric">3D Gaussian Splatting for Real-Time Radiance Field Rendering</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf">https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">gaussian-splatting</dd>
+</dl>
+<p>Official Gaussian Splatting implementation extended to support distorted camera models. It is fast to train (1 hous) and render (200 FPS).</p>
 </section>
 <section id="instant-ngp">
 <h2>Instant NGP<a class="headerlink" href="#instant-ngp" title="Link to this heading">¶</a></h2>
@@ -557,22 +502,77 @@ Instead of sampling along the ray it samples along a spiral path - approximating
 <p>Instant-NGP is a method that uses hash-grid and a shallow MLP to accelerate training and rendering.
 This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
 </section>
-<section id="gaussian-splatting">
-<h2>Gaussian Splatting<a class="headerlink" href="#gaussian-splatting" title="Link to this heading">¶</a></h2>
-<p class="rubric">3D Gaussian Splatting for Real-Time Radiance Field Rendering</p>
+<section id="mipnerf360">
+<h2>Mip-NeRF 360<a class="headerlink" href="#mipnerf360" title="Link to this heading">¶</a></h2>
+<p class="rubric">Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</p>
 <dl class="field-list simple">
 <dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis</dd>
+<dd class="field-odd">Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman</dd>
 <dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf">https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2111.12077.pdf">https://arxiv.org/pdf/2111.12077.pdf</a></p>
 </dd>
 <dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://jonbarron.info/mipnerf360/">https://jonbarron.info/mipnerf360/</a></p>
 </dd>
 <dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">gaussian-splatting</dd>
+<dd class="field-even">mipnerf360</dd>
 </dl>
-<p>Official Gaussian Splatting implementation extended to support distorted camera models. It is fast to train (1 hous) and render (200 FPS).</p>
+<p>Official Mip-NeRF 360 implementation addapted to handle different camera distortion/intrinsic parameters.
+It was designed for unbounded object-centric 360-degree capture and handles anti-aliasing well.
+It is, however slower to train and render compared to other approaches.</p>
+</section>
+<section id="nerfacto">
+<h2>NerfStudio<a class="headerlink" href="#nerfacto" title="Link to this heading">¶</a></h2>
+<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.nerf.studio/">https://docs.nerf.studio/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">nerfacto</dd>
+</dl>
+<p>NerfStudio (Nerfacto) is a method based on Instant-NGP which combines several improvements from different papers to achieve good quality on real-world scenes captured under normal conditions. It is fast to train (12 min) and render speed is ~1 FPS.</p>
+</section>
+<section id="tetra-nerf">
+<h2>Tetra-NeRF<a class="headerlink" href="#tetra-nerf" title="Link to this heading">¶</a></h2>
+<p class="rubric">Tetra-NeRF: Representing Neural Radiance Fields Using Tetrahedra</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Jonas Kulhanek, Torsten Sattler</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2304.09987.pdf">https://arxiv.org/pdf/2304.09987.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://jkulhanek.com/tetra-nerf">https://jkulhanek.com/tetra-nerf</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">tetra-nerf</dd>
+</dl>
+<p>Tetra-NeRF is a method that represents the scene as tetrahedral mesh obtained using Delaunay tetrahedralization. The input point cloud has to be provided (for COLMAP datasets the point cloud is automatically extracted). This is the official implementation
+    from the paper.</p>
+</section>
+<section id="zipnerf">
+<h2>Zip-NeRF<a class="headerlink" href="#zipnerf" title="Link to this heading">¶</a></h2>
+<p class="rubric">Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields</p>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2304.06706.pdf">https://arxiv.org/pdf/2304.06706.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://jonbarron.info/zipnerf/">https://jonbarron.info/zipnerf/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">zipnerf</dd>
+</dl>
+<p>Zip-NeRF is a radiance field method which addresses the aliasing problem in the case of hash-grid based methods (iNGP-based).
+Instead of sampling along the ray it samples along a spiral path - approximating integration along the frustum. </p>
 </section>
 </section>
 
@@ -644,13 +644,13 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Methods</a><ul>
-<li><a class="reference internal" href="#mipnerf360">Mip-NeRF 360</a></li>
-<li><a class="reference internal" href="#tetra-nerf">Tetra-NeRF</a></li>
-<li><a class="reference internal" href="#nerfacto">NerfStudio</a></li>
-<li><a class="reference internal" href="#zipnerf">Zip-NeRF</a></li>
 <li><a class="reference internal" href="#camp">Zip-NeRF</a></li>
-<li><a class="reference internal" href="#instant-ngp">Instant NGP</a></li>
 <li><a class="reference internal" href="#gaussian-splatting">Gaussian Splatting</a></li>
+<li><a class="reference internal" href="#instant-ngp">Instant NGP</a></li>
+<li><a class="reference internal" href="#mipnerf360">Mip-NeRF 360</a></li>
+<li><a class="reference internal" href="#nerfacto">NerfStudio</a></li>
+<li><a class="reference internal" href="#tetra-nerf">Tetra-NeRF</a></li>
+<li><a class="reference internal" href="#zipnerf">Zip-NeRF</a></li>
 </ul>
 </li>
 </ul>

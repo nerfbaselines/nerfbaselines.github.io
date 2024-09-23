@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="cli.html" />
 <meta property="og:site_name" content="NerfBaselines" />
-<meta property="og:description" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Export a demo from a trained model. The interactive demo will be a website (index.html) that can be opened in the browse..." />
+<meta property="og:description" content="download-dataset: Download a dataset either to a specified directory or to the default dataset directory. The dataset must have format external://{dataset}/{scene}, where{dataset} is one of the reg..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_cli_d5b5a258.png" />
-<meta property="og:image:alt" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Export a demo from a trained model. The interactive demo will be a website (inde..." />
-<meta name="description" content="download-dataset: Options Arguments evaluate: Options Arguments export-demo: Export a demo from a trained model. The interactive demo will be a website (index.html) that can be opened in the browse..." />
+<meta property="og:image" content="/_images/social_previews/summary_cli_bde68798.png" />
+<meta property="og:image:alt" content="download-dataset: Download a dataset either to a specified directory or to the default dataset directory. The dataset must have format external://{dataset}/{..." />
+<meta name="description" content="download-dataset: Download a dataset either to a specified directory or to the default dataset directory. The dataset must have format external://{dataset}/{scene}, where{dataset} is one of the reg..." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="API Reference" href="api/modules.html" /><link rel="prev" title="Datasets" href="datasets.html" />
 
@@ -487,6 +487,7 @@
 </div>
 <section id="nerfbaselines-download-dataset">
 <h2>download-dataset<a class="headerlink" href="#nerfbaselines-download-dataset" title="Link to this heading">¶</a></h2>
+<p>Download a dataset either to a specified directory or to the default dataset directory. The dataset must have format <cite>external://{dataset}/{scene}</cite>, where <cite>{dataset}</cite> is one of the registered datasets and <cite>{scene}</cite> is the scene id supported by the dataset.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>download-dataset<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>DATASET
 </pre></div>
 </div>
@@ -494,7 +495,8 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-download-dataset-o">
 <span id="cmdoption-nerfbaselines-download-dataset-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-download-dataset-o" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Output directory to download the dataset to. If not provided, the dataset will be downloaded to the default dataset directory (/home/runner/.cache/nerfbaselines).</p>
+</dd></dl>
 
 <p class="rubric">Arguments</p>
 <dl class="std option">
@@ -506,6 +508,7 @@
 </section>
 <section id="nerfbaselines-evaluate">
 <h2>evaluate<a class="headerlink" href="#nerfbaselines-evaluate" title="Link to this heading">¶</a></h2>
+<p>Evaluate predictions (e.g., obtained by running <cite>nerfbaselines render</cite>) against the ground truth. The predictions are evaluated using the correct evaluation protocol and the results are saved in the specified JSON output file. The predictions can be provided as a directory or a tar.gz/zip file.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>evaluate<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span>PREDICTIONS
 </pre></div>
 </div>
@@ -513,7 +516,7 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-evaluate-o">
 <span id="cmdoption-nerfbaselines-evaluate-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-evaluate-o" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> Path to the output JSON file to save the evaluation results.</p>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
@@ -534,36 +537,38 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-checkpoint">
 <span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-checkpoint" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p>Path to the checkpoint directory. It can also be a remote path (starting with <cite>http(s)://</cite>) or be a path inside a zip file.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-o">
 <span id="cmdoption-nerfbaselines-export-demo-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-o" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> Output directory for the demo.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-data" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>A path to the dataset to load which matches the dataset used to train the model. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path. While only some methods require the dataset, it is recommended to always specify it as it can improve viewing experience.</p>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-train-embedding">
 <span class="sig-name descname"><span class="pre">--train-embedding</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;train_embedding&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-train-embedding" title="Link to this definition">¶</a></dt>
-<dd><p>Select the train embedding index to use for the demo.</p>
+<dd><p>Select the train embedding index to use for the demo (if the method supports appearance modelling.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-set">
 <span class="sig-name descname"><span class="pre">--set</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;options&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-set" title="Link to this definition">¶</a></dt>
-<dd><p>Set a parameter for demo export.</p>
+<dd><p>Set a parameter for demo export. The argument should be in the form of <cite>–set key=value</cite> and can be used multiple times to set multiple parameters. The parameters are specific to each method.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -582,7 +587,7 @@
 </section>
 <section id="nerfbaselines-export-mesh">
 <h2>export-mesh<a class="headerlink" href="#nerfbaselines-export-mesh" title="Link to this heading">¶</a></h2>
-<p>Export a mesh from a trained model. Only some methods support this feature.</p>
+<p>Export a mesh from a trained model. This usually involves rendering all training cameras and fusing the depth maps and normals into a mesh. The mesh will be saved in the specified output directory, usually as <cite>mesh.ply</cite> file, but different methods can export other files or file formats. Note, only some methods support this feature.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>export-mesh<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -590,13 +595,13 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-checkpoint">
 <span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-checkpoint" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong> Path to the checkpoint directory. This directory should contain the nb-info.json file.</p>
+<dd><p>Path to the checkpoint directory. It can also be a remote path (starting with <cite>http(s)://</cite>) or be a path inside a zip file.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-o">
 <span id="cmdoption-nerfbaselines-export-mesh-output"></span><span class="sig-name descname"><span class="pre">-o</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-o" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong> Path to a directory to save the mesh.</p>
+<dd><p><strong>Required</strong> Path to a directory to save the mesh (usually as a <cite>mesh.ply</cite> file).</p>
 </dd></dl>
 
 <dl class="std option">
@@ -608,19 +613,20 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-data" title="Link to this definition">¶</a></dt>
-<dd><p>Path to a dataset to use for exporting the mesh. This is required for some methods.</p>
+<dd><p>A path to the dataset to load which matches the dataset used to train the model. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path. While required for most, some methods do not require the dataset to export a mesh (e.g. <cite>colmap</cite>).</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-set">
 <span class="sig-name descname"><span class="pre">--set</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;options&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-set" title="Link to this definition">¶</a></dt>
-<dd><p>Set a parameter for mesh export.</p>
+<dd><p>Set a parameter for mesh export. The argument should be in the form of <cite>–set key=value</cite> and can be used multiple times to set multiple parameters. The parameters will override the parameters stored in the checkpoint. The parameters are specific to each method.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-mesh-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-mesh-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -639,6 +645,7 @@
 </section>
 <section id="nerfbaselines-fix-checkpoint">
 <h2>fix-checkpoint<a class="headerlink" href="#nerfbaselines-fix-checkpoint" title="Link to this heading">¶</a></h2>
+<p>Fix a checkpoint created from either an older <cite>nerfbaselines</cite> version or a checkpoint created directly by using the authors’ code. This command will update the checkpoint to the latest format and save it to a new directory.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>fix-checkpoint<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -646,19 +653,20 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-checkpoint-checkpoint">
 <span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-checkpoint-checkpoint" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> Path to the current checkpoint directory.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-checkpoint-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-checkpoint-data" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> A path to the dataset the model was trained on. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-checkpoint-method">
 <span class="sig-name descname"><span class="pre">--method</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;method_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-checkpoint-method" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Method to use. If not provided, the method name will be read from the checkpoint (if <cite>nb-info.json</cite> file is present).</p>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-checkpoint-new-checkpoint">
@@ -667,26 +675,22 @@
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-checkpoint-v">
-<span id="cmdoption-nerfbaselines-fix-checkpoint-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-checkpoint-v" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-checkpoint-set">
 <span class="sig-name descname"><span class="pre">--set</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;config_overrides&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-checkpoint-set" title="Link to this definition">¶</a></dt>
-<dd><p>Override a parameter in the method.</p>
+<dd><p>Override parameters used when training the original checkpoint. The argument should be in the form of <cite>–set key=value</cite>. This argument can be used multiple times to override multiple parameters. And it is specific to each method.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-checkpoint-presets">
 <span class="sig-name descname"><span class="pre">--presets</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;presets&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-checkpoint-presets" title="Link to this definition">¶</a></dt>
-<dd><p>Apply a comma-separated list of preset to the method. If no <cite>–presets</cite> is supplied, or if a special <cite>&#64;auto</cite> preset is present, the method’s default presets are applied (based on the dataset metadata).</p>
+<dd><p>A comma-separated list of presets used when training the original checkpoint.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-checkpoint-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-checkpoint-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -759,7 +763,8 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-fix-output-artifact-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-fix-output-artifact-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -818,37 +823,41 @@
 <dd></dd></dl>
 
 </section>
-<section id="nerfbaselines-install-method">
-<h2>install-method<a class="headerlink" href="#nerfbaselines-install-method" title="Link to this heading">¶</a></h2>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>install-method<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+<section id="nerfbaselines-install">
+<h2>install<a class="headerlink" href="#nerfbaselines-install" title="Link to this heading">¶</a></h2>
+<p>Install either a pre-defined method or a custom method from a spec file. If installing from spec (<cite>–spec</cite> argument) - a python file with a register() call - the registered objects will be added to local registry. If installing a method (<cite>–method</cite> argument) the backend implementation for the method will be pre-installed. This also applies when specifying both <cite>–spec</cite> and <cite>–backend</cite> arguments.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>install<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-method-method">
-<span class="sig-name descname"><span class="pre">--method</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;method&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method-method" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-method">
+<span class="sig-name descname"><span class="pre">--method</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;method&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method" title="Link to this definition">¶</a></dt>
+<dd><p>Method to install.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>gaussian-splatting-wild | camp | instant-ngp | 2d-gaussian-splatting | zipnerf | 3dgs-mcmc | nerfonthego | mip-splatting | nerf | gaussian-opacity-fields | seathru-nerf | kplanes | tensorf | colmap | wild-gaussians | tetra-nerf | scaffold-gs | mipnerf360 | nerfw-reimpl | nerfacto | gaussian-splatting | gsplat</p>
+<dd class="field-odd"><p>seathru-nerf | gaussian-splatting-wild | gaussian-splatting | tetra-nerf | tensorf | nerfonthego | nerf | wild-gaussians | nerfw-reimpl | scaffold-gs | gsplat | colmap | camp | 3dgs-mcmc | 2d-gaussian-splatting | mip-splatting | mipnerf360 | nerfacto | kplanes | gaussian-opacity-fields | zipnerf | instant-ngp</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-method-spec">
-<span class="sig-name descname"><span class="pre">--spec</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;spec&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method-spec" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-method-force">
-<span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method-force" title="Link to this definition">¶</a></dt>
-<dd><p>Overwrite existing specs</p>
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-spec">
+<span class="sig-name descname"><span class="pre">--spec</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;spec&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-spec" title="Link to this definition">¶</a></dt>
+<dd><p>Path to a spec file (a Python file with <cite>register()</cite> calls) to install.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-method-backend">
-<span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-method-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-force">
+<span class="sig-name descname"><span class="pre">--force</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-force" title="Link to this definition">¶</a></dt>
+<dd><p>Overwrite existing specs. Only applies when <cite>–spec</cite> is provided.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-install-backend">
+<span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-install-backend" title="Link to this definition">¶</a></dt>
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -856,17 +865,18 @@
 </dd></dl>
 
 <p class="rubric">Environment variables</p>
-<dl class="std envvar" id="nerfbaselines-install-method-backend-name-nerfbaselines-backend">
+<dl class="std envvar" id="nerfbaselines-install-backend-name-nerfbaselines-backend">
 <dt class="sig sig-object std">
 <span class="sig-name descname"><span class="pre">NERFBASELINES_BACKEND</span></span></dt>
 <dd><blockquote>
-<div><p>Provide a default for <a class="reference internal" href="#cmdoption-nerfbaselines-install-method-backend"><code class="xref std std-option docutils literal notranslate"><span class="pre">--backend</span></code></a></p>
+<div><p>Provide a default for <a class="reference internal" href="#cmdoption-nerfbaselines-install-backend"><code class="xref std std-option docutils literal notranslate"><span class="pre">--backend</span></code></a></p>
 </div></blockquote>
 </dd></dl>
 
 </section>
 <section id="nerfbaselines-render">
 <h2>render<a class="headerlink" href="#nerfbaselines-render" title="Link to this heading">¶</a></h2>
+<p>Render images from a trained model for all cameras in the dataset. The images will be saved in the specified output directory. The correct evaluation protocol will be used to render the images. E.g., for Photo Tourism, appearance embeddings will be optimized before the images are rendered.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>render<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -874,30 +884,37 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-checkpoint">
 <span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-checkpoint" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> Path to the checkpoint directory. It can also be a remote path (starting with <cite>http(s)://</cite>) or be a path inside a zip file.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-data" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> A path to the dataset to render the cameras from. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-output">
 <span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-output" title="Link to this definition">¶</a></dt>
-<dd><p>output directory or tar.gz file</p>
+<dd><p>Output directory or tar.gz/zip file.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-split">
 <span class="sig-name descname"><span class="pre">--split</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;split&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-split" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Dataset split to render.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">'test'</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -916,6 +933,7 @@
 </section>
 <section id="nerfbaselines-render-trajectory">
 <h2>render-trajectory<a class="headerlink" href="#nerfbaselines-render-trajectory" title="Link to this heading">¶</a></h2>
+<p>Render images from a trained model for a trajectory. The trajectory should be a JSON file obtained from the viewer (<cite>nerfbaselines viewer</cite>). The output can be a video or a directory with images. Furthermore, one or multiple outputs can be rendered (e.g., color, depth, accumulation).If multiple outputs are specified, the <cite>–output</cite> argument should contain a placeholder <cite>{output}</cite> which will be replaced with the output name and multiple files will be generated (unless the output is a directory or an archive, where all outputs can be placed to a single archive).</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>render-trajectory<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -923,13 +941,13 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-trajectory-checkpoint">
 <span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-trajectory-checkpoint" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> Path to the checkpoint directory. It can also be a remote path (starting with <cite>http(s)://</cite>) or be a path inside a zip file.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-trajectory-trajectory">
 <span class="sig-name descname"><span class="pre">--trajectory</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;trajectory&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-trajectory-trajectory" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> Path to the trajectory JSON file.</p>
 </dd></dl>
 
 <dl class="std option">
@@ -941,19 +959,20 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-trajectory-resolution">
 <span class="sig-name descname"><span class="pre">--resolution</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;resolution&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-trajectory-resolution" title="Link to this definition">¶</a></dt>
-<dd><p>Override the resolution of the output</p>
+<dd><p>Override the resolution of the output. Use ‘widthxheight’ format (e.g., 1920x1080). If one of the dimensions is negative, the aspect ratio will be preserved and the dimension will be rounded to the nearest multiple of the absolute value of the dimension.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-trajectory-output-names">
 <span class="sig-name descname"><span class="pre">--output-names</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_names&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-trajectory-output-names" title="Link to this definition">¶</a></dt>
-<dd><p>Comma separated list of output types (e.g. color,depth,accumulation)</p>
+<dd><p>Comma separated list of output types (e.g. color,depth,accumulation). See the method’s <cite>get_info()[‘supported_outputs’]</cite> for supported outputs.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-render-trajectory-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-render-trajectory-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -972,6 +991,7 @@
 </section>
 <section id="nerfbaselines-shell">
 <h2>shell<a class="headerlink" href="#nerfbaselines-shell" title="Link to this heading">¶</a></h2>
+<p>Run a shell command in the backend environment. This command is useful for debugging and running custom commands in the backend environment.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>shell<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span><span class="w"> </span><span class="o">[</span>COMMAND<span class="o">]</span>...
 </pre></div>
 </div>
@@ -979,23 +999,19 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-shell-method">
 <span class="sig-name descname"><span class="pre">--method</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;method&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-shell-method" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> Method to use.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>gaussian-splatting-wild | camp | instant-ngp | 2d-gaussian-splatting | zipnerf | 3dgs-mcmc | nerfonthego | mip-splatting | nerf | gaussian-opacity-fields | seathru-nerf | kplanes | tensorf | colmap | wild-gaussians | tetra-nerf | scaffold-gs | mipnerf360 | nerfw-reimpl | nerfacto | gaussian-splatting | gsplat</p>
+<dd class="field-odd"><p>seathru-nerf | gaussian-splatting-wild | gaussian-splatting | tetra-nerf | tensorf | nerfonthego | nerf | wild-gaussians | nerfw-reimpl | scaffold-gs | gsplat | colmap | camp | 3dgs-mcmc | 2d-gaussian-splatting | mip-splatting | mipnerf360 | nerfacto | kplanes | gaussian-opacity-fields | zipnerf | instant-ngp</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="std option">
-<dt class="sig sig-object std" id="cmdoption-nerfbaselines-shell-v">
-<span id="cmdoption-nerfbaselines-shell-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-nerfbaselines-shell-v" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-shell-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-shell-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -1074,7 +1090,8 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-test-method-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-test-method-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -1093,6 +1110,7 @@
 </section>
 <section id="nerfbaselines-train">
 <h2>train<a class="headerlink" href="#nerfbaselines-train" title="Link to this heading">¶</a></h2>
+<p>Train a model of a specified method on a dataset. The method is specified by the <cite>–method</cite> argument, and the dataset is specified by the <cite>–data</cite> argument. The training will periodically save checkpoints, evaluate the intermediate model on a few images, and evaluate the final model on all images. The training progress will be logged to the console and optionally to TensorBoard, Weights &amp; Biases, or another supported logger. The final model and predictions can be saved as an output artifact which can be uploaded to the web benchmark. The training can be resumed from a checkpoint by specifying the <cite>–checkpoint</cite> argument. The method’s parameters can be overridden using the <cite>–set</cite> argument, and the method’s presets can be applied using the <cite>–presets</cite> argument. The <cite>–set</cite> and <cite>–presets</cite> arguments can be used multiple times to apply multiple overrides and presets and are specific to each method.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>train<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -1111,26 +1129,36 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-checkpoint">
 <span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-checkpoint" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Path to a checkpoint to resume training from.</p>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-data" title="Link to this definition">¶</a></dt>
-<dd><p><strong>Required</strong></p>
+<dd><p><strong>Required</strong> A path to the dataset to train on. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-output">
 <span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-output" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Output directory to save the training results</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">'.'</span></code></p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-logger">
 <span class="sig-name descname"><span class="pre">--logger</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;logger&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-logger" title="Link to this definition">¶</a></dt>
-<dd><p>Logger to use. Defaults to tensorboard.</p>
+<dd><p>Logger to use.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>none | wandb | tensorboard | wandb,tensorboard</p>
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">'tensorboard'</span></code></p>
+</dd>
+<dt class="field-even">Options<span class="colon">:</span></dt>
+<dd class="field-even"><p>none | wandb | tensorboard | wandb,tensorboard</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1139,18 +1167,33 @@
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-save-iters">
 <span class="sig-name descname"><span class="pre">--save-iters</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;save_iters&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-save-iters" title="Link to this definition">¶</a></dt>
 <dd><p>When to save the model</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">-1</span></code></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-eval-few-iters">
 <span class="sig-name descname"><span class="pre">--eval-few-iters</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;eval_few_iters&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-eval-few-iters" title="Link to this definition">¶</a></dt>
 <dd><p>When to evaluate on few images</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">2000::2000</span></code></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-eval-all-iters">
 <span class="sig-name descname"><span class="pre">--eval-all-iters</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;eval_all_iters&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-eval-all-iters" title="Link to this definition">¶</a></dt>
 <dd><p>When to evaluate all images</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">-1</span></code></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="std option">
@@ -1168,19 +1211,20 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-set">
 <span class="sig-name descname"><span class="pre">--set</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;config_overrides&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-set" title="Link to this definition">¶</a></dt>
-<dd><p>Override a parameter in the method.</p>
+<dd><p>Override a parameter in the method. The argument should be in the form of <cite>–set key=value</cite>. This argument can be used multiple times to override multiple parameters. And it is specific to each method.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-presets">
 <span class="sig-name descname"><span class="pre">--presets</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;presets&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-presets" title="Link to this definition">¶</a></dt>
-<dd><p>Apply a comma-separated list of preset to the method. If no <cite>–presets</cite> is supplied, or if a special <cite>&#64;auto</cite> preset is present, the method’s default presets are applied (based on the dataset metadata).</p>
+<dd><p>Apply a comma-separated list of preset to the method. If no <cite>–presets</cite> is supplied, or if a special <cite>&#64;auto</cite> preset is present (default if no presets are specified), the method’s default presets are applied (based on the dataset metadata).</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-train-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-train-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -1199,6 +1243,7 @@
 </section>
 <section id="nerfbaselines-viewer">
 <h2>viewer<a class="headerlink" href="#nerfbaselines-viewer" title="Link to this heading">¶</a></h2>
+<p>Start the viewer. If a checkpoint is provided, the viewer will load the model. If a data path is provided, the viewer will load the dataset. Note that even then the checkpoint is provided, providing the <cite>–data</cite> argument is still recommended as it will improve viewing experience.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>viewer<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -1206,22 +1251,26 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-viewer-checkpoint">
 <span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-viewer-checkpoint" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Path to the checkpoint directory. It can also be a remote path (starting with <cite>http(s)://</cite>) or be a path inside a zip file.</p>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-viewer-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-viewer-data" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>A path to the dataset to load in the viewer. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path.</p>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-viewer-port">
 <span class="sig-name descname"><span class="pre">--port</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;port&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-viewer-port" title="Link to this definition">¶</a></dt>
-<dd></dd></dl>
+<dd><p>Port to run the viewer on. Defaults to 6006.</p>
+</dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-viewer-backend">
 <span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-viewer-backend" title="Link to this definition">¶</a></dt>
-<dd><dl class="field-list simple">
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
 <dd class="field-odd"><p>conda | docker | apptainer | python</p>
 </dd>
@@ -1245,6 +1294,7 @@
 </div>
 <section id="nerfbaselines-web-build">
 <h3>build<a class="headerlink" href="#nerfbaselines-web-build" title="Link to this heading">¶</a></h3>
+<p>Build the web benchmark static website.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>web<span class="w"> </span>build<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -1278,8 +1328,11 @@
 <span class="sig-name descname"><span class="pre">--docs</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;include_docs&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-web-build-docs" title="Link to this definition">¶</a></dt>
 <dd><p>Whether to include the documentation page for all versions, the latest, or none.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>all | latest | none</p>
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
+</dd>
+<dt class="field-even">Options<span class="colon">:</span></dt>
+<dd class="field-even"><p>all | latest | none</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1287,6 +1340,7 @@
 </section>
 <section id="nerfbaselines-web-dev">
 <h3>dev<a class="headerlink" href="#nerfbaselines-web-dev" title="Link to this heading">¶</a></h3>
+<p>Start a development server for the web benchmark. Any changes to the source code will be automatically reloaded.</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>web<span class="w"> </span>dev<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
 </pre></div>
 </div>
@@ -1308,8 +1362,11 @@
 <span class="sig-name descname"><span class="pre">--docs</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;include_docs&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-web-dev-docs" title="Link to this definition">¶</a></dt>
 <dd><p>Whether to include the documentation page for all versions, the latest, or none.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>all | latest | none</p>
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">'none'</span></code></p>
+</dd>
+<dt class="field-even">Options<span class="colon">:</span></dt>
+<dd class="field-even"><p>all | latest | none</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1393,7 +1450,7 @@
 <li><a class="reference internal" href="#nerfbaselines-fix-checkpoint">fix-checkpoint</a></li>
 <li><a class="reference internal" href="#nerfbaselines-fix-output-artifact">fix-output-artifact</a></li>
 <li><a class="reference internal" href="#nerfbaselines-generate-dataset-results">generate-dataset-results</a></li>
-<li><a class="reference internal" href="#nerfbaselines-install-method">install-method</a></li>
+<li><a class="reference internal" href="#nerfbaselines-install">install</a></li>
 <li><a class="reference internal" href="#nerfbaselines-render">render</a></li>
 <li><a class="reference internal" href="#nerfbaselines-render-trajectory">render-trajectory</a></li>
 <li><a class="reference internal" href="#nerfbaselines-shell">shell</a></li>

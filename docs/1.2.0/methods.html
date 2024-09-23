@@ -7,12 +7,12 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="methods.html" />
 <meta property="og:site_name" content="NerfBaselines" />
-<meta property="og:description" content="TensoRF: TensoRF: Tensorial Radiance Fields Authors, Anpei Chen, Zexiang Xu, Andreas Geiger, Jingyi Yu, Hao Su,, Paper, https://arxiv.org/pdf/2203.09517.pdf,, Web, https://apchenstu.github.io/Tenso..." />
+<meta property="og:description" content="CamP: CamP: Camera Preconditioning for Neural Radiance Fields Authors, Keunhong Park, Philipp Henzler, Ben Mildenhall, Jonathan T. Barron, Ricardo Martin-Brualla,, Paper, https://arxiv.org/pdf/2308..." />
 <meta property="og:image:width" content="1146" />
 <meta property="og:image:height" content="600" />
-<meta property="og:image" content="/_images/social_previews/summary_methods_dadc70d2.png" />
-<meta property="og:image:alt" content="TensoRF: TensoRF: Tensorial Radiance Fields Authors, Anpei Chen, Zexiang Xu, Andreas Geiger, Jingyi Yu, Hao Su,, Paper, https://arxiv.org/pdf/2203.09517.pdf,..." />
-<meta name="description" content="TensoRF: TensoRF: Tensorial Radiance Fields Authors, Anpei Chen, Zexiang Xu, Andreas Geiger, Jingyi Yu, Hao Su,, Paper, https://arxiv.org/pdf/2203.09517.pdf,, Web, https://apchenstu.github.io/Tenso..." />
+<meta property="og:image" content="/_images/social_previews/summary_methods_f5c11ed3.png" />
+<meta property="og:image:alt" content="CamP: CamP: Camera Preconditioning for Neural Radiance Fields Authors, Keunhong Park, Philipp Henzler, Ben Mildenhall, Jonathan T. Barron, Ricardo Martin-Bru..." />
+<meta name="description" content="CamP: CamP: Camera Preconditioning for Neural Radiance Fields Authors, Keunhong Park, Philipp Henzler, Ben Mildenhall, Jonathan T. Barron, Ricardo Martin-Brualla,, Paper, https://arxiv.org/pdf/2308..." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Datasets" href="datasets.html" /><link rel="prev" title="Isolated backends" href="backends.html" />
 
@@ -478,75 +478,6 @@
         <article role="main" id="furo-main-content">
           <section id="methods">
 <h1>Methods<a class="headerlink" href="#methods" title="Link to this heading">¶</a></h1>
-<section id="tensorf">
-<h2>TensoRF<a class="headerlink" href="#tensorf" title="Link to this heading">¶</a></h2>
-<p class="rubric">TensoRF: Tensorial Radiance Fields</p>
-<dl class="field-list">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Anpei Chen, Zexiang Xu, Andreas Geiger, Jingyi Yu, Hao Su</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2203.09517.pdf">https://arxiv.org/pdf/2203.09517.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://apchenstu.github.io/TensoRF/">https://apchenstu.github.io/TensoRF/</a></p>
-</dd>
-<dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://github.com/apchenstu/TensoRF/blob/main/LICENSE">MIT</a></p>
-</dd>
-<dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">tensorf</dd>
-<dt class="field-even">Backends<span class="colon">:</span></dt>
-<dd class="field-even">conda, docker, apptainer, python</dd>
-<dt class="field-odd">Camera models<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code></div>
-</dd>
-<dt class="field-even">Required features<span class="colon">:</span></dt>
-<dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
-</dd>
-<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code></div>
-</dd>
-</dl>
-<p>TensoRF factorizes the radiance field into a multiple compact low-rank tensor components. It was designed and tester primarily on Blender, LLFF, and NSVF datasets.</p>
-</section>
-<section id="zipnerf">
-<h2>Zip-NeRF<a class="headerlink" href="#zipnerf" title="Link to this heading">¶</a></h2>
-<p class="rubric">Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields</p>
-<dl class="field-list">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2304.06706.pdf">https://arxiv.org/pdf/2304.06706.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://jonbarron.info/zipnerf/">https://jonbarron.info/zipnerf/</a></p>
-</dd>
-<dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/jonbarron/camp_zipnerf/main/LICENSE">Apache 2.0</a></p>
-</dd>
-<dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">zipnerf</dd>
-<dt class="field-even">Backends<span class="colon">:</span></dt>
-<dd class="field-even">conda, docker, apptainer, python</dd>
-<dt class="field-odd">Camera models<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
-</dd>
-<dt class="field-even">Required features<span class="colon">:</span></dt>
-<dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
-</dd>
-<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
-</dd>
-</dl>
-<p>Zip-NeRF is a radiance field method which addresses the aliasing problem in the case of hash-grid based methods (iNGP-based).
-Instead of sampling along the ray it samples along a spiral path - approximating integration along the frustum. </p>
-</section>
 <section id="camp">
 <h2>CamP<a class="headerlink" href="#camp" title="Link to this heading">¶</a></h2>
 <p class="rubric">CamP: Camera Preconditioning for Neural Radiance Fields</p>
@@ -581,98 +512,43 @@ Instead of sampling along the ray it samples along a spiral path - approximating
 </dl>
 <p>CamP is an extension of Zip-NeRF which adds pose refinement to the training process. </p>
 </section>
-<section id="nerfw-reimpl">
-<h2>NeRF-W (reimplementation)<a class="headerlink" href="#nerfw-reimpl" title="Link to this heading">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">Licenses<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/kwea123/nerf_pl/master/LICENSE">MIT</a></p>
-</dd>
-<dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">nerfw-reimpl</dd>
-<dt class="field-odd">Backends<span class="colon">:</span></dt>
-<dd class="field-odd">conda, docker, apptainer, python</dd>
-<dt class="field-even">Camera models<span class="colon">:</span></dt>
-<dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code></div>
-</dd>
-<dt class="field-odd">Required features<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
-</dd>
-<dt class="field-even">Supported outputs<span class="colon">:</span></dt>
-<dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code></div>
-</dd>
-</dl>
-<p>Unofficial reimplementation of NeRF-W. Does not reach the performance reported in the original paper, but is widely used for benchmarking.</p>
-</section>
-<section id="mip-splatting">
-<h2>Mip-Splatting<a class="headerlink" href="#mip-splatting" title="Link to this heading">¶</a></h2>
-<p class="rubric">Mip-Splatting: Alias-free 3D Gaussian Splatting</p>
+<section id="colmap">
+<h2>COLMAP<a class="headerlink" href="#colmap" title="Link to this heading">¶</a></h2>
+<p class="rubric">Pixelwise View Selection for Unstructured Multi-View Stereo</p>
 <dl class="field-list">
 <dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Zehao Yu, Anpei Chen, Binbin Huang, Torsten Sattler, Andreas Geiger</dd>
+<dd class="field-odd">Johannes Lutz Schőnberger, Enliang Zheng, Marc Pollefeys, Jan-Michael Frahm</dd>
 <dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2311.16493.pdf">https://arxiv.org/pdf/2311.16493.pdf</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://demuc.de/papers/schoenberger2016mvs.pdf">https://demuc.de/papers/schoenberger2016mvs.pdf</a></p>
 </dd>
 <dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://niujinshuchong.github.io/mip-splatting/">https://niujinshuchong.github.io/mip-splatting/</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://colmap.github.io/">https://colmap.github.io/</a></p>
 </dd>
 <dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/autonomousvision/mip-splatting/main/LICENSE.md">custom, research only</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://colmap.github.io/license.html">BSD</a></p>
 </dd>
 <dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">mip-splatting</dd>
+<dd class="field-odd">colmap</dd>
 <dt class="field-even">Backends<span class="colon">:</span></dt>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
-</dd>
-<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
-</dd>
-</dl>
-<p>A modification of Gaussian Splatting designed to better handle aliasing artifacts.</p>
-</section>
-<section id="kplanes">
-<h2>K-Planes<a class="headerlink" href="#kplanes" title="Link to this heading">¶</a></h2>
-<p class="rubric">K-Planes: Explicit Radiance Fields in Space, Time, and Appearance</p>
-<dl class="field-list">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Sara Fridovich-Keil, Giacomo Meanti, Frederik Warburg, Benjamin Recht, Angjoo Kanazawa</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2301.10241">https://arxiv.org/pdf/2301.10241</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://sarafridov.github.io/K-Planes/">https://sarafridov.github.io/K-Planes/</a></p>
-</dd>
-<dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/sarafridov/K-Planes/main/LICENSE">BSD 3</a></p>
-</dd>
-<dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">kplanes</dd>
-<dt class="field-even">Backends<span class="colon">:</span></dt>
-<dd class="field-even">conda, docker, apptainer, python</dd>
-<dt class="field-odd">Camera models<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
-</dd>
-<dt class="field-even">Required features<span class="colon">:</span></dt>
-<dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code></div>
 </dd>
 </dl>
-<p>K-Planes is a NeRF-based method representing d-dimensional space using 2 planes allowing for a seamless way to go from static (d=3) to dynamic (d=4) scenes.</p>
+<p>COLMAP Multi-View Stereo (MVS) is a general-purpose, end-to-end image-based 3D reconstruction pipeline.
+It uses the point cloud if available, otherwise it runs a sparse reconstruction to obtained.
+The reconstruction consists of a stereo matching step, followed by a multi-view stereo step to obtain a dense point cloud.
+Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the point cloud.
+</p>
 </section>
 <section id="gaussian-opacity-fields">
 <h2>Gaussian Opacity Fields<a class="headerlink" href="#gaussian-opacity-fields" title="Link to this heading">¶</a></h2>
@@ -707,6 +583,177 @@ Instead of sampling along the ray it samples along a spiral path - approximating
 </dd>
 </dl>
 <p>Improved Mip-Splatting with better geometry.</p>
+</section>
+<section id="gaussian-splatting">
+<h2>Gaussian Splatting<a class="headerlink" href="#gaussian-splatting" title="Link to this heading">¶</a></h2>
+<p class="rubric">3D Gaussian Splatting for Real-Time Radiance Field Rendering</p>
+<dl class="field-list">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf">https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/</a></p>
+</dd>
+<dt class="field-even">Licenses<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/main/LICENSE.md">custom, research only</a></p>
+</dd>
+<dt class="field-odd">ID<span class="colon">:</span></dt>
+<dd class="field-odd">gaussian-splatting</dd>
+<dt class="field-even">Backends<span class="colon">:</span></dt>
+<dd class="field-even">conda, docker, apptainer, python</dd>
+<dt class="field-odd">Camera models<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
+</dd>
+<dt class="field-even">Required features<span class="colon">:</span></dt>
+<dd class="field-even"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+</dd>
+<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+</dd>
+</dl>
+<p>Official Gaussian Splatting implementation extended to support distorted camera models. It is fast to train (1 hous) and render (200 FPS).</p>
+</section>
+<section id="gaussian-splatting-wild">
+<h2>GS-W<a class="headerlink" href="#gaussian-splatting-wild" title="Link to this heading">¶</a></h2>
+<p class="rubric">Gaussian in the Wild: 3D Gaussian Splatting for Unconstrained Image Collections</p>
+<dl class="field-list">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Dongbin Zhang, Chuming Wang, Weitao Wang, Peihao Li, Minghan Qin, Haoqian Wang</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2403.15704.pdf">https://arxiv.org/pdf/2403.15704.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://eastbeanzhang.github.io/GS-W/">https://eastbeanzhang.github.io/GS-W/</a></p>
+</dd>
+<dt class="field-even">Licenses<span class="colon">:</span></dt>
+<dd class="field-even"><p>unknown</p>
+</dd>
+<dt class="field-odd">ID<span class="colon">:</span></dt>
+<dd class="field-odd">gaussian-splatting-wild</dd>
+<dt class="field-even">Backends<span class="colon">:</span></dt>
+<dd class="field-even">conda, docker, apptainer, python</dd>
+<dt class="field-odd">Camera models<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
+</dd>
+<dt class="field-even">Required features<span class="colon">:</span></dt>
+<dd class="field-even"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+</dd>
+<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+</dd>
+</dl>
+<p>Official GS-W implementation - 3DGS modified to handle appearance changes and transient objects. A reference view used to provide appearance conditioning. Note, that the method uses huge appearance embeddings (per-Gaussian) and appearance modeling has a large memory footprint.</p>
+</section>
+<section id="instant-ngp">
+<h2>Instant NGP<a class="headerlink" href="#instant-ngp" title="Link to this heading">¶</a></h2>
+<p class="rubric">Instant Neural Graphics Primitives with a Multiresolution Hash Encoding</p>
+<dl class="field-list">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Thomas Müller, Alex Evans, Christoph Schied, Alexander Keller</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf">https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://nvlabs.github.io/instant-ngp/">https://nvlabs.github.io/instant-ngp/</a></p>
+</dd>
+<dt class="field-even">Licenses<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/NVlabs/instant-ngp/master/LICENSE.txt">custom, research only</a></p>
+</dd>
+<dt class="field-odd">ID<span class="colon">:</span></dt>
+<dd class="field-odd">instant-ngp</dd>
+<dt class="field-even">Backends<span class="colon">:</span></dt>
+<dd class="field-even">docker, conda, apptainer, python</dd>
+<dt class="field-odd">Camera models<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+</dd>
+<dt class="field-even">Required features<span class="colon">:</span></dt>
+<dd class="field-even"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+</dd>
+<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
+</dd>
+</dl>
+<p>Instant-NGP is a method that uses hash-grid and a shallow MLP to accelerate training and rendering.
+This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
+</section>
+<section id="kplanes">
+<h2>K-Planes<a class="headerlink" href="#kplanes" title="Link to this heading">¶</a></h2>
+<p class="rubric">K-Planes: Explicit Radiance Fields in Space, Time, and Appearance</p>
+<dl class="field-list">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Sara Fridovich-Keil, Giacomo Meanti, Frederik Warburg, Benjamin Recht, Angjoo Kanazawa</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2301.10241">https://arxiv.org/pdf/2301.10241</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://sarafridov.github.io/K-Planes/">https://sarafridov.github.io/K-Planes/</a></p>
+</dd>
+<dt class="field-even">Licenses<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/sarafridov/K-Planes/main/LICENSE">BSD 3</a></p>
+</dd>
+<dt class="field-odd">ID<span class="colon">:</span></dt>
+<dd class="field-odd">kplanes</dd>
+<dt class="field-even">Backends<span class="colon">:</span></dt>
+<dd class="field-even">conda, docker, apptainer, python</dd>
+<dt class="field-odd">Camera models<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
+</dd>
+<dt class="field-even">Required features<span class="colon">:</span></dt>
+<dd class="field-even"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+</dd>
+<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code></div>
+</dd>
+</dl>
+<p>K-Planes is a NeRF-based method representing d-dimensional space using 2 planes allowing for a seamless way to go from static (d=3) to dynamic (d=4) scenes.</p>
+</section>
+<section id="mip-splatting">
+<h2>Mip-Splatting<a class="headerlink" href="#mip-splatting" title="Link to this heading">¶</a></h2>
+<p class="rubric">Mip-Splatting: Alias-free 3D Gaussian Splatting</p>
+<dl class="field-list">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Zehao Yu, Anpei Chen, Binbin Huang, Torsten Sattler, Andreas Geiger</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2311.16493.pdf">https://arxiv.org/pdf/2311.16493.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://niujinshuchong.github.io/mip-splatting/">https://niujinshuchong.github.io/mip-splatting/</a></p>
+</dd>
+<dt class="field-even">Licenses<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/autonomousvision/mip-splatting/main/LICENSE.md">custom, research only</a></p>
+</dd>
+<dt class="field-odd">ID<span class="colon">:</span></dt>
+<dd class="field-odd">mip-splatting</dd>
+<dt class="field-even">Backends<span class="colon">:</span></dt>
+<dd class="field-even">conda, docker, apptainer, python</dd>
+<dt class="field-odd">Camera models<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
+</dd>
+<dt class="field-even">Required features<span class="colon">:</span></dt>
+<dd class="field-even"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+</dd>
+<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+</dd>
+</dl>
+<p>A modification of Gaussian Splatting designed to better handle aliasing artifacts.</p>
 </section>
 <section id="mipnerf360">
 <h2>Mip-NeRF 360<a class="headerlink" href="#mipnerf360" title="Link to this heading">¶</a></h2>
@@ -744,43 +791,70 @@ Instead of sampling along the ray it samples along a spiral path - approximating
 It was designed for unbounded object-centric 360-degree capture and handles anti-aliasing well.
 It is, however slower to train and render compared to other approaches.</p>
 </section>
-<section id="colmap">
-<h2>COLMAP<a class="headerlink" href="#colmap" title="Link to this heading">¶</a></h2>
-<p class="rubric">Pixelwise View Selection for Unstructured Multi-View Stereo</p>
+<section id="nerf">
+<h2>NeRF<a class="headerlink" href="#nerf" title="Link to this heading">¶</a></h2>
+<p class="rubric">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</p>
 <dl class="field-list">
 <dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Johannes Lutz Schőnberger, Enliang Zheng, Marc Pollefeys, Jan-Michael Frahm</dd>
+<dd class="field-odd">Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng</dd>
 <dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://demuc.de/papers/schoenberger2016mvs.pdf">https://demuc.de/papers/schoenberger2016mvs.pdf</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2003.08934.pdf">https://arxiv.org/pdf/2003.08934.pdf</a></p>
 </dd>
 <dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://colmap.github.io/">https://colmap.github.io/</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://www.matthewtancik.com/nerf">https://www.matthewtancik.com/nerf</a></p>
 </dd>
 <dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://colmap.github.io/license.html">BSD</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/bmild/nerf/blob/master/LICENSE">MIT</a></p>
 </dd>
 <dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">colmap</dd>
+<dd class="field-odd">nerf</dd>
 <dt class="field-even">Backends<span class="colon">:</span></dt>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
 </dd>
 </dl>
-<p>COLMAP Multi-View Stereo (MVS) is a general-purpose, end-to-end image-based 3D reconstruction pipeline.
-It uses the point cloud if available, otherwise it runs a sparse reconstruction to obtained.
-The reconstruction consists of a stereo matching step, followed by a multi-view stereo step to obtain a dense point cloud.
-Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the point cloud.
-</p>
+<p>Original NeRF method representing radiance field using a large MLP.</p>
+</section>
+<section id="nerfacto">
+<h2>NerfStudio<a class="headerlink" href="#nerfacto" title="Link to this heading">¶</a></h2>
+<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
+<dl class="field-list">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.nerf.studio/">https://docs.nerf.studio/</a></p>
+</dd>
+<dt class="field-even">ID<span class="colon">:</span></dt>
+<dd class="field-even">nerfacto</dd>
+<dt class="field-odd">Backends<span class="colon">:</span></dt>
+<dd class="field-odd">conda, docker, apptainer, python</dd>
+<dt class="field-even">Camera models<span class="colon">:</span></dt>
+<dd class="field-even"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+</dd>
+<dt class="field-odd">Required features<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+</dd>
+<dt class="field-even">Supported outputs<span class="colon">:</span></dt>
+<dd class="field-even"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
+</dd>
+</dl>
+<p>NerfStudio (Nerfacto) is a method based on Instant-NGP which combines several improvements from different papers to achieve good quality on real-world scenes captured under normal conditions. It is fast to train (12 min) and render speed is ~1 FPS.</p>
 </section>
 <section id="nerfonthego">
 <h2>NeRF On-the-go<a class="headerlink" href="#nerfonthego" title="Link to this heading">¶</a></h2>
@@ -813,36 +887,30 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dl>
 <p>NeRF On-the-go enables novel view synthesis in in-the-wild scenes from casually captured images.</p>
 </section>
-<section id="nerfacto">
-<h2>NerfStudio<a class="headerlink" href="#nerfacto" title="Link to this heading">¶</a></h2>
-<p class="rubric">Nerfstudio: A Modular Framework for Neural Radiance Field Development</p>
+<section id="nerfw-reimpl">
+<h2>NeRF-W (reimplementation)<a class="headerlink" href="#nerfw-reimpl" title="Link to this heading">¶</a></h2>
 <dl class="field-list">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Matthew Tancik, Ethan Weber, Evonne Ng, Ruilong Li, Brent Yi, Justin Kerr, Terrance Wang, Alexander Kristoffersen, Jake Austin, Kamyar Salahi, Abhik Ahuja, David McAllister, Angjoo Kanazawa</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2302.04264.pdf">https://arxiv.org/pdf/2302.04264.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.nerf.studio/">https://docs.nerf.studio/</a></p>
+<dt class="field-odd">Licenses<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://raw.githubusercontent.com/kwea123/nerf_pl/master/LICENSE">MIT</a></p>
 </dd>
 <dt class="field-even">ID<span class="colon">:</span></dt>
-<dd class="field-even">nerfacto</dd>
+<dd class="field-even">nerfw-reimpl</dd>
 <dt class="field-odd">Backends<span class="colon">:</span></dt>
 <dd class="field-odd">conda, docker, apptainer, python</dd>
 <dt class="field-even">Camera models<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-odd">Required features<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-even">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code></div>
 </dd>
 </dl>
-<p>NerfStudio (Nerfacto) is a method based on Instant-NGP which combines several improvements from different papers to achieve good quality on real-world scenes captured under normal conditions. It is fast to train (12 min) and render speed is ~1 FPS.</p>
+<p>Unofficial reimplementation of NeRF-W. Does not reach the performance reported in the original paper, but is widely used for benchmarking.</p>
 </section>
 <section id="seathru-nerf">
 <h2>SeaThru-NeRF<a class="headerlink" href="#seathru-nerf" title="Link to this heading">¶</a></h2>
@@ -879,142 +947,74 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 <p>Official SeaThru-NeRF implementation.
 It is based on MipNeRF 360 and was disagned for underwater scenes.</p>
 </section>
-<section id="instant-ngp">
-<h2>Instant NGP<a class="headerlink" href="#instant-ngp" title="Link to this heading">¶</a></h2>
-<p class="rubric">Instant Neural Graphics Primitives with a Multiresolution Hash Encoding</p>
+<section id="tensorf">
+<h2>TensoRF<a class="headerlink" href="#tensorf" title="Link to this heading">¶</a></h2>
+<p class="rubric">TensoRF: Tensorial Radiance Fields</p>
 <dl class="field-list">
 <dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Thomas Müller, Alex Evans, Christoph Schied, Alexander Keller</dd>
+<dd class="field-odd">Anpei Chen, Zexiang Xu, Andreas Geiger, Jingyi Yu, Hao Su</dd>
 <dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf">https://nvlabs.github.io/instant-ngp/assets/mueller2022instant.pdf</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2203.09517.pdf">https://arxiv.org/pdf/2203.09517.pdf</a></p>
 </dd>
 <dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://nvlabs.github.io/instant-ngp/">https://nvlabs.github.io/instant-ngp/</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://apchenstu.github.io/TensoRF/">https://apchenstu.github.io/TensoRF/</a></p>
 </dd>
 <dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/NVlabs/instant-ngp/master/LICENSE.txt">custom, research only</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/apchenstu/TensoRF/blob/main/LICENSE">MIT</a></p>
 </dd>
 <dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">instant-ngp</dd>
+<dd class="field-odd">tensorf</dd>
 <dt class="field-even">Backends<span class="colon">:</span></dt>
-<dd class="field-even">docker, conda, apptainer, python</dd>
+<dd class="field-even">conda, docker, apptainer, python</dd>
+<dt class="field-odd">Camera models<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+</dd>
+<dt class="field-even">Required features<span class="colon">:</span></dt>
+<dd class="field-even"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+</dd>
+<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
+<dd class="field-odd"><div class="docutils container">
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code></div>
+</dd>
+</dl>
+<p>TensoRF factorizes the radiance field into a multiple compact low-rank tensor components. It was designed and tester primarily on Blender, LLFF, and NSVF datasets.</p>
+</section>
+<section id="tetra-nerf">
+<h2>Tetra-NeRF<a class="headerlink" href="#tetra-nerf" title="Link to this heading">¶</a></h2>
+<p class="rubric">Tetra-NeRF: Representing Neural Radiance Fields Using Tetrahedra</p>
+<dl class="field-list">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd">Jonas Kulhanek, Torsten Sattler</dd>
+<dt class="field-even">Paper<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2304.09987.pdf">https://arxiv.org/pdf/2304.09987.pdf</a></p>
+</dd>
+<dt class="field-odd">Web<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://jkulhanek.com/tetra-nerf">https://jkulhanek.com/tetra-nerf</a></p>
+</dd>
+<dt class="field-even">Licenses<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/jkulhanek/tetra-nerf/master/LICENSE">MIT</a></p>
+</dd>
+<dt class="field-odd">ID<span class="colon">:</span></dt>
+<dd class="field-odd">tetra-nerf</dd>
+<dt class="field-even">Backends<span class="colon">:</span></dt>
+<dd class="field-even">docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
-</dd>
-<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
-</dd>
-</dl>
-<p>Instant-NGP is a method that uses hash-grid and a shallow MLP to accelerate training and rendering.
-This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
-</section>
-<section id="gaussian-splatting-wild">
-<h2>GS-W<a class="headerlink" href="#gaussian-splatting-wild" title="Link to this heading">¶</a></h2>
-<p class="rubric">Gaussian in the Wild: 3D Gaussian Splatting for Unconstrained Image Collections</p>
-<dl class="field-list">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Dongbin Zhang, Chuming Wang, Weitao Wang, Peihao Li, Minghan Qin, Haoqian Wang</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2403.15704.pdf">https://arxiv.org/pdf/2403.15704.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://eastbeanzhang.github.io/GS-W/">https://eastbeanzhang.github.io/GS-W/</a></p>
-</dd>
-<dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p>unknown</p>
-</dd>
-<dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">gaussian-splatting-wild</dd>
-<dt class="field-even">Backends<span class="colon">:</span></dt>
-<dd class="field-even">conda, docker, apptainer, python</dd>
-<dt class="field-odd">Camera models<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
-</dd>
-<dt class="field-even">Required features<span class="colon">:</span></dt>
-<dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
-</dd>
-<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
-</dd>
-</dl>
-<p>Official GS-W implementation - 3DGS modified to handle appearance changes and transient objects. A reference view used to provide appearance conditioning. Note, that the method uses huge appearance embeddings (per-Gaussian) and appearance modeling has a large memory footprint.</p>
-</section>
-<section id="gaussian-splatting">
-<h2>Gaussian Splatting<a class="headerlink" href="#gaussian-splatting" title="Link to this heading">¶</a></h2>
-<p class="rubric">3D Gaussian Splatting for Real-Time Radiance Field Rendering</p>
-<dl class="field-list">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Bernhard Kerbl, Georgios Kopanas, Thomas Leimkühler, George Drettakis</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf">https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/</a></p>
-</dd>
-<dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/main/LICENSE.md">custom, research only</a></p>
-</dd>
-<dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">gaussian-splatting</dd>
-<dt class="field-even">Backends<span class="colon">:</span></dt>
-<dd class="field-even">conda, docker, apptainer, python</dd>
-<dt class="field-odd">Camera models<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
-</dd>
-<dt class="field-even">Required features<span class="colon">:</span></dt>
-<dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
-</dd>
-<dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
-</dd>
-</dl>
-<p>Official Gaussian Splatting implementation extended to support distorted camera models. It is fast to train (1 hous) and render (200 FPS).</p>
-</section>
-<section id="nerf">
-<h2>NeRF<a class="headerlink" href="#nerf" title="Link to this heading">¶</a></h2>
-<p class="rubric">NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</p>
-<dl class="field-list">
-<dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng</dd>
-<dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2003.08934.pdf">https://arxiv.org/pdf/2003.08934.pdf</a></p>
-</dd>
-<dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://www.matthewtancik.com/nerf">https://www.matthewtancik.com/nerf</a></p>
-</dd>
-<dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://github.com/bmild/nerf/blob/master/LICENSE">MIT</a></p>
-</dd>
-<dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">nerf</dd>
-<dt class="field-even">Backends<span class="colon">:</span></dt>
-<dd class="field-even">conda, docker, apptainer, python</dd>
-<dt class="field-odd">Camera models<span class="colon">:</span></dt>
-<dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code></div>
-</dd>
-<dt class="field-even">Required features<span class="colon">:</span></dt>
-<dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
 </dd>
 </dl>
-<p>Original NeRF method representing radiance field using a large MLP.</p>
+<p>Tetra-NeRF is a method that represents the scene as tetrahedral mesh obtained using Delaunay tetrahedralization. The input point cloud has to be provided (for COLMAP datasets the point cloud is automatically extracted). This is the official implementation
+    from the paper.</p>
 </section>
 <section id="wild-gaussians">
 <h2>WildGaussians<a class="headerlink" href="#wild-gaussians" title="Link to this heading">¶</a></h2>
@@ -1048,40 +1048,40 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
 </dl>
 <p>WildGaussians adopts 3DGS to handle appearance changes and transient objects. After fixing appearance, it can be baked back into 3DGS.</p>
 </section>
-<section id="tetra-nerf">
-<h2>Tetra-NeRF<a class="headerlink" href="#tetra-nerf" title="Link to this heading">¶</a></h2>
-<p class="rubric">Tetra-NeRF: Representing Neural Radiance Fields Using Tetrahedra</p>
+<section id="zipnerf">
+<h2>Zip-NeRF<a class="headerlink" href="#zipnerf" title="Link to this heading">¶</a></h2>
+<p class="rubric">Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields</p>
 <dl class="field-list">
 <dt class="field-odd">Authors<span class="colon">:</span></dt>
-<dd class="field-odd">Jonas Kulhanek, Torsten Sattler</dd>
+<dd class="field-odd">Jonathan T. Barron, Ben Mildenhall, Dor Verbin, Pratul P. Srinivasan, Peter Hedman</dd>
 <dt class="field-even">Paper<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2304.09987.pdf">https://arxiv.org/pdf/2304.09987.pdf</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://arxiv.org/pdf/2304.06706.pdf">https://arxiv.org/pdf/2304.06706.pdf</a></p>
 </dd>
 <dt class="field-odd">Web<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://jkulhanek.com/tetra-nerf">https://jkulhanek.com/tetra-nerf</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://jonbarron.info/zipnerf/">https://jonbarron.info/zipnerf/</a></p>
 </dd>
 <dt class="field-even">Licenses<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/jkulhanek/tetra-nerf/master/LICENSE">MIT</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://raw.githubusercontent.com/jonbarron/camp_zipnerf/main/LICENSE">Apache 2.0</a></p>
 </dd>
 <dt class="field-odd">ID<span class="colon">:</span></dt>
-<dd class="field-odd">tetra-nerf</dd>
+<dd class="field-odd">zipnerf</dd>
 <dt class="field-even">Backends<span class="colon">:</span></dt>
-<dd class="field-even">docker, apptainer, python</dd>
+<dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
 </dd>
 </dl>
-<p>Tetra-NeRF is a method that represents the scene as tetrahedral mesh obtained using Delaunay tetrahedralization. The input point cloud has to be provided (for COLMAP datasets the point cloud is automatically extracted). This is the official implementation
-    from the paper.</p>
+<p>Zip-NeRF is a radiance field method which addresses the aliasing problem in the case of hash-grid based methods (iNGP-based).
+Instead of sampling along the ray it samples along a spiral path - approximating integration along the frustum. </p>
 </section>
 </section>
 
@@ -1153,24 +1153,24 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">Methods</a><ul>
-<li><a class="reference internal" href="#tensorf">TensoRF</a></li>
-<li><a class="reference internal" href="#zipnerf">Zip-NeRF</a></li>
 <li><a class="reference internal" href="#camp">CamP</a></li>
-<li><a class="reference internal" href="#nerfw-reimpl">NeRF-W (reimplementation)</a></li>
-<li><a class="reference internal" href="#mip-splatting">Mip-Splatting</a></li>
-<li><a class="reference internal" href="#kplanes">K-Planes</a></li>
-<li><a class="reference internal" href="#gaussian-opacity-fields">Gaussian Opacity Fields</a></li>
-<li><a class="reference internal" href="#mipnerf360">Mip-NeRF 360</a></li>
 <li><a class="reference internal" href="#colmap">COLMAP</a></li>
-<li><a class="reference internal" href="#nerfonthego">NeRF On-the-go</a></li>
-<li><a class="reference internal" href="#nerfacto">NerfStudio</a></li>
-<li><a class="reference internal" href="#seathru-nerf">SeaThru-NeRF</a></li>
-<li><a class="reference internal" href="#instant-ngp">Instant NGP</a></li>
-<li><a class="reference internal" href="#gaussian-splatting-wild">GS-W</a></li>
+<li><a class="reference internal" href="#gaussian-opacity-fields">Gaussian Opacity Fields</a></li>
 <li><a class="reference internal" href="#gaussian-splatting">Gaussian Splatting</a></li>
+<li><a class="reference internal" href="#gaussian-splatting-wild">GS-W</a></li>
+<li><a class="reference internal" href="#instant-ngp">Instant NGP</a></li>
+<li><a class="reference internal" href="#kplanes">K-Planes</a></li>
+<li><a class="reference internal" href="#mip-splatting">Mip-Splatting</a></li>
+<li><a class="reference internal" href="#mipnerf360">Mip-NeRF 360</a></li>
 <li><a class="reference internal" href="#nerf">NeRF</a></li>
-<li><a class="reference internal" href="#wild-gaussians">WildGaussians</a></li>
+<li><a class="reference internal" href="#nerfacto">NerfStudio</a></li>
+<li><a class="reference internal" href="#nerfonthego">NeRF On-the-go</a></li>
+<li><a class="reference internal" href="#nerfw-reimpl">NeRF-W (reimplementation)</a></li>
+<li><a class="reference internal" href="#seathru-nerf">SeaThru-NeRF</a></li>
+<li><a class="reference internal" href="#tensorf">TensoRF</a></li>
 <li><a class="reference internal" href="#tetra-nerf">Tetra-NeRF</a></li>
+<li><a class="reference internal" href="#wild-gaussians">WildGaussians</a></li>
+<li><a class="reference internal" href="#zipnerf">Zip-NeRF</a></li>
 </ul>
 </li>
 </ul>
