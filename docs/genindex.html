@@ -193,7 +193,7 @@
   
   <div class="sidebar-logo-container">
     <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
-    <span class="sidebar-brand-text">NerfBaselines  documentation<span class="sidebar-brand-version">Version: 1.2.4</span></span>
+    <span class="sidebar-brand-text">NerfBaselines  documentation<span class="sidebar-brand-version">Version: 1.2.5</span></span>
   </div>
   
 </a>
@@ -211,6 +211,7 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-custom-data.html">Using custom data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python-tutorial.html">Python tutorial</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
 <ul>
@@ -218,6 +219,9 @@
 <li class="toctree-l1"><a class="reference internal" href="custom-dataset-loader.html">Custom dataset loader</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adding-new-datasets.html">Adding new datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backends.html">Isolated backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporting-demos.html">Creating web demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporting-meshes.html">Exporting meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-web.html">Custom web benchmark</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul>
@@ -246,7 +250,7 @@
 </div>
 <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="versions">
   <span class="rst-current-version" data-toggle="rst-current-version">
-    Version: 1.2.4
+    Version: 1.2.5
     <span class="fa fa-caret-down"></span>
   </span>
   <div class="rst-other-versions">
@@ -267,6 +271,13 @@
         
         
         <dd class="rst-current-item"><a href="/docs/">latest</a></dd>
+        
+      
+        
+        
+        
+        
+        <dd class=""><a href="/docs/1.2.4/">1.2.4</a></dd>
         
       
         
@@ -484,7 +495,7 @@
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-backend">nerfbaselines-fix-output-artifact command line option</a>
 </li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-backend">nerfbaselines-install-method command line option</a>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-backend">nerfbaselines-install command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-render-backend">nerfbaselines-render command line option</a>
 </li>
@@ -602,7 +613,7 @@
         <ul>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-force">nerfbaselines-fix-output-artifact command line option</a>
 </li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-force">nerfbaselines-install-method command line option</a>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-force">nerfbaselines-install command line option</a>
 </li>
         </ul></li>
         <li>
@@ -648,7 +659,7 @@
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-output-artifact-method">nerfbaselines-fix-output-artifact command line option</a>
 </li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-method">nerfbaselines-install-method command line option</a>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method">nerfbaselines-install command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-shell-method">nerfbaselines-shell command line option</a>
 </li>
@@ -791,7 +802,7 @@
     --spec
 
         <ul>
-          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-spec">nerfbaselines-install-method command line option</a>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-spec">nerfbaselines-install command line option</a>
 </li>
         </ul></li>
         <li>
@@ -828,10 +839,6 @@
         <ul>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-v">nerfbaselines-export-mesh command line option</a>
 </li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">nerfbaselines-fix-checkpoint command line option</a>
-</li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">nerfbaselines-shell command line option</a>
-</li>
           <li><a href="cli.html#cmdoption-nerfbaselines-test-method-v">nerfbaselines-test-method command line option</a>
 </li>
         </ul></li>
@@ -853,10 +860,6 @@
 
         <ul>
           <li><a href="cli.html#cmdoption-nerfbaselines-export-mesh-v">nerfbaselines-export-mesh command line option</a>
-</li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">nerfbaselines-fix-checkpoint command line option</a>
-</li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">nerfbaselines-shell command line option</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-test-method-v">nerfbaselines-test-method command line option</a>
 </li>
@@ -1563,6 +1566,8 @@
 </li>
         <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.bundler.load_bundler_dataset">load_bundler_dataset() (in module nerfbaselines.datasets.bundler)</a>
 </li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.load_checkpoint">load_checkpoint() (in module nerfbaselines)</a>
+</li>
         <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.colmap.load_colmap_dataset">load_colmap_dataset() (in module nerfbaselines.datasets.colmap)</a>
 </li>
         <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.load_dataset">load_dataset() (in module nerfbaselines.datasets)</a>
@@ -1841,10 +1846,6 @@
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-set">--set</a>
 </li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">--verbose</a>
-</li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-fix-checkpoint-v">-v</a>
-</li>
         </ul></li>
         <li>
     nerfbaselines-fix-output-artifact command line option
@@ -1887,16 +1888,16 @@
 </li>
         </ul></li>
         <li>
-    nerfbaselines-install-method command line option
+    nerfbaselines-install command line option
 
         <ul>
-          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-backend">--backend</a>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-backend">--backend</a>
 </li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-force">--force</a>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-force">--force</a>
 </li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-method">--method</a>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-method">--method</a>
 </li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-install-method-spec">--spec</a>
+          <li><a href="cli.html#cmdoption-nerfbaselines-install-spec">--spec</a>
 </li>
         </ul></li>
         <li>
@@ -1938,10 +1939,6 @@
           <li><a href="cli.html#cmdoption-nerfbaselines-shell-backend">--backend</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-shell-method">--method</a>
-</li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">--verbose</a>
-</li>
-          <li><a href="cli.html#cmdoption-nerfbaselines-shell-v">-v</a>
 </li>
           <li><a href="cli.html#cmdoption-nerfbaselines-shell-arg-COMMAND">COMMAND</a>
 </li>
