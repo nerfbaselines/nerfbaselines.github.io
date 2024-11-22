@@ -829,6 +829,12 @@
 <span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-generate-dataset-results-output" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-generate-dataset-results-scenes">
+<span class="sig-name descname"><span class="pre">--scenes</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;scenes&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-generate-dataset-results-scenes" title="Link to this definition">¶</a></dt>
+<dd><p>Comma-separated list of scenes to include in the results.</p>
+</dd></dl>
+
 </section>
 <section id="nerfbaselines-install">
 <h2>install<a class="headerlink" href="#nerfbaselines-install" title="Link to this heading">¶</a></h2>
@@ -843,7 +849,7 @@
 <dd><p>Method to install.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>nerf | nerfacto | gaussian-splatting | 3dgs-mcmc | instant-ngp | colmap | nerfw-reimpl | zipnerf | kplanes | gaussian-opacity-fields | wild-gaussians | scaffold-gs | tensorf | mip-splatting | tetra-nerf | seathru-nerf | camp | nerfonthego | gsplat | mipnerf360 | gaussian-splatting-wild | 2d-gaussian-splatting</p>
+<dd class="field-odd"><p>gaussian-opacity-fields | colmap | nerf | mip-splatting | wild-gaussians | gsplat | 2d-gaussian-splatting | nerfw-reimpl | tensorf | tetra-nerf | kplanes | mipnerf360 | seathru-nerf | scaffold-gs | instant-ngp | gaussian-splatting-wild | gaussian-splatting | zipnerf | nerfacto | camp | 3dgs-mcmc | nerfonthego</p>
 </dd>
 </dl>
 </dd></dl>
@@ -877,6 +883,92 @@
 <span class="sig-name descname"><span class="pre">NERFBASELINES_BACKEND</span></span></dt>
 <dd><blockquote>
 <div><p>Provide a default for <a class="reference internal" href="#cmdoption-nerfbaselines-install-backend"><code class="xref std std-option docutils literal notranslate"><span class="pre">--backend</span></code></a></p>
+</div></blockquote>
+</dd></dl>
+
+</section>
+<section id="nerfbaselines-measure-fps">
+<h2>measure-fps<a class="headerlink" href="#nerfbaselines-measure-fps" title="Link to this heading">¶</a></h2>
+<p>Measure FPS</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>measure-fps<span class="w"> </span><span class="o">[</span>OPTIONS<span class="o">]</span>
+</pre></div>
+</div>
+<p class="rubric">Options</p>
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-checkpoint">
+<span class="sig-name descname"><span class="pre">--checkpoint</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;checkpoint&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-checkpoint" title="Link to this definition">¶</a></dt>
+<dd><p><strong>Required</strong> Path to the checkpoint directory. It can also be a remote path (starting with <cite>http(s)://</cite>) or be a path inside a zip file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-data">
+<span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-data" title="Link to this definition">¶</a></dt>
+<dd><p><strong>Required</strong> A path to the dataset to render the cameras from. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-num-repeats">
+<span class="sig-name descname"><span class="pre">--num-repeats</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;num_repeats&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-num-repeats" title="Link to this definition">¶</a></dt>
+<dd><p>Number of times to repeat the rendering to estimate the FPS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">10</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-split">
+<span class="sig-name descname"><span class="pre">--split</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;split&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-split" title="Link to this definition">¶</a></dt>
+<dd><p>Dataset split to use to estimate the FPS.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">'test'</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-data-indices">
+<span class="sig-name descname"><span class="pre">--data-indices</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data_indices&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-data-indices" title="Link to this definition">¶</a></dt>
+<dd><p>Indices of the dataset to use to estimate the FPS. Default is to use the first camera.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-resolution">
+<span class="sig-name descname"><span class="pre">--resolution</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;resolution&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-resolution" title="Link to this definition">¶</a></dt>
+<dd><p>Override the resolution of the output. Use ‘widthxheight’ format (e.g., 1920x1080). If one of the dimensions is negative, the aspect ratio will be preserved and the dimension will be rounded to the nearest multiple of the absolute value of the dimension.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-output-names">
+<span class="sig-name descname"><span class="pre">--output-names</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output_names&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-output-names" title="Link to this definition">¶</a></dt>
+<dd><p>Comma separated list of output types (e.g. color,depth,accumulation). See the method’s <cite>get_info()[‘supported_outputs’]</cite> for supported outputs. By default, only <cite>color</cite> is rendered.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-output">
+<span class="sig-name descname"><span class="pre">--output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;output&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-output" title="Link to this definition">¶</a></dt>
+<dd><p>Write output to a JSON file.</p>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-backend">
+<span class="sig-name descname"><span class="pre">--backend</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;backend_name&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-backend" title="Link to this definition">¶</a></dt>
+<dd><p>The backend to use. If not specified, a supported installed  backend is selected automatically. Note, the backend can be specified via the NERFBASELINES_BACKEND environment variable.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Options<span class="colon">:</span></dt>
+<dd class="field-odd"><p>conda | docker | apptainer | python</p>
+</dd>
+</dl>
+</dd></dl>
+
+<p class="rubric">Environment variables</p>
+<dl class="std envvar" id="nerfbaselines-measure-fps-backend-name-nerfbaselines-backend">
+<dt class="sig sig-object std">
+<span class="sig-name descname"><span class="pre">NERFBASELINES_BACKEND</span></span></dt>
+<dd><blockquote>
+<div><p>Provide a default for <a class="reference internal" href="#cmdoption-nerfbaselines-measure-fps-backend"><code class="xref std std-option docutils literal notranslate"><span class="pre">--backend</span></code></a></p>
 </div></blockquote>
 </dd></dl>
 
@@ -1009,7 +1101,7 @@
 <dd><p><strong>Required</strong> Method to use.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>nerf | nerfacto | gaussian-splatting | 3dgs-mcmc | instant-ngp | colmap | nerfw-reimpl | zipnerf | kplanes | gaussian-opacity-fields | wild-gaussians | scaffold-gs | tensorf | mip-splatting | tetra-nerf | seathru-nerf | camp | nerfonthego | gsplat | mipnerf360 | gaussian-splatting-wild | 2d-gaussian-splatting</p>
+<dd class="field-odd"><p>gaussian-opacity-fields | colmap | nerf | mip-splatting | wild-gaussians | gsplat | 2d-gaussian-splatting | nerfw-reimpl | tensorf | tetra-nerf | kplanes | mipnerf360 | seathru-nerf | scaffold-gs | instant-ngp | gaussian-splatting-wild | gaussian-splatting | zipnerf | nerfacto | camp | 3dgs-mcmc | nerfonthego</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1458,6 +1550,7 @@
 <li><a class="reference internal" href="#nerfbaselines-fix-output-artifact">fix-output-artifact</a></li>
 <li><a class="reference internal" href="#nerfbaselines-generate-dataset-results">generate-dataset-results</a></li>
 <li><a class="reference internal" href="#nerfbaselines-install">install</a></li>
+<li><a class="reference internal" href="#nerfbaselines-measure-fps">measure-fps</a></li>
 <li><a class="reference internal" href="#nerfbaselines-render">render</a></li>
 <li><a class="reference internal" href="#nerfbaselines-render-trajectory">render-trajectory</a></li>
 <li><a class="reference internal" href="#nerfbaselines-shell">shell</a></li>
