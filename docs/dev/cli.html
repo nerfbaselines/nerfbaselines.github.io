@@ -24,7 +24,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=5792dc8b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=1988f973" />
     
     
 
@@ -224,6 +224,7 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-custom-data.html">Using custom data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewer.html">Viewer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python-tutorial.html">Python tutorial</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
@@ -850,7 +851,7 @@
 <dd><p>Method to install.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>mipnerf360 | wild-gaussians | kplanes | colmap | instant-ngp | tetra-nerf | mip-splatting | nerf | 3dgs-mcmc | nerfw-reimpl | gaussian-opacity-fields | nerfonthego | scaffold-gs | zipnerf | tensorf | nerfacto | seathru-nerf | gsplat | camp | gaussian-splatting-wild | gaussian-splatting | 2d-gaussian-splatting</p>
+<dd class="field-odd"><p>zipnerf | kplanes | wild-gaussians | gsplat | nerfw-reimpl | instant-ngp | camp | mip-splatting | scaffold-gs | seathru-nerf | nerfonthego | 2d-gaussian-splatting | 3dgs-mcmc | tetra-nerf | gaussian-splatting | gaussian-opacity-fields | nerf | tensorf | mipnerf360 | colmap | gaussian-splatting-wild | nerfacto</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1102,7 +1103,7 @@
 <dd><p><strong>Required</strong> Method to use.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>mipnerf360 | wild-gaussians | kplanes | colmap | instant-ngp | tetra-nerf | mip-splatting | nerf | 3dgs-mcmc | nerfw-reimpl | gaussian-opacity-fields | nerfonthego | scaffold-gs | zipnerf | tensorf | nerfacto | seathru-nerf | gsplat | camp | gaussian-splatting-wild | gaussian-splatting | 2d-gaussian-splatting</p>
+<dd class="field-odd"><p>zipnerf | kplanes | wild-gaussians | gsplat | nerfw-reimpl | instant-ngp | camp | mip-splatting | scaffold-gs | seathru-nerf | nerfonthego | 2d-gaussian-splatting | 3dgs-mcmc | tetra-nerf | gaussian-splatting | gaussian-opacity-fields | nerf | tensorf | mipnerf360 | colmap | gaussian-splatting-wild | nerfacto</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1363,7 +1364,7 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-viewer-port">
 <span class="sig-name descname"><span class="pre">--port</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;port&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-viewer-port" title="Link to this definition">¶</a></dt>
-<dd><p>Port to run the viewer on. Defaults to 6006.</p>
+<dd><p>Port to run the viewer on. If port=0, a random free port will be assigned. Defaults to 6006.</p>
 </dd></dl>
 
 <dl class="std option">

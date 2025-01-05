@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
-    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=5792dc8b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=1988f973" />
     
     
 
@@ -211,6 +211,7 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-custom-data.html">Using custom data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewer.html">Viewer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python-tutorial.html">Python tutorial</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
@@ -478,7 +479,7 @@
           
 <section class="genindex-section">
   <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#Symbols"><strong>Symbols</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#K"><strong>K</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#Q"><strong>Q</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#V"><strong>V</strong></a> | <a href="#W"><strong>W</strong></a></div>
+  <div class="genindex-jumpbox"><a href="#Symbols"><strong>Symbols</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#Q"><strong>Q</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#V"><strong>V</strong></a> | <a href="#W"><strong>W</strong></a></div>
 </section>
 <section id="Symbols" class="genindex-section">
   <h2>Symbols</h2>
@@ -1012,8 +1013,6 @@
           <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.WandbLoggerEvent.add_text">(nerfbaselines.logging.WandbLoggerEvent method)</a>
 </li>
         </ul></li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe.appearance">appearance (nerfbaselines.TrajectoryKeyframe attribute)</a>
-</li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrame.appearance_weights">appearance_weights (nerfbaselines.TrajectoryFrame attribute)</a>
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.appearances">appearances (nerfbaselines.Trajectory attribute)</a>
@@ -1101,6 +1100,8 @@
         <ul>
           <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol.close">(nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol method)</a>
 </li>
+          <li><a href="api/nerfbaselines.viewer.html#nerfbaselines.viewer.Viewer.close">(nerfbaselines.viewer.Viewer method)</a>
+</li>
         </ul></li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
@@ -1172,22 +1173,10 @@
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata">DatasetSpecMetadata (class in nerfbaselines)</a>
 </li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.default_appearance">default_appearance (nerfbaselines.ImageSetInterpolationSource attribute)</a>
-
-        <ul>
-          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.default_appearance">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
-</li>
-        </ul></li>
         <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackendSpec.default_cuda_archs">default_cuda_archs (nerfbaselines.backends.ApptainerBackendSpec attribute)</a>
 
         <ul>
           <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackendSpec.default_cuda_archs">(nerfbaselines.backends.DockerBackendSpec attribute)</a>
-</li>
-        </ul></li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.default_fov">default_fov (nerfbaselines.ImageSetInterpolationSource attribute)</a>
-
-        <ul>
-          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.default_fov">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
 </li>
         </ul></li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.default_metric">default_metric (nerfbaselines.DatasetSpecMetadata attribute)</a>
@@ -1196,14 +1185,6 @@
           <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.default_metric">(nerfbaselines.results.DatasetInfo attribute)</a>
 </li>
         </ul></li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.default_transition_duration">default_transition_duration (nerfbaselines.ImageSetInterpolationSource attribute)</a>
-
-        <ul>
-          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.default_transition_duration">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
-</li>
-        </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.DefaultEvaluationProtocol">DefaultEvaluationProtocol (class in nerfbaselines.evaluation)</a>
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpecMetadata.description">description (nerfbaselines.DatasetSpecMetadata attribute)</a>
@@ -1214,6 +1195,8 @@
           <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.MetricInfo.description">(nerfbaselines.results.MetricInfo attribute)</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.deserialize_nb_info">deserialize_nb_info() (in module nerfbaselines.io)</a>
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.distortion_parameters">distortion_parameters (nerfbaselines.GenericCameras property)</a>
@@ -1320,11 +1303,9 @@
 </li>
         <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.format_memory">format_memory() (in module nerfbaselines.results)</a>
 </li>
-        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.forward_port">forward_port() (in module nerfbaselines.backends)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe.fov">fov (nerfbaselines.TrajectoryKeyframe attribute)</a>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.forward_port">forward_port() (in module nerfbaselines.backends)</a>
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.fps">fps (nerfbaselines.Trajectory attribute)</a>
 </li>
@@ -1496,16 +1477,14 @@
           <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.images">(nerfbaselines.UnloadedDataset attribute)</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.images_points3D_indices">images_points3D_indices (nerfbaselines.Dataset attribute)</a>
 
         <ul>
           <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.images_points3D_indices">(nerfbaselines.UnloadedDataset attribute)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource">ImageSetInterpolationSource (class in nerfbaselines)</a>
-</li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.MethodSpec.implementation_status">implementation_status (nerfbaselines.MethodSpec attribute)</a>
 </li>
         <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.Indices">Indices (class in nerfbaselines.utils)</a>
@@ -1536,12 +1515,6 @@
         </ul></li>
         <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.interpolate_bilinear">interpolate_bilinear() (in module nerfbaselines.cameras)</a>
 </li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.interpolation">interpolation (nerfbaselines.ImageSetInterpolationSource attribute)</a>
-
-        <ul>
-          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.interpolation">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
-</li>
-        </ul></li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.intrinsics">intrinsics (nerfbaselines.GenericCameras property)</a>
 
         <ul>
@@ -1550,27 +1523,7 @@
         </ul></li>
         <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.invert_transform">invert_transform() (in module nerfbaselines.utils)</a>
 </li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.is_cycle">is_cycle (nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
-</li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.item">item() (nerfbaselines.GenericCameras method)</a>
-</li>
-    </ul></td>
-  </tr></table>
-</section>
-
-<section id="K" class="genindex-section">
-  <h2>K</h2>
-  <table style="width: 100%" class="indextable genindextable"><tr>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.keyframes">keyframes (nerfbaselines.ImageSetInterpolationSource attribute)</a>
-
-        <ul>
-          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.keyframes">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
-</li>
-        </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource">KochanekBartelsInterpolationSource (class in nerfbaselines)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -2362,11 +2315,7 @@
         <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.MetricsAccumulator.pop">pop() (nerfbaselines.training.MetricsAccumulator method)</a>
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrame.pose">pose (nerfbaselines.TrajectoryFrame attribute)</a>
-
-        <ul>
-          <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe.pose">(nerfbaselines.TrajectoryKeyframe attribute)</a>
 </li>
-        </ul></li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.poses">poses (nerfbaselines.GenericCameras property)</a>
 </li>
         <li>
@@ -2474,11 +2423,11 @@
 </li>
         <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.rotation_matrix_to_quaternion">rotation_matrix_to_quaternion() (in module nerfbaselines.utils)</a>
 </li>
+        <li><a href="api/nerfbaselines.viewer.html#nerfbaselines.viewer.Viewer.run">run() (nerfbaselines.viewer.Viewer method)</a>
+</li>
         <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.run_inside_eval_container">run_inside_eval_container() (in module nerfbaselines.evaluation)</a>
 </li>
         <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.run_on_host">run_on_host() (in module nerfbaselines.backends)</a>
-</li>
-        <li><a href="api/nerfbaselines.viewer.html#nerfbaselines.viewer.run_viser_viewer">run_viser_viewer() (in module nerfbaselines.viewer)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -2558,9 +2507,9 @@
           <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.DockerBackend.shell">(nerfbaselines.backends.DockerBackend method)</a>
 </li>
         </ul></li>
-        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.SimpleBackend">SimpleBackend (class in nerfbaselines.backends)</a>
+        <li><a href="api/nerfbaselines.viewer.html#nerfbaselines.viewer.Viewer.show_in_notebook">show_in_notebook() (nerfbaselines.viewer.Viewer method)</a>
 </li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory.source">source (nerfbaselines.Trajectory attribute)</a>
+        <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.SimpleBackend">SimpleBackend (class in nerfbaselines.backends)</a>
 </li>
         <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.ssim">ssim() (in module nerfbaselines.metrics)</a>
 </li>
@@ -2604,8 +2553,6 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.protocol_tcp_pickle.TCPPickleProtocol">TCPPickleProtocol (class in nerfbaselines.backends.protocol_tcp_pickle)</a>
 </li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.tension">tension (nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
-</li>
         <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLogger">TensorboardLogger (class in nerfbaselines.logging)</a>
 </li>
         <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.TensorboardLoggerEvent">TensorboardLoggerEvent (class in nerfbaselines.logging)</a>
@@ -2620,10 +2567,10 @@
           <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer.train_iteration">(nerfbaselines.training.Trainer method)</a>
 </li>
         </ul></li>
-        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer">Trainer (class in nerfbaselines.training)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer">Trainer (class in nerfbaselines.training)</a>
+</li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.Trajectory">Trajectory (class in nerfbaselines)</a>
 </li>
         <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.trajectory_get_cameras">trajectory_get_cameras() (in module nerfbaselines.evaluation)</a>
@@ -2634,18 +2581,8 @@
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryFrameAppearance">TrajectoryFrameAppearance (class in nerfbaselines)</a>
 </li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe">TrajectoryKeyframe (class in nerfbaselines)</a>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOutputType.type">type (nerfbaselines.RenderOutputType attribute)</a>
 </li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.TrajectoryKeyframe.transition_duration">transition_duration (nerfbaselines.TrajectoryKeyframe attribute)</a>
-</li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.ImageSetInterpolationSource.type">type (nerfbaselines.ImageSetInterpolationSource attribute)</a>
-
-        <ul>
-          <li><a href="api/nerfbaselines.html#nerfbaselines.KochanekBartelsInterpolationSource.type">(nerfbaselines.KochanekBartelsInterpolationSource attribute)</a>
-</li>
-          <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOutputType.type">(nerfbaselines.RenderOutputType attribute)</a>
-</li>
-        </ul></li>
     </ul></td>
   </tr></table>
 </section>
@@ -2665,7 +2602,11 @@
         <li><a href="api/nerfbaselines.cameras.html#nerfbaselines.cameras.unproject">unproject() (in module nerfbaselines.cameras)</a>
 </li>
         <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.MetricsAccumulator.update">update() (nerfbaselines.training.MetricsAccumulator method)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.viewer.html#nerfbaselines.viewer.Viewer.update">(nerfbaselines.viewer.Viewer method)</a>
 </li>
+        </ul></li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.LicenseSpec.url">url (nerfbaselines.LicenseSpec attribute)</a>
 </li>
     </ul></td>
@@ -2675,6 +2616,16 @@
 <section id="V" class="genindex-section">
   <h2>V</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.viewer.html#nerfbaselines.viewer.Viewer">Viewer (class in nerfbaselines.viewer)</a>
+</li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.MethodInfo.viewer_default_resolution">viewer_default_resolution (nerfbaselines.MethodInfo attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.ModelInfo.viewer_default_resolution">(nerfbaselines.ModelInfo attribute)</a>
+</li>
+        </ul></li>
+    </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.utils.html#nerfbaselines.utils.visualize_depth">visualize_depth() (in module nerfbaselines.utils)</a>
 </li>
