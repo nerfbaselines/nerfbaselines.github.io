@@ -18,7 +18,7 @@
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
         <title>Adding new datasets - NerfBaselines documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -525,13 +525,13 @@ a <code class="docutils literal notranslate"><span class="pre">nb-info.json</spa
 such as the loader to use, the dataset ID, and the scene name. This file is used by NerfBaselines to
 detect the format of the dataset.
 Add the following code to a new Python file, e.g., <code class="docutils literal notranslate"><span class="pre">my_dataset.py</span></code>:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">zipfile</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">tempfile</span>
-<span class="kn">import</span> <span class="nn">shutil</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">zipfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tempfile</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">shutil</span>
 
-<span class="k">def</span> <span class="nf">download_my_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">download_my_dataset</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">output</span><span class="p">):</span>
     <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://example.com/datasets/my_dataset/my_scene.zip&quot;</span>
     <span class="c1"># Users may call this function with the following arguments:</span>
     <span class="c1">#    path=&quot;my-dataset&quot; - in case user wants to download the whole dataset</span>
@@ -575,7 +575,7 @@ Add the following code to a new Python file, e.g., <code class="docutils literal
 <p>In order to make the dataset available to NerfBaselines, you need to register the dataset with NerfBaselines.
 This is done by adding a <code class="docutils literal notranslate"><span class="pre">spec</span></code> file. The <code class="docutils literal notranslate"><span class="pre">spec</span></code> file is a Python file that contains a <a class="reference internal" href="api/nerfbaselines.html#nerfbaselines.register" title="nerfbaselines.register"><code class="xref py py-func docutils literal notranslate"><span class="pre">nerfbaselines.register()</span></code></a> call.
 Let’s create a new file, e.g., <code class="docutils literal notranslate"><span class="pre">my_dataset_spec.py</span></code>, with the following content:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nerfbaselines</span> <span class="kn">import</span> <span class="n">register</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines</span><span class="w"> </span><span class="kn">import</span> <span class="n">register</span>
 
 <span class="n">register</span><span class="p">({</span>
     <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;my-dataset&quot;</span><span class="p">,</span>
