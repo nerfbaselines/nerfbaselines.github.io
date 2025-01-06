@@ -14,7 +14,7 @@
 <meta property="og:image:alt" content="Apart from the CLI, NerfBaselines also provides a Python API that allows you to interact with the methods programmatically. This tutorial will guide you thro..." />
 <meta name="description" content="Apart from the CLI, NerfBaselines also provides a Python API that allows you to interact with the methods programmatically. This tutorial will guide you through the process of using the Python API ..." />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Adding new methods" href="adding-new-methods.html" /><link rel="prev" title="Using custom data" href="using-custom-data.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Adding new methods" href="adding-new-methods.html" /><link rel="prev" title="Viewer" href="viewer.html" />
 
     <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
         <title>Python tutorial - NerfBaselines documentation</title>
@@ -223,7 +223,14 @@
         
         
         
-        <option  selected value="/docs/">Version: 1.2.5</option>
+        <option  selected value="/docs/">Version: 1.2.6</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.5/">Version: 1.2.5</option>
         
       
         
@@ -414,6 +421,7 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="using-custom-data.html">Using custom data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewer.html">Viewer</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Python tutorial</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
@@ -424,6 +432,7 @@
 <li class="toctree-l1"><a class="reference internal" href="backends.html">Isolated backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exporting-demos.html">Creating web demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="exporting-meshes.html">Exporting meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporting-results-tables.html">Exporting results tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="custom-web.html">Custom web benchmark</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
@@ -505,10 +514,10 @@
 <span class="c1"># a zip file. In that case, NerfBaselines will automatically </span>
 <span class="c1"># download/extract the file to a temporary directory to </span>
 <span class="c1"># load the checkpoint.</span>
-<span class="n">checkpoint_path</span> <span class="o">=</span> <span class="s2">&quot;https://huggingface.co/jkulhanek/nerfbaselines/resolve/main/gaussian-splatting/mipnerf360/garden.zip/checkpoint&quot;</span>
+<span class="n">checkpoint_path</span> <span class="o">=</span> <span class="s2">&quot;https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/mipnerf360/garden.zip/checkpoint&quot;</span>
 
 <span class="c1"># Start the conda backend and load the checkpoint</span>
-<span class="n">model</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">enter_context</span><span class="p">(</span><span class="n">load_checkpoint</span><span class="p">(</span><span class="n">checkpoint_path</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s2">&quot;conda&quot;</span><span class="p">))</span>
+<span class="n">model</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">enter_context</span><span class="p">(</span><span class="n">load_checkpoint</span><span class="p">(</span><span class="n">checkpoint_path</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s2">&quot;conda&quot;</span><span class="p">))</span>
 
 <span class="c1"># Print model information</span>
 <span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">get_info</span><span class="p">())</span>
@@ -874,14 +883,14 @@ training: 100%|██████████| 100/100 [00:53&lt;00:00,  1.87it/
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="using-custom-data.html">
+          <a class="prev-page" href="viewer.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Using custom data</div>
+                <div class="title">Viewer</div>
                 
               </div>
             </a>

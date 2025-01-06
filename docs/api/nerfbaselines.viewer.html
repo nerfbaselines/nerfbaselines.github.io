@@ -221,7 +221,14 @@
         
         
         
-        <option  selected value="/docs/">Version: 1.2.5</option>
+        <option  selected value="/docs/">Version: 1.2.6</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.5/">Version: 1.2.5</option>
         
       
         
@@ -412,6 +419,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../using-custom-data.html">Using custom data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../viewer.html">Viewer</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../python-tutorial.html">Python tutorial</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
@@ -422,6 +430,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../backends.html">Isolated backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exporting-demos.html">Creating web demos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../exporting-meshes.html">Exporting meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../exporting-results-tables.html">Exporting results tables</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../custom-web.html">Custom web benchmark</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
@@ -480,10 +489,48 @@
         <article role="main" id="furo-main-content">
           <section id="module-nerfbaselines.viewer">
 <span id="nerfbaselines-viewer"></span><h1>nerfbaselines.viewer<a class="headerlink" href="#module-nerfbaselines.viewer" title="Link to this heading">¶</a></h1>
-<dl class="py function">
-<dt class="sig sig-object py" id="nerfbaselines.viewer.run_viser_viewer">
-<span class="sig-prename descclassname"><span class="pre">nerfbaselines.viewer.</span></span><span class="sig-name descname"><span class="pre">run_viser_viewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">method</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="nerfbaselines.html#nerfbaselines.Method" title="nerfbaselines._types.Method"><span class="pre">Method</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6006</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/ccaa35b/nerfbaselines/viewer/_viser.py#L2094-L2136"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.viewer.run_viser_viewer" title="Link to this definition">¶</a></dt>
+<dl class="py class">
+<dt class="sig sig-object py" id="nerfbaselines.viewer.Viewer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">nerfbaselines.viewer.</span></span><span class="sig-name descname"><span class="pre">Viewer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">train_dataset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">test_dataset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nb_info</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/5a1d184/nerfbaselines/viewer/_viewer.py#L141-L383"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.viewer.Viewer" title="Link to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="nerfbaselines.viewer.Viewer.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/5a1d184/nerfbaselines/viewer/_viewer.py#L321-L338"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.viewer.Viewer.close" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="nerfbaselines.viewer.Viewer.port">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">port</span></span><a class="headerlink" href="#nerfbaselines.viewer.Viewer.port" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nerfbaselines.viewer.Viewer.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/5a1d184/nerfbaselines/viewer/_viewer.py#L174-L180"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.viewer.Viewer.run" title="Link to this definition">¶</a></dt>
+<dd><p>Starts the update loop that continuously processes render tasks.
+The function will block until the viewer is closed by the user.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nerfbaselines.viewer.Viewer.show_in_notebook">
+<span class="sig-name descname"><span class="pre">show_in_notebook</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">use_jupyter_proxy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/5a1d184/nerfbaselines/viewer/_viewer.py#L349-L383"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.viewer.Viewer.show_in_notebook" title="Link to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="nerfbaselines.viewer.Viewer.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/5a1d184/nerfbaselines/viewer/_viewer.py#L182-L209"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.viewer.Viewer.update" title="Link to this definition">¶</a></dt>
+<dd><p>Performs a single render task from the queue.
+This function should be called within the train step function to update the viewer when rendering is available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True if there are more tasks in the queue</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
 
 </section>
 
@@ -555,7 +602,14 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">nerfbaselines.viewer</a><ul>
-<li><a class="reference internal" href="#nerfbaselines.viewer.run_viser_viewer"><code class="docutils literal notranslate"><span class="pre">run_viser_viewer()</span></code></a></li>
+<li><a class="reference internal" href="#nerfbaselines.viewer.Viewer"><code class="docutils literal notranslate"><span class="pre">Viewer</span></code></a><ul>
+<li><a class="reference internal" href="#nerfbaselines.viewer.Viewer.close"><code class="docutils literal notranslate"><span class="pre">Viewer.close()</span></code></a></li>
+<li><a class="reference internal" href="#nerfbaselines.viewer.Viewer.port"><code class="docutils literal notranslate"><span class="pre">Viewer.port</span></code></a></li>
+<li><a class="reference internal" href="#nerfbaselines.viewer.Viewer.run"><code class="docutils literal notranslate"><span class="pre">Viewer.run()</span></code></a></li>
+<li><a class="reference internal" href="#nerfbaselines.viewer.Viewer.show_in_notebook"><code class="docutils literal notranslate"><span class="pre">Viewer.show_in_notebook()</span></code></a></li>
+<li><a class="reference internal" href="#nerfbaselines.viewer.Viewer.update"><code class="docutils literal notranslate"><span class="pre">Viewer.update()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
