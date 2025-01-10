@@ -1,0 +1,6 @@
+nerfbaselines.logging
+=====================
+.. automodule:: nerfbaselines.logging
+   :members:
+   :undoc-members:
+   :show-inheritance:
