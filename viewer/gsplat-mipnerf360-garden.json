@@ -1,0 +1,237 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "garden",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.101067543029785,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gsplat",
+      "hparams": null,
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth"
+      ],
+      "name": "gsplat",
+      "description": "gsplat is an open-source library for CUDA accelerated rasterization of gaussians with python bindings. It is inspired by the 3DGS paper, but it is faster, more memory efficient, and with a growing list of new features. In NerfBaselines, the method was modified to enable appearance optimization, to support sampling masks, and to support setting background color (which is required for the Blender dataset).",
+      "paper_title": "gsplat: An Open-Source Library for Gaussian Splatting",
+      "paper_authors": [
+        "Vickie Ye",
+        "Ruilong Li",
+        "Justin Kerr",
+        "Matias Turkulainen",
+        "Brent Yi",
+        "Zhuoyang Pan",
+        "Otto Seiskari",
+        "Jianbo Ye",
+        "Jeffrey Hu",
+        "Matthew Tancik",
+        "Angjoo Kanazawa"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2409.06765.pdf",
+      "link": "https://docs.gsplat.studio/main/",
+      "licenses": [
+        {
+          "name": "Apache 2.0",
+          "url": "https://raw.githubusercontent.com/nerfstudio-project/gsplat/main/LICENSE"
+        }
+      ],
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "num_iterations": 30000,
+      "total_train_time": 2395.32607,
+      "resources_utilization": {
+        "memory": 1829,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 12820
+      },
+      "datetime": "2024-09-11T20:45:14",
+      "config_overrides": {},
+      "applied_presets": [],
+      "dataset_metadata": {
+        "id": "mipnerf360",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "garden",
+        "downscale_factor": 4,
+        "type": "object-centric",
+        "viewer_transform": [
+          [
+            -0.060159,
+            0.107308,
+            -0.200148,
+            0.081662
+          ],
+          [
+            0.227086,
+            0.026215,
+            -0.054201,
+            -0.075593
+          ],
+          [
+            -0.002423,
+            -0.207343,
+            -0.110437,
+            0.435541
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            -0.062053,
+            0.200932,
+            -0.977638,
+            1.048963
+          ],
+          [
+            0.998067,
+            0.015936,
+            -0.060075,
+            0.065366
+          ],
+          [
+            0.003509,
+            -0.979476,
+            -0.201532,
+            0.172452
+          ]
+        ],
+        "expected_scene_scale": 4.101068
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "8b09051ec1f80252ed894791208c661143e3975c3268517f263f2517b2e69756"
+    }
+  },
+  "viewer_transform": [
+    -0.060159127613912934,
+    0.10730773903112355,
+    -0.20014781043327937,
+    0.08166239754256945,
+    0.22708637933654383,
+    0.026214964273466538,
+    -0.05420119662331633,
+    -0.07559332122255462,
+    -0.0024234234048181465,
+    -0.2073428067605815,
+    -0.11043686984214754,
+    0.4355414626590412
+  ],
+  "viewer_initial_pose": [
+    -0.06205325107625681,
+    0.20093197157545312,
+    -0.9776378503560623,
+    1.048962666217299,
+    0.998066652938876,
+    0.015936037074919068,
+    -0.06007464409148531,
+    0.06536615074217787,
+    0.003508747861450171,
+    -0.9794755553500759,
+    -0.20153237614274824,
+    0.17245212573259566
+  ],
+  "method_id": "gsplat",
+  "renderer": {
+    "transform": [
+      1.0989001242541236,
+      -3.8668539510866333,
+      0.0394845614518923,
+      0.19303856857194013,
+      -1.9001069838131976,
+      -0.5756756926021297,
+      -3.495696059402826,
+      2.4732871158938563,
+      3.368042749089101,
+      0.9368767318200589,
+      -1.9850063028604161,
+      1.6439324444214276
+    ],
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/mipnerf360/garden_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/garden-nbv.json"
+  }
+}

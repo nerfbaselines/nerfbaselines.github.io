@@ -1,0 +1,91 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "phototourism",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerfw",
+      "scene": "sacre-coeur",
+      "type": null,
+      "expected_scene_scale": 6.961587047576904,
+      "name": "Photo Tourism",
+      "default_metric": "psnr",
+      "link": "https://phototour.cs.washington.edu/",
+      "paper_link": "https://phototour.cs.washington.edu/Photo_Tourism.pdf",
+      "paper_title": "Photo Tourism: Exploring Photo Collections in 3D",
+      "paper_authors": [
+        "Noah Snavely",
+        "Steven M. Seitz",
+        "Richard Szeliski"
+      ],
+      "description": "Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "sacre-coeur",
+          "name": "Sacre Coeur"
+        },
+        {
+          "id": "trevi-fountain",
+          "name": "Trevi Fountain"
+        },
+        {
+          "id": "brandenburg-gate",
+          "name": "Brandenburg Gate"
+        }
+      ]
+    }
+  },
+  "viewer_transform": [
+    0.13628977730655956,
+    -0.00889859758182881,
+    0.01094684663461174,
+    0.013991032644615395,
+    -0.00889859758182881,
+    0.02827487749031025,
+    0.13377320207465113,
+    -0.0020546178365765605,
+    -0.01094684663461174,
+    -0.13377320207465113,
+    0.02754669155909438,
+    -0.002243488408240893
+  ],
+  "viewer_initial_pose": [
+    0.9980635619580694,
+    -0.05959150115589057,
+    -0.01783129022814921,
+    0.09569803725007499,
+    0.032893601929604444,
+    0.26233827722506053,
+    0.9644151645263127,
+    0.372607101055443,
+    -0.05279312128504969,
+    -0.9631342046432797,
+    0.26379044306441624,
+    -0.08508402505997528
+  ],
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/phototourism/sacre-coeur-nbv.json"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "state": {
+    "render_resolution": 512,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "colmap",
+      "hparams": {
+        "mesher": "poisson",
+        "PatchMatchStereo.geom_consistency": "true"
+      },
+      "supported_camera_models": [
+        "full_opencv",
+        "opencv",
+        "opencv_fisheye",
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color",
+        "depth"
+      ],
+      "name": "COLMAP",
+      "description": "COLMAP Multi-View Stereo (MVS) is a general-purpose, end-to-end image-based 3D reconstruction pipeline.\nIt uses the point cloud if available, otherwise it runs a sparse reconstruction to obtained.\nThe reconstruction consists of a stereo matching step, followed by a multi-view stereo step to obtain a dense point cloud.\nFinally, either Delaunay or Poisson meshing is used to obtain a mesh from the point cloud.\n",
+      "paper_title": "Pixelwise View Selection for Unstructured Multi-View Stereo",
+      "paper_authors": [
+        "Johannes Lutz Sch\u0151nberger",
+        "Enliang Zheng",
+        "Marc Pollefeys",
+        "Jan-Michael Frahm"
+      ],
+      "paper_link": "https://demuc.de/papers/schoenberger2016mvs.pdf",
+      "link": "https://colmap.github.io/",
+      "licenses": [
+        {
+          "name": "BSD",
+          "url": "https://colmap.github.io/license.html"
+        }
+      ],
+      "nb_version": "1.0.3.dev2+g00cf083.d20240819",
+      "num_iterations": 1,
+      "total_train_time": 4000.21086,
+      "resources_utilization": {
+        "memory": 686,
+        "gpu_name": "",
+        "gpu_memory": 0
+      },
+      "datetime": "2024-09-01T18:52:42",
+      "config_overrides": {},
+      "applied_presets": [],
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "2def4e280bec2c7d30e5b3397e927d72e81f4d3c185332776508790033952ae0"
+    },
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "treehill",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.344243907928466,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    }
+  },
+  "method_id": "colmap",
+  "renderer": {
+    "mesh_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/treehill_demo/mesh.ply",
+    "type": "mesh",
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/colmap/mipnerf360/treehill_demo/params.json"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/treehill-nbv.json"
+  },
+  "viewer_transform": [
+    0.11428548319518271,
+    -0.07137611685401901,
+    0.16609563381334608,
+    0.042799729733504675,
+    -0.1804968183894162,
+    -0.034008148629525205,
+    0.10958021874099086,
+    -0.012040602512207385,
+    -0.010159124708921144,
+    -0.1987268880761798,
+    -0.07840852375412206,
+    0.018146370973378928
+  ],
+  "viewer_initial_pose": [
+    -0.9083243801885619,
+    0.18406595587150512,
+    0.37558829424737183,
+    -0.27902187455278366,
+    -0.4180083956477986,
+    -0.36793835072082437,
+    -0.8305963758864779,
+    0.8084602176716709,
+    -0.014691138435328545,
+    -0.9114499934823032,
+    0.41114847689976686,
+    -0.2307105908942182
+  ]
+}

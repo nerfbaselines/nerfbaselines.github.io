@@ -1,0 +1,165 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "tanksandtemples",
+      "color_space": "srgb",
+      "evaluation_protocol": "default",
+      "scene": "truck",
+      "type": "object-centric",
+      "downscale_factor": 2,
+      "expected_scene_scale": 4.9711024284362795,
+      "name": "Tanks and Temples",
+      "description": "Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.",
+      "paper_title": "Tanks and Temples: Benchmarking Large-Scale Scene Reconstruction",
+      "paper_authors": [
+        "Arno Knapitsch",
+        "Jaesik Park",
+        "Qian-Yi Zhou",
+        "Vladlen Koltun"
+      ],
+      "paper_link": "https://storage.googleapis.com/t2-downloads/paper/tanks-and-temples.pdf",
+      "link": "https://www.tanksandtemples.org/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "auditorium",
+          "name": "auditorium"
+        },
+        {
+          "id": "ballroom",
+          "name": "ballroom"
+        },
+        {
+          "id": "courtroom",
+          "name": "courtroom"
+        },
+        {
+          "id": "museum",
+          "name": "museum"
+        },
+        {
+          "id": "palace",
+          "name": "palace"
+        },
+        {
+          "id": "temple",
+          "name": "temple"
+        },
+        {
+          "id": "family",
+          "name": "family"
+        },
+        {
+          "id": "francis",
+          "name": "francis"
+        },
+        {
+          "id": "horse",
+          "name": "horse"
+        },
+        {
+          "id": "lighthouse",
+          "name": "lighthouse"
+        },
+        {
+          "id": "m60",
+          "name": "m60"
+        },
+        {
+          "id": "panther",
+          "name": "panther"
+        },
+        {
+          "id": "playground",
+          "name": "playground"
+        },
+        {
+          "id": "train",
+          "name": "train"
+        },
+        {
+          "id": "barn",
+          "name": "barn"
+        },
+        {
+          "id": "caterpillar",
+          "name": "caterpillar"
+        },
+        {
+          "id": "church",
+          "name": "church"
+        },
+        {
+          "id": "courthouse",
+          "name": "courthouse"
+        },
+        {
+          "id": "ignatius",
+          "name": "ignatius"
+        },
+        {
+          "id": "meetingroom",
+          "name": "meetingroom"
+        },
+        {
+          "id": "truck",
+          "name": "truck"
+        }
+      ]
+    }
+  },
+  "viewer_transform": [
+    0.1454077104537557,
+    0.026119456203799598,
+    -0.12320364544828087,
+    -0.02015829708594205,
+    0.12564856958173082,
+    -0.01724979689639089,
+    0.14463626037756344,
+    -0.09879495924347917,
+    0.008590815998929944,
+    -0.1898024826670958,
+    -0.030099492263002056,
+    0.1503578020779073
+  ],
+  "viewer_initial_pose": [
+    0.1960246294527081,
+    0.08639115208768383,
+    -0.976786013648807,
+    0.796161899663975,
+    0.9802130370079851,
+    -0.04520662240722972,
+    0.19271408550953328,
+    -0.032288999098732445,
+    -0.02750839369458845,
+    -0.9952351092124003,
+    -0.093543347011357,
+    0.11925081357745762
+  ],
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/tanksandtemples/truck-nbv.json"
+  }
+}

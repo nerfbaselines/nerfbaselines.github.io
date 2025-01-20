@@ -1,0 +1,258 @@
+{
+  "state": {
+    "dataset_info": {
+      "name": "Mip-NeRF 360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "bonsai",
+      "downscale_factor": 2,
+      "expected_scene_scale": 4.317465686798096,
+      "type": "object-centric",
+      "id": "mipnerf360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gaussian-opacity-fields",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "kernel_size": 0.0,
+        "ray_jitter": false,
+        "resample_gt_image": false,
+        "load_allres": false,
+        "sample_more_highres": false,
+        "use_decoupled_appearance": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "appearance_embeddings_lr": 0.001,
+        "appearance_network_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "lambda_distortion": 100,
+        "lambda_depth_normal": 0.05,
+        "distortion_from_iter": 15000,
+        "depth_normal_from_iter": 15000,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "compute_view2gaussian_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "distortion_map",
+        "normal"
+      ],
+      "name": "Gaussian Opacity Fields",
+      "description": "Improved Mip-Splatting with better geometry.",
+      "paper_title": "Gaussian Opacity Fields: Efficient and Compact Surface Reconstruction in Unbounded Scenes",
+      "paper_authors": [
+        "Zehao Yu",
+        "Torsten Sattler",
+        "Andreas Geiger"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2404.10772.pdf",
+      "link": "https://niujinshuchong.github.io/gaussian-opacity-fields/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/autonomousvision/gaussian-opacity-fields/main/LICENSE.md"
+        }
+      ],
+      "num_iterations": 30000,
+      "total_train_time": 3557.15881,
+      "resources_utilization": {
+        "memory": 5506,
+        "gpu_memory": 23946,
+        "gpu_name": "NVIDIA A100-SXM4-40GB"
+      },
+      "datetime": "2024-06-07T12:39:35+0200",
+      "config_overrides": {},
+      "dataset_metadata": {
+        "name": "mipnerf360",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "viewer_transform": [
+          [
+            -0.195865,
+            0.051631,
+            -0.084885,
+            0.14291
+          ],
+          [
+            0.097825,
+            0.133009,
+            -0.144821,
+            0.001467
+          ],
+          [
+            0.017362,
+            -0.166965,
+            -0.141619,
+            0.484152
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            -0.01815,
+            0.157138,
+            -0.98741,
+            0.99913
+          ],
+          [
+            0.998532,
+            -0.047562,
+            -0.025924,
+            -0.056191
+          ],
+          [
+            -0.051037,
+            -0.986431,
+            -0.156044,
+            0.130103
+          ]
+        ],
+        "scene": "bonsai",
+        "downscale_factor": 2,
+        "expected_scene_scale": 4.317639,
+        "type": "object-centric"
+      },
+      "evaluation_protocol": "nerf",
+      "nb_version": "0.0.16.dev56+g8ee0779.d20240531",
+      "checkpoint_sha256": "8fbe39d4c8b0e0a2338ffed9a861a8d66f070acaa4efa69eb09bdd0c7cc89ea5"
+    }
+  },
+  "viewer_transform": [
+    -0.19479263603828023,
+    0.05273479806189789,
+    -0.0869322150746532,
+    0.14412365187954626,
+    0.10006671297963125,
+    0.13273038743371207,
+    -0.1437067692922574,
+    -0.0003535804971097501,
+    0.018022826518647176,
+    -0.1669851008666565,
+    -0.14168095332892433,
+    0.4833019658555503
+  ],
+  "viewer_initial_pose": [
+    -0.0222299693438242,
+    0.18494954349991288,
+    -0.9824965549510772,
+    0.999067309205532,
+    0.9991382100132318,
+    -0.030346313595300996,
+    -0.02831901210957592,
+    -0.06399863206728015,
+    -0.03505274829459211,
+    -0.9822793434567549,
+    -0.18411553366796343,
+    0.15928955756039653
+  ],
+  "method_id": "gaussian-opacity-fields",
+  "renderer": {
+    "type": "mesh",
+    "mesh_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-opacity-fields/mipnerf360/bonsai_mesh/mesh.ply"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/bonsai-nbv.json"
+  }
+}

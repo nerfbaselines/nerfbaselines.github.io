@@ -1,0 +1,288 @@
+{
+  "state": {
+    "dataset_info": {
+      "name": "Tanks and Temples",
+      "color_space": "srgb",
+      "evaluation_protocol": "default",
+      "scene": "family",
+      "downscale_factor": 2,
+      "expected_scene_scale": 4.6075568199157715,
+      "type": "object-centric",
+      "id": "tanksandtemples",
+      "description": "Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.",
+      "paper_title": "Tanks and Temples: Benchmarking Large-Scale Scene Reconstruction",
+      "paper_authors": [
+        "Arno Knapitsch",
+        "Jaesik Park",
+        "Qian-Yi Zhou",
+        "Vladlen Koltun"
+      ],
+      "paper_link": "https://storage.googleapis.com/t2-downloads/paper/tanks-and-temples.pdf",
+      "link": "https://www.tanksandtemples.org/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "auditorium",
+          "name": "auditorium"
+        },
+        {
+          "id": "ballroom",
+          "name": "ballroom"
+        },
+        {
+          "id": "courtroom",
+          "name": "courtroom"
+        },
+        {
+          "id": "museum",
+          "name": "museum"
+        },
+        {
+          "id": "palace",
+          "name": "palace"
+        },
+        {
+          "id": "temple",
+          "name": "temple"
+        },
+        {
+          "id": "family",
+          "name": "family"
+        },
+        {
+          "id": "francis",
+          "name": "francis"
+        },
+        {
+          "id": "horse",
+          "name": "horse"
+        },
+        {
+          "id": "lighthouse",
+          "name": "lighthouse"
+        },
+        {
+          "id": "m60",
+          "name": "m60"
+        },
+        {
+          "id": "panther",
+          "name": "panther"
+        },
+        {
+          "id": "playground",
+          "name": "playground"
+        },
+        {
+          "id": "train",
+          "name": "train"
+        },
+        {
+          "id": "barn",
+          "name": "barn"
+        },
+        {
+          "id": "caterpillar",
+          "name": "caterpillar"
+        },
+        {
+          "id": "church",
+          "name": "church"
+        },
+        {
+          "id": "courthouse",
+          "name": "courthouse"
+        },
+        {
+          "id": "ignatius",
+          "name": "ignatius"
+        },
+        {
+          "id": "meetingroom",
+          "name": "meetingroom"
+        },
+        {
+          "id": "truck",
+          "name": "truck"
+        }
+      ]
+    },
+    "method_info": {
+      "method_id": "mip-splatting",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "kernel_size": 0.1,
+        "ray_jitter": false,
+        "resample_gt_image": false,
+        "load_allres": false,
+        "sample_more_highres": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Mip-Splatting",
+      "description": "A modification of Gaussian Splatting designed to better handle aliasing artifacts.",
+      "paper_title": "Mip-Splatting: Alias-free 3D Gaussian Splatting",
+      "paper_authors": [
+        "Zehao Yu",
+        "Anpei Chen",
+        "Binbin Huang",
+        "Torsten Sattler",
+        "Andreas Geiger"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2311.16493.pdf",
+      "link": "https://niujinshuchong.github.io/mip-splatting/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/autonomousvision/mip-splatting/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "develop",
+      "num_iterations": 30000,
+      "total_train_time": 943.99899,
+      "resources_utilization": {
+        "memory": 3498,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 7162
+      },
+      "datetime": "2024-06-25T08:52:09",
+      "config_overrides": {},
+      "dataset_metadata": {
+        "name": "tanksandtemples",
+        "color_space": "srgb",
+        "evaluation_protocol": "default",
+        "viewer_transform": [
+          [
+            0.204741,
+            0.001483,
+            -0.001329,
+            0.00029
+          ],
+          [
+            0.001483,
+            -0.022336,
+            0.203524,
+            0.010881
+          ],
+          [
+            0.001329,
+            -0.203524,
+            -0.022345,
+            0.002793
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            -0.672146,
+            0.070429,
+            0.737061,
+            -0.26242
+          ],
+          [
+            -0.740207,
+            -0.04013,
+            -0.67118,
+            0.290885
+          ],
+          [
+            -0.017693,
+            -0.996709,
+            0.079105,
+            -0.034919
+          ]
+        ],
+        "scene": "family",
+        "downscale_factor": 2,
+        "expected_scene_scale": 4.621087,
+        "type": null
+      },
+      "evaluation_protocol": "default",
+      "checkpoint_sha256": "ace9aec7de577dc8afab1f914213ccb435141d318f56455906aff54139be9cf5"
+    }
+  },
+  "viewer_transform": [
+    0.18297347720594634,
+    0.010401813507298543,
+    -0.10316773971697349,
+    -0.05442891731859649,
+    0.10368020606706717,
+    -0.02134384396723278,
+    0.18173037556769409,
+    -0.01659370225035649,
+    -0.001481945637030885,
+    -0.20896725820331216,
+    -0.023697283096239856,
+    0.09630489947390644
+  ],
+  "viewer_initial_pose": [
+    -0.22704624238821502,
+    0.07106322256788092,
+    0.9712878316142205,
+    -0.4305084284229046,
+    -0.9738661191302617,
+    -0.010527025033377928,
+    -0.22687871890119116,
+    0.1029611668979777,
+    -0.005897968499279093,
+    -0.9974162801634963,
+    0.07159618357605851,
+    0.06016544275125207
+  ],
+  "method_id": "mip-splatting",
+  "renderer": {
+    "antialias_2D_kernel_size": 0.1,
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/mip-splatting/tanksandtemples/family_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/tanksandtemples/family-nbv.json"
+  }
+}

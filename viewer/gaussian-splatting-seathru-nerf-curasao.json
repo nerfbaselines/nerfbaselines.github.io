@@ -1,0 +1,222 @@
+{
+  "state": {
+    "dataset_info": {
+      "name": "SeaThru-NeRF",
+      "color_space": "srgb",
+      "evaluation_protocol": "default",
+      "type": "forward-facing",
+      "scene": "curasao",
+      "id": "seathru-nerf",
+      "expected_scene_scale": 29.164317104575225,
+      "description": "SeaThru-NeRF dataset contains four underwater forward-facing scenes.",
+      "paper_title": "SeaThru-NeRF: Neural Radiance Fields in Scattering Media",
+      "paper_authors": [
+        "Deborah Levy",
+        "Amit Peleg",
+        "Naama Pearl",
+        "Dan Rosenbaum",
+        "Derya Akkaynak",
+        "Tali Treibitz",
+        "Simon Korman"
+      ],
+      "paper_link": "https://openaccess.thecvf.com/content/CVPR2023/papers/Levy_SeaThru-NeRF_Neural_Radiance_Fields_in_Scattering_Media_CVPR_2023_paper.pdf",
+      "link": "https://sea-thru-nerf.github.io/",
+      "licenses": [
+        {
+          "name": "Apache 2.0",
+          "url": "https://raw.githubusercontent.com/deborahLevy130/seathru_NeRF/master/LICENSE"
+        }
+      ],
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "curasao",
+          "name": "Curasao"
+        },
+        {
+          "id": "panama",
+          "name": "Panama"
+        },
+        {
+          "id": "iui3",
+          "name": "IUI3"
+        },
+        {
+          "id": "japanese-gradens",
+          "name": "Japanese Gradens"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gaussian-splatting",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "random_background": false,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Gaussian Splatting",
+      "description": "Official Gaussian Splatting implementation extended to support distorted camera models. It is fast to train (1 hous) and render (200 FPS).",
+      "paper_title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+      "paper_authors": [
+        "Bernhard Kerbl",
+        "Georgios Kopanas",
+        "Thomas Leimk\u00fchler",
+        "George Drettakis"
+      ],
+      "paper_link": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf",
+      "link": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "1.0.2.dev2+g3eac102",
+      "num_iterations": 30000,
+      "total_train_time": 1345.82111,
+      "resources_utilization": {
+        "memory": 3411,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 9520
+      },
+      "datetime": "2024-07-25T12:58:50",
+      "config_overrides": {},
+      "dataset_metadata": {
+        "name": "seathru-nerf",
+        "color_space": "srgb",
+        "evaluation_protocol": "default",
+        "viewer_transform": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            1.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0,
+            0.0
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.99748,
+            -0.063994,
+            -0.030638,
+            0.661316
+          ],
+          [
+            0.059363,
+            0.989257,
+            -0.133593,
+            2.684039
+          ],
+          [
+            0.038858,
+            0.131437,
+            0.990563,
+            -2.273083
+          ]
+        ],
+        "type": "forward-facing",
+        "scene": "curasao"
+      },
+      "evaluation_protocol": "default",
+      "checkpoint_sha256": "c2320a62ee8ae0624e2fd197b7840feb49e3b0a896b000a22e74765ce00a1486"
+    }
+  },
+  "viewer_transform": [
+    0.12312964522066765,
+    -0.0067019611233687425,
+    0.003450087323524556,
+    -0.016710334875456822,
+    -0.0034720804867292804,
+    -0.00031075980027058984,
+    0.12331089139143202,
+    0.02425725896930067,
+    -0.006690593368418015,
+    -0.12317757303852561,
+    -0.0004988117798227323,
+    -0.06883205823608707
+  ],
+  "viewer_initial_pose": [
+    0.9591309820335697,
+    -0.0298486869248954,
+    -0.28138382220635705,
+    0.39151168868849706,
+    0.2829367677369914,
+    0.11458567835429992,
+    0.952269326146784,
+    0.24396023873787512,
+    0.003818567622475145,
+    -0.99296483594072,
+    0.11834796383276577,
+    -0.3408501539460073
+  ],
+  "method_id": "gaussian-splatting",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-splatting/seathru-nerf/curasao_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/seathru-nerf/curasao-nbv.json"
+  }
+}

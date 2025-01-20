@@ -1,0 +1,205 @@
+{
+  "state": {
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "2d-gaussian-splatting",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "render_items": [
+          "RGB",
+          "Alpha",
+          "Normal",
+          "Depth",
+          "Edge",
+          "Curvature"
+        ],
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "lambda_dist": 0.0,
+        "lambda_normal": 0.05,
+        "opacity_cull": 0.05,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "depth_ratio": 0.0,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "normal"
+      ],
+      "name": "2D Gaussian Splatting",
+      "description": "2DGS adopts 2D oriented disks as surface elements and allows high-quality rendering with Gaussian Splatting. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks.",
+      "paper_title": "2D Gaussian Splatting for Geometrically Accurate Radiance Fields",
+      "paper_authors": [
+        "Binbin Huang",
+        "Zehao Yu",
+        "Anpei Chen",
+        "Andreas Geiger",
+        "Shenghua Gao"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2403.17888.pdf",
+      "link": "https://surfsplatting.github.io/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/hbb1/2d-gaussian-splatting/main/LICENSE.md"
+        }
+      ],
+      "num_iterations": 30000,
+      "total_train_time": 1675.56968,
+      "resources_utilization": {
+        "memory": 3513,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 8790
+      },
+      "datetime": "2024-09-13T17:15:25",
+      "config_overrides": {},
+      "applied_presets": [],
+      "evaluation_protocol": "nerf",
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "checkpoint_sha256": "eaee8d69a11aa3d7e8008890c108ffced687143df1d4b54b4ab637e4198f9eca"
+    },
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "garden",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.101067543029785,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    }
+  },
+  "method_id": "2d-gaussian-splatting",
+  "renderer": {
+    "is_2DGS": true,
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/2d-gaussian-splatting/mipnerf360/garden_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/garden-nbv.json"
+  },
+  "viewer_transform": [
+    -0.060159127613912934,
+    0.10730773903112355,
+    -0.20014781043327937,
+    0.08166239754256945,
+    0.22708637933654383,
+    0.026214964273466538,
+    -0.05420119662331633,
+    -0.07559332122255462,
+    -0.0024234234048181465,
+    -0.2073428067605815,
+    -0.11043686984214754,
+    0.4355414626590412
+  ],
+  "viewer_initial_pose": [
+    -0.06205325107625681,
+    0.20093197157545312,
+    -0.9776378503560623,
+    1.048962666217299,
+    0.998066652938876,
+    0.015936037074919068,
+    -0.06007464409148531,
+    0.06536615074217787,
+    0.003508747861450171,
+    -0.9794755553500759,
+    -0.20153237614274824,
+    0.17245212573259566
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "counter",
+      "downscale_factor": 2,
+      "type": "object-centric",
+      "expected_scene_scale": 4.36344952583313,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    }
+  },
+  "viewer_transform": [
+    0.15577992373765237,
+    0.10557218681215286,
+    -0.13650593106921163,
+    0.0791340648993877,
+    0.17221945396010707,
+    -0.08344548914049088,
+    0.13200019264286664,
+    -0.14688512926281708,
+    0.010946106802707134,
+    -0.18957348156751969,
+    -0.13412239858718253,
+    0.5440358197498617
+  ],
+  "viewer_initial_pose": [
+    -0.27056928407005215,
+    0.5400467568517372,
+    -0.7969578414552986,
+    0.7767020994979709,
+    0.9625706093267021,
+    0.1653598127117572,
+    -0.2147416307338941,
+    0.13131370970970474,
+    0.015814311950124723,
+    -0.8252306408910235,
+    -0.5645744196555283,
+    0.40045901239675374
+  ],
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/counter-nbv.json"
+  }
+}

@@ -1,0 +1,290 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "garden",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.101067543029785,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "scaffold-gs",
+      "hparams": {
+        "sh_degree": 3,
+        "feat_dim": 32,
+        "n_offsets": 10,
+        "voxel_size": 0.001,
+        "update_depth": 3,
+        "update_init_factor": 16,
+        "update_hierachy_factor": 4,
+        "use_feat_bank": false,
+        "white_background": false,
+        "lod": 0,
+        "appearance_dim": 0,
+        "lowpoly": false,
+        "ds": 1,
+        "ratio": 1,
+        "undistorted": false,
+        "add_opacity_dist": false,
+        "add_cov_dist": false,
+        "add_color_dist": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.0,
+        "position_lr_final": 0.0,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "offset_lr_init": 0.01,
+        "offset_lr_final": 0.0001,
+        "offset_lr_delay_mult": 0.01,
+        "offset_lr_max_steps": 30000,
+        "feature_lr": 0.0075,
+        "opacity_lr": 0.02,
+        "scaling_lr": 0.007,
+        "rotation_lr": 0.002,
+        "mlp_opacity_lr_init": 0.002,
+        "mlp_opacity_lr_final": 2e-05,
+        "mlp_opacity_lr_delay_mult": 0.01,
+        "mlp_opacity_lr_max_steps": 30000,
+        "mlp_cov_lr_init": 0.004,
+        "mlp_cov_lr_final": 0.004,
+        "mlp_cov_lr_delay_mult": 0.01,
+        "mlp_cov_lr_max_steps": 30000,
+        "mlp_color_lr_init": 0.008,
+        "mlp_color_lr_final": 5e-05,
+        "mlp_color_lr_delay_mult": 0.01,
+        "mlp_color_lr_max_steps": 30000,
+        "mlp_featurebank_lr_init": 0.01,
+        "mlp_featurebank_lr_final": 1e-05,
+        "mlp_featurebank_lr_delay_mult": 0.01,
+        "mlp_featurebank_lr_max_steps": 30000,
+        "appearance_lr_init": 0.05,
+        "appearance_lr_final": 0.0005,
+        "appearance_lr_delay_mult": 0.01,
+        "appearance_lr_max_steps": 30000,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "start_stat": 500,
+        "update_from": 1500,
+        "update_interval": 100,
+        "update_until": 15000,
+        "min_opacity": 0.005,
+        "success_threshold": 0.8,
+        "densify_grad_threshold": 0.0002,
+        "test_optim_lr": 0.1,
+        "test_optim_steps": 128,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Scaffold-GS",
+      "description": "Scaffold-GS uses anchor points to distribute local 3D Gaussians, and predicts their attributes on-the-fly based on viewing direction and distance within the view frustum. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks. Note, that we also implement a demo for the method, but it does not evaluate the MLP and the Gaussians are \"baked\" for specific viewing direction and appearance embedding (if enabled).",
+      "paper_title": "Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering",
+      "paper_authors": [
+        "Tao Lu",
+        "Mulin Yu",
+        "Linning Xu",
+        "Yuanbo Xiangli",
+        "Limin Wang",
+        "Dahua LinBo Dai"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2312.00109.pdf",
+      "link": "https://city-super.github.io/scaffold-gs/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/city-super/Scaffold-GS/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "num_iterations": 30000,
+      "total_train_time": 1305.73572,
+      "resources_utilization": {
+        "memory": 3923,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 8098
+      },
+      "datetime": "2024-09-12T18:34:08",
+      "config_overrides": {
+        "voxel_size": 0.001,
+        "update_init_factor": 16,
+        "appearance_dim": 0,
+        "ratio": 1
+      },
+      "applied_presets": [
+        "mipnerf360"
+      ],
+      "dataset_metadata": {
+        "id": "mipnerf360",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "garden",
+        "downscale_factor": 4,
+        "type": "object-centric",
+        "viewer_transform": [
+          [
+            -0.060159,
+            0.107308,
+            -0.200148,
+            0.081662
+          ],
+          [
+            0.227086,
+            0.026215,
+            -0.054201,
+            -0.075593
+          ],
+          [
+            -0.002423,
+            -0.207343,
+            -0.110437,
+            0.435541
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            -0.062053,
+            0.200932,
+            -0.977638,
+            1.048963
+          ],
+          [
+            0.998067,
+            0.015936,
+            -0.060075,
+            0.065366
+          ],
+          [
+            0.003509,
+            -0.979476,
+            -0.201532,
+            0.172452
+          ]
+        ],
+        "expected_scene_scale": 4.101068
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "d3882a93e64fb74652dfbfdf4d56ad5363b7a7f3f401bc426f7842e6e0d69db1"
+    }
+  },
+  "viewer_transform": [
+    -0.060159127613912934,
+    0.10730773903112355,
+    -0.20014781043327937,
+    0.08166239754256945,
+    0.22708637933654383,
+    0.026214964273466538,
+    -0.05420119662331633,
+    -0.07559332122255462,
+    -0.0024234234048181465,
+    -0.2073428067605815,
+    -0.11043686984214754,
+    0.4355414626590412
+  ],
+  "viewer_initial_pose": [
+    -0.06205325107625681,
+    0.20093197157545312,
+    -0.9776378503560623,
+    1.048962666217299,
+    0.998066652938876,
+    0.015936037074919068,
+    -0.06007464409148531,
+    0.06536615074217787,
+    0.003508747861450171,
+    -0.9794755553500759,
+    -0.20153237614274824,
+    0.17245212573259566
+  ],
+  "method_id": "scaffold-gs",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/scaffold-gs/mipnerf360/garden_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/garden-nbv.json"
+  }
+}

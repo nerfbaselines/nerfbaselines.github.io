@@ -1,0 +1,279 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "phototourism",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerfw",
+      "scene": "trevi-fountain",
+      "type": null,
+      "expected_scene_scale": 6.192305946350098,
+      "name": "Photo Tourism",
+      "default_metric": "psnr",
+      "link": "https://phototour.cs.washington.edu/",
+      "paper_link": "https://phototour.cs.washington.edu/Photo_Tourism.pdf",
+      "paper_title": "Photo Tourism: Exploring Photo Collections in 3D",
+      "paper_authors": [
+        "Noah Snavely",
+        "Steven M. Seitz",
+        "Richard Szeliski"
+      ],
+      "description": "Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "sacre-coeur",
+          "name": "Sacre Coeur"
+        },
+        {
+          "id": "trevi-fountain",
+          "name": "Trevi Fountain"
+        },
+        {
+          "id": "brandenburg-gate",
+          "name": "Brandenburg Gate"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "scaffold-gs",
+      "hparams": {
+        "sh_degree": 3,
+        "feat_dim": 32,
+        "n_offsets": 10,
+        "voxel_size": 0.0,
+        "update_depth": 3,
+        "update_init_factor": 16,
+        "update_hierachy_factor": 4,
+        "use_feat_bank": false,
+        "white_background": false,
+        "lod": 0,
+        "appearance_dim": 32,
+        "lowpoly": false,
+        "ds": 1,
+        "ratio": 1,
+        "undistorted": false,
+        "add_opacity_dist": false,
+        "add_cov_dist": false,
+        "add_color_dist": false,
+        "scale_coords": null,
+        "iterations": 100000,
+        "position_lr_init": 0.0,
+        "position_lr_final": 0.0,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 100000,
+        "offset_lr_init": 0.01,
+        "offset_lr_final": 0.0001,
+        "offset_lr_delay_mult": 0.01,
+        "offset_lr_max_steps": 100000,
+        "feature_lr": 0.0075,
+        "opacity_lr": 0.02,
+        "scaling_lr": 0.007,
+        "rotation_lr": 0.002,
+        "mlp_opacity_lr_init": 0.002,
+        "mlp_opacity_lr_final": 2e-05,
+        "mlp_opacity_lr_delay_mult": 0.01,
+        "mlp_opacity_lr_max_steps": 100000,
+        "mlp_cov_lr_init": 0.004,
+        "mlp_cov_lr_final": 0.004,
+        "mlp_cov_lr_delay_mult": 0.01,
+        "mlp_cov_lr_max_steps": 100000,
+        "mlp_color_lr_init": 0.008,
+        "mlp_color_lr_final": 5e-05,
+        "mlp_color_lr_delay_mult": 0.01,
+        "mlp_color_lr_max_steps": 100000,
+        "mlp_featurebank_lr_init": 0.01,
+        "mlp_featurebank_lr_final": 1e-05,
+        "mlp_featurebank_lr_delay_mult": 0.01,
+        "mlp_featurebank_lr_max_steps": 100000,
+        "appearance_lr_init": 0.05,
+        "appearance_lr_final": 0.0005,
+        "appearance_lr_delay_mult": 0.01,
+        "appearance_lr_max_steps": 100000,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "start_stat": 1500,
+        "update_from": 4500,
+        "update_interval": 300,
+        "update_until": 50000,
+        "min_opacity": 0.005,
+        "success_threshold": 0.8,
+        "densify_grad_threshold": 0.0002,
+        "test_optim_lr": 0.1,
+        "test_optim_steps": 128,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Scaffold-GS",
+      "description": "Scaffold-GS uses anchor points to distribute local 3D Gaussians, and predicts their attributes on-the-fly based on viewing direction and distance within the view frustum. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks. Note, that we also implement a demo for the method, but it does not evaluate the MLP and the Gaussians are \"baked\" for specific viewing direction and appearance embedding (if enabled).",
+      "paper_title": "Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering",
+      "paper_authors": [
+        "Tao Lu",
+        "Mulin Yu",
+        "Linning Xu",
+        "Yuanbo Xiangli",
+        "Limin Wang",
+        "Dahua LinBo Dai"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2312.00109.pdf",
+      "link": "https://city-super.github.io/scaffold-gs/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/city-super/Scaffold-GS/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "num_iterations": 100000,
+      "total_train_time": 4893.57761,
+      "resources_utilization": {
+        "memory": 11416,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 22362
+      },
+      "datetime": "2024-09-12T21:30:21",
+      "config_overrides": {
+        "voxel_size": 0,
+        "update_init_factor": 16,
+        "appearance_dim": 32,
+        "ratio": 1,
+        "iterations": 100000,
+        "appearance_lr_max_steps": 100000,
+        "position_lr_max_steps": 100000,
+        "offset_lr_max_steps": 100000,
+        "mlp_opacity_lr_max_steps": 100000,
+        "mlp_cov_lr_max_steps": 100000,
+        "mlp_color_lr_max_steps": 100000,
+        "mlp_featurebank_lr_max_steps": 100000,
+        "start_stat": 1500,
+        "update_from": 4500,
+        "update_interval": 300,
+        "update_until": 50000
+      },
+      "applied_presets": [
+        "phototourism"
+      ],
+      "dataset_metadata": {
+        "id": "phototourism",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerfw",
+        "scene": "trevi-fountain",
+        "type": null,
+        "viewer_transform": [
+          [
+            0.142849,
+            -0.001339,
+            0.001503,
+            -0.010995
+          ],
+          [
+            -0.001339,
+            0.016496,
+            0.141901,
+            0.021133
+          ],
+          [
+            -0.001503,
+            -0.141901,
+            0.016481,
+            -0.003401
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.994616,
+            0.001218,
+            0.103626,
+            -0.116815
+          ],
+          [
+            -0.103501,
+            0.062227,
+            0.992681,
+            0.087581
+          ],
+          [
+            -0.005239,
+            -0.998061,
+            0.062018,
+            -0.056212
+          ]
+        ],
+        "expected_scene_scale": 6.192306
+      },
+      "evaluation_protocol": "nerfw",
+      "checkpoint_sha256": "936a6f1681cd7cd24d3b23545c85dc0d3ee845e4e32318962af2224114ae610b"
+    }
+  },
+  "viewer_transform": [
+    0.14284866985234132,
+    -0.001338555578712147,
+    0.00150309824343254,
+    -0.01099531833958742,
+    -0.001338555578712147,
+    0.016495597025250584,
+    0.14190102033725074,
+    0.02113333864115158,
+    -0.00150309824343254,
+    -0.14190102033725074,
+    0.016481410553284684,
+    -0.0034010094716564235
+  ],
+  "viewer_initial_pose": [
+    0.9946155511004888,
+    0.001218095867033484,
+    0.10362615617722272,
+    -0.11681537804558118,
+    -0.10350080666571963,
+    0.06222656526036957,
+    0.9926809290891708,
+    0.08758102041597864,
+    -0.00523911432384906,
+    -0.9980613153318487,
+    0.062017527462639006,
+    -0.056211940269892874
+  ],
+  "method_id": "scaffold-gs",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/scaffold-gs/phototourism/trevi-fountain_demo/scene.ksplat",
+    "type": "3dgs",
+    "scene_url_per_appearance": {
+      "7": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/scaffold-gs/phototourism/trevi-fountain_demo/scene-7.ksplat",
+      "5": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/scaffold-gs/phototourism/trevi-fountain_demo/scene-5.ksplat",
+      "174": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/scaffold-gs/phototourism/trevi-fountain_demo/scene-174.ksplat"
+    }
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/phototourism/trevi-fountain-nbv.json"
+  }
+}

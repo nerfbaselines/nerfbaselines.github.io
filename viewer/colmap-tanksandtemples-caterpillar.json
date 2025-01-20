@@ -1,0 +1,220 @@
+{
+  "state": {
+    "render_resolution": 512,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "colmap",
+      "hparams": {
+        "mesher": "poisson",
+        "PatchMatchStereo.geom_consistency": "true"
+      },
+      "supported_camera_models": [
+        "full_opencv",
+        "opencv",
+        "opencv_fisheye",
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color",
+        "depth"
+      ],
+      "name": "COLMAP",
+      "description": "COLMAP Multi-View Stereo (MVS) is a general-purpose, end-to-end image-based 3D reconstruction pipeline.\nIt uses the point cloud if available, otherwise it runs a sparse reconstruction to obtained.\nThe reconstruction consists of a stereo matching step, followed by a multi-view stereo step to obtain a dense point cloud.\nFinally, either Delaunay or Poisson meshing is used to obtain a mesh from the point cloud.\n",
+      "paper_title": "Pixelwise View Selection for Unstructured Multi-View Stereo",
+      "paper_authors": [
+        "Johannes Lutz Sch\u0151nberger",
+        "Enliang Zheng",
+        "Marc Pollefeys",
+        "Jan-Michael Frahm"
+      ],
+      "paper_link": "https://demuc.de/papers/schoenberger2016mvs.pdf",
+      "link": "https://colmap.github.io/",
+      "licenses": [
+        {
+          "name": "BSD",
+          "url": "https://colmap.github.io/license.html"
+        }
+      ],
+      "nb_version": "1.0.3.dev2+g00cf083.d20240819",
+      "num_iterations": 1,
+      "total_train_time": 12009.58035,
+      "resources_utilization": {
+        "memory": 1177,
+        "gpu_name": "",
+        "gpu_memory": 0
+      },
+      "datetime": "2024-09-01T21:58:30",
+      "config_overrides": {},
+      "applied_presets": [],
+      "evaluation_protocol": "default",
+      "checkpoint_sha256": "dccbaef84e8eab22c9624dd1bd1673b1ac20af06faf4eb3ee6a1fd76196d331f"
+    },
+    "dataset_info": {
+      "id": "tanksandtemples",
+      "color_space": "srgb",
+      "evaluation_protocol": "default",
+      "scene": "caterpillar",
+      "type": "object-centric",
+      "downscale_factor": 2,
+      "expected_scene_scale": 5.022944927215576,
+      "name": "Tanks and Temples",
+      "description": "Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.",
+      "paper_title": "Tanks and Temples: Benchmarking Large-Scale Scene Reconstruction",
+      "paper_authors": [
+        "Arno Knapitsch",
+        "Jaesik Park",
+        "Qian-Yi Zhou",
+        "Vladlen Koltun"
+      ],
+      "paper_link": "https://storage.googleapis.com/t2-downloads/paper/tanks-and-temples.pdf",
+      "link": "https://www.tanksandtemples.org/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "auditorium",
+          "name": "auditorium"
+        },
+        {
+          "id": "ballroom",
+          "name": "ballroom"
+        },
+        {
+          "id": "courtroom",
+          "name": "courtroom"
+        },
+        {
+          "id": "museum",
+          "name": "museum"
+        },
+        {
+          "id": "palace",
+          "name": "palace"
+        },
+        {
+          "id": "temple",
+          "name": "temple"
+        },
+        {
+          "id": "family",
+          "name": "family"
+        },
+        {
+          "id": "francis",
+          "name": "francis"
+        },
+        {
+          "id": "horse",
+          "name": "horse"
+        },
+        {
+          "id": "lighthouse",
+          "name": "lighthouse"
+        },
+        {
+          "id": "m60",
+          "name": "m60"
+        },
+        {
+          "id": "panther",
+          "name": "panther"
+        },
+        {
+          "id": "playground",
+          "name": "playground"
+        },
+        {
+          "id": "train",
+          "name": "train"
+        },
+        {
+          "id": "barn",
+          "name": "barn"
+        },
+        {
+          "id": "caterpillar",
+          "name": "caterpillar"
+        },
+        {
+          "id": "church",
+          "name": "church"
+        },
+        {
+          "id": "courthouse",
+          "name": "courthouse"
+        },
+        {
+          "id": "ignatius",
+          "name": "ignatius"
+        },
+        {
+          "id": "meetingroom",
+          "name": "meetingroom"
+        },
+        {
+          "id": "truck",
+          "name": "truck"
+        }
+      ]
+    }
+  },
+  "method_id": "colmap",
+  "renderer": {
+    "mesh_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/caterpillar_demo/mesh.ply",
+    "type": "mesh",
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/colmap/tanksandtemples/caterpillar_demo/params.json"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/tanksandtemples/caterpillar-nbv.json"
+  },
+  "viewer_transform": [
+    0.05815351044696622,
+    -0.012821369573687008,
+    0.14453922659878507,
+    -0.05695618096252971,
+    -0.14509727616610918,
+    -0.0033562891245416822,
+    0.05808031017645983,
+    -0.08005801674322369,
+    -0.001660336442904413,
+    -0.15576313141604883,
+    -0.01314897246456458,
+    0.05032741129188668
+  ],
+  "viewer_initial_pose": [
+    0.0797114713287373,
+    0.07799461272994204,
+    0.9937620220435194,
+    -0.6118148047075128,
+    -0.9968158193328948,
+    0.008328547352127437,
+    0.07930272783094257,
+    -0.06743460240793722,
+    -0.002091406448153195,
+    -0.9969189822387635,
+    0.07841013475441555,
+    0.045840073072162965
+  ]
+}

@@ -1,0 +1,275 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "phototourism",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerfw",
+      "scene": "brandenburg-gate",
+      "type": null,
+      "expected_scene_scale": 5.435907363891603,
+      "name": "Photo Tourism",
+      "default_metric": "psnr",
+      "link": "https://phototour.cs.washington.edu/",
+      "paper_link": "https://phototour.cs.washington.edu/Photo_Tourism.pdf",
+      "paper_title": "Photo Tourism: Exploring Photo Collections in 3D",
+      "paper_authors": [
+        "Noah Snavely",
+        "Steven M. Seitz",
+        "Richard Szeliski"
+      ],
+      "description": "Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "sacre-coeur",
+          "name": "Sacre Coeur"
+        },
+        {
+          "id": "trevi-fountain",
+          "name": "Trevi Fountain"
+        },
+        {
+          "id": "brandenburg-gate",
+          "name": "Brandenburg Gate"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gsplat",
+      "hparams": {
+        "compression": null,
+        "data_factor": 1,
+        "test_every": 8,
+        "patch_size": null,
+        "global_scale": 1.0,
+        "normalize_world_space": true,
+        "batch_size": 1,
+        "steps_scaler": 1.0,
+        "max_steps": 100000,
+        "eval_steps": "23333,100000",
+        "save_steps": "23333,100000",
+        "init_type": "sfm",
+        "init_num_pts": 100000,
+        "init_extent": 3.0,
+        "sh_degree": 3,
+        "sh_degree_interval": 3333,
+        "init_opa": 0.1,
+        "init_scale": 1.0,
+        "ssim_lambda": 0.2,
+        "near_plane": 0.01,
+        "far_plane": 10000000000.0,
+        "strategy/prune_opa": 0.005,
+        "strategy/grow_grad2d": 0.0002,
+        "strategy/grow_scale3d": 0.01,
+        "strategy/grow_scale2d": 0.05,
+        "strategy/prune_scale3d": 0.1,
+        "strategy/prune_scale2d": 0.15,
+        "strategy/refine_scale2d_stop_iter": 0,
+        "strategy/refine_start_iter": 1666,
+        "strategy/refine_stop_iter": 50000,
+        "strategy/reset_every": 10000,
+        "strategy/refine_every": 333,
+        "strategy/pause_refine_after_reset": 0,
+        "strategy/absgrad": false,
+        "strategy/revised_opacity": false,
+        "strategy/verbose": true,
+        "packed": false,
+        "sparse_grad": false,
+        "antialiased": false,
+        "random_bkgd": false,
+        "opacity_reg": 0.0,
+        "scale_reg": 0.0,
+        "pose_opt": false,
+        "pose_opt_lr": 1e-05,
+        "pose_opt_reg": 1e-06,
+        "pose_noise": 0.0,
+        "app_opt": true,
+        "app_embed_dim": 16,
+        "app_opt_lr": 0.001,
+        "app_opt_reg": 1e-06,
+        "depth_loss": false,
+        "depth_lambda": 0.01,
+        "app_test_opt_steps": 128,
+        "app_test_opt_lr": 0.1,
+        "background_color": null
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth"
+      ],
+      "name": "gsplat",
+      "description": "gsplat is an open-source library for CUDA accelerated rasterization of gaussians with python bindings. It is inspired by the 3DGS paper, but it is faster, more memory efficient, and with a growing list of new features. In NerfBaselines, the method was modified to enable appearance optimization, to support sampling masks, and to support setting background color (which is required for the Blender dataset).",
+      "paper_title": "gsplat: An Open-Source Library for Gaussian Splatting",
+      "paper_authors": [
+        "Vickie Ye",
+        "Ruilong Li",
+        "Justin Kerr",
+        "Matias Turkulainen",
+        "Brent Yi",
+        "Zhuoyang Pan",
+        "Otto Seiskari",
+        "Jianbo Ye",
+        "Jeffrey Hu",
+        "Matthew Tancik",
+        "Angjoo Kanazawa"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2409.06765.pdf",
+      "link": "https://docs.gsplat.studio/main/",
+      "licenses": [
+        {
+          "name": "Apache 2.0",
+          "url": "https://raw.githubusercontent.com/nerfstudio-project/gsplat/main/LICENSE"
+        }
+      ],
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "num_iterations": 100000,
+      "total_train_time": 5455.76525,
+      "resources_utilization": {
+        "memory": 2795,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 3768
+      },
+      "datetime": "2024-09-12T12:29:53",
+      "config_overrides": {
+        "app_opt": true,
+        "steps_scaler": 3.333334
+      },
+      "applied_presets": [
+        "phototourism"
+      ],
+      "dataset_metadata": {
+        "id": "phototourism",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerfw",
+        "scene": "brandenburg-gate",
+        "type": null,
+        "viewer_transform": [
+          [
+            0.136799,
+            0.001065,
+            -0.001068,
+            -0.013551
+          ],
+          [
+            0.001065,
+            0.000412,
+            0.136803,
+            -0.052058
+          ],
+          [
+            0.001068,
+            -0.136803,
+            0.000404,
+            0.012686
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.844081,
+            0.110492,
+            0.524709,
+            -0.368579
+          ],
+          [
+            -0.527673,
+            -0.002821,
+            0.849443,
+            0.26475
+          ],
+          [
+            0.095337,
+            -0.993873,
+            0.055923,
+            -0.055566
+          ]
+        ],
+        "expected_scene_scale": 5.435907
+      },
+      "evaluation_protocol": "nerfw",
+      "checkpoint_sha256": "4da8b6573a67232c691cc206630b71ac3d8c76894e0414b7b8e9d9762aa04dcc"
+    }
+  },
+  "viewer_transform": [
+    0.13679942583792487,
+    0.001065196449206895,
+    -0.00106837646509609,
+    -0.013550737704302044,
+    0.001065196449206895,
+    0.0004119591231130087,
+    0.13680298114627162,
+    -0.052058341527068744,
+    0.00106837646509609,
+    -0.13680298114627162,
+    0.00040364165863210474,
+    0.012686333995855803
+  ],
+  "viewer_initial_pose": [
+    0.8440806965720405,
+    0.11049210775847061,
+    0.5247087182337515,
+    -0.3685787362484528,
+    -0.5276727865135689,
+    -0.0028209914767246894,
+    0.8494430340946415,
+    0.2647499756124351,
+    0.09533695175576438,
+    -0.9938730152516586,
+    0.05592254632491684,
+    -0.05556570767969427
+  ],
+  "method_id": "gsplat",
+  "renderer": {
+    "transform": [
+      0.11954733749478352,
+      -2.7508110580543566,
+      0.04152943029373683,
+      0.7589801720919499,
+      0.29412101654332096,
+      -0.02855110596739063,
+      -2.7378194605510977,
+      0.14256481666864773,
+      2.7353571975744178,
+      0.12329271604864911,
+      0.2925707511763862,
+      7.226454981898048
+    ],
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/phototourism/brandenburg-gate_demo/scene.ksplat",
+    "type": "3dgs",
+    "scene_url_per_appearance": {
+      "0": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/phototourism/brandenburg-gate_demo/scene-0.ksplat",
+      "1": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/phototourism/brandenburg-gate_demo/scene-1.ksplat",
+      "9": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/phototourism/brandenburg-gate_demo/scene-9.ksplat"
+    }
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/phototourism/brandenburg-gate-nbv.json"
+  }
+}

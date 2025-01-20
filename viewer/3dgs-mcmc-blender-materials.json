@@ -1,0 +1,265 @@
+{
+  "state": {
+    "dataset_info": {
+      "color_space": "srgb",
+      "expected_scene_scale": 4,
+      "background_color": [
+        255,
+        255,
+        255
+      ],
+      "id": "blender",
+      "scene": "materials",
+      "evaluation_protocol": "nerf",
+      "type": "object-centric",
+      "name": "Blender",
+      "description": "Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.",
+      "paper_title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+      "paper_authors": [
+        "Ben Mildenhall",
+        "Pratul P. Srinivasan",
+        "Matthew Tancik",
+        "Jonathan T. Barron",
+        "Ravi Ramamoorthi",
+        "Ren Ng"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2003.08934.pdf",
+      "link": "https://www.matthewtancik.com/nerf",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "lego",
+          "name": "lego"
+        },
+        {
+          "id": "drums",
+          "name": "drums"
+        },
+        {
+          "id": "ficus",
+          "name": "ficus"
+        },
+        {
+          "id": "hotdog",
+          "name": "hotdog"
+        },
+        {
+          "id": "materials",
+          "name": "materials"
+        },
+        {
+          "id": "mic",
+          "name": "mic"
+        },
+        {
+          "id": "ship",
+          "name": "ship"
+        },
+        {
+          "id": "chair",
+          "name": "chair"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "3dgs-mcmc",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": true,
+        "cap_max": -1,
+        "init_type": "random",
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 25000,
+        "densify_grad_threshold": 0.0002,
+        "random_background": false,
+        "noise_lr": 500000.0,
+        "scale_reg": 0.01,
+        "opacity_reg": 0.01,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "normal"
+      ],
+      "name": "3DGS-MCMC",
+      "description": "3DGS-MCMC reinterprets 3D Gaussian Splatting as MCMC sampling, introducing noise-based updates and removing heuristic cloning strategies, leading to improved rendering quality, efficient Gaussian use, and robustness to initialization. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks and web demos.",
+      "paper_title": "3D Gaussian Splatting as Markov Chain Monte Carlo",
+      "paper_authors": [
+        "Shakiba Kheradmand",
+        "Daniel Rebain",
+        "Gopal Sharma",
+        "Weiwei Sun",
+        "Yang-Che Tseng",
+        "Hossam Isack",
+        "Abhishek Kar",
+        "Andrea Tagliasacchi",
+        "Kwang Moo Yi"
+      ],
+      "paper_link": "https://ubc-vision.github.io/3dgs-mcmc/paper.pdf",
+      "link": "https://ubc-vision.github.io/3dgs-mcmc/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/ubc-vision/3dgs-mcmc/refs/heads/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "1.2.3.dev6+geacf155.d20240917",
+      "num_iterations": 30000,
+      "total_train_time": 371.49664,
+      "resources_utilization": {
+        "memory": 4504,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 3984
+      },
+      "datetime": "2024-09-22T05:56:45",
+      "config_overrides": {
+        "white_background": true
+      },
+      "applied_presets": [
+        "blender"
+      ],
+      "dataset_metadata": {
+        "color_space": "srgb",
+        "expected_scene_scale": 4,
+        "background_color": [
+          255,
+          255,
+          255
+        ],
+        "id": "blender",
+        "scene": "materials",
+        "evaluation_protocol": "nerf",
+        "type": "object-centric",
+        "viewer_transform": [
+          [
+            -0.191745,
+            -0.12815,
+            0.054467,
+            -0.0
+          ],
+          [
+            0.130883,
+            -0.197508,
+            -0.00394,
+            -0.0
+          ],
+          [
+            0.047528,
+            0.026895,
+            0.230593,
+            -0.0
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.908305,
+            0.066228,
+            0.413032,
+            -0.394553
+          ],
+          [
+            -0.355399,
+            0.642937,
+            0.678471,
+            -0.648117
+          ],
+          [
+            -0.22062,
+            -0.763051,
+            0.60752,
+            -0.58034
+          ]
+        ]
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "ad9e92753c53b020ad14d297bb57f93b5041de4027154a0cf8c5f2476b4511b0"
+    }
+  },
+  "viewer_transform": [
+    -0.191744895506323,
+    -0.12815007315948115,
+    0.0544674008672559,
+    -8.927507309797189e-10,
+    0.13088265507160343,
+    -0.19750811603138166,
+    -0.00393994760731515,
+    -1.5221711044399733e-09,
+    0.04752758237693954,
+    0.02689516271184267,
+    0.23059276293602926,
+    -1.3997468392701329e-09
+  ],
+  "viewer_initial_pose": [
+    0.9083051784146993,
+    0.06622825463276528,
+    0.41303207942486847,
+    -0.39455330528762367,
+    -0.35539940749492627,
+    0.6429368209111613,
+    0.6784714046650461,
+    -0.6481170605635974,
+    -0.2206195688526204,
+    -0.7630505169385107,
+    0.6075202526842826,
+    -0.5803402118903167
+  ],
+  "method_id": "3dgs-mcmc",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/3dgs-mcmc/blender/materials_demo/scene.ksplat",
+    "type": "3dgs",
+    "background_color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/blender/materials-nbv.json"
+  }
+}

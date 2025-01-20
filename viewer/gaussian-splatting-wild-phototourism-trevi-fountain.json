@@ -1,0 +1,242 @@
+{
+  "state": {
+    "dataset_info": {
+      "name": "Photo Tourism",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerfw",
+      "scene": "trevi-fountain",
+      "expected_scene_scale": 6.192305946350098,
+      "type": null,
+      "id": "phototourism",
+      "default_metric": "psnr",
+      "link": "https://phototour.cs.washington.edu/",
+      "paper_link": "https://phototour.cs.washington.edu/Photo_Tourism.pdf",
+      "paper_title": "Photo Tourism: Exploring Photo Collections in 3D",
+      "paper_authors": [
+        "Noah Snavely",
+        "Steven M. Seitz",
+        "Richard Szeliski"
+      ],
+      "description": "Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "sacre-coeur",
+          "name": "Sacre Coeur"
+        },
+        {
+          "id": "trevi-fountain",
+          "name": "Trevi Fountain"
+        },
+        {
+          "id": "brandenburg-gate",
+          "name": "Brandenburg Gate"
+        }
+      ]
+    },
+    "render_resolution": 512,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gaussian-splatting-wild",
+      "hparams": {
+        "device": "cuda:0",
+        "sh_degree": 3,
+        "white_background": false,
+        "scene_name": "brandenburg",
+        "use_colors_precomp": true,
+        "use_decode_with_pos": false,
+        "use_indep_mask_branch": false,
+        "use_features_mask": true,
+        "features_mask_loss_coef": 0.15,
+        "features_mask_iters": 2500,
+        "use_okmap": false,
+        "use_kmap_pjmap": true,
+        "map_num": 3,
+        "use_wo_adative": 0,
+        "use_xw_init_box_coord": true,
+        "use_color_net": true,
+        "use_scaling_loss": false,
+        "use_lpips_loss": true,
+        "use_box_coord_loss": true,
+        "coord_scale": 1,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-07,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "map_generator_lr": 0.002,
+        "color_net_lr": 0.0005,
+        "box_coord_lr": 1,
+        "warm_up_iter": 0,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0004,
+        "opacity_threshold": 0.005,
+        "random_background": false,
+        "scaling_loss_coef": 0.005,
+        "lpips_loss_coef": 0.005,
+        "box_coord_loss_coef": 0.001,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "GS-W",
+      "description": "Official GS-W implementation - 3DGS modified to handle appearance changes and transient objects. A reference view used to provide appearance conditioning. Note, that the method uses huge appearance embeddings (per-Gaussian) and appearance modeling has a large memory footprint.",
+      "note": "The appearance embeddings are stored per Gaussian and therefore the memory consumption is huge when interpolating between two appearance embeddings. Furthermore, the training dataset is required during inference to compute the appearance embeddings and therefore is only enabled for default datasets.",
+      "paper_title": "Gaussian in the Wild: 3D Gaussian Splatting for Unconstrained Image Collections",
+      "paper_authors": [
+        "Dongbin Zhang",
+        "Chuming Wang",
+        "Weitao Wang",
+        "Peihao Li",
+        "Minghan Qin",
+        "Haoqian Wang"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2403.15704.pdf",
+      "link": "https://eastbeanzhang.github.io/GS-W/",
+      "licenses": [
+        {
+          "name": "unknown"
+        }
+      ],
+      "nb_version": "1.0.2.dev2+g3eac102",
+      "num_iterations": 30000,
+      "total_train_time": 4893.02475,
+      "resources_utilization": {
+        "memory": 15468,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 28588
+      },
+      "datetime": "2024-08-01T01:23:53",
+      "config_overrides": {},
+      "dataset_metadata": {
+        "name": "phototourism",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerfw",
+        "viewer_transform": [
+          [
+            0.143114,
+            -0.001053,
+            0.001237,
+            3.1e-05
+          ],
+          [
+            -0.001053,
+            0.022851,
+            0.141284,
+            0.030631
+          ],
+          [
+            -0.001237,
+            -0.141284,
+            0.022841,
+            -0.00037
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.977511,
+            -0.003726,
+            -0.210851,
+            0.586971
+          ],
+          [
+            0.210759,
+            -0.017195,
+            0.977387,
+            -0.641327
+          ],
+          [
+            -0.007267,
+            -0.999845,
+            -0.016023,
+            0.107145
+          ]
+        ],
+        "scene": "trevi-fountain",
+        "expected_scene_scale": 6.204333,
+        "type": null
+      },
+      "evaluation_protocol": "nerfw",
+      "checkpoint_sha256": "8a504d3413860dca52621d189255fe48634071e88867c009af98bd13aedb5de3"
+    }
+  },
+  "viewer_transform": [
+    0.14284866985234132,
+    -0.001338555578712147,
+    0.00150309824343254,
+    -0.01099531833958742,
+    -0.001338555578712147,
+    0.016495597025250584,
+    0.14190102033725074,
+    0.02113333864115158,
+    -0.00150309824343254,
+    -0.14190102033725074,
+    0.016481410553284684,
+    -0.0034010094716564235
+  ],
+  "viewer_initial_pose": [
+    0.9946155511004888,
+    0.001218095867033484,
+    0.10362615617722272,
+    -0.11681537804558118,
+    -0.10350080666571963,
+    0.06222656526036957,
+    0.9926809290891708,
+    0.08758102041597864,
+    -0.00523911432384906,
+    -0.9980613153318487,
+    0.062017527462639006,
+    -0.056211940269892874
+  ],
+  "method_id": "gaussian-splatting-wild",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-splatting-wild/phototourism/trevi-fountain_demo/scene.ksplat",
+    "type": "3dgs",
+    "scene_url_per_appearance": {
+      "7": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-splatting-wild/phototourism/trevi-fountain_demo/scene-7.ksplat",
+      "5": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-splatting-wild/phototourism/trevi-fountain_demo/scene-5.ksplat",
+      "174": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-splatting-wild/phototourism/trevi-fountain_demo/scene-174.ksplat"
+    }
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/phototourism/trevi-fountain-nbv.json"
+  }
+}

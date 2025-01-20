@@ -1,0 +1,204 @@
+{
+  "state": {
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gaussian-opacity-fields",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "kernel_size": 0.0,
+        "ray_jitter": false,
+        "resample_gt_image": false,
+        "load_allres": false,
+        "sample_more_highres": false,
+        "use_decoupled_appearance": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "appearance_embeddings_lr": 0.001,
+        "appearance_network_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "lambda_distortion": 100,
+        "lambda_depth_normal": 0.05,
+        "distortion_from_iter": 15000,
+        "depth_normal_from_iter": 15000,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "compute_view2gaussian_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "distortion_map",
+        "normal"
+      ],
+      "name": "Gaussian Opacity Fields",
+      "description": "Improved Mip-Splatting with better geometry.",
+      "paper_title": "Gaussian Opacity Fields: Efficient and Compact Surface Reconstruction in Unbounded Scenes",
+      "paper_authors": [
+        "Zehao Yu",
+        "Torsten Sattler",
+        "Andreas Geiger"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2404.10772.pdf",
+      "link": "https://niujinshuchong.github.io/gaussian-opacity-fields/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/autonomousvision/gaussian-opacity-fields/main/LICENSE.md"
+        }
+      ],
+      "num_iterations": 30000,
+      "total_train_time": 3133.62347,
+      "resources_utilization": {
+        "memory": 8586,
+        "gpu_memory": 34632,
+        "gpu_name": "NVIDIA A100-SXM4-40GB"
+      },
+      "datetime": "2024-06-07T12:33:15+0200",
+      "config_overrides": {},
+      "evaluation_protocol": "nerf",
+      "nb_version": "0.0.16.dev56+g8ee0779.d20240531",
+      "checkpoint_sha256": "fbf2cf9e927ed55210577b36c4dabdb4e8128b867a46efb58be8e37702c837b8"
+    },
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "stump",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.188471412658691,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    }
+  },
+  "method_id": "gaussian-opacity-fields",
+  "renderer": {
+    "antialias_2D_kernel_size": 0.0,
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-opacity-fields/mipnerf360/stump_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/stump-nbv.json"
+  },
+  "viewer_transform": [
+    0.15479412523404207,
+    0.13592330631009028,
+    -0.12038191246434035,
+    0.009754612474239949,
+    0.1815283364572884,
+    -0.11254766701591598,
+    0.10634215385155395,
+    -0.10444329547909094,
+    0.0037958417995670787,
+    -0.1605803475449247,
+    -0.17643047473321727,
+    0.23584158579250009
+  ],
+  "viewer_initial_pose": [
+    0.8003846564933853,
+    0.03992720239005722,
+    -0.5981557036131206,
+    0.5917947536691911,
+    0.5989919661228531,
+    -0.09379411875551064,
+    0.7952428921546283,
+    -0.7149200015089064,
+    -0.02435167014499559,
+    -0.9947906720174758,
+    -0.09898746301614442,
+    -0.1782950953256095
+  ]
+}

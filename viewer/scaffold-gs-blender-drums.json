@@ -1,0 +1,301 @@
+{
+  "state": {
+    "dataset_info": {
+      "color_space": "srgb",
+      "expected_scene_scale": 4,
+      "background_color": [
+        255,
+        255,
+        255
+      ],
+      "id": "blender",
+      "scene": "drums",
+      "evaluation_protocol": "nerf",
+      "type": "object-centric",
+      "name": "Blender",
+      "description": "Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.",
+      "paper_title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+      "paper_authors": [
+        "Ben Mildenhall",
+        "Pratul P. Srinivasan",
+        "Matthew Tancik",
+        "Jonathan T. Barron",
+        "Ravi Ramamoorthi",
+        "Ren Ng"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2003.08934.pdf",
+      "link": "https://www.matthewtancik.com/nerf",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "lego",
+          "name": "lego"
+        },
+        {
+          "id": "drums",
+          "name": "drums"
+        },
+        {
+          "id": "ficus",
+          "name": "ficus"
+        },
+        {
+          "id": "hotdog",
+          "name": "hotdog"
+        },
+        {
+          "id": "materials",
+          "name": "materials"
+        },
+        {
+          "id": "mic",
+          "name": "mic"
+        },
+        {
+          "id": "ship",
+          "name": "ship"
+        },
+        {
+          "id": "chair",
+          "name": "chair"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "scaffold-gs",
+      "hparams": {
+        "sh_degree": 3,
+        "feat_dim": 32,
+        "n_offsets": 10,
+        "voxel_size": 0.001,
+        "update_depth": 3,
+        "update_init_factor": 4,
+        "update_hierachy_factor": 4,
+        "use_feat_bank": false,
+        "white_background": true,
+        "lod": 0,
+        "appearance_dim": 0,
+        "lowpoly": false,
+        "ds": 1,
+        "ratio": 1,
+        "undistorted": false,
+        "add_opacity_dist": false,
+        "add_cov_dist": false,
+        "add_color_dist": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.0,
+        "position_lr_final": 0.0,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "offset_lr_init": 0.01,
+        "offset_lr_final": 0.0001,
+        "offset_lr_delay_mult": 0.01,
+        "offset_lr_max_steps": 30000,
+        "feature_lr": 0.0075,
+        "opacity_lr": 0.02,
+        "scaling_lr": 0.007,
+        "rotation_lr": 0.002,
+        "mlp_opacity_lr_init": 0.002,
+        "mlp_opacity_lr_final": 2e-05,
+        "mlp_opacity_lr_delay_mult": 0.01,
+        "mlp_opacity_lr_max_steps": 30000,
+        "mlp_cov_lr_init": 0.004,
+        "mlp_cov_lr_final": 0.004,
+        "mlp_cov_lr_delay_mult": 0.01,
+        "mlp_cov_lr_max_steps": 30000,
+        "mlp_color_lr_init": 0.008,
+        "mlp_color_lr_final": 5e-05,
+        "mlp_color_lr_delay_mult": 0.01,
+        "mlp_color_lr_max_steps": 30000,
+        "mlp_featurebank_lr_init": 0.01,
+        "mlp_featurebank_lr_final": 1e-05,
+        "mlp_featurebank_lr_delay_mult": 0.01,
+        "mlp_featurebank_lr_max_steps": 30000,
+        "appearance_lr_init": 0.05,
+        "appearance_lr_final": 0.0005,
+        "appearance_lr_delay_mult": 0.01,
+        "appearance_lr_max_steps": 30000,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "start_stat": 500,
+        "update_from": 1500,
+        "update_interval": 100,
+        "update_until": 15000,
+        "min_opacity": 0.005,
+        "success_threshold": 0.8,
+        "densify_grad_threshold": 0.0002,
+        "test_optim_lr": 0.1,
+        "test_optim_steps": 128,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Scaffold-GS",
+      "description": "Scaffold-GS uses anchor points to distribute local 3D Gaussians, and predicts their attributes on-the-fly based on viewing direction and distance within the view frustum. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks. Note, that we also implement a demo for the method, but it does not evaluate the MLP and the Gaussians are \"baked\" for specific viewing direction and appearance embedding (if enabled).",
+      "paper_title": "Scaffold-GS: Structured 3D Gaussians for View-Adaptive Rendering",
+      "paper_authors": [
+        "Tao Lu",
+        "Mulin Yu",
+        "Linning Xu",
+        "Yuanbo Xiangli",
+        "Limin Wang",
+        "Dahua LinBo Dai"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2312.00109.pdf",
+      "link": "https://city-super.github.io/scaffold-gs/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/city-super/Scaffold-GS/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "num_iterations": 30000,
+      "total_train_time": 405.37243,
+      "resources_utilization": {
+        "memory": 3724,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 3816
+      },
+      "datetime": "2024-09-12T18:29:43",
+      "config_overrides": {
+        "white_background": true,
+        "voxel_size": 0.001,
+        "update_init_factor": 4,
+        "appearance_dim": 0,
+        "ratio": 1
+      },
+      "applied_presets": [
+        "blender"
+      ],
+      "dataset_metadata": {
+        "color_space": "srgb",
+        "expected_scene_scale": 4,
+        "background_color": [
+          255,
+          255,
+          255
+        ],
+        "id": "blender",
+        "scene": "drums",
+        "evaluation_protocol": "nerf",
+        "type": "object-centric",
+        "viewer_transform": [
+          [
+            0.233781,
+            0.041763,
+            -0.005102,
+            0.0
+          ],
+          [
+            -0.041899,
+            0.233714,
+            -0.006771,
+            0.0
+          ],
+          [
+            0.003829,
+            0.007564,
+            0.237385,
+            0.0
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.046754,
+            -0.851644,
+            0.522031,
+            -0.499865
+          ],
+          [
+            -0.998529,
+            -0.025471,
+            0.047876,
+            -0.045843
+          ],
+          [
+            -0.027476,
+            -0.523501,
+            -0.851582,
+            0.815423
+          ]
+        ]
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "66d1afeba6ee0864ea34156afd3a46ad7855e77ab9d423b79b087057b856f322"
+    }
+  },
+  "viewer_transform": [
+    0.23378053111752,
+    0.04176272097533595,
+    -0.005101554485803457,
+    1.212545071294091e-09,
+    -0.04189856245458773,
+    0.2337138173700361,
+    -0.006770974607286131,
+    2.0343422085788987e-09,
+    0.0038290131136860485,
+    0.007563770228847798,
+    0.23738494237270985,
+    2.567753787374727e-10
+  ],
+  "viewer_initial_pose": [
+    0.04675402447987858,
+    -0.8516441730000772,
+    0.5220309648324886,
+    -0.4998651409608372,
+    -0.9985285667177936,
+    -0.025471302242835323,
+    0.047875928602504725,
+    -0.045843079064837255,
+    -0.027476441547764876,
+    -0.5235011008876568,
+    -0.8515819427686113,
+    0.8154231121581405
+  ],
+  "method_id": "scaffold-gs",
+  "renderer": {
+    "background_color": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/scaffold-gs/blender/drums_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/blender/drums-nbv.json"
+  }
+}

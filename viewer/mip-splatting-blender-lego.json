@@ -1,0 +1,259 @@
+{
+  "state": {
+    "dataset_info": {
+      "name": "Blender",
+      "scene": "lego",
+      "color_space": "srgb",
+      "type": "object-centric",
+      "evaluation_protocol": "nerf",
+      "expected_scene_scale": 4,
+      "background_color": [
+        255,
+        255,
+        255
+      ],
+      "id": "blender",
+      "description": "Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.",
+      "paper_title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+      "paper_authors": [
+        "Ben Mildenhall",
+        "Pratul P. Srinivasan",
+        "Matthew Tancik",
+        "Jonathan T. Barron",
+        "Ravi Ramamoorthi",
+        "Ren Ng"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2003.08934.pdf",
+      "link": "https://www.matthewtancik.com/nerf",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "lego",
+          "name": "lego"
+        },
+        {
+          "id": "drums",
+          "name": "drums"
+        },
+        {
+          "id": "ficus",
+          "name": "ficus"
+        },
+        {
+          "id": "hotdog",
+          "name": "hotdog"
+        },
+        {
+          "id": "materials",
+          "name": "materials"
+        },
+        {
+          "id": "mic",
+          "name": "mic"
+        },
+        {
+          "id": "ship",
+          "name": "ship"
+        },
+        {
+          "id": "chair",
+          "name": "chair"
+        }
+      ]
+    },
+    "method_info": {
+      "method_id": "mip-splatting",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": true,
+        "kernel_size": 0.1,
+        "ray_jitter": false,
+        "resample_gt_image": false,
+        "load_allres": false,
+        "sample_more_highres": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Mip-Splatting",
+      "description": "A modification of Gaussian Splatting designed to better handle aliasing artifacts.",
+      "paper_title": "Mip-Splatting: Alias-free 3D Gaussian Splatting",
+      "paper_authors": [
+        "Zehao Yu",
+        "Anpei Chen",
+        "Binbin Huang",
+        "Torsten Sattler",
+        "Andreas Geiger"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2311.16493.pdf",
+      "link": "https://niujinshuchong.github.io/mip-splatting/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/autonomousvision/mip-splatting/main/LICENSE.md"
+        }
+      ],
+      "num_iterations": 30000,
+      "total_train_time": 389.19833,
+      "resources_utilization": {
+        "memory": 4300,
+        "gpu_memory": 2574,
+        "gpu_name": "NVIDIA A100-SXM4-40GB"
+      },
+      "datetime": "2024-02-10T12:14:54+0100",
+      "config_overrides": {
+        "white_background": true
+      },
+      "nb_version": "0.0.15",
+      "dataset_metadata": {
+        "name": "blender",
+        "scene": "lego",
+        "color_space": "srgb",
+        "type": "object-centric",
+        "evaluation_protocol": "nerf",
+        "expected_scene_scale": 4,
+        "viewer_transform": [
+          [
+            0.16700999438762665,
+            -0.1760600060224533,
+            0.015320000238716602,
+            0.0
+          ],
+          [
+            0.17597000300884247,
+            0.1676200032234192,
+            0.008019999600946903,
+            0.0
+          ],
+          [
+            -0.016370000317692757,
+            0.00558000011369586,
+            0.24254000186920166,
+            -0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            -0.6766499876976013,
+            -0.27998000383377075,
+            0.6809999942779541,
+            -0.6675199866294861
+          ],
+          [
+            -0.7332500219345093,
+            0.17207999527454376,
+            -0.6578199863433838,
+            0.6448000073432922
+          ],
+          [
+            0.06699000298976898,
+            -0.9444599747657776,
+            -0.32172998785972595,
+            0.31536000967025757
+          ]
+        ],
+        "background_color": [
+          255,
+          255,
+          255
+        ]
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "550ab5e37f4d98f4c72d859f97ab4023bfb7406212028211af6c2f16bc41a5fc"
+    }
+  },
+  "viewer_transform": [
+    0.1670121405209167,
+    -0.17606317224319482,
+    0.015324060256443976,
+    1.2690874046095146e-10,
+    0.1759691971374496,
+    0.16762071774026302,
+    0.008016493023706637,
+    3.2305537411847496e-10,
+    -0.01636807672270719,
+    0.005583642543146731,
+    0.24254284907732618,
+    -1.9717516508421795e-09
+  ],
+  "viewer_initial_pose": [
+    -0.6766484313881248,
+    -0.2799769149572417,
+    0.6809990511616157,
+    -0.6675179688885037,
+    -0.7332528966115079,
+    0.17208243233783602,
+    -0.657820488775843,
+    0.6447982496030091,
+    0.06698658842008934,
+    -0.9444578592318481,
+    -0.3217330881863616,
+    0.31536403276898606
+  ],
+  "method_id": "mip-splatting",
+  "renderer": {
+    "antialias_2D_kernel_size": 0.1,
+    "background_color": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/mip-splatting/blender/lego_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/blender/lego-nbv.json"
+  }
+}

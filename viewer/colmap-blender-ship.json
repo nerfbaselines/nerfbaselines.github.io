@@ -1,0 +1,194 @@
+{
+  "state": {
+    "render_resolution": 512,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "colmap",
+      "hparams": {
+        "mesher": "poisson",
+        "PatchMatchStereo.geom_consistency": "true",
+        "background_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "PoissonMeshing.trim": 5
+      },
+      "supported_camera_models": [
+        "full_opencv",
+        "opencv",
+        "opencv_fisheye",
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color",
+        "depth"
+      ],
+      "name": "COLMAP",
+      "description": "COLMAP Multi-View Stereo (MVS) is a general-purpose, end-to-end image-based 3D reconstruction pipeline.\nIt uses the point cloud if available, otherwise it runs a sparse reconstruction to obtained.\nThe reconstruction consists of a stereo matching step, followed by a multi-view stereo step to obtain a dense point cloud.\nFinally, either Delaunay or Poisson meshing is used to obtain a mesh from the point cloud.\n",
+      "paper_title": "Pixelwise View Selection for Unstructured Multi-View Stereo",
+      "paper_authors": [
+        "Johannes Lutz Sch\u0151nberger",
+        "Enliang Zheng",
+        "Marc Pollefeys",
+        "Jan-Michael Frahm"
+      ],
+      "paper_link": "https://demuc.de/papers/schoenberger2016mvs.pdf",
+      "link": "https://colmap.github.io/",
+      "licenses": [
+        {
+          "name": "BSD",
+          "url": "https://colmap.github.io/license.html"
+        }
+      ],
+      "nb_version": "1.0.3.dev2+g00cf083.d20240819",
+      "num_iterations": 1,
+      "total_train_time": 2882.60264,
+      "resources_utilization": {
+        "memory": 1157,
+        "gpu_name": "",
+        "gpu_memory": 0
+      },
+      "datetime": "2024-09-01T19:46:50",
+      "config_overrides": {
+        "background_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "PoissonMeshing.trim": 5
+      },
+      "applied_presets": [
+        "blender"
+      ],
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "2b957ab98649924db68b501289aa3d466a8fba8f27911b8b0467016cc62ae3d2"
+    },
+    "dataset_info": {
+      "color_space": "srgb",
+      "expected_scene_scale": 4,
+      "background_color": [
+        255,
+        255,
+        255
+      ],
+      "id": "blender",
+      "scene": "ship",
+      "evaluation_protocol": "nerf",
+      "type": "object-centric",
+      "name": "Blender",
+      "description": "Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.",
+      "paper_title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+      "paper_authors": [
+        "Ben Mildenhall",
+        "Pratul P. Srinivasan",
+        "Matthew Tancik",
+        "Jonathan T. Barron",
+        "Ravi Ramamoorthi",
+        "Ren Ng"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2003.08934.pdf",
+      "link": "https://www.matthewtancik.com/nerf",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "lego",
+          "name": "lego"
+        },
+        {
+          "id": "drums",
+          "name": "drums"
+        },
+        {
+          "id": "ficus",
+          "name": "ficus"
+        },
+        {
+          "id": "hotdog",
+          "name": "hotdog"
+        },
+        {
+          "id": "materials",
+          "name": "materials"
+        },
+        {
+          "id": "mic",
+          "name": "mic"
+        },
+        {
+          "id": "ship",
+          "name": "ship"
+        },
+        {
+          "id": "chair",
+          "name": "chair"
+        }
+      ]
+    }
+  },
+  "method_id": "colmap",
+  "renderer": {
+    "mesh_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/colmap/blender/ship_demo/mesh.ply",
+    "type": "mesh",
+    "background_color": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/colmap/blender/ship_demo/params.json"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/blender/ship-nbv.json"
+  },
+  "viewer_transform": [
+    0.23846538939359294,
+    -0.056710718634791414,
+    0.023961371205228597,
+    -7.603364465813556e-10,
+    0.05563650640645701,
+    0.2395511288508942,
+    0.013260299766015676,
+    1.2460730086649718e-09,
+    -0.02635966789209515,
+    -0.007426356708156213,
+    0.24475704711568652,
+    2.2674716548820584e-09
+  ],
+  "viewer_initial_pose": [
+    0.18490369559083322,
+    -0.2673955698335829,
+    0.9456797256200091,
+    -0.9388746775435663,
+    -0.9821293881676113,
+    -0.08465346758043255,
+    0.16809430311640883,
+    -0.1668847073115244,
+    0.0351073999487177,
+    -0.9598610797825978,
+    -0.2782697863116357,
+    0.2762673779751974
+  ]
+}

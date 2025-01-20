@@ -1,0 +1,253 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "treehill",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.344243907928466,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "2d-gaussian-splatting",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "render_items": [
+          "RGB",
+          "Alpha",
+          "Normal",
+          "Depth",
+          "Edge",
+          "Curvature"
+        ],
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "lambda_dist": 0.0,
+        "lambda_normal": 0.05,
+        "opacity_cull": 0.05,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "depth_ratio": 0.0,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "normal"
+      ],
+      "name": "2D Gaussian Splatting",
+      "description": "2DGS adopts 2D oriented disks as surface elements and allows high-quality rendering with Gaussian Splatting. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks.",
+      "paper_title": "2D Gaussian Splatting for Geometrically Accurate Radiance Fields",
+      "paper_authors": [
+        "Binbin Huang",
+        "Zehao Yu",
+        "Anpei Chen",
+        "Andreas Geiger",
+        "Shenghua Gao"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2403.17888.pdf",
+      "link": "https://surfsplatting.github.io/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/hbb1/2d-gaussian-splatting/main/LICENSE.md"
+        }
+      ],
+      "num_iterations": 30000,
+      "total_train_time": 1723.41993,
+      "resources_utilization": {
+        "memory": 3512,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 9024
+      },
+      "datetime": "2024-09-13T17:16:18",
+      "config_overrides": {},
+      "applied_presets": [],
+      "dataset_metadata": {
+        "id": "mipnerf360",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "treehill",
+        "downscale_factor": 4,
+        "type": "object-centric",
+        "viewer_transform": [
+          [
+            0.114285,
+            -0.071376,
+            0.166096,
+            0.0428
+          ],
+          [
+            -0.180497,
+            -0.034008,
+            0.10958,
+            -0.012041
+          ],
+          [
+            -0.010159,
+            -0.198727,
+            -0.078409,
+            0.018146
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            -0.908324,
+            0.184066,
+            0.375588,
+            -0.279022
+          ],
+          [
+            -0.418008,
+            -0.367938,
+            -0.830596,
+            0.80846
+          ],
+          [
+            -0.014691,
+            -0.91145,
+            0.411148,
+            -0.230711
+          ]
+        ],
+        "expected_scene_scale": 4.344244
+      },
+      "evaluation_protocol": "nerf",
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "checkpoint_sha256": "dc2c45f48c916c7ca0cfebd82e385d3defbb2a237c9d7d62c2e994e37d4ed4c6"
+    }
+  },
+  "viewer_transform": [
+    0.11428548319518271,
+    -0.07137611685401901,
+    0.16609563381334608,
+    0.042799729733504675,
+    -0.1804968183894162,
+    -0.034008148629525205,
+    0.10958021874099086,
+    -0.012040602512207385,
+    -0.010159124708921144,
+    -0.1987268880761798,
+    -0.07840852375412206,
+    0.018146370973378928
+  ],
+  "viewer_initial_pose": [
+    -0.9083243801885619,
+    0.18406595587150512,
+    0.37558829424737183,
+    -0.27902187455278366,
+    -0.4180083956477986,
+    -0.36793835072082437,
+    -0.8305963758864779,
+    0.8084602176716709,
+    -0.014691138435328545,
+    -0.9114499934823032,
+    0.41114847689976686,
+    -0.2307105908942182
+  ],
+  "method_id": "2d-gaussian-splatting",
+  "renderer": {
+    "type": "mesh",
+    "mesh_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/2d-gaussian-splatting/mipnerf360/treehill_mesh/mesh.ply"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/treehill-nbv.json"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "state": {
+    "dataset_info": {
+      "downscale_factor": 4,
+      "color_space": "srgb",
+      "type": "forward-facing",
+      "evaluation_protocol": "nerf",
+      "expected_scene_scale": 0.5,
+      "id": "llff",
+      "scene": "flower",
+      "name": "LLFF",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "description": "LLFF is a dataset of forward-facing scenes with a small variation in camera pose. NeRF methods usually use NDC-space parametrization for the scene representation.",
+      "link": "https://bmild.github.io/llff/",
+      "paper_link": "https://arxiv.org/pdf/1905.00889.pdf",
+      "paper_authors": [
+        "Ben Mildenhall",
+        "Pratul P. Srinivasan",
+        "Rodrigo Ortiz-Cayon",
+        "Nima Khademi Kalantari",
+        "Ravi Ramamoorthi",
+        "Ren Ng",
+        "Abhishek Kar"
+      ],
+      "paper_title": "LLFF: A Large-Scale, Long-Form Video Dataset for 3D Scene Understanding",
+      "scenes": [
+        {
+          "id": "fern",
+          "name": "Fern"
+        },
+        {
+          "id": "flower",
+          "name": "Flower"
+        },
+        {
+          "id": "fortress",
+          "name": "Fortress"
+        },
+        {
+          "id": "horns",
+          "name": "Horns"
+        },
+        {
+          "id": "leaves",
+          "name": "Leaves"
+        },
+        {
+          "id": "orchids",
+          "name": "Orchids"
+        },
+        {
+          "id": "room",
+          "name": "Room"
+        },
+        {
+          "id": "trex",
+          "name": "Trex"
+        }
+      ]
+    }
+  },
+  "viewer_transform": [
+    0.1873721675704884,
+    0.00270161882985229,
+    0.0005465071580811508,
+    -0.058074853794274336,
+    -0.0005182025548364818,
+    -0.001964952270862258,
+    0.1873814212325337,
+    -0.022415413804411873,
+    0.0027071905156097415,
+    -0.18736266120203954,
+    -0.0019572688217952753,
+    0.002174950850599675
+  ],
+  "viewer_initial_pose": [
+    0.99963459358696,
+    0.02664461454266334,
+    0.0045545384075542025,
+    -0.693074973753918,
+    -0.00485419858321362,
+    0.01119270767211148,
+    0.9999255772561683,
+    0.17745725407514457,
+    0.02659165396036358,
+    -0.9995823066715613,
+    0.011317956035112086,
+    0.4152146555772978
+  ],
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/llff/flower-nbv.json"
+  }
+}

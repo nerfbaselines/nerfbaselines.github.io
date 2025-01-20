@@ -1,0 +1,309 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "tanksandtemples",
+      "color_space": "srgb",
+      "evaluation_protocol": "default",
+      "scene": "courtroom",
+      "type": "object-centric",
+      "downscale_factor": 2,
+      "expected_scene_scale": 5.173992347717285,
+      "name": "Tanks and Temples",
+      "description": "Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.",
+      "paper_title": "Tanks and Temples: Benchmarking Large-Scale Scene Reconstruction",
+      "paper_authors": [
+        "Arno Knapitsch",
+        "Jaesik Park",
+        "Qian-Yi Zhou",
+        "Vladlen Koltun"
+      ],
+      "paper_link": "https://storage.googleapis.com/t2-downloads/paper/tanks-and-temples.pdf",
+      "link": "https://www.tanksandtemples.org/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "auditorium",
+          "name": "auditorium"
+        },
+        {
+          "id": "ballroom",
+          "name": "ballroom"
+        },
+        {
+          "id": "courtroom",
+          "name": "courtroom"
+        },
+        {
+          "id": "museum",
+          "name": "museum"
+        },
+        {
+          "id": "palace",
+          "name": "palace"
+        },
+        {
+          "id": "temple",
+          "name": "temple"
+        },
+        {
+          "id": "family",
+          "name": "family"
+        },
+        {
+          "id": "francis",
+          "name": "francis"
+        },
+        {
+          "id": "horse",
+          "name": "horse"
+        },
+        {
+          "id": "lighthouse",
+          "name": "lighthouse"
+        },
+        {
+          "id": "m60",
+          "name": "m60"
+        },
+        {
+          "id": "panther",
+          "name": "panther"
+        },
+        {
+          "id": "playground",
+          "name": "playground"
+        },
+        {
+          "id": "train",
+          "name": "train"
+        },
+        {
+          "id": "barn",
+          "name": "barn"
+        },
+        {
+          "id": "caterpillar",
+          "name": "caterpillar"
+        },
+        {
+          "id": "church",
+          "name": "church"
+        },
+        {
+          "id": "courthouse",
+          "name": "courthouse"
+        },
+        {
+          "id": "ignatius",
+          "name": "ignatius"
+        },
+        {
+          "id": "meetingroom",
+          "name": "meetingroom"
+        },
+        {
+          "id": "truck",
+          "name": "truck"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "2d-gaussian-splatting",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "render_items": [
+          "RGB",
+          "Alpha",
+          "Normal",
+          "Depth",
+          "Edge",
+          "Curvature"
+        ],
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "lambda_dist": 100.0,
+        "lambda_normal": 0.05,
+        "opacity_cull": 0.05,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "depth_ratio": 1.0,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "normal"
+      ],
+      "name": "2D Gaussian Splatting",
+      "description": "2DGS adopts 2D oriented disks as surface elements and allows high-quality rendering with Gaussian Splatting. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks.",
+      "paper_title": "2D Gaussian Splatting for Geometrically Accurate Radiance Fields",
+      "paper_authors": [
+        "Binbin Huang",
+        "Zehao Yu",
+        "Anpei Chen",
+        "Andreas Geiger",
+        "Shenghua Gao"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2403.17888.pdf",
+      "link": "https://surfsplatting.github.io/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/hbb1/2d-gaussian-splatting/main/LICENSE.md"
+        }
+      ],
+      "num_iterations": 30000,
+      "total_train_time": 911.23506,
+      "resources_utilization": {
+        "memory": 3646,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 9618
+      },
+      "datetime": "2024-09-13T17:02:40",
+      "config_overrides": {
+        "depth_ratio": 1.0,
+        "lambda_dist": 100,
+        "num_cluster": 1,
+        "voxel_size": 0.004,
+        "sdf_trunc": 0.016,
+        "depth_trunc": 3.0
+      },
+      "applied_presets": [
+        "tanksandtemples"
+      ],
+      "dataset_metadata": {
+        "id": "tanksandtemples",
+        "color_space": "srgb",
+        "evaluation_protocol": "default",
+        "scene": "courtroom",
+        "type": "object-centric",
+        "downscale_factor": 2,
+        "viewer_transform": [
+          [
+            0.039227,
+            0.054926,
+            0.172538,
+            -0.011456
+          ],
+          [
+            -0.181064,
+            0.010463,
+            0.037834,
+            -0.083826
+          ],
+          [
+            0.001473,
+            -0.176632,
+            0.055894,
+            -0.05128
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.971348,
+            -0.034302,
+            -0.235174,
+            0.412893
+          ],
+          [
+            0.235255,
+            -0.001714,
+            0.971932,
+            -0.031899
+          ],
+          [
+            -0.033742,
+            -0.99941,
+            0.006405,
+            -0.080787
+          ]
+        ],
+        "expected_scene_scale": 5.173992
+      },
+      "evaluation_protocol": "default",
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "checkpoint_sha256": "1b38a3a234f839ce6b7977c10fcb641469948d91f58f26a0ea7c7eb169d272a0"
+    }
+  },
+  "viewer_transform": [
+    0.039226756035258804,
+    0.054925938342622514,
+    0.17253827564570323,
+    -0.011456422453869242,
+    -0.1810639309552064,
+    0.010462808188448304,
+    0.037834337463738835,
+    -0.08382604695218623,
+    0.0014727224994963764,
+    -0.1766316048219412,
+    0.05589419108516684,
+    -0.05128043375885339
+  ],
+  "viewer_initial_pose": [
+    0.9713477889918459,
+    -0.03430187744491224,
+    -0.23517406397972507,
+    0.4128927654124998,
+    0.23525501870319704,
+    -0.0017142092229504983,
+    0.9719321967524766,
+    -0.031899341983060985,
+    -0.03374222744693408,
+    -0.9994100521864794,
+    0.006404594017156154,
+    -0.08078732088858431
+  ],
+  "method_id": "2d-gaussian-splatting",
+  "renderer": {
+    "type": "mesh",
+    "mesh_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/2d-gaussian-splatting/tanksandtemples/courtroom_mesh/mesh.ply"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/tanksandtemples/courtroom-nbv.json"
+  }
+}

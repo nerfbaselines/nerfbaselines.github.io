@@ -565,13 +565,13 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-data">
 <span class="sig-name descname"><span class="pre">--data</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;data&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-data" title="Link to this definition">¶</a></dt>
-<dd><p>A path to the dataset to load which matches the dataset used to train the model. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path. While only some methods require the dataset, it is recommended to always specify it as it can improve viewing experience.</p>
+<dd><p><strong>Required</strong> A path to the dataset to load which matches the dataset used to train the model. The dataset can be either an external dataset (e.g., a path starting with <cite>external://{dataset}/{scene}</cite>) or a local path to a dataset. If the dataset is an external dataset, the dataset will be downloaded and cached locally. If the dataset is a local path, the dataset will be loaded directly from the specified path.</p>
 </dd></dl>
 
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-export-demo-train-embedding">
 <span class="sig-name descname"><span class="pre">--train-embedding</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;train_embedding&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-export-demo-train-embedding" title="Link to this definition">¶</a></dt>
-<dd><p>Select the train embedding index to use for the demo (if the method supports appearance modelling.</p>
+<dd><p>Select the train embedding index to use for the demo (if the method supports appearance modelling. A comma-separated list of indices can be provided to select multiple embeddings.</p>
 </dd></dl>
 
 <dl class="std option">
@@ -858,7 +858,7 @@
 <dd><p>Method to install.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>instant-ngp | tensorf | zipnerf | kplanes | gaussian-splatting-wild | camp | mip-splatting | nerf | nerfw-reimpl | nerfacto | nerfonthego | wild-gaussians | gaussian-opacity-fields | tetra-nerf | seathru-nerf | scaffold-gs | colmap | gsplat | 2d-gaussian-splatting | 3dgs-mcmc | mipnerf360 | gaussian-splatting</p>
+<dd class="field-odd"><p>nerfacto | colmap | 2d-gaussian-splatting | wild-gaussians | zipnerf | instant-ngp | seathru-nerf | kplanes | tensorf | camp | mipnerf360 | 3dgs-mcmc | gsplat | nerf | gaussian-splatting | scaffold-gs | nerfonthego | gaussian-opacity-fields | gaussian-splatting-wild | tetra-nerf | mip-splatting | nerfw-reimpl</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1110,7 +1110,7 @@
 <dd><p><strong>Required</strong> Method to use.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>instant-ngp | tensorf | zipnerf | kplanes | gaussian-splatting-wild | camp | mip-splatting | nerf | nerfw-reimpl | nerfacto | nerfonthego | wild-gaussians | gaussian-opacity-fields | tetra-nerf | seathru-nerf | scaffold-gs | colmap | gsplat | 2d-gaussian-splatting | 3dgs-mcmc | mipnerf360 | gaussian-splatting</p>
+<dd class="field-odd"><p>nerfacto | colmap | 2d-gaussian-splatting | wild-gaussians | zipnerf | instant-ngp | seathru-nerf | kplanes | tensorf | camp | mipnerf360 | 3dgs-mcmc | gsplat | nerf | gaussian-splatting | scaffold-gs | nerfonthego | gaussian-opacity-fields | gaussian-splatting-wild | tetra-nerf | mip-splatting | nerfw-reimpl</p>
 </dd>
 </dl>
 </dd></dl>

@@ -1,0 +1,243 @@
+{
+  "state": {
+    "dataset_info": {
+      "name": "Mip-NeRF 360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "room",
+      "downscale_factor": 2,
+      "expected_scene_scale": 5.41783709526062,
+      "type": "object-centric",
+      "id": "mipnerf360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gaussian-splatting",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "random_background": false,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Gaussian Splatting",
+      "description": "Official Gaussian Splatting implementation extended to support distorted camera models. It is fast to train (1 hous) and render (200 FPS).",
+      "paper_title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+      "paper_authors": [
+        "Bernhard Kerbl",
+        "Georgios Kopanas",
+        "Thomas Leimk\u00fchler",
+        "George Drettakis"
+      ],
+      "paper_link": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf",
+      "link": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/main/LICENSE.md"
+        }
+      ],
+      "num_iterations": 30000,
+      "total_train_time": 1342.02756,
+      "resources_utilization": {
+        "memory": 8139,
+        "gpu_memory": 10288,
+        "gpu_name": "NVIDIA A100-SXM4-40GB"
+      },
+      "datetime": "2024-06-07T12:00:28+0200",
+      "config_overrides": {},
+      "dataset_metadata": {
+        "name": "mipnerf360",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "viewer_transform": [
+          [
+            0.021719999611377716,
+            -0.08031000196933746,
+            0.1545100063085556,
+            0.07874999940395355
+          ],
+          [
+            -0.1740500032901764,
+            -0.005369999911636114,
+            0.02167999930679798,
+            0.06318999826908112
+          ],
+          [
+            -0.005189999938011169,
+            -0.1559399962425232,
+            -0.08032000064849854,
+            0.27351999282836914
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            -0.43733999133110046,
+            -0.3448199927806854,
+            0.830560028553009,
+            -0.6116899847984314
+          ],
+          [
+            -0.8992199897766113,
+            0.15560999512672424,
+            -0.4088900089263916,
+            0.4080899953842163
+          ],
+          [
+            0.011749999597668648,
+            -0.9256799817085266,
+            -0.3781200051307678,
+            0.26458001136779785
+          ]
+        ],
+        "scene": "room",
+        "downscale_factor": 2,
+        "expected_scene_scale": 5.42021,
+        "type": "object-centric"
+      },
+      "evaluation_protocol": "nerf",
+      "nb_version": "0.0.16.dev56+g8ee0779.d20240531",
+      "checkpoint_sha256": "671cd186c9de5d2d88908d2fc5fdc899c7d72b35f548f5ea2b5c9eb2761c631e"
+    }
+  },
+  "viewer_transform": [
+    0.02161545094088316,
+    -0.08079698960965041,
+    0.15521716368048286,
+    0.08659090766947489,
+    -0.17491292780479237,
+    -0.005419941342721438,
+    0.02153696600235412,
+    0.06265604602802297,
+    -0.005097938310461649,
+    -0.1566212617924149,
+    -0.08081794519989922,
+    0.2762035288339131
+  ],
+  "viewer_initial_pose": [
+    -0.4185028061575934,
+    -0.3599059031442802,
+    0.8338604016562333,
+    -0.6128405412626861,
+    -0.9081440253868295,
+    0.15431275229312047,
+    -0.38918117507952305,
+    0.40416453978937594,
+    0.01139330122348635,
+    -0.920138751277078,
+    -0.3914267242016044,
+    0.26555527816312496
+  ],
+  "method_id": "gaussian-splatting",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-splatting/mipnerf360/room_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/room-nbv.json"
+  }
+}

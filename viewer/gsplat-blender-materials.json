@@ -1,0 +1,313 @@
+{
+  "state": {
+    "dataset_info": {
+      "color_space": "srgb",
+      "expected_scene_scale": 4,
+      "background_color": [
+        255,
+        255,
+        255
+      ],
+      "id": "blender",
+      "scene": "materials",
+      "evaluation_protocol": "nerf",
+      "type": "object-centric",
+      "name": "Blender",
+      "description": "Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.",
+      "paper_title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
+      "paper_authors": [
+        "Ben Mildenhall",
+        "Pratul P. Srinivasan",
+        "Matthew Tancik",
+        "Jonathan T. Barron",
+        "Ravi Ramamoorthi",
+        "Ren Ng"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2003.08934.pdf",
+      "link": "https://www.matthewtancik.com/nerf",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "lego",
+          "name": "lego"
+        },
+        {
+          "id": "drums",
+          "name": "drums"
+        },
+        {
+          "id": "ficus",
+          "name": "ficus"
+        },
+        {
+          "id": "hotdog",
+          "name": "hotdog"
+        },
+        {
+          "id": "materials",
+          "name": "materials"
+        },
+        {
+          "id": "mic",
+          "name": "mic"
+        },
+        {
+          "id": "ship",
+          "name": "ship"
+        },
+        {
+          "id": "chair",
+          "name": "chair"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gsplat",
+      "hparams": {
+        "compression": null,
+        "data_factor": 1,
+        "test_every": 8,
+        "patch_size": null,
+        "global_scale": 1.0,
+        "normalize_world_space": true,
+        "batch_size": 1,
+        "steps_scaler": 1.0,
+        "max_steps": 30000,
+        "eval_steps": "7000,30000",
+        "save_steps": "7000,30000",
+        "init_type": "random",
+        "init_num_pts": 100000,
+        "init_extent": 0.5,
+        "sh_degree": 3,
+        "sh_degree_interval": 1000,
+        "init_opa": 0.1,
+        "init_scale": 1.0,
+        "ssim_lambda": 0.2,
+        "near_plane": 0.01,
+        "far_plane": 10000000000.0,
+        "strategy/prune_opa": 0.005,
+        "strategy/grow_grad2d": 0.0002,
+        "strategy/grow_scale3d": 0.01,
+        "strategy/grow_scale2d": 0.05,
+        "strategy/prune_scale3d": 0.1,
+        "strategy/prune_scale2d": 0.15,
+        "strategy/refine_scale2d_stop_iter": 0,
+        "strategy/refine_start_iter": 500,
+        "strategy/refine_stop_iter": 15000,
+        "strategy/reset_every": 3000,
+        "strategy/refine_every": 100,
+        "strategy/pause_refine_after_reset": 0,
+        "strategy/absgrad": false,
+        "strategy/revised_opacity": false,
+        "strategy/verbose": true,
+        "packed": false,
+        "sparse_grad": false,
+        "antialiased": false,
+        "random_bkgd": false,
+        "opacity_reg": 0.0,
+        "scale_reg": 0.0,
+        "pose_opt": false,
+        "pose_opt_lr": 1e-05,
+        "pose_opt_reg": 1e-06,
+        "pose_noise": 0.0,
+        "app_opt": false,
+        "app_embed_dim": 16,
+        "app_opt_lr": 0.001,
+        "app_opt_reg": 1e-06,
+        "depth_loss": false,
+        "depth_lambda": 0.01,
+        "app_test_opt_steps": 128,
+        "app_test_opt_lr": 0.1,
+        "background_color": "1.0,1.0,1.0"
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth"
+      ],
+      "name": "gsplat",
+      "description": "gsplat is an open-source library for CUDA accelerated rasterization of gaussians with python bindings. It is inspired by the 3DGS paper, but it is faster, more memory efficient, and with a growing list of new features. In NerfBaselines, the method was modified to enable appearance optimization, to support sampling masks, and to support setting background color (which is required for the Blender dataset).",
+      "paper_title": "gsplat: An Open-Source Library for Gaussian Splatting",
+      "paper_authors": [
+        "Vickie Ye",
+        "Ruilong Li",
+        "Justin Kerr",
+        "Matias Turkulainen",
+        "Brent Yi",
+        "Zhuoyang Pan",
+        "Otto Seiskari",
+        "Jianbo Ye",
+        "Jeffrey Hu",
+        "Matthew Tancik",
+        "Angjoo Kanazawa"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2409.06765.pdf",
+      "link": "https://docs.gsplat.studio/main/",
+      "licenses": [
+        {
+          "name": "Apache 2.0",
+          "url": "https://raw.githubusercontent.com/nerfstudio-project/gsplat/main/LICENSE"
+        }
+      ],
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "num_iterations": 30000,
+      "total_train_time": 696.71858,
+      "resources_utilization": {
+        "memory": 1780,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 2826
+      },
+      "datetime": "2024-09-12T09:45:12",
+      "config_overrides": {
+        "init_type": "random",
+        "background_color": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "init_extent": 0.5
+      },
+      "applied_presets": [
+        "blender"
+      ],
+      "dataset_metadata": {
+        "color_space": "srgb",
+        "expected_scene_scale": 4,
+        "background_color": [
+          255,
+          255,
+          255
+        ],
+        "id": "blender",
+        "scene": "materials",
+        "evaluation_protocol": "nerf",
+        "type": "object-centric",
+        "viewer_transform": [
+          [
+            -0.191745,
+            -0.12815,
+            0.054467,
+            -0.0
+          ],
+          [
+            0.130883,
+            -0.197508,
+            -0.00394,
+            -0.0
+          ],
+          [
+            0.047528,
+            0.026895,
+            0.230593,
+            -0.0
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.908305,
+            0.066228,
+            0.413032,
+            -0.394553
+          ],
+          [
+            -0.355399,
+            0.642937,
+            0.678471,
+            -0.648117
+          ],
+          [
+            -0.22062,
+            -0.763051,
+            0.60752,
+            -0.58034
+          ]
+        ]
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "2ddfe5105e1a4b8706f083e42ac29985702ea85f1e86ed64f4eec19a4c1386a4"
+    }
+  },
+  "viewer_transform": [
+    -0.191744895506323,
+    -0.12815007315948115,
+    0.0544674008672559,
+    -8.927507309797189e-10,
+    0.13088265507160343,
+    -0.19750811603138166,
+    -0.00393994760731515,
+    -1.5221711044399733e-09,
+    0.04752758237693954,
+    0.02689516271184267,
+    0.23059276293602926,
+    -1.3997468392701329e-09
+  ],
+  "viewer_initial_pose": [
+    0.9083051784146993,
+    0.06622825463276528,
+    0.41303207942486847,
+    -0.39455330528762367,
+    -0.35539940749492627,
+    0.6429368209111613,
+    0.6784714046650461,
+    -0.6481170605635974,
+    -0.2206195688526204,
+    -0.7630505169385107,
+    0.6075202526842826,
+    -0.5803402118903167
+  ],
+  "method_id": "gsplat",
+  "renderer": {
+    "transform": [
+      4.0170366870934515,
+      -0.23405854587780528,
+      -0.24214228618732606,
+      4.941106421990296e-09,
+      0.23405854587780528,
+      -0.14362825490634346,
+      4.02176423433887,
+      -8.797386529131303e-09,
+      -0.24214228618732606,
+      -4.02176423433887,
+      -0.12953606349526464,
+      -7.362854505267028e-09
+    ],
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/blender/materials_demo/scene.ksplat",
+    "type": "3dgs",
+    "background_color": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/blender/materials-nbv.json"
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "state": {
+    "dataset_info": {
+      "name": "Tanks and Temples",
+      "color_space": "srgb",
+      "scene": "auditorium",
+      "expected_scene_scale": 5.280644798278808,
+      "type": "object-centric",
+      "evaluation_protocol": "default",
+      "id": "tanksandtemples",
+      "downscale_factor": 2,
+      "description": "Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.",
+      "paper_title": "Tanks and Temples: Benchmarking Large-Scale Scene Reconstruction",
+      "paper_authors": [
+        "Arno Knapitsch",
+        "Jaesik Park",
+        "Qian-Yi Zhou",
+        "Vladlen Koltun"
+      ],
+      "paper_link": "https://storage.googleapis.com/t2-downloads/paper/tanks-and-temples.pdf",
+      "link": "https://www.tanksandtemples.org/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "auditorium",
+          "name": "auditorium"
+        },
+        {
+          "id": "ballroom",
+          "name": "ballroom"
+        },
+        {
+          "id": "courtroom",
+          "name": "courtroom"
+        },
+        {
+          "id": "museum",
+          "name": "museum"
+        },
+        {
+          "id": "palace",
+          "name": "palace"
+        },
+        {
+          "id": "temple",
+          "name": "temple"
+        },
+        {
+          "id": "family",
+          "name": "family"
+        },
+        {
+          "id": "francis",
+          "name": "francis"
+        },
+        {
+          "id": "horse",
+          "name": "horse"
+        },
+        {
+          "id": "lighthouse",
+          "name": "lighthouse"
+        },
+        {
+          "id": "m60",
+          "name": "m60"
+        },
+        {
+          "id": "panther",
+          "name": "panther"
+        },
+        {
+          "id": "playground",
+          "name": "playground"
+        },
+        {
+          "id": "train",
+          "name": "train"
+        },
+        {
+          "id": "barn",
+          "name": "barn"
+        },
+        {
+          "id": "caterpillar",
+          "name": "caterpillar"
+        },
+        {
+          "id": "church",
+          "name": "church"
+        },
+        {
+          "id": "courthouse",
+          "name": "courthouse"
+        },
+        {
+          "id": "ignatius",
+          "name": "ignatius"
+        },
+        {
+          "id": "meetingroom",
+          "name": "meetingroom"
+        },
+        {
+          "id": "truck",
+          "name": "truck"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gaussian-opacity-fields",
+      "hparams": {},
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "distortion_map",
+        "normal"
+      ],
+      "name": "Gaussian Opacity Fields",
+      "description": "Improved Mip-Splatting with better geometry.",
+      "paper_title": "Gaussian Opacity Fields: Efficient and Compact Surface Reconstruction in Unbounded Scenes",
+      "paper_authors": [
+        "Zehao Yu",
+        "Torsten Sattler",
+        "Andreas Geiger"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2404.10772.pdf",
+      "link": "https://niujinshuchong.github.io/gaussian-opacity-fields/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/autonomousvision/gaussian-opacity-fields/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "0.0.16.dev56+g8ee0779.d20240531",
+      "num_iterations": 30000,
+      "total_train_time": 2116.43691,
+      "resources_utilization": {
+        "memory": 4510,
+        "gpu_memory": 8644
+      },
+      "datetime": "2024-06-02T13:58:03+0200",
+      "config_overrides": {},
+      "dataset_metadata": {
+        "name": "tanksandtemples",
+        "color_space": "srgb",
+        "viewer_transform": [
+          [
+            0.16378000378608704,
+            -0.0013800000306218863,
+            0.0014700000174343586,
+            -0.016179999336600304
+          ],
+          [
+            -0.0013800000306218863,
+            0.010440000332891941,
+            0.16345000267028809,
+            0.009589999914169312
+          ],
+          [
+            -0.0014700000174343586,
+            -0.16345000267028809,
+            0.01042999979108572,
+            0.0005699999746866524
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.4357199966907501,
+            0.09341000020503998,
+            0.8952199816703796,
+            -0.4940299987792969
+          ],
+          [
+            -0.899429976940155,
+            0.007269999943673611,
+            0.4370099902153015,
+            -0.47835999727249146
+          ],
+          [
+            0.0343099981546402,
+            -0.9955999851226807,
+            0.0871800035238266,
+            -0.07123000174760818
+          ]
+        ],
+        "scene": "auditorium",
+        "expected_scene_scale": 5.2967396736145025,
+        "type": null,
+        "evaluation_protocol": "default"
+      },
+      "evaluation_protocol": "default",
+      "color_space": "srgb",
+      "expected_scene_scale": 5.2967396736145025,
+      "dataset_background_color": null,
+      "checkpoint_sha256": "eeb8db5f91af57ff06eb8521dd55d57883cff1fd1c81c8eb601deabf64c42b72"
+    }
+  },
+  "viewer_transform": [
+    0.1507552443330664,
+    -0.005719047374154977,
+    0.06067497534050028,
+    0.04870118370187182,
+    -0.06066753174509619,
+    0.0013174950334368337,
+    0.15086092788031408,
+    -0.12561190075409043,
+    -0.005797505583524928,
+    -0.1625018775647032,
+    -0.0009122635613005331,
+    0.01129238805494905
+  ],
+  "viewer_initial_pose": [
+    0.08140382785669392,
+    0.039276510365269864,
+    0.9959069830292467,
+    -0.5719153306679995,
+    -0.9930997265826096,
+    -0.08143679950594096,
+    0.08438607678070752,
+    -0.40671410553452986,
+    0.08441786477967839,
+    -0.9959043101854582,
+    0.032376220325302504,
+    -0.013426133374788974
+  ],
+  "method_id": "gaussian-opacity-fields",
+  "renderer": {
+    "type": "mesh",
+    "mesh_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-opacity-fields/tanksandtemples/auditorium_mesh/mesh.ply"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/tanksandtemples/auditorium-nbv.json"
+  }
+}

@@ -1,0 +1,275 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "phototourism",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerfw",
+      "scene": "trevi-fountain",
+      "type": null,
+      "expected_scene_scale": 6.192305946350098,
+      "name": "Photo Tourism",
+      "default_metric": "psnr",
+      "link": "https://phototour.cs.washington.edu/",
+      "paper_link": "https://phototour.cs.washington.edu/Photo_Tourism.pdf",
+      "paper_title": "Photo Tourism: Exploring Photo Collections in 3D",
+      "paper_authors": [
+        "Noah Snavely",
+        "Steven M. Seitz",
+        "Richard Szeliski"
+      ],
+      "description": "Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips",
+          "name": "LPIPS",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses AlexNet backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "scenes": [
+        {
+          "id": "sacre-coeur",
+          "name": "Sacre Coeur"
+        },
+        {
+          "id": "trevi-fountain",
+          "name": "Trevi Fountain"
+        },
+        {
+          "id": "brandenburg-gate",
+          "name": "Brandenburg Gate"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gsplat",
+      "hparams": {
+        "compression": null,
+        "data_factor": 1,
+        "test_every": 8,
+        "patch_size": null,
+        "global_scale": 1.0,
+        "normalize_world_space": true,
+        "batch_size": 1,
+        "steps_scaler": 1.0,
+        "max_steps": 100000,
+        "eval_steps": "23333,100000",
+        "save_steps": "23333,100000",
+        "init_type": "sfm",
+        "init_num_pts": 100000,
+        "init_extent": 3.0,
+        "sh_degree": 3,
+        "sh_degree_interval": 3333,
+        "init_opa": 0.1,
+        "init_scale": 1.0,
+        "ssim_lambda": 0.2,
+        "near_plane": 0.01,
+        "far_plane": 10000000000.0,
+        "strategy/prune_opa": 0.005,
+        "strategy/grow_grad2d": 0.0002,
+        "strategy/grow_scale3d": 0.01,
+        "strategy/grow_scale2d": 0.05,
+        "strategy/prune_scale3d": 0.1,
+        "strategy/prune_scale2d": 0.15,
+        "strategy/refine_scale2d_stop_iter": 0,
+        "strategy/refine_start_iter": 1666,
+        "strategy/refine_stop_iter": 50000,
+        "strategy/reset_every": 10000,
+        "strategy/refine_every": 333,
+        "strategy/pause_refine_after_reset": 0,
+        "strategy/absgrad": false,
+        "strategy/revised_opacity": false,
+        "strategy/verbose": true,
+        "packed": false,
+        "sparse_grad": false,
+        "antialiased": false,
+        "random_bkgd": false,
+        "opacity_reg": 0.0,
+        "scale_reg": 0.0,
+        "pose_opt": false,
+        "pose_opt_lr": 1e-05,
+        "pose_opt_reg": 1e-06,
+        "pose_noise": 0.0,
+        "app_opt": true,
+        "app_embed_dim": 16,
+        "app_opt_lr": 0.001,
+        "app_opt_reg": 1e-06,
+        "depth_loss": false,
+        "depth_lambda": 0.01,
+        "app_test_opt_steps": 128,
+        "app_test_opt_lr": 0.1,
+        "background_color": null
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth"
+      ],
+      "name": "gsplat",
+      "description": "gsplat is an open-source library for CUDA accelerated rasterization of gaussians with python bindings. It is inspired by the 3DGS paper, but it is faster, more memory efficient, and with a growing list of new features. In NerfBaselines, the method was modified to enable appearance optimization, to support sampling masks, and to support setting background color (which is required for the Blender dataset).",
+      "paper_title": "gsplat: An Open-Source Library for Gaussian Splatting",
+      "paper_authors": [
+        "Vickie Ye",
+        "Ruilong Li",
+        "Justin Kerr",
+        "Matias Turkulainen",
+        "Brent Yi",
+        "Zhuoyang Pan",
+        "Otto Seiskari",
+        "Jianbo Ye",
+        "Jeffrey Hu",
+        "Matthew Tancik",
+        "Angjoo Kanazawa"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2409.06765.pdf",
+      "link": "https://docs.gsplat.studio/main/",
+      "licenses": [
+        {
+          "name": "Apache 2.0",
+          "url": "https://raw.githubusercontent.com/nerfstudio-project/gsplat/main/LICENSE"
+        }
+      ],
+      "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
+      "num_iterations": 100000,
+      "total_train_time": 7919.62587,
+      "resources_utilization": {
+        "memory": 4818,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 7216
+      },
+      "datetime": "2024-09-12T13:16:16",
+      "config_overrides": {
+        "app_opt": true,
+        "steps_scaler": 3.333334
+      },
+      "applied_presets": [
+        "phototourism"
+      ],
+      "dataset_metadata": {
+        "id": "phototourism",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerfw",
+        "scene": "trevi-fountain",
+        "type": null,
+        "viewer_transform": [
+          [
+            0.142849,
+            -0.001339,
+            0.001503,
+            -0.010995
+          ],
+          [
+            -0.001339,
+            0.016496,
+            0.141901,
+            0.021133
+          ],
+          [
+            -0.001503,
+            -0.141901,
+            0.016481,
+            -0.003401
+          ]
+        ],
+        "viewer_initial_pose": [
+          [
+            0.994616,
+            0.001218,
+            0.103626,
+            -0.116815
+          ],
+          [
+            -0.103501,
+            0.062227,
+            0.992681,
+            0.087581
+          ],
+          [
+            -0.005239,
+            -0.998061,
+            0.062018,
+            -0.056212
+          ]
+        ],
+        "expected_scene_scale": 6.192306
+      },
+      "evaluation_protocol": "nerfw",
+      "checkpoint_sha256": "5d0992f6ad32d182c15cb7c0f334d4d879a26b2779cc9d7b60f12d1e2f95edc3"
+    }
+  },
+  "viewer_transform": [
+    0.14284866985234132,
+    -0.001338555578712147,
+    0.00150309824343254,
+    -0.01099531833958742,
+    -0.001338555578712147,
+    0.016495597025250584,
+    0.14190102033725074,
+    0.02113333864115158,
+    -0.00150309824343254,
+    -0.14190102033725074,
+    0.016481410553284684,
+    -0.0034010094716564235
+  ],
+  "viewer_initial_pose": [
+    0.9946155511004888,
+    0.001218095867033484,
+    0.10362615617722272,
+    -0.11681537804558118,
+    -0.10350080666571963,
+    0.06222656526036957,
+    0.9926809290891708,
+    0.08758102041597864,
+    -0.00523911432384906,
+    -0.9980613153318487,
+    0.062017527462639006,
+    -0.056211940269892874
+  ],
+  "method_id": "gsplat",
+  "renderer": {
+    "transform": [
+      -2.6550971247359225,
+      0.10370580981929796,
+      0.16184152007548933,
+      0.08791436335697383,
+      0.057763183420190205,
+      -1.7072904508726556,
+      2.041644201468953,
+      1.5297965318575706,
+      0.18333299553486523,
+      2.039826643555856,
+      1.7005836031725838,
+      8.678422578314645
+    ],
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/phototourism/trevi-fountain_demo/scene.ksplat",
+    "type": "3dgs",
+    "scene_url_per_appearance": {
+      "7": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/phototourism/trevi-fountain_demo/scene-7.ksplat",
+      "5": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/phototourism/trevi-fountain_demo/scene-5.ksplat",
+      "174": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gsplat/phototourism/trevi-fountain_demo/scene-174.ksplat"
+    }
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/phototourism/trevi-fountain-nbv.json"
+  }
+}
