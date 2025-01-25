@@ -91,8 +91,8 @@
       "hparams": {
         "sh_degree": 3,
         "white_background": true,
-        "cap_max": -1,
-        "init_type": "random",
+        "cap_max": 300000,
+        "init_type": "sfm",
         "scale_coords": null,
         "iterations": 30000,
         "position_lr_init": 0.00016,
@@ -149,20 +149,22 @@
           "url": "https://raw.githubusercontent.com/ubc-vision/3dgs-mcmc/refs/heads/main/LICENSE.md"
         }
       ],
-      "nb_version": "1.2.3.dev6+geacf155.d20240917",
+      "nb_version": "1.2.8.dev10+gedf1f6f.d20250124",
       "num_iterations": 30000,
-      "total_train_time": 308.26933,
+      "total_train_time": 481.56684,
       "resources_utilization": {
-        "memory": 4390,
+        "memory": 4567,
         "gpu_name": "NVIDIA A100-SXM4-40GB",
-        "gpu_memory": 3798
+        "gpu_memory": 4648
       },
-      "datetime": "2024-09-22T05:55:33",
+      "datetime": "2025-01-25T13:37:13",
       "config_overrides": {
-        "white_background": true
+        "white_background": true,
+        "cap_max": 300000
       },
       "applied_presets": [
-        "blender"
+        "blender",
+        "blender/ficus"
       ],
       "dataset_metadata": {
         "color_space": "srgb",
@@ -177,48 +179,36 @@
         "evaluation_protocol": "nerf",
         "type": "object-centric",
         "viewer_transform": [
-          [
-            0.105706,
-            0.21158,
-            0.033192,
-            -0.0
-          ],
-          [
-            -0.214074,
-            0.103294,
-            0.023324,
-            0.0
-          ],
-          [
-            0.006307,
-            -0.040074,
-            0.235363,
-            -0.0
-          ]
+          0.105706,
+          0.21158,
+          0.033192,
+          -0.0,
+          -0.214074,
+          0.103294,
+          0.023324,
+          0.0,
+          0.006307,
+          -0.040074,
+          0.235363,
+          -0.0
         ],
         "viewer_initial_pose": [
-          [
-            -0.315746,
-            0.021087,
-            -0.948609,
-            0.913291
-          ],
-          [
-            0.947558,
-            -0.045016,
-            -0.316397,
-            0.304617
-          ],
-          [
-            -0.049374,
-            -0.998764,
-            -0.005767,
-            0.005553
-          ]
+          -0.315746,
+          0.021087,
+          -0.948609,
+          0.913291,
+          0.947558,
+          -0.045016,
+          -0.316397,
+          0.304617,
+          -0.049374,
+          -0.998764,
+          -0.005767,
+          0.005553
         ]
       },
       "evaluation_protocol": "nerf",
-      "checkpoint_sha256": "08a7ef809298ab5b8758c888b972804f4ab7119bdc6c14e3ecb6e9cce4cc75ae"
+      "checkpoint_sha256": "1e1a2f5075c1d881e04993a1d6b1550f0a8cde3ec75001d28c5f932a6cdeda96"
     }
   },
   "viewer_transform": [

@@ -90,7 +90,7 @@
       "hparams": {
         "sh_degree": 3,
         "white_background": false,
-        "cap_max": -1,
+        "cap_max": 3800000,
         "init_type": "sfm",
         "scale_coords": null,
         "iterations": 30000,
@@ -148,17 +148,21 @@
           "url": "https://raw.githubusercontent.com/ubc-vision/3dgs-mcmc/refs/heads/main/LICENSE.md"
         }
       ],
-      "nb_version": "1.2.3.dev6+geacf155.d20240917",
+      "nb_version": "1.2.8.dev10+gedf1f6f.d20250124",
       "num_iterations": 30000,
-      "total_train_time": 615.92901,
+      "total_train_time": 2252.2403,
       "resources_utilization": {
-        "memory": 5255,
+        "memory": 5503,
         "gpu_name": "NVIDIA A100-SXM4-40GB",
-        "gpu_memory": 5710
+        "gpu_memory": 39062
       },
-      "datetime": "2024-09-22T07:05:36",
-      "config_overrides": {},
-      "applied_presets": [],
+      "datetime": "2025-01-25T14:07:23",
+      "config_overrides": {
+        "cap_max": 3800000
+      },
+      "applied_presets": [
+        "mipnerf360/treehill"
+      ],
       "dataset_metadata": {
         "id": "mipnerf360",
         "color_space": "srgb",
@@ -167,49 +171,37 @@
         "downscale_factor": 4,
         "type": "object-centric",
         "viewer_transform": [
-          [
-            0.114285,
-            -0.071376,
-            0.166096,
-            0.0428
-          ],
-          [
-            -0.180497,
-            -0.034008,
-            0.10958,
-            -0.012041
-          ],
-          [
-            -0.010159,
-            -0.198727,
-            -0.078409,
-            0.018146
-          ]
+          0.114285,
+          -0.071376,
+          0.166096,
+          0.0428,
+          -0.180497,
+          -0.034008,
+          0.10958,
+          -0.012041,
+          -0.010159,
+          -0.198727,
+          -0.078409,
+          0.018146
         ],
         "viewer_initial_pose": [
-          [
-            -0.908324,
-            0.184066,
-            0.375588,
-            -0.279022
-          ],
-          [
-            -0.418008,
-            -0.367938,
-            -0.830596,
-            0.80846
-          ],
-          [
-            -0.014691,
-            -0.91145,
-            0.411148,
-            -0.230711
-          ]
+          -0.908324,
+          0.184066,
+          0.375588,
+          -0.279022,
+          -0.418008,
+          -0.367938,
+          -0.830596,
+          0.80846,
+          -0.014691,
+          -0.91145,
+          0.411148,
+          -0.230711
         ],
         "expected_scene_scale": 4.344244
       },
       "evaluation_protocol": "nerf",
-      "checkpoint_sha256": "d3f80d3353517b62fe47b33407d89ad10b1970e5baf153b78e35860a5a05eebc"
+      "checkpoint_sha256": "08e92dcfcdb4697fd67b1d1e4a83621425d24949898fba90aa5354c492c6130e"
     }
   },
   "viewer_transform": [
