@@ -1,0 +1,244 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "kitchen",
+      "downscale_factor": 2,
+      "type": "object-centric",
+      "expected_scene_scale": 4.210958814620972,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    },
+    "method_info": {
+      "method_id": "taming-3dgs",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "shfeature_lr": 0.005,
+        "opacity_lr": 0.025,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 500,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "random_background": false,
+        "optimizer_type": "default",
+        "separate_sh": true,
+        "compute_cov3D_python": false,
+        "cams": 10,
+        "budget": 2.0,
+        "mode": "multiplier",
+        "ho_iteration": 15000,
+        "sh_lower": true,
+        "scale_coords": null
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Taming 3DGS",
+      "description": "Taming 3DGS improves the densification process to make the primitive count deterministic and implements several low-level optimizations for fast convergence",
+      "paper_title": "Taming 3DGS: High-Quality Radiance Fields with Limited Resources",
+      "paper_authors": [
+        "Saswat Subhajyoti Mallick",
+        "Rahul Goel",
+        "Bernhard Kerbl",
+        "Francisco Vicente Carrasco",
+        "Markus Steinberger",
+        "Fernando De La Torre"
+      ],
+      "paper_link": "https://humansensinglab.github.io/taming-3dgs/docs/paper_lite.pdf",
+      "link": "https://humansensinglab.github.io/taming-3dgs/",
+      "licenses": [
+        {
+          "name": "MIT",
+          "url": "https://raw.githubusercontent.com/humansensinglab/taming-3dgs/refs/heads/main/LICENSE.md"
+        },
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/humansensinglab/taming-3dgs/refs/heads/main/LICENSE_ORIGINAL.md"
+        }
+      ],
+      "nb_version": "1.2.8.dev10+gedf1f6f.d20250124",
+      "num_iterations": 30000,
+      "total_train_time": 449.32421,
+      "resources_utilization": {
+        "memory": 4825,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 11168
+      },
+      "datetime": "2025-01-24T23:43:38",
+      "config_overrides": {
+        "mode": "multiplier",
+        "budget": 2,
+        "sh_lower": true,
+        "densification_interval": 500
+      },
+      "applied_presets": [
+        "mipnerf360",
+        "mipnerf360/indoor"
+      ],
+      "dataset_metadata": {
+        "id": "mipnerf360",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "kitchen",
+        "downscale_factor": 2,
+        "type": "object-centric",
+        "viewer_transform": [
+          0.214286,
+          -0.04183,
+          0.06089,
+          0.069172,
+          -0.073795,
+          -0.129813,
+          0.170524,
+          -0.05314,
+          0.003403,
+          -0.181037,
+          -0.136344,
+          0.526111
+        ],
+        "viewer_initial_pose": [
+          0.334389,
+          -0.270612,
+          0.902747,
+          -0.801915,
+          -0.940661,
+          -0.154583,
+          0.302094,
+          -0.1938,
+          0.057799,
+          -0.950196,
+          -0.306245,
+          0.279624
+        ],
+        "expected_scene_scale": 4.210959
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "fa370894885c377fbc65492c5a1cf6f8ed2d67cdd4161eb8f5945b5615944b60"
+    }
+  },
+  "viewer_transform": [
+    0.21428569758099228,
+    -0.04183006930840528,
+    0.06088967461572752,
+    0.0691716694225072,
+    -0.07379518563175276,
+    -0.1298132839471867,
+    0.1705240373769955,
+    -0.05314041265136786,
+    0.0034026734837382267,
+    -0.18103707702871044,
+    -0.13634392185399882,
+    0.5261106218758103
+  ],
+  "viewer_initial_pose": [
+    0.3343893739964279,
+    -0.27061182714569193,
+    0.9027474564177824,
+    -0.801915344072193,
+    -0.9406609247426991,
+    -0.15458294484621618,
+    0.30209449598792876,
+    -0.19380001954440976,
+    0.057799024725896646,
+    -0.9501964887113119,
+    -0.306244867059411,
+    0.2796243366258503
+  ],
+  "method_id": "taming-3dgs",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/taming-3dgs/mipnerf360/kitchen_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/kitchen-nbv.json"
+  }
+}

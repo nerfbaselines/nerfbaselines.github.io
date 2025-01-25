@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method Taming 3DGS</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      Taming 3DGS<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    Taming 3DGS improves the densification process to make the primitive count deterministic and implements several low-level optimizations for fast convergence
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://humansensinglab.github.io/taming-3dgs/" class="text-blue link-underline">https://humansensinglab.github.io/taming-3dgs/</a></div>
+      
+      
+      <div>Paper: <a href="https://humansensinglab.github.io/taming-3dgs/docs/paper_lite.pdf" class="text-blue link-underline">Taming 3DGS: High-Quality Radiance Fields with Limited Resources</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Saswat Subhajyoti Mallick, Rahul Goel, Bernhard Kerbl, Francisco Vicente Carrasco, Markus Steinberger, Fernando De La Torre</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=mipnerf360 class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Mip-NeRF 360
+      </h2>
+      <p class="text-justify">Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/garden.json" title="Download checkpoint and predictions for scene garden" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-garden.json" title="Online demo for scene garden" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="4" class="w120">garden</td>
+        
+        <td data-sort-value="40"><span class="table__allowcopy">27.42</span>
+
+</td>
+        
+        <td data-sort-value="40"><span class="table__allowcopy">0.858</span>
+
+</td>
+        
+        <td data-sort-value="81"><span class="table__allowcopy">0.145</span>
+
+</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">8m 20s</span>
+
+</td>
+        <td data-sort-value="39"><span class="table__allowcopy">8.10 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/bicycle.json" title="Download checkpoint and predictions for scene bicycle" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-bicycle.json" title="Online demo for scene bicycle" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">bicycle</td>
+        
+        <td data-sort-value="38"><span class="table__allowcopy">24.75</span>
+
+</td>
+        
+        <td data-sort-value="38"><span class="table__allowcopy">0.712</span>
+
+</td>
+        
+        <td data-sort-value="87"><span class="table__allowcopy">0.336</span>
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">5m 16s</span>
+
+</td>
+        <td data-sort-value="40"><span class="table__allowcopy">9.15 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/flowers.json" title="Download checkpoint and predictions for scene flowers" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-flowers.json" title="Online demo for scene flowers" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="3" class="w120">flowers</td>
+        
+        <td data-sort-value="36"><span class="table__allowcopy">21.10</span>
+
+</td>
+        
+        <td data-sort-value="36"><span class="table__allowcopy">0.551</span>
+
+</td>
+        
+        <td data-sort-value="88"><span class="table__allowcopy">0.438</span>
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">4m 51s</span>
+
+</td>
+        <td data-sort-value="37"><span class="table__allowcopy">6.18 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/treehill.json" title="Download checkpoint and predictions for scene treehill" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-treehill.json" title="Online demo for scene treehill" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="8" class="w120">treehill</td>
+        
+        <td data-sort-value="37"><span class="table__allowcopy">23.02</span>
+
+</td>
+        
+        <td data-sort-value="37"><span class="table__allowcopy">0.623</span>
+
+</td>
+        
+        <td data-sort-value="89"><span class="table__allowcopy">0.443</span>
+
+</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">5m 18s</span>
+
+</td>
+        <td data-sort-value="38"><span class="table__allowcopy">6.58 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/stump.json" title="Download checkpoint and predictions for scene stump" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-stump.json" title="Online demo for scene stump" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="7" class="w120">stump</td>
+        
+        <td data-sort-value="39"><span class="table__allowcopy">25.95</span>
+
+</td>
+        
+        <td data-sort-value="39"><span class="table__allowcopy">0.734</span>
+
+</td>
+        
+        <td data-sort-value="86"><span class="table__allowcopy">0.336</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">4m 12s</span>
+
+</td>
+        <td data-sort-value="36"><span class="table__allowcopy">5.35 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/kitchen.json" title="Download checkpoint and predictions for scene kitchen" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-kitchen.json" title="Online demo for scene kitchen" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="5" class="w120">kitchen</td>
+        
+        <td data-sort-value="42"><span class="table__allowcopy">30.92</span>
+
+</td>
+        
+        <td data-sort-value="43"><span class="table__allowcopy">0.921</span>
+
+</td>
+        
+        <td data-sort-value="82"><span class="table__allowcopy">0.172</span>
+
+</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">7m 30s</span>
+
+</td>
+        <td data-sort-value="43"><span class="table__allowcopy">10.91 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/bonsai.json" title="Download checkpoint and predictions for scene bonsai" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-bonsai.json" title="Online demo for scene bonsai" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="1" class="w120">bonsai</td>
+        
+        <td data-sort-value="44"><span class="table__allowcopy">31.86</span>
+
+</td>
+        
+        <td data-sort-value="44"><span class="table__allowcopy">0.935</span>
+
+</td>
+        
+        <td data-sort-value="83"><span class="table__allowcopy">0.271</span>
+
+</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">6m 7s</span>
+
+</td>
+        <td data-sort-value="42"><span class="table__allowcopy">10.80 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/counter.json" title="Download checkpoint and predictions for scene counter" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-counter.json" title="Online demo for scene counter" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="2" class="w120">counter</td>
+        
+        <td data-sort-value="41"><span class="table__allowcopy">28.53</span>
+
+</td>
+        
+        <td data-sort-value="41"><span class="table__allowcopy">0.897</span>
+
+</td>
+        
+        <td data-sort-value="84"><span class="table__allowcopy">0.283</span>
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">6m 37s</span>
+
+</td>
+        <td data-sort-value="41"><span class="table__allowcopy">9.88 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/taming-3dgs/mipnerf360/room.json" title="Download checkpoint and predictions for scene room" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=taming-3dgs-mipnerf360-room.json" title="Online demo for scene room" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="6" class="w120">room</td>
+        
+        <td data-sort-value="43"><span class="table__allowcopy">31.41</span>
+
+</td>
+        
+        <td data-sort-value="42"><span class="table__allowcopy">0.906</span>
+
+</td>
+        
+        <td data-sort-value="85"><span class="table__allowcopy">0.321</span>
+
+</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">5m 40s</span>
+
+</td>
+        <td data-sort-value="44"><span class="table__allowcopy">11.28 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">27.22</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.793</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.305</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">5m 59s</span>
+
+</td>
+        <td><span class="table__allowcopy">8.69 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>
