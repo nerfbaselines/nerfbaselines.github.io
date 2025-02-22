@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Creating web demos" href="exporting-demos.html" /><link rel="prev" title="Adding new datasets" href="adding-new-datasets.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
         <title>Isolated backends - NerfBaselines documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
@@ -223,7 +223,14 @@
         
         
         
-        <option  selected value="/docs/">Version: 1.2.7</option>
+        <option  selected value="/docs/">Version: 1.2.8</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.7/">Version: 1.2.7</option>
         
       
         
@@ -513,16 +520,77 @@ Also note, that the <strong>Docker</strong> backend is the fastest to install in
 </section>
 <section id="communication-with-the-backend">
 <h2>Communication with the backend<a class="headerlink" href="#communication-with-the-backend" title="Link to this heading">¶</a></h2>
-<p>NerfBaselines uses multiple communication protocols to interface with the backend (<strong>worker</strong>) process:</p>
+<p>NerfBaselines uses a custom communication protocol to interface with the backend (<strong>worker</strong>) process.
+The communication protocol is used to send and receive messages between the <strong>host</strong> and <strong>worker</strong> processes. The messages are serialized using the Pickle protocol.
+The highest version of the protocol supported by both ends is chosen and if it is supported, pickle will use separate buffers for binary data (numpy arrays). The communication protocol will attempt to setup shared memory buffers to transfer the buffers between the <strong>host</strong> and <strong>worker</strong> processes faster.
+There are currently two low-level protocols implemented: 1) UNIX pipes, 2) TCP sockets. The UNIX pipes are used by default, but if they are not available (or manually disabled), the communication will fallback to using TCP sockets. Note, that TCP sockets could be slower on some HPC systems and pipes are recommended.</p>
+<p>After the connection is established, you will see the established protocol string in the logs. The format is the folloging:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">protocol</span><span class="p">}</span><span class="o">-</span><span class="n">pickle</span><span class="p">{</span><span class="n">pickle</span><span class="o">-</span><span class="n">version</span><span class="p">}</span><span class="o">-</span><span class="n">shm</span><span class="p">{</span><span class="n">shm</span><span class="o">-</span><span class="n">size</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">{protocol}</span></code> is either <code class="docutils literal notranslate"><span class="pre">pipe</span></code> or <code class="docutils literal notranslate"><span class="pre">tcp</span></code>, <code class="docutils literal notranslate"><span class="pre">{pickle-version}</span></code> is the used pickle protocol and should be 5 to achieve best performance. <code class="docutils literal notranslate"><span class="pre">{shm-size}</span></code> is the size of the shared memory buffer used to transfer the data between the processes, and has the format <code class="docutils literal notranslate"><span class="pre">{size}{unit}</span></code>, where the unit can be empty or <code class="docutils literal notranslate"><span class="pre">K</span></code>, <code class="docutils literal notranslate"><span class="pre">M</span></code>, or <code class="docutils literal notranslate"><span class="pre">G</span></code>. The protocol can chosen with the folloging environment variables:</p>
 <ul class="simple">
-<li><p><strong>tcp-pickle</strong>: The fallback communication protocol that works in most cases. It starts a TCP server in the <strong>host</strong> process and the <strong>worker</strong> process attach to it. The messages are serialized using the Pickle protocol. The highest version of the protocol supported by both ends is chosen and if it is supported, pickle will use separate buffers for binary data (numpy arrays). These are sent as separate messages.</p></li>
-<li><p><strong>shm-pickle</strong>: This is the default communication protocol. It uses shared memory to transfer the data between the <strong>host</strong> and <strong>worker</strong> processes. The messages are serialized using the Pickle protocol. The highest version of the protocol supported by both ends is chosen and if it is supported, pickle will use separate buffers for binary data (numpy arrays). These are sent as separate messages. The current implementation uses spinlocks to synchronize access to the shared memory, which may be suboptimal on some systems.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NERFBASELINES_PROTOCOL={protocol}[-pickle{version}][-shm{size}{unit}]</span></code>, where <code class="docutils literal notranslate"><span class="pre">{protocol}</span></code> can also be <code class="docutils literal notranslate"><span class="pre">auto</span></code> and the rest of the string is optional, but otherwise the format is the same as in the logs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NERFBASELINES_TCP_PORT={port}</span></code> - TCP port (e.g., <code class="docutils literal notranslate"><span class="pre">12345</span></code>), default is <code class="docutils literal notranslate"><span class="pre">0</span></code> (random port)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NERFBASELINES_TCP_HOSTNAME={host}</span></code> - TCP host name (e.g. <code class="docutils literal notranslate"><span class="pre">localhost</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">NERFBASELINES_SHM_SIZE={size}</span></code> - the size of the shared memory buffer (in bytes)</p></li>
 </ul>
-<p>The communication protocol can be selected by setting the environment variable <code class="docutils literal notranslate"><span class="pre">NERFBASELINES_PROTOCOL</span></code>. It accepts a comma-separated list of protocols, with the first one being the fallback one. After establishing the connection using the fallback protocol, the <strong>host</strong> and <strong>worker</strong> will initiate a protocol upgrade sequence where they will attempt the highest supported protocol (by both ends) from the list. It will take the list of protocols in the reverse order until a common protocol is found. If no common protocol is found, the connection will continue using the fallback protocol.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The default value of NERFBASELINES_PROTOCOL is <code class="docutils literal notranslate"><span class="pre">tcp-pickle,shm-pickle</span></code>. This means the communication will start using the <code class="docutils literal notranslate"><span class="pre">tcp-pickle</span></code> protocol and will attempt to upgrade to <code class="docutils literal notranslate"><span class="pre">shm-pickle</span></code> if both ends support it. Note, shared memory is only supported if both processes are running on Linux/MacOS and both Python versions are 3.8+.</p>
+<p>The default value of NERFBASELINES_PROTOCOL is <code class="docutils literal notranslate"><span class="pre">auto-pickle5-72M</span></code>. This means the communication will start using UNIX pipes and will fallback to using TCP if the pipes are not available. It will then attempt to use pickle5 protocol and fallback to highest supported pickle protocol on both ends. Finally, it will try to setup a shared memory buffer of 72MB size, and fallback to not using shared memory if it fails.
+If Python 3.8+ and UNIX is used on both ends, the best performance should be achieved.</p>
 </div>
+</section>
+<section id="zero-copy-communication">
+<h2>Zero-copy communication<a class="headerlink" href="#zero-copy-communication" title="Link to this heading">¶</a></h2>
+<p>By default, the communication protocol tries to be safe and does not assume anything about how it is used. However, this means
+for each message, two memory copies are made - one to move tensors to the shared memory buffer and one to move them to the receiving process. Sometimes, this is not necessary and the user can opt-in to zero-copy communication.</p>
+<section id="avoid-copy-on-caller-site">
+<h3>Avoid copy on caller site<a class="headerlink" href="#avoid-copy-on-caller-site" title="Link to this heading">¶</a></h3>
+<p>When recieving a message, the memory is copied from the shared memory buffer to the receiving process. This is done in order to release the shared memory so it can be used by new messages without overriding the old data. If the recieved data are used <strong>within the lifetime of the message</strong>, the user can avoid this memory copy and instead use the shared memory buffer directly. In NerfBaselines this is internally used for faster trajectory rendering and faster viewer.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The user should be extremely careful when using this feature as the shared memory buffer is reused for new messages. This means that the data will be overwritten when a new message is sent. After recieving the message, the user should fully process and discard the data before sending a new message.</p>
+</div>
+<p>To enable zero-copy, the user can place code inside <code class="docutils literal notranslate"><span class="pre">nerfbaselines.backends.zero_copy</span></code> context manager. This will cause all backend calls within the context to use zero-copy communication.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines.backends</span><span class="w"> </span><span class="kn">import</span> <span class="n">zero_copy</span>
+
+<span class="k">with</span> <span class="n">zero_copy</span><span class="p">():</span>
+    <span class="c1"># All backend calls within this context will use zero-copy communication</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+
+    <span class="c1"># Save the result to disk</span>
+    <span class="o">...</span>
+
+    <span class="k">del</span> <span class="n">result</span>
+
+    <span class="n">result2</span> <span class="o">=</span> <span class="n">backend</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="o">...</span><span class="p">)</span>
+    <span class="c1"># WARNING: at this point, all tensors in result are invalid and should not be used</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+</section>
+<section id="avoiding-copy-on-worker-site">
+<h3>Avoiding copy on worker site<a class="headerlink" href="#avoiding-copy-on-worker-site" title="Link to this heading">¶</a></h3>
+<p>The NerfBaselines interface expects each <code class="docutils literal notranslate"><span class="pre">render</span></code> method to return a dictionary of <code class="docutils literal notranslate"><span class="pre">np.ndarrays</span></code>.
+However, most methods process data in CUDA memory and returning a <code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code> requires moving the data to the host memory.
+The communication protocol then requires another memory copy to move the data to the shared memory buffer.
+Most currently implemented methods already avoid this additional memory copy by allocating
+<code class="docutils literal notranslate"><span class="pre">np.ndarray</span></code> directly in shared memory and copying the data from CUDA directly to the shared buffer.
+This can also be implemented for your own method.
+In the following example, we use the <code class="docutils literal notranslate"><span class="pre">nerfbaselines.backend.backend_allocate_ndarray</span></code> function:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># We start with a CUDA tensor</span>
+<span class="n">cuda_tensor</span><span class="p">:</span> <span class="n">torch</span><span class="o">.</span><span class="n">Tensor</span> <span class="o">=</span> <span class="o">...</span> 
+
+<span class="c1"># We allocate a new shared memory buffer</span>
+<span class="n">dtype_name</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">cuda_tensor</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">np_array</span> <span class="o">=</span> <span class="n">backend_allocate_ndarray</span><span class="p">(</span><span class="n">cuda_tensor</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype_name</span><span class="p">)</span>
+
+<span class="c1"># Now, we copy the data from the CUDA tensor to the shared memory buffer</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">from_numpy</span><span class="p">(</span><span class="n">np_array</span><span class="p">)</span><span class="o">.</span><span class="n">copy_</span><span class="p">(</span><span class="n">cuda_tensor</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
 </section>
 </section>
 
@@ -596,6 +664,11 @@ Also note, that the <strong>Docker</strong> backend is the fastest to install in
 <li><a class="reference internal" href="#">Isolated backends</a><ul>
 <li><a class="reference internal" href="#introduction">Introduction</a></li>
 <li><a class="reference internal" href="#communication-with-the-backend">Communication with the backend</a></li>
+<li><a class="reference internal" href="#zero-copy-communication">Zero-copy communication</a><ul>
+<li><a class="reference internal" href="#avoid-copy-on-caller-site">Avoid copy on caller site</a></li>
+<li><a class="reference internal" href="#avoiding-copy-on-worker-site">Avoiding copy on worker site</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -608,7 +681,7 @@ Also note, that the <strong>Docker</strong> backend is the fastest to install in
     </aside>
   </div>
 </div><script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=5fa4622c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>

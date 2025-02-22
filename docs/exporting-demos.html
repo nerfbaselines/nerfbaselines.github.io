@@ -16,7 +16,7 @@
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Exporting meshes" href="exporting-meshes.html" /><link rel="prev" title="Isolated backends" href="backends.html" />
 
-    <!-- Generated with Sphinx 8.1.3 and Furo 2024.08.06 -->
+    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
         <title>Creating web demos - NerfBaselines documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
@@ -223,7 +223,14 @@
         
         
         
-        <option  selected value="/docs/">Version: 1.2.7</option>
+        <option  selected value="/docs/">Version: 1.2.8</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.7/">Version: 1.2.7</option>
         
       
         
@@ -515,19 +522,12 @@ In this tutorial, we will show you how to export a web demo for a trained model.
 </div>
 <p>This will start a local server on port 8000. You can now open your web browser and navigate to <code class="docutils literal notranslate"><span class="pre">http://localhost:8000</span></code> to view the demo.</p>
 </section>
-<section id="configuring-the-web-demo">
-<h2>Configuring the web demo<a class="headerlink" href="#configuring-the-web-demo" title="Link to this heading">¶</a></h2>
-<p>Each method has its own set of parameters that can be configured in the web demo. You can provide these parameters using the <code class="docutils literal notranslate"><span class="pre">--set</span></code> argument, similarly how you provide the arguments for training. In general, there are the following arguments you can consider setting:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">mock_cors</span></code> - if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the demo will use a service worker to patch requests which does not have <code class="docutils literal notranslate"><span class="pre">Access-Control-Allow-Origin</span></code> header. This is useful when you want to access the demo file from a different domain without having control over the server.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">enable_shared_memory</span></code> - (<em>only applicable to 3DGS-based methods</em>) if set to <code class="docutils literal notranslate"><span class="pre">true</span></code>, the demo will use shared memory to communicate between the worker and the main thread. This can improve the performance of the demo, but it requires support for shared memory in the browser and specific safety headers to be set in the request. These headers can also be patched by setting <code class="docutils literal notranslate"><span class="pre">mock_cors=true</span></code>, but it requires <code class="docutils literal notranslate"><span class="pre">https</span></code> connection..</p></li>
-</ul>
-</section>
 <section id="applying-apperance-embeddings">
 <h2>Applying apperance embeddings<a class="headerlink" href="#applying-apperance-embeddings" title="Link to this heading">¶</a></h2>
 <p>If you trained the model with appearance embeddings, you can also provide the <code class="docutils literal notranslate"><span class="pre">--train-embedding</span> <span class="pre">{i}</span></code> argument to the <code class="docutils literal notranslate"><span class="pre">export-demo</span></code> command, where <code class="docutils literal notranslate"><span class="pre">i</span></code> is smaller then the size of the training dataset.
-This will render the demo with the appearance of the <code class="docutils literal notranslate"><span class="pre">i-th</span></code> training image. For example, to render the demo with the appearance of the 10-th training image, you can run the following command:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>export-demo<span class="w"> </span>--method<span class="w"> </span>gaussian-splatting<span class="w"> </span>--data<span class="w"> </span>external://mipnerf360/bicycle<span class="w"> </span>--checkpoint<span class="w"> </span>checkpoint-30000<span class="w"> </span>--output<span class="w"> </span>web-demo<span class="w"> </span>--train-embedding<span class="w"> </span><span class="m">10</span>
+This will render the demo with the appearance of the <code class="docutils literal notranslate"><span class="pre">i-th</span></code> training image. Multiple appearances can be specified by providing a list of indices separated by commas. Also, special token <code class="docutils literal notranslate"><span class="pre">none</span></code> can be used to render the demo with the default appearance.
+For example, to render the demo with the appearances of the 10-th, 20-th training images, and the default appearance, you can run the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>nerfbaselines<span class="w"> </span>export-demo<span class="w"> </span>--method<span class="w"> </span>gaussian-splatting<span class="w"> </span>--data<span class="w"> </span>external://mipnerf360/bicycle<span class="w"> </span>--checkpoint<span class="w"> </span>checkpoint-30000<span class="w"> </span>--output<span class="w"> </span>web-demo<span class="w"> </span>--train-embedding<span class="w"> </span><span class="m">10</span>,20,none
 </pre></div>
 </div>
 </section>
@@ -602,7 +602,6 @@ This will render the demo with the appearance of the <code class="docutils liter
             <ul>
 <li><a class="reference internal" href="#">Creating web demos</a><ul>
 <li><a class="reference internal" href="#exporting-a-web-demo">Exporting a web demo</a></li>
-<li><a class="reference internal" href="#configuring-the-web-demo">Configuring the web demo</a></li>
 <li><a class="reference internal" href="#applying-apperance-embeddings">Applying apperance embeddings</a></li>
 </ul>
 </li>
@@ -616,7 +615,7 @@ This will render the demo with the appearance of the <code class="docutils liter
     </aside>
   </div>
 </div><script src="_static/documentation_options.js?v=5929fcd5"></script>
-    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/furo.js?v=5fa4622c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
