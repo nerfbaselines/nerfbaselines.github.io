@@ -49,6 +49,12 @@
       "evaluation_protocol": "default",
       "checkpoint_sha256": "f0c6e2aa904e69cad9d212a163fdf241c54b397192b76bdb5df6a0afa45183d4"
     },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true
+      }
+    },
     "dataset_info": {
       "id": "tanksandtemples",
       "color_space": "srgb",

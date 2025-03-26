@@ -13,6 +13,10 @@
         255
       ],
       "id": "blender",
+      "depth_range": [
+        2,
+        6
+      ],
       "description": "Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.",
       "paper_title": "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis",
       "paper_authors": [
@@ -209,6 +213,13 @@
       },
       "evaluation_protocol": "nerf",
       "checkpoint_sha256": "e2e452b04fabb9bba8e7e4a60eb8717716f74186ad55b1b27efbf06b66d88ace"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "range_min": 2,
+        "range_max": 6
+      }
     }
   },
   "viewer_transform": [

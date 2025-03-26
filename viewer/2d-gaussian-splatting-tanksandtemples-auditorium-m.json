@@ -269,6 +269,18 @@
       "evaluation_protocol": "default",
       "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
       "checkpoint_sha256": "3d2b71c0e2faf362493a7ea78d1e49f1868b81b8b3b2f573c8f643e7ac803337"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "normal": {}
     }
   },
   "viewer_transform": [

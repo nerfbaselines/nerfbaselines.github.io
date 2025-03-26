@@ -243,6 +243,9 @@
       "evaluation_protocol": "default",
       "nb_version": "0.0.16.dev56+g8ee0779.d20240531",
       "checkpoint_sha256": "a5f3ed6aff09b11070c091c99688081310506119426f2a93480632a84286803a"
+    },
+    "outputs_configuration": {
+      "color": {}
     }
   },
   "viewer_transform": [

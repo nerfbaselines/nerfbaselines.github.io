@@ -212,6 +212,18 @@
       "evaluation_protocol": "nerf",
       "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
       "checkpoint_sha256": "f853c9b7d3ea676c6fed965777532ad4c11ad6dbd1ca907bc1fb19b430727549"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "normal": {}
     }
   },
   "viewer_transform": [

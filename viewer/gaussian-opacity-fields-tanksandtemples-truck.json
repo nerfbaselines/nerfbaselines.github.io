@@ -46,6 +46,21 @@
       "dataset_background_color": null,
       "checkpoint_sha256": "aaf71db01670095cd1e066ebe7edb503aa457b24a07608e4b7e56fb73f8308da"
     },
+    "outputs_configuration": {
+      "color": {},
+      "normal": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "distortion_map": {
+        "palette_enabled": true
+      }
+    },
     "dataset_info": {
       "id": "tanksandtemples",
       "color_space": "srgb",

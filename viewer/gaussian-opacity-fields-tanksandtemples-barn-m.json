@@ -229,6 +229,21 @@
       "expected_scene_scale": 4.451097202301026,
       "dataset_background_color": null,
       "checkpoint_sha256": "0160d2dfc17c5a537d8123f36252055b835709a3146dfa25ec873bf5e120f219"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "normal": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "distortion_map": {
+        "palette_enabled": true
+      }
     }
   },
   "viewer_transform": [

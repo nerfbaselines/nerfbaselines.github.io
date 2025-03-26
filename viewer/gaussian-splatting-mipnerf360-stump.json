@@ -202,6 +202,9 @@
       "evaluation_protocol": "nerf",
       "nb_version": "0.0.16.dev56+g8ee0779.d20240531",
       "checkpoint_sha256": "9a13ee65ef5549f3f0fe418f2440ef6bdf73f1af8726a9ff0691e31ba5841026"
+    },
+    "outputs_configuration": {
+      "color": {}
     }
   },
   "viewer_transform": [

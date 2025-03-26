@@ -249,6 +249,9 @@
       },
       "evaluation_protocol": "nerf",
       "checkpoint_sha256": "84405168486c5f3a795e1f6bff9a82a0425a119fb2195635f4f80281ea3871b8"
+    },
+    "outputs_configuration": {
+      "color": {}
     }
   },
   "viewer_transform": [

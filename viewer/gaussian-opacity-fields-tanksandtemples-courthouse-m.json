@@ -260,6 +260,21 @@
       },
       "evaluation_protocol": "default",
       "checkpoint_sha256": "a3860fab349db10874cb2dc049d55b821c4859c8a5b098cb025cdb244caec61a"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "normal": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "distortion_map": {
+        "palette_enabled": true
+      }
     }
   },
   "viewer_transform": [

@@ -246,6 +246,9 @@
       },
       "evaluation_protocol": "default",
       "checkpoint_sha256": "abef12671f73868f56553602da698d02d67afab420ef19c9b74e1b8afd4d87ad"
+    },
+    "outputs_configuration": {
+      "color": {}
     }
   },
   "viewer_transform": [

@@ -82,6 +82,10 @@
           "id": "chair",
           "name": "chair"
         }
+      ],
+      "depth_range": [
+        2,
+        6
       ]
     },
     "render_resolution": 768,
@@ -209,6 +213,20 @@
       },
       "evaluation_protocol": "nerf",
       "checkpoint_sha256": "1e1a2f5075c1d881e04993a1d6b1550f0a8cde3ec75001d28c5f932a6cdeda96"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true,
+        "range_min": 2,
+        "range_max": 6
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "normal": {}
     }
   },
   "viewer_transform": [

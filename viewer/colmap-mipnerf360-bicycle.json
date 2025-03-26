@@ -49,6 +49,12 @@
       "evaluation_protocol": "nerf",
       "checkpoint_sha256": "c84a497b14108d6f15486e05dc39221835b5916701b1f91d7c1b1dfe9f361c1c"
     },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true
+      }
+    },
     "dataset_info": {
       "id": "mipnerf360",
       "color_space": "srgb",

@@ -90,6 +90,18 @@
       "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
       "checkpoint_sha256": "24bcd758eff5acab194ea15ee979570574786829e2e28c069939917accccd8db"
     },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "normal": {}
+    },
     "dataset_info": {
       "id": "tanksandtemples",
       "color_space": "srgb",

@@ -214,6 +214,18 @@
       },
       "evaluation_protocol": "nerf",
       "checkpoint_sha256": "6062ef4ac44131721bda507fbc9fff5b522d68077bfbcf981c66761f8e148984"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "normal": {}
     }
   },
   "viewer_transform": [

@@ -81,6 +81,18 @@
       "nb_version": "1.1.1.dev6+g5df36ec.d20240910",
       "checkpoint_sha256": "a556829f53d633a4c2c50384dda6ebc2d3f1f4d86a3a3d281fdcbbdceb869fe5"
     },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "normal": {}
+    },
     "dataset_info": {
       "id": "mipnerf360",
       "color_space": "srgb",
