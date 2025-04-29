@@ -96,3 +96,12 @@ nerfbaselines.datasets.tanksandtemples
    :members:
    :undoc-members:
    :show-inheritance:
+
+nerfbaselines.datasets.zipnerf
+------------------------------
+
+.. automodule:: nerfbaselines.datasets.zipnerf
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
