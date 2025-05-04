@@ -1,0 +1,85 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "hierarchical-3dgs",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "smallcity",
+      "expected_scene_scale": 57.171496963500985,
+      "name": "Hierarchical 3DGS",
+      "description": "Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6\u20137km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset",
+      "paper_title": "A Hierarchical 3D Gaussian Representation for Real-Time Rendering of Very Large Datasets",
+      "paper_authors": [
+        "Bernhard Kerbl",
+        "Andreas Meuleman",
+        "Georgios Kopanas",
+        "Michael Wimmer",
+        "Alexandre Lanvin",
+        "George Drettakis"
+      ],
+      "paper_link": "https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf",
+      "link": "https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "smallcity",
+          "name": "Small City"
+        }
+      ]
+    }
+  },
+  "viewer_transform": [
+    0.014516739555677892,
+    2.433413239767878e-05,
+    -0.00026224072111583524,
+    -0.36863890843557434,
+    2.433413239767878e-05,
+    0.014271246821965525,
+    0.002671328100564484,
+    0.36787934375931536,
+    0.00026224072111583524,
+    -0.002671328100564484,
+    0.014268858297343702,
+    -0.02770137123672652
+  ],
+  "viewer_initial_pose": [
+    -0.59016123915155,
+    0.0017244302906136517,
+    -0.8072835953218718,
+    -0.3612856486940555,
+    0.7700898944498754,
+    0.3012463799273243,
+    -0.5623274517346271,
+    -0.34903851811728287,
+    0.2422215720093898,
+    -0.9535447509589106,
+    -0.17911188469564693,
+    0.006164597307127886
+  ],
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/hierarchical-3dgs/smallcity-nbv.json"
+  }
+}

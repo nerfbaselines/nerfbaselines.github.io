@@ -1208,10 +1208,10 @@
           <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.MetricInfo.description">(nerfbaselines.results.MetricInfo attribute)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.deserialize_nb_info">deserialize_nb_info() (in module nerfbaselines.io)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.html#nerfbaselines.GenericCameras.distortion_parameters">distortion_parameters (nerfbaselines.GenericCameras property)</a>
 </li>
         <li><a href="api/nerfbaselines.metrics.html#nerfbaselines.metrics.dmpix_ssim">dmpix_ssim() (in module nerfbaselines.metrics)</a>
@@ -1227,6 +1227,8 @@
         <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.download_dataset">download_dataset() (in module nerfbaselines.datasets)</a>
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.DatasetSpec.download_dataset_function">download_dataset_function (nerfbaselines.DatasetSpec attribute)</a>
+</li>
+        <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.hierarchical_3dgs.download_hierarchical_3dgs_dataset">download_hierarchical_3dgs_dataset() (in module nerfbaselines.datasets.hierarchical_3dgs)</a>
 </li>
         <li><a href="api/nerfbaselines.datasets.html#nerfbaselines.datasets.llff.download_llff_dataset">download_llff_dataset() (in module nerfbaselines.datasets.llff)</a>
 </li>
@@ -1494,6 +1496,12 @@
         </ul></li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.images_points2D_xy">images_points2D_xy (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.images_points2D_xy">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.images_points3D_indices">images_points3D_indices (nerfbaselines.Dataset attribute)</a>
 
         <ul>
@@ -1687,6 +1695,8 @@
           <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.bundler">nerfbaselines.datasets.bundler</a>
 </li>
           <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.colmap">nerfbaselines.datasets.colmap</a>
+</li>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.hierarchical_3dgs">nerfbaselines.datasets.hierarchical_3dgs</a>
 </li>
           <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.llff">nerfbaselines.datasets.llff</a>
 </li>
@@ -2112,6 +2122,13 @@
 </li>
         </ul></li>
         <li>
+    nerfbaselines.datasets.hierarchical_3dgs
+
+        <ul>
+          <li><a href="api/nerfbaselines.datasets.html#module-nerfbaselines.datasets.hierarchical_3dgs">module</a>
+</li>
+        </ul></li>
+        <li>
     nerfbaselines.datasets.llff
 
         <ul>
@@ -2308,20 +2325,26 @@
         </ul></li>
         <li><a href="api/nerfbaselines.evaluation.html#nerfbaselines.evaluation.path_is_video">path_is_video() (in module nerfbaselines.evaluation)</a>
 </li>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.points3D_error">points3D_error (nerfbaselines.Dataset attribute)</a>
+
+        <ul>
+          <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.points3D_error">(nerfbaselines.UnloadedDataset attribute)</a>
+</li>
+        </ul></li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.points3D_rgb">points3D_rgb (nerfbaselines.Dataset attribute)</a>
 
         <ul>
           <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.points3D_rgb">(nerfbaselines.UnloadedDataset attribute)</a>
 </li>
         </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.html#nerfbaselines.Dataset.points3D_xyz">points3D_xyz (nerfbaselines.Dataset attribute)</a>
 
         <ul>
           <li><a href="api/nerfbaselines.html#nerfbaselines.UnloadedDataset.points3D_xyz">(nerfbaselines.UnloadedDataset attribute)</a>
 </li>
         </ul></li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.training.html#nerfbaselines.training.MetricsAccumulator.pop">pop() (nerfbaselines.training.MetricsAccumulator method)</a>
 </li>
         <li><a href="api/nerfbaselines.viewer.html#nerfbaselines.viewer.Viewer.port">port (nerfbaselines.viewer.Viewer property)</a>
@@ -2377,6 +2400,8 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.read_image">read_image() (in module nerfbaselines.io)</a>
 </li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.read_mask">read_mask() (in module nerfbaselines.io)</a>
+</li>
         <li><a href="api/nerfbaselines.logging.html#nerfbaselines.logging.read_tensorboard_metrics">read_tensorboard_metrics() (in module nerfbaselines.logging)</a>
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.register">register() (in module nerfbaselines)</a>
@@ -2399,10 +2424,10 @@
 </li>
         <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.render_markdown_dataset_results_table">render_markdown_dataset_results_table() (in module nerfbaselines.results)</a>
 </li>
-        <li><a href="api/nerfbaselines.html#nerfbaselines.OptimizeEmbeddingOutput.render_output">render_output (nerfbaselines.OptimizeEmbeddingOutput attribute)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.html#nerfbaselines.OptimizeEmbeddingOutput.render_output">render_output (nerfbaselines.OptimizeEmbeddingOutput attribute)</a>
+</li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOptions">RenderOptions (class in nerfbaselines)</a>
 </li>
         <li><a href="api/nerfbaselines.html#nerfbaselines.RenderOutputType">RenderOutputType (class in nerfbaselines)</a>
@@ -2469,6 +2494,8 @@
 </li>
         <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_image">save_image() (in module nerfbaselines.io)</a>
 </li>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_mask">save_mask() (in module nerfbaselines.io)</a>
+</li>
         <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_output_artifact">save_output_artifact() (in module nerfbaselines.io)</a>
 </li>
         <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.save_predictions">save_predictions() (in module nerfbaselines.io)</a>
@@ -2483,10 +2510,10 @@
           <li><a href="api/nerfbaselines.results.html#nerfbaselines.results.DatasetInfo.scenes">(nerfbaselines.results.DatasetInfo attribute)</a>
 </li>
         </ul></li>
-        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.serialize_evaluation_results">serialize_evaluation_results() (in module nerfbaselines.io)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.serialize_evaluation_results">serialize_evaluation_results() (in module nerfbaselines.io)</a>
+</li>
         <li><a href="api/nerfbaselines.io.html#nerfbaselines.io.serialize_nb_info">serialize_nb_info() (in module nerfbaselines.io)</a>
 </li>
         <li><a href="api/nerfbaselines.backends.html#nerfbaselines.backends.ApptainerBackend.shell">shell() (nerfbaselines.backends.ApptainerBackend method)</a>

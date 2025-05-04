@@ -34,6 +34,15 @@ nerfbaselines.datasets.colmap
    :undoc-members:
    :show-inheritance:
 
+nerfbaselines.datasets.hierarchical\_3dgs
+-----------------------------------------
+
+.. automodule:: nerfbaselines.datasets.hierarchical_3dgs
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 nerfbaselines.datasets.llff
 ---------------------------
 

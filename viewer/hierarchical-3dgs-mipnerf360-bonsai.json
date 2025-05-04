@@ -1,0 +1,304 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "bonsai",
+      "downscale_factor": 2,
+      "type": "object-centric",
+      "expected_scene_scale": 4.317465686798096,
+      "name": "Mip-NeRF 360",
+      "description": "Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden",
+          "name": "garden"
+        },
+        {
+          "id": "bicycle",
+          "name": "bicycle"
+        },
+        {
+          "id": "flowers",
+          "name": "flowers"
+        },
+        {
+          "id": "treehill",
+          "name": "treehill"
+        },
+        {
+          "id": "stump",
+          "name": "stump"
+        },
+        {
+          "id": "kitchen",
+          "name": "kitchen"
+        },
+        {
+          "id": "bonsai",
+          "name": "bonsai"
+        },
+        {
+          "id": "counter",
+          "name": "counter"
+        },
+        {
+          "id": "room",
+          "name": "room"
+        }
+      ]
+    },
+    "method_info": {
+      "method_id": "hierarchical-3dgs",
+      "hparams": {
+        "single.sh_degree": 3,
+        "single.exp_name": "",
+        "single.alpha_masks": "",
+        "single.depths": null,
+        "single.white_background": false,
+        "single.train_test_exp": false,
+        "single.skip_scale_big_gauss": true,
+        "single.pretrained": "",
+        "single.skybox_num": 0,
+        "single.scaffold_file": "",
+        "single.bounds_file": "",
+        "single.skybox_locked": false,
+        "single.iterations": 30000,
+        "single.position_lr_init": 2e-05,
+        "single.position_lr_final": 2e-07,
+        "single.position_lr_delay_mult": 0.01,
+        "single.position_lr_max_steps": 30000,
+        "single.feature_lr": 0.0025,
+        "single.opacity_lr": 0.05,
+        "single.scaling_lr": 0.005,
+        "single.rotation_lr": 0.001,
+        "single.exposure_lr_init": 0.0,
+        "single.exposure_lr_final": 0.0,
+        "single.exposure_lr_delay_steps": 5000,
+        "single.exposure_lr_delay_mult": 0.001,
+        "single.percent_dense": 0.0001,
+        "single.lambda_dssim": 0.2,
+        "single.densification_interval": 300,
+        "single.opacity_reset_interval": 3000,
+        "single.densify_from_iter": 500,
+        "single.densify_until_iter": 15000,
+        "single.densify_grad_threshold": 0.015,
+        "single.depth_l1_weight_init": 1.0,
+        "single.depth_l1_weight_final": 0.01,
+        "single.compute_cov3D_python": false,
+        "single.disable_viewer": false,
+        "single.depth_mode": "dpt",
+        "post.sh_degree": 3,
+        "post.exp_name": "",
+        "post.alpha_masks": "",
+        "post.depths": "",
+        "post.white_background": false,
+        "post.train_test_exp": false,
+        "post.skip_scale_big_gauss": false,
+        "post.pretrained": "",
+        "post.skybox_num": 0,
+        "post.scaffold_file": "",
+        "post.bounds_file": "",
+        "post.skybox_locked": false,
+        "post.iterations": 15000,
+        "post.position_lr_init": 2e-05,
+        "post.position_lr_final": 2e-07,
+        "post.position_lr_delay_mult": 0.01,
+        "post.position_lr_max_steps": 30000,
+        "post.feature_lr": 0.0005,
+        "post.opacity_lr": 0.01,
+        "post.scaling_lr": 0.001,
+        "post.rotation_lr": 0.001,
+        "post.exposure_lr_init": 0.0,
+        "post.exposure_lr_final": 0.0,
+        "post.exposure_lr_delay_steps": 5000,
+        "post.exposure_lr_delay_mult": 0.001,
+        "post.percent_dense": 0.0001,
+        "post.lambda_dssim": 0.2,
+        "post.densification_interval": 300,
+        "post.opacity_reset_interval": 3000,
+        "post.densify_from_iter": 500,
+        "post.densify_until_iter": 15000,
+        "post.densify_grad_threshold": 0.015,
+        "post.depth_l1_weight_init": 1.0,
+        "post.depth_l1_weight_final": 0.01,
+        "post.compute_cov3D_python": false,
+        "post.disable_viewer": false,
+        "post.tau": 6.0
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "H3DGS",
+      "description": "H3DGS extends 3DGS with LOD rendering strategy based on hierarchical representation of the scene. For large scenes it splits it into chunks, optimize each separatedly and merge them into single model.",
+      "paper_title": "A Hierarchical 3D Gaussian Representation for Real-Time Rendering of Very Large Datasets",
+      "paper_authors": [
+        "Bernhard Kerbl",
+        "Andreas Meuleman",
+        "Georgios Kopanas",
+        "Michael Wimmer",
+        "Alexandre Lanvin",
+        "George Drettakis"
+      ],
+      "paper_link": "https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf",
+      "link": "https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/graphdeco-inria/hierarchical-3d-gaussians/refs/heads/main/LICENSE.md"
+        },
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/refs/heads/main/LICENSE.md"
+        }
+      ],
+      "long_description": "\nThe Hierarchical 3DGS implementation performs splitting the scene into regions, each\nof which is optimized separately. This set is then merged into a single model. This\nis only applied for larger scenes. In NerfBaselines integration, by default we do\nnot use the splitting - this matches the original implementation when applied to smaller scenes.\nThe splitting implementation is not yet available in NerfBaselines, but it is planned for the future.\n\nAlso, we added `depth_mode` option which allows to use different monodular depth predictors. Currently,\nadd `--preset depth-anything` to use Depth Anything V2 depth predictor, or use the default `dpt` model.\n\nIn order to enable appearance optimization, add `--preset exposure` to the command line. This \nwill optimize a affine mapping for each image during the training to map the rendered colors.\nThis option is recommended for the scenes with strong lighting changes when rendering a video,\nbut it can decrease metrics - especially PSNR. By default exposure optimization is turned off.\n\nDurring rendering, you can pass tau (float) in the rendering `options` to set the tau parameter\nused by H3DGS renderer. The default value is 0 which means the finest set of Gaussians will\nbe used - highest quality, but slowest performance.\n",
+      "presets": {
+        "exposure": {
+          "exposure_lr_init": 0.001,
+          "exposure_lr_final": 0.0001
+        },
+        "depth-anything": {
+          "single.depth_mode": "depth-anything"
+        },
+        "tau-0": {
+          "post.tau": "0"
+        },
+        "tau-3": {
+          "post.tau": "3"
+        },
+        "tau-6": {
+          "post.tau": "15"
+        }
+      },
+      "nb_version": "1.2.9.dev0+g09eaa2c.d20250222",
+      "num_iterations": 45000,
+      "total_train_time": 3365.23403,
+      "resources_utilization": {
+        "memory": 66237,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 7136
+      },
+      "datetime": "2025-05-04T05:57:12",
+      "config_overrides": {},
+      "applied_presets": [],
+      "dataset_metadata": {
+        "id": "mipnerf360",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "bonsai",
+        "downscale_factor": 2,
+        "type": "object-centric",
+        "viewer_transform": [
+          -0.194793,
+          0.052735,
+          -0.086932,
+          0.144124,
+          0.100067,
+          0.13273,
+          -0.143707,
+          -0.000354,
+          0.018023,
+          -0.166985,
+          -0.141681,
+          0.483302
+        ],
+        "viewer_initial_pose": [
+          -0.02223,
+          0.18495,
+          -0.982497,
+          0.999067,
+          0.999138,
+          -0.030346,
+          -0.028319,
+          -0.063999,
+          -0.035053,
+          -0.982279,
+          -0.184116,
+          0.15929
+        ],
+        "expected_scene_scale": 4.317466
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "721ffe3fb46263700e86feeb0f12b872511731f9271b554f52cd853096d160f8"
+    },
+    "outputs_configuration": {
+      "color": {}
+    }
+  },
+  "viewer_transform": [
+    -0.19479263603828023,
+    0.05273479806189789,
+    -0.0869322150746532,
+    0.14412365187954626,
+    0.10006671297963125,
+    0.13273038743371207,
+    -0.1437067692922574,
+    -0.0003535804971097501,
+    0.018022826518647176,
+    -0.1669851008666565,
+    -0.14168095332892433,
+    0.4833019658555503
+  ],
+  "viewer_initial_pose": [
+    -0.0222299693438242,
+    0.18494954349991288,
+    -0.9824965549510772,
+    0.999067309205532,
+    0.9991382100132318,
+    -0.030346313595300996,
+    -0.02831901210957592,
+    -0.06399863206728015,
+    -0.03505274829459211,
+    -0.9822793434567549,
+    -0.18411553366796343,
+    0.15928955756039653
+  ],
+  "method_id": "hierarchical-3dgs",
+  "renderer": {
+    "antialias_2D_kernel_size": 0.3,
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/hierarchical-3dgs/mipnerf360/bonsai_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360/bonsai-nbv.json"
+  }
+}

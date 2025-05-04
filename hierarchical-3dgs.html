@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Dataset Hierarchical 3DGS</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      Hierarchical 3DGS<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6–7km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset
+    </p>
+    
+    <div class="results-page__header-links">
+      
+      <div>Web: <a href="https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/" class="text-blue link-underline">https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/</a></div>
+      
+      
+      <div>Paper: <a href="https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf" class="text-blue link-underline">A Hierarchical 3D Gaussian Representation for Real-Time Rendering of Very Large Datasets</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Bernhard Kerbl, Andreas Meuleman, Georgios Kopanas, Michael Wimmer, Alexandre Lanvin, George Drettakis</span></div>
+      
+    </div>
+    
+  </div>
+  
+    
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr data-expand-id="hierarchical-3dgs">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="hierarchical-3dgs" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="0"><a href="/m-hierarchical-3dgs">H3DGS</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">26.42</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.807</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.331</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">1h 16m 1s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">15.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="hierarchical-3dgs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/smallcity.zip" title="Download checkpoint and predictions for scene Small City" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-smallcity.json" title="Online demo for scene Small City" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="0">Small City</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">26.42</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 26.29</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.807</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.81</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.331</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">1h 16m 1s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">15.85 GB</span>
+
+</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+  
+  
+  <div id="psnr" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>PSNR</h2>
+      <p class="text-justify">Peak Signal to Noise Ratio. The higher the better.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by Small City (ascending)">Small City <i class="ti" /></span></th>
+      
+    </thead>
+    <tbody>
+      
+      <tr data-expand-id="hierarchical-3dgs">
+        <td class="w120" data-sort-value="0"><a href="/m-hierarchical-3dgs">H3DGS</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">26.42</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 26.29</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id="ssim" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>SSIM</h2>
+      <p class="text-justify">Structural Similarity Index. The higher the better. The implementation matches JAX&#39;s SSIM and torchmetrics&#39;s SSIM (with default parameters).</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by Small City (ascending)">Small City <i class="ti" /></span></th>
+      
+    </thead>
+    <tbody>
+      
+      <tr data-expand-id="hierarchical-3dgs">
+        <td class="w120" data-sort-value="0"><a href="/m-hierarchical-3dgs">H3DGS</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.807</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.81</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id="lpips_vgg" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>LPIPS (VGG)</h2>
+      <p class="text-justify">Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by Small City (ascending)">Small City <i class="ti" /></span></th>
+      
+    </thead>
+    <tbody>
+      
+      <tr data-expand-id="hierarchical-3dgs">
+        <td class="w120" data-sort-value="0"><a href="/m-hierarchical-3dgs">H3DGS</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.331</span>
+
+</td>
+        
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>

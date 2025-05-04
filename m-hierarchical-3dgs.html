@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method H3DGS</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      H3DGS<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    H3DGS extends 3DGS with LOD rendering strategy based on hierarchical representation of the scene. For large scenes it splits it into chunks, optimize each separatedly and merge them into single model.
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/" class="text-blue link-underline">https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/</a></div>
+      
+      
+      <div>Paper: <a href="https://repo-sam.inria.fr/fungraph/hierarchical-3d-gaussians/hierarchical-3d-gaussians_low.pdf" class="text-blue link-underline">A Hierarchical 3D Gaussian Representation for Real-Time Rendering of Very Large Datasets</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Bernhard Kerbl, Andreas Meuleman, Georgios Kopanas, Michael Wimmer, Alexandre Lanvin, George Drettakis</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=mipnerf360 class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Mip-NeRF 360
+      </h2>
+      <p class="text-justify">Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/garden.zip" title="Download checkpoint and predictions for scene garden" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-garden.json" title="Online demo for scene garden" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="4" class="w120">garden</td>
+        
+        <td data-sort-value="40"><span class="table__allowcopy">26.44</span>
+
+</td>
+        
+        <td data-sort-value="31"><span class="table__allowcopy">0.820</span>
+
+</td>
+        
+        <td data-sort-value="73"><span class="table__allowcopy">0.191</span>
+
+</td>
+        
+        <td data-sort-value="91"><span class="table__allowcopy">52m 35s</span>
+
+</td>
+        <td data-sort-value="58"><span class="table__allowcopy">8.97 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/bicycle.zip" title="Download checkpoint and predictions for scene bicycle" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-bicycle.json" title="Online demo for scene bicycle" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">bicycle</td>
+        
+        <td data-sort-value="38"><span class="table__allowcopy">24.03</span>
+
+</td>
+        
+        <td data-sort-value="29"><span class="table__allowcopy">0.717</span>
+
+</td>
+        
+        <td data-sort-value="76"><span class="table__allowcopy">0.284</span>
+
+</td>
+        
+        <td data-sort-value="96"><span class="table__allowcopy">57m 19s</span>
+
+</td>
+        <td data-sort-value="61"><span class="table__allowcopy">11.46 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/flowers.zip" title="Download checkpoint and predictions for scene flowers" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-flowers.json" title="Online demo for scene flowers" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="3" class="w120">flowers</td>
+        
+        <td data-sort-value="36"><span class="table__allowcopy">20.53</span>
+
+</td>
+        
+        <td data-sort-value="27"><span class="table__allowcopy">0.571</span>
+
+</td>
+        
+        <td data-sort-value="79"><span class="table__allowcopy">0.344</span>
+
+</td>
+        
+        <td data-sort-value="98"><span class="table__allowcopy">59m 11s</span>
+
+</td>
+        <td data-sort-value="62"><span class="table__allowcopy">11.99 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/treehill.zip" title="Download checkpoint and predictions for scene treehill" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-treehill.json" title="Online demo for scene treehill" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="8" class="w120">treehill</td>
+        
+        <td data-sort-value="37"><span class="table__allowcopy">22.09</span>
+
+</td>
+        
+        <td data-sort-value="28"><span class="table__allowcopy">0.598</span>
+
+</td>
+        
+        <td data-sort-value="80"><span class="table__allowcopy">0.384</span>
+
+</td>
+        
+        <td data-sort-value="93"><span class="table__allowcopy">54m 52s</span>
+
+</td>
+        <td data-sort-value="60"><span class="table__allowcopy">10.48 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/stump.zip" title="Download checkpoint and predictions for scene stump" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-stump.json" title="Online demo for scene stump" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="7" class="w120">stump</td>
+        
+        <td data-sort-value="39"><span class="table__allowcopy">25.37</span>
+
+</td>
+        
+        <td data-sort-value="30"><span class="table__allowcopy">0.728</span>
+
+</td>
+        
+        <td data-sort-value="78"><span class="table__allowcopy">0.287</span>
+
+</td>
+        
+        <td data-sort-value="90"><span class="table__allowcopy">50m 50s</span>
+
+</td>
+        <td data-sort-value="59"><span class="table__allowcopy">9.07 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/kitchen.zip" title="Download checkpoint and predictions for scene kitchen" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-kitchen.json" title="Online demo for scene kitchen" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="5" class="w120">kitchen</td>
+        
+        <td data-sort-value="42"><span class="table__allowcopy">31.06</span>
+
+</td>
+        
+        <td data-sort-value="33"><span class="table__allowcopy">0.918</span>
+
+</td>
+        
+        <td data-sort-value="72"><span class="table__allowcopy">0.163</span>
+
+</td>
+        
+        <td data-sort-value="92"><span class="table__allowcopy">53m 54s</span>
+
+</td>
+        <td data-sort-value="54"><span class="table__allowcopy">6.70 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/bonsai.zip" title="Download checkpoint and predictions for scene bonsai" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-bonsai.json" title="Online demo for scene bonsai" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="1" class="w120">bonsai</td>
+        
+        <td data-sort-value="43"><span class="table__allowcopy">31.86</span>
+
+</td>
+        
+        <td data-sort-value="35"><span class="table__allowcopy">0.937</span>
+
+</td>
+        
+        <td data-sort-value="74"><span class="table__allowcopy">0.243</span>
+
+</td>
+        
+        <td data-sort-value="94"><span class="table__allowcopy">56m 6s</span>
+
+</td>
+        <td data-sort-value="55"><span class="table__allowcopy">6.97 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/counter.zip" title="Download checkpoint and predictions for scene counter" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-counter.json" title="Online demo for scene counter" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="2" class="w120">counter</td>
+        
+        <td data-sort-value="41"><span class="table__allowcopy">29.07</span>
+
+</td>
+        
+        <td data-sort-value="32"><span class="table__allowcopy">0.906</span>
+
+</td>
+        
+        <td data-sort-value="75"><span class="table__allowcopy">0.243</span>
+
+</td>
+        
+        <td data-sort-value="97"><span class="table__allowcopy">58m 13s</span>
+
+</td>
+        <td data-sort-value="56"><span class="table__allowcopy">7.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/mipnerf360/room.zip" title="Download checkpoint and predictions for scene room" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-mipnerf360-room.json" title="Online demo for scene room" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="6" class="w120">room</td>
+        
+        <td data-sort-value="44"><span class="table__allowcopy">31.89</span>
+
+</td>
+        
+        <td data-sort-value="34"><span class="table__allowcopy">0.918</span>
+
+</td>
+        
+        <td data-sort-value="77"><span class="table__allowcopy">0.284</span>
+
+</td>
+        
+        <td data-sort-value="95"><span class="table__allowcopy">56m 22s</span>
+
+</td>
+        <td data-sort-value="57"><span class="table__allowcopy">8.41 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">26.93</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.790</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.269</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">55m 29s</span>
+
+</td>
+        <td><span class="table__allowcopy">9.08 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id=hierarchical-3dgs class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Hierarchical 3DGS
+      </h2>
+      <p class="text-justify">Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6–7km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/smallcity.zip" title="Download checkpoint and predictions for scene Small City" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-smallcity.json" title="Online demo for scene Small City" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">Small City</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">26.42</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 26.29</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.807</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.81</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.331</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">1h 16m 1s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">15.85 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">26.42</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.807</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.331</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">1h 16m 1s</span>
+
+</td>
+        <td><span class="table__allowcopy">15.85 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>
