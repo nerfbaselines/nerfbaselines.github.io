@@ -865,7 +865,7 @@
 <dd><p>Method to install.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>gsplat | kplanes | instant-ngp | nerfw-reimpl | gaussian-splatting-wild | wild-gaussians | mip-splatting | gaussian-opacity-fields | 2d-gaussian-splatting | scaffold-gs | taming-3dgs | seathru-nerf | gaussian-splatting | tetra-nerf | tensorf | zipnerf | nerfacto | colmap | camp | pgsr | 3dgs-mcmc | nerfonthego | mipnerf360 | hierarchical-3dgs | nerf</p>
+<dd class="field-odd"><p>pgsr | zipnerf | hierarchical-3dgs | wild-gaussians | seathru-nerf | taming-3dgs | nerfacto | colmap | gaussian-splatting-wild | gaussian-splatting | nerf | tensorf | tetra-nerf | 3dgs-mcmc | kplanes | nerfonthego | mip-splatting | scaffold-gs | instant-ngp | gsplat | 2d-gaussian-splatting | nerfw-reimpl | camp | mipnerf360 | gaussian-opacity-fields</p>
 </dd>
 </dl>
 </dd></dl>
@@ -925,10 +925,21 @@
 <dl class="std option">
 <dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-num-repeats">
 <span class="sig-name descname"><span class="pre">--num-repeats</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;num_repeats&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-num-repeats" title="Link to this definition">¶</a></dt>
-<dd><p>Number of times to repeat the rendering to estimate the FPS.</p>
+<dd><p>Number of times to repeat the rendering to estimate the FPS (results are averaged).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Default<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">7</span></code></p>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std option">
+<dt class="sig sig-object std" id="cmdoption-nerfbaselines-measure-fps-num-repeats-median">
+<span class="sig-name descname"><span class="pre">--num-repeats-median</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;num_repeats_median&gt;</span></span><a class="headerlink" href="#cmdoption-nerfbaselines-measure-fps-num-repeats-median" title="Link to this definition">¶</a></dt>
+<dd><p>Number of times to repeat the rendering to estimate the FPS (median is taken from results).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Default<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p>
 </dd>
 </dl>
 </dd></dl>
@@ -1117,7 +1128,7 @@
 <dd><p><strong>Required</strong> Method to use.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options<span class="colon">:</span></dt>
-<dd class="field-odd"><p>gsplat | kplanes | instant-ngp | nerfw-reimpl | gaussian-splatting-wild | wild-gaussians | mip-splatting | gaussian-opacity-fields | 2d-gaussian-splatting | scaffold-gs | taming-3dgs | seathru-nerf | gaussian-splatting | tetra-nerf | tensorf | zipnerf | nerfacto | colmap | camp | pgsr | 3dgs-mcmc | nerfonthego | mipnerf360 | hierarchical-3dgs | nerf</p>
+<dd class="field-odd"><p>pgsr | zipnerf | hierarchical-3dgs | wild-gaussians | seathru-nerf | taming-3dgs | nerfacto | colmap | gaussian-splatting-wild | gaussian-splatting | nerf | tensorf | tetra-nerf | 3dgs-mcmc | kplanes | nerfonthego | mip-splatting | scaffold-gs | instant-ngp | gsplat | 2d-gaussian-splatting | nerfw-reimpl | camp | mipnerf360 | gaussian-opacity-fields</p>
 </dd>
 </dl>
 </dd></dl>
