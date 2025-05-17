@@ -1,0 +1,97 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "zipnerf",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "london",
+      "downscale_factor": 2,
+      "expected_scene_scale": 5.320378398895264,
+      "name": "Zip-NeRF",
+      "description": "ZipNeRF is a dataset with four large scenes: Berlin, Alameda, London, and NYC, (1000-2000 photos each) captured using fisheye cameras. This implementation uses undistorted images which are provided with the dataset and the downsampled resolutions are between 1392 \u00d7 793 and 2000 \u00d7 1140 depending on scene. It is recommended to use exposure modeling with this dataset if available.",
+      "paper_title": "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2304.06706.pdf",
+      "link": "https://jonbarron.info/zipnerf/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "alameda",
+          "name": "Alameda"
+        },
+        {
+          "id": "berlin",
+          "name": "Berlin"
+        },
+        {
+          "id": "london",
+          "name": "London"
+        },
+        {
+          "id": "nyc",
+          "name": "NYC"
+        }
+      ]
+    }
+  },
+  "viewer_transform": [
+    0.17240308761443984,
+    -0.001008323171235625,
+    0.0009675077884447058,
+    -0.016569027231899697,
+    -0.001008323171235625,
+    -0.007117018022618422,
+    0.17225883831692787,
+    0.01639261934313591,
+    -0.0009675077884447058,
+    -0.17225883831692787,
+    -0.007122690574604361,
+    0.0010343104857939405
+  ],
+  "viewer_initial_pose": [
+    -0.6819483498457826,
+    -0.10497359050579438,
+    0.7238280048516436,
+    0.18860117058655537,
+    -0.7314003117542784,
+    0.0978805633451479,
+    -0.674887367409276,
+    0.555063765620894,
+    -3.299821844711653e-06,
+    -0.9896463723301168,
+    -0.14352716345230965,
+    -0.008610987614534993
+  ],
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/zipnerf/london-nbv.json"
+  }
+}

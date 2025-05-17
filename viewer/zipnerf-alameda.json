@@ -1,0 +1,97 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "zipnerf",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "alameda",
+      "downscale_factor": 2,
+      "expected_scene_scale": 5.969993972778321,
+      "name": "Zip-NeRF",
+      "description": "ZipNeRF is a dataset with four large scenes: Berlin, Alameda, London, and NYC, (1000-2000 photos each) captured using fisheye cameras. This implementation uses undistorted images which are provided with the dataset and the downsampled resolutions are between 1392 \u00d7 793 and 2000 \u00d7 1140 depending on scene. It is recommended to use exposure modeling with this dataset if available.",
+      "paper_title": "Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2304.06706.pdf",
+      "link": "https://jonbarron.info/zipnerf/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "alameda",
+          "name": "Alameda"
+        },
+        {
+          "id": "berlin",
+          "name": "Berlin"
+        },
+        {
+          "id": "london",
+          "name": "London"
+        },
+        {
+          "id": "nyc",
+          "name": "NYC"
+        }
+      ]
+    }
+  },
+  "viewer_transform": [
+    0.15259729914857062,
+    -0.006198771141269543,
+    0.004175750291411717,
+    -0.005333531166657577,
+    -0.006198771141269543,
+    -0.05727548393640417,
+    0.14150227532646104,
+    -0.022022318931775586,
+    -0.004175750291411717,
+    -0.14150227532646104,
+    -0.05745841352584793,
+    0.0015107331390453534
+  ],
+  "viewer_initial_pose": [
+    -0.4087720242630055,
+    -0.3248081278792368,
+    0.8528804235649561,
+    0.7960761000730776,
+    -0.911529385446916,
+    0.09928814541333997,
+    -0.3990689731271053,
+    -0.4074789946255087,
+    0.04493996325483151,
+    -0.9405538588912338,
+    -0.3366583551093048,
+    -0.0025610311242543695
+  ],
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/zipnerf/alameda-nbv.json"
+  }
+}

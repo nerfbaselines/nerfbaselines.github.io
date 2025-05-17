@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method Octree-GS</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      Octree-GS<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    An LOD-structured 3D Gaussian approach supporting level-of-detail decomposition for scene representation that contributes to the final rendering results.
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://city-super.github.io/octree-gs/" class="text-blue link-underline">https://city-super.github.io/octree-gs/</a></div>
+      
+      
+      <div>Paper: <a href="https://arxiv.org/pdf/2403.17898.pdf" class="text-blue link-underline">Octree-GS: Towards Consistent Real-time Rendering with LOD-Structured 3D Gaussians</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Kerui Ren, Lihan Jiang, Tao Lu, Mulin Yu, Linning Xu, Zhangkai Ni, Bo Dai</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=mipnerf360 class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Mip-NeRF 360
+      </h2>
+      <p class="text-justify">Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/garden.zip" title="Download checkpoint and predictions for scene garden" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="4" class="w120">garden</td>
+        
+        <td data-sort-value="67"><span class="table__allowcopy">27.72</span>
+
+</td>
+        
+        <td data-sort-value="67"><span class="table__allowcopy">0.869</span>
+
+</td>
+        
+        <td data-sort-value="72"><span class="table__allowcopy">0.124</span>
+
+</td>
+        
+        <td data-sort-value="59"><span class="table__allowcopy">30m 15s</span>
+
+</td>
+        <td data-sort-value="40"><span class="table__allowcopy">7.65 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/bicycle.zip" title="Download checkpoint and predictions for scene bicycle" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">bicycle</td>
+        
+        <td data-sort-value="65"><span class="table__allowcopy">25.03</span>
+
+</td>
+        
+        <td data-sort-value="65"><span class="table__allowcopy">0.759</span>
+
+</td>
+        
+        <td data-sort-value="74"><span class="table__allowcopy">0.251</span>
+
+</td>
+        
+        <td data-sort-value="57"><span class="table__allowcopy">24m 55s</span>
+
+</td>
+        <td data-sort-value="39"><span class="table__allowcopy">7.50 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/flowers.zip" title="Download checkpoint and predictions for scene flowers" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="3" class="w120">flowers</td>
+        
+        <td data-sort-value="63"><span class="table__allowcopy">21.43</span>
+
+</td>
+        
+        <td data-sort-value="63"><span class="table__allowcopy">0.600</span>
+
+</td>
+        
+        <td data-sort-value="80"><span class="table__allowcopy">0.374</span>
+
+</td>
+        
+        <td data-sort-value="55"><span class="table__allowcopy">22m 57s</span>
+
+</td>
+        <td data-sort-value="38"><span class="table__allowcopy">6.53 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/treehill.zip" title="Download checkpoint and predictions for scene treehill" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="8" class="w120">treehill</td>
+        
+        <td data-sort-value="64"><span class="table__allowcopy">23.01</span>
+
+</td>
+        
+        <td data-sort-value="64"><span class="table__allowcopy">0.643</span>
+
+</td>
+        
+        <td data-sort-value="79"><span class="table__allowcopy">0.360</span>
+
+</td>
+        
+        <td data-sort-value="56"><span class="table__allowcopy">24m 41s</span>
+
+</td>
+        <td data-sort-value="37"><span class="table__allowcopy">6.44 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/stump.zip" title="Download checkpoint and predictions for scene stump" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="7" class="w120">stump</td>
+        
+        <td data-sort-value="66"><span class="table__allowcopy">26.48</span>
+
+</td>
+        
+        <td data-sort-value="66"><span class="table__allowcopy">0.763</span>
+
+</td>
+        
+        <td data-sort-value="77"><span class="table__allowcopy">0.276</span>
+
+</td>
+        
+        <td data-sort-value="54"><span class="table__allowcopy">20m 38s</span>
+
+</td>
+        <td data-sort-value="36"><span class="table__allowcopy">5.79 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/kitchen.zip" title="Download checkpoint and predictions for scene kitchen" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="5" class="w120">kitchen</td>
+        
+        <td data-sort-value="69"><span class="table__allowcopy">30.52</span>
+
+</td>
+        
+        <td data-sort-value="69"><span class="table__allowcopy">0.917</span>
+
+</td>
+        
+        <td data-sort-value="73"><span class="table__allowcopy">0.172</span>
+
+</td>
+        
+        <td data-sort-value="62"><span class="table__allowcopy">35m 35s</span>
+
+</td>
+        <td data-sort-value="42"><span class="table__allowcopy">10.41 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/bonsai.zip" title="Download checkpoint and predictions for scene bonsai" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">bonsai</td>
+        
+        <td data-sort-value="70"><span class="table__allowcopy">30.88</span>
+
+</td>
+        
+        <td data-sort-value="71"><span class="table__allowcopy">0.923</span>
+
+</td>
+        
+        <td data-sort-value="78"><span class="table__allowcopy">0.280</span>
+
+</td>
+        
+        <td data-sort-value="58"><span class="table__allowcopy">27m 5s</span>
+
+</td>
+        <td data-sort-value="43"><span class="table__allowcopy">10.86 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/counter.zip" title="Download checkpoint and predictions for scene counter" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">counter</td>
+        
+        <td data-sort-value="68"><span class="table__allowcopy">29.49</span>
+
+</td>
+        
+        <td data-sort-value="68"><span class="table__allowcopy">0.907</span>
+
+</td>
+        
+        <td data-sort-value="75"><span class="table__allowcopy">0.262</span>
+
+</td>
+        
+        <td data-sort-value="61"><span class="table__allowcopy">34m 58s</span>
+
+</td>
+        <td data-sort-value="41"><span class="table__allowcopy">9.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/mipnerf360/room.zip" title="Download checkpoint and predictions for scene room" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="6" class="w120">room</td>
+        
+        <td data-sort-value="71"><span class="table__allowcopy">32.01</span>
+
+</td>
+        
+        <td data-sort-value="70"><span class="table__allowcopy">0.922</span>
+
+</td>
+        
+        <td data-sort-value="76"><span class="table__allowcopy">0.275</span>
+
+</td>
+        
+        <td data-sort-value="60"><span class="table__allowcopy">31m 21s</span>
+
+</td>
+        <td data-sort-value="44"><span class="table__allowcopy">11.66 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">27.40</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.811</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.264</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">28m 3s</span>
+
+</td>
+        <td><span class="table__allowcopy">8.52 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+  <div id=zipnerf class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Zip-NeRF
+      </h2>
+      <p class="text-justify">ZipNeRF is a dataset with four large scenes: Berlin, Alameda, London, and NYC, (1000-2000 photos each) captured using fisheye cameras. This implementation uses undistorted images which are provided with the dataset and the downsampled resolutions are between 1392 × 793 and 2000 × 1140 depending on scene. It is recommended to use exposure modeling with this dataset if available.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/alameda.zip" title="Download checkpoint and predictions for scene Alameda" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">Alameda</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">22.79</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.448</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">44m 25s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">28.68 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/berlin.zip" title="Download checkpoint and predictions for scene Berlin" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">Berlin</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">13.64</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.669</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.640</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">1h 6m 40s</span>
+
+</td>
+        <td data-sort-value="3"><span class="table__allowcopy">34.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/london.zip" title="Download checkpoint and predictions for scene London" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">London</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">25.76</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.807</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.433</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">33m 44s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">27.35 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/nyc.zip" title="Download checkpoint and predictions for scene NYC" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="3" class="w120">NYC</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">27.13</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.841</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.372</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">34m 55s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">19.63 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">22.33</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.762</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.473</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">44m 56s</span>
+
+</td>
+        <td><span class="table__allowcopy">27.63 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>
