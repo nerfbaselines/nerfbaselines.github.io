@@ -34,6 +34,15 @@ nerfbaselines.datasets.colmap
    :undoc-members:
    :show-inheritance:
 
+nerfbaselines.datasets.hierarchical\_3dgs
+-----------------------------------------
+
+.. automodule:: nerfbaselines.datasets.hierarchical_3dgs
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 nerfbaselines.datasets.llff
 ---------------------------
 
@@ -92,6 +101,15 @@ nerfbaselines.datasets.tanksandtemples
 --------------------------------------
 
 .. automodule:: nerfbaselines.datasets.tanksandtemples
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+nerfbaselines.datasets.zipnerf
+------------------------------
+
+.. automodule:: nerfbaselines.datasets.zipnerf
    :imported-members:
    :members:
    :undoc-members:
