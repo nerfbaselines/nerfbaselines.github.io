@@ -191,24 +191,6 @@
         }
       ],
       "long_description": "\nThe Hierarchical 3DGS implementation performs splitting the scene into regions, each\nof which is optimized separately. This set is then merged into a single model. This\nis only applied for larger scenes. In NerfBaselines integration, by default we do\nnot use the splitting - this matches the original implementation when applied to smaller scenes.\nThe splitting implementation is not yet available in NerfBaselines, but it is planned for the future.\n\nAlso, we added `depth_mode` option which allows to use different monodular depth predictors. Currently,\nadd `--preset depth-anything` to use Depth Anything V2 depth predictor, or use the default `dpt` model.\n\nIn order to enable appearance optimization, add `--preset exposure` to the command line. This \nwill optimize a affine mapping for each image during the training to map the rendered colors.\nThis option is recommended for the scenes with strong lighting changes when rendering a video,\nbut it can decrease metrics - especially PSNR. By default exposure optimization is turned off.\n\nDurring rendering, you can pass tau (float) in the rendering `options` to set the tau parameter\nused by H3DGS renderer. The default value is 0 which means the finest set of Gaussians will\nbe used - highest quality, but slowest performance.\n",
-      "presets": {
-        "exposure": {
-          "exposure_lr_init": 0.001,
-          "exposure_lr_final": 0.0001
-        },
-        "depth-anything": {
-          "single.depth_mode": "depth-anything"
-        },
-        "tau-0": {
-          "post.tau": "0"
-        },
-        "tau-3": {
-          "post.tau": "3"
-        },
-        "tau-6": {
-          "post.tau": "15"
-        }
-      },
       "nb_version": "1.2.9.dev0+g09eaa2c.d20250222",
       "num_iterations": 45000,
       "total_train_time": 3492.89231,
