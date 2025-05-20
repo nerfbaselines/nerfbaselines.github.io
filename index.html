@@ -18541,356 +18541,6 @@
     
   </section>
   
-  <section id="dataset-hierarchical-3dgs" class="result-set-panel">
-    <div class="result-set-panel__header">
-      <h2>
-          <a href="/hierarchical-3dgs">Hierarchical 3DGS&nbsp;<i class="ti ti-external-link text-blue"></i></a>
-      </h2>
-      <p className="text-justify">Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6–7km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset</p>
-    </div>
-    
-      
-<div class="table-container">
-  <table class="table">
-    <thead class="table__header">
-      <th class="w70"></th>
-      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
-      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
-    </thead>
-    <tbody class="expand-root">
-      
-      <tr data-expand-id="hierarchical-3dgs">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="hierarchical-3dgs" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="0"><a href="/m-hierarchical-3dgs">H3DGS</a></td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">25.53</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's PSNR: 25.39</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.803</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's SSIM: 0.806</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.364</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">1h 23m 4s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">14.94 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="hierarchical-3dgs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/smallcity.zip" title="Download checkpoint and predictions for scene SmallCity" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-smallcity.json" title="Online demo for scene SmallCity" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="1">SmallCity</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">26.42</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's PSNR: 26.29</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.807</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's SSIM: 0.81</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.331</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">1h 16m 1s</span>
-
-</td>
-        <td data-sort-value="1"><span class="table__allowcopy">15.85 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="hierarchical-3dgs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/campus.zip" title="Download checkpoint and predictions for scene Campus" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-campus.json" title="Online demo for scene Campus" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="0">Campus</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">24.63</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's PSNR: 24.5</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.798</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's SSIM: 0.801</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.396</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">1h 30m 7s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">14.04 GB</span>
-
-</td>
-      </tr>
-      
-      
-    </tbody>
-  </table>
-</div>
-    
-  </section>
-  
-  <section id="dataset-zipnerf" class="result-set-panel">
-    <div class="result-set-panel__header">
-      <h2>
-          <a href="/zipnerf">Zip-NeRF&nbsp;<i class="ti ti-external-link text-blue"></i></a>
-      </h2>
-      <p className="text-justify">ZipNeRF is a dataset with four large scenes: Berlin, Alameda, London, and NYC, (1000-2000 photos each) captured using fisheye cameras. This implementation uses undistorted images which are provided with the dataset and the downsampled resolutions are between 1392 × 793 and 2000 × 1140 depending on scene. It is recommended to use exposure modeling with this dataset if available.</p>
-    </div>
-    
-      
-<div class="table-container">
-  <table class="table">
-    <thead class="table__header">
-      <th class="w70"></th>
-      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
-      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
-    </thead>
-    <tbody class="expand-root">
-      
-      <tr data-expand-id="octree-gs">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="octree-gs" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="0"><a href="/m-octree-gs">Octree-GS</a></td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">22.33</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.762</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.473</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">44m 56s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">27.63 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="octree-gs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/alameda.zip" title="Download checkpoint and predictions for scene Alameda" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="0">Alameda</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">22.79</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.448</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">44m 25s</span>
-
-</td>
-        <td data-sort-value="2"><span class="table__allowcopy">28.68 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="octree-gs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/berlin.zip" title="Download checkpoint and predictions for scene Berlin" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="1">Berlin</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">13.64</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.669</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">0.640</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">1h 6m 40s</span>
-
-</td>
-        <td data-sort-value="3"><span class="table__allowcopy">34.85 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="octree-gs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/london.zip" title="Download checkpoint and predictions for scene London" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="2">London</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">25.76</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.807</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.433</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">33m 44s</span>
-
-</td>
-        <td data-sort-value="1"><span class="table__allowcopy">27.35 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="octree-gs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/nyc.zip" title="Download checkpoint and predictions for scene NYC" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="3">NYC</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">27.13</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">0.841</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.372</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">34m 55s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">19.63 GB</span>
-
-</td>
-      </tr>
-      
-      
-    </tbody>
-  </table>
-</div>
-    
-  </section>
-  
   <section id="dataset-phototourism" class="result-set-panel">
     <div class="result-set-panel__header">
       <h2>
@@ -19728,6 +19378,185 @@
 
 </td>
         <td data-sort-value="6"><span class="table__allowcopy">7.83 GB</span>
+
+</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+    
+  </section>
+  
+  <section id="dataset-zipnerf" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+          <a href="/zipnerf">Zip-NeRF&nbsp;<i class="ti ti-external-link text-blue"></i></a>
+      </h2>
+      <p className="text-justify">ZipNeRF is a dataset with four large scenes: Berlin, Alameda, London, and NYC, (1000-2000 photos each) captured using fisheye cameras. This implementation uses undistorted images which are provided with the dataset and the downsampled resolutions are between 1392 × 793 and 2000 × 1140 depending on scene. It is recommended to use exposure modeling with this dataset if available.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr data-expand-id="octree-gs">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="octree-gs" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="0"><a href="/m-octree-gs">Octree-GS</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">22.33</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.762</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.473</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">44m 56s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">27.63 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="octree-gs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/alameda.zip" title="Download checkpoint and predictions for scene Alameda" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="0">Alameda</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">22.79</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.448</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">44m 25s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">28.68 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="octree-gs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/berlin.zip" title="Download checkpoint and predictions for scene Berlin" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="1">Berlin</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">13.64</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.669</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.640</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">1h 6m 40s</span>
+
+</td>
+        <td data-sort-value="3"><span class="table__allowcopy">34.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="octree-gs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/london.zip" title="Download checkpoint and predictions for scene London" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="2">London</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">25.76</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.807</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.433</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">33m 44s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">27.35 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="octree-gs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/nyc.zip" title="Download checkpoint and predictions for scene NYC" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="3">NYC</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">27.13</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.841</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.372</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">34m 55s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">19.63 GB</span>
 
 </td>
       </tr>
@@ -21035,6 +20864,177 @@
 
 </td>
         <td data-sort-value="7"><span class="table__allowcopy">27.20 GB</span>
+
+</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+    
+  </section>
+  
+  <section id="dataset-hierarchical-3dgs" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+          <a href="/hierarchical-3dgs">Hierarchical 3DGS&nbsp;<i class="ti ti-external-link text-blue"></i></a>
+      </h2>
+      <p className="text-justify">Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6–7km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr data-expand-id="hierarchical-3dgs">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="hierarchical-3dgs" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="0"><a href="/m-hierarchical-3dgs">H3DGS</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">25.53</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 25.39</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.803</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.806</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.364</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">1h 23m 4s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">14.94 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="hierarchical-3dgs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/smallcity.zip" title="Download checkpoint and predictions for scene SmallCity" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-smallcity.json" title="Online demo for scene SmallCity" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="1">SmallCity</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">26.42</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 26.29</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.807</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.81</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.331</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">1h 16m 1s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">15.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="hierarchical-3dgs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/campus.zip" title="Download checkpoint and predictions for scene Campus" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-campus.json" title="Online demo for scene Campus" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="0">Campus</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">24.63</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 24.5</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.798</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.801</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.396</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">1h 30m 7s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">14.04 GB</span>
 
 </td>
       </tr>

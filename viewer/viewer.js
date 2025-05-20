@@ -14,6 +14,8 @@ import palettes from './palettes.js';
 
 const notification_autoclose = 5000;
 
+const notempty = (x) => x !== undefined && x !== null && x !== "";
+
 
 function drawChart({ svg, ...data }) {
   // Clear the SVG
@@ -1179,9 +1181,9 @@ function _attach_output_configuration(viewer) {
         property === 'output_type' ||
         property === 'outputs_configuration') {
       const output_configuration = state.outputs_configuration?.[state.output_type] || {};
-      state.output_range_min = output_configuration.range_min || "";
+      state.output_range_min = notempty(output_configuration.range_min) ? output_configuration.range_min : "";
       viewer.notifyChange({ property: "output_range_min", trigger: self_trigger });
-      state.output_range_max = output_configuration.range_max || "";
+      state.output_range_max = notempty(output_configuration.range_max) ? output_configuration.range_max : "";
       viewer.notifyChange({ property: "output_range_max", trigger: self_trigger });
       state.output_palette_enabled = output_configuration.palette_enabled || false;
       viewer.notifyChange({ property: "output_palette_enabled", trigger: self_trigger });
@@ -2746,7 +2748,6 @@ export class Viewer extends THREE.EventDispatcher {
       [width, height] = computeResolution([width, height], resolution);
       const round = (x) => Math.round(x * 100000) / 100000;
       const focal = height / (2 * Math.tan(THREE.MathUtils.degToRad(fov) / 2));
-      const notempty = (x) => x !== undefined && x !== null && x !== "";
       const request = {
         pose: matrix4ToArray(matrix).map(round),
         intrinsics: [focal, focal, width/2, height/2].map(round),
