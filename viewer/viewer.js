@@ -3696,12 +3696,22 @@ export class Viewer extends THREE.EventDispatcher {
           appearance_weights,
           appearance_train_indices,
           lossless: true,
+          palette: state.output_palette,
+          output_range: [
+            notempty(state.output_range_min) ? 1*state.output_range_min : null,
+            notempty(state.output_range_max) ? 1*state.output_range_max : null,
+          ],
         };
         request.output_type = state.output_type === "" ? undefined : state.output_type;
         if (state.split_enabled && state.split_output_type) {
           request.split_output_type = state.split_output_type === "" ? undefined : state.split_output_type;
           request.split_percentage = round(state.split_percentage === undefined ? 0.5 : state.split_percentage);
           request.split_tilt = round(state.split_tilt || 0.0);
+          request.split_palette = state.split_palette;
+          request.split_range = [
+            notempty(state.split_range_min) ? 1*state.split_range_min : null,
+            notempty(state.split_range_max) ? 1*state.split_range_max : null,
+          ];
         }
         const frame = await this.frame_renderer.render(request);
         if (closed) break;
