@@ -15,15 +15,16 @@
 <meta name="description" content="Blender: NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis Authors, Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng,, Paper, ..." />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="nerfbaselines" href="cli.html" /><link rel="prev" title="Methods" href="methods.html" />
+        <link rel="prefetch" href="_static/logo.png" as="image" />
 
-    <!-- Generated with Sphinx 7.4.7 and Furo 2024.08.06 -->
+    <!-- Generated with Sphinx 7.4.7 and Furo 2025.07.19 -->
         <title>Datasets - NerfBaselines documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="_static/styles.css?v=5124f2f6" />
     
     
@@ -31,20 +32,20 @@
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
       }
     }
@@ -527,7 +528,7 @@
 <dt class="field-even">ID<span class="colon">:</span></dt>
 <dd class="field-even">Blender</dd>
 <dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
 </dd>
 </dl>
 <p>Blender (nerf-synthetic) is a synthetic dataset used to benchmark NeRF methods. It consists of 8 scenes of an object placed on a white background. Cameras are placed on a semi-sphere around the object. Scenes are licensed under various CC licenses.</p>
@@ -547,7 +548,7 @@
 <dt class="field-even">ID<span class="colon">:</span></dt>
 <dd class="field-even">Hierarchical 3DGS</dd>
 <dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
 </dd>
 </dl>
 <p>Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6–7km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset</p>
@@ -567,7 +568,7 @@
 <dt class="field-even">ID<span class="colon">:</span></dt>
 <dd class="field-even">LLFF</dd>
 <dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
 </dd>
 </dl>
 <p>LLFF is a dataset of forward-facing scenes with a small variation in camera pose. NeRF methods usually use NDC-space parametrization for the scene representation.</p>
@@ -587,7 +588,7 @@
 <dt class="field-even">ID<span class="colon">:</span></dt>
 <dd class="field-even">Mip-NeRF 360</dd>
 <dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
 </dd>
 </dl>
 <p>Mip-NeRF 360 is a collection of four indoor and five outdoor object-centric scenes. The camera trajectory is an orbit around the object with fixed elevation and radius. The test set takes each n-th frame of the trajectory as test views.</p>
@@ -607,7 +608,7 @@
 <dt class="field-even">ID<span class="colon">:</span></dt>
 <dd class="field-even">Nerfstudio</dd>
 <dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/evaluation.py#L237-L277">default (source code)</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/evaluation.py#L237-L277">default (source code)</a></p>
 </dd>
 </dl>
 <p>Nerfstudio Dataset includes 10 in-the-wild captures obtained using either a mobile phone or a mirror-less camera with a fisheye lens. We processed the data using either COLMAP or the Polycam app to obtain camera poses and intrinsic parameters.</p>
@@ -627,7 +628,7 @@
 <dt class="field-even">ID<span class="colon">:</span></dt>
 <dd class="field-even">Photo Tourism</dd>
 <dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/datasets/phototourism.py#L156-L200">nerfw (source code)</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/datasets/phototourism.py#L156-L200">nerfw (source code)</a></p>
 </dd>
 </dl>
 <p>Photo Tourism is a dataset of images of famous landmarks, such as the Sacre Coeur, the Trevi Fountain, and the Brandenburg Gate. The images were captured by tourist at different times of the day and year, images have varying lighting conditions and occlusions. The evaluation protocol is based on NeRF-W, where the image appearance embeddings are optimized on the left side of the image and the metrics are computed on the right side of the image.</p>
@@ -650,7 +651,7 @@
 <dt class="field-odd">ID<span class="colon">:</span></dt>
 <dd class="field-odd">SeaThru-NeRF</dd>
 <dt class="field-even">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/evaluation.py#L237-L277">default (source code)</a></p>
+<dd class="field-even"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/evaluation.py#L237-L277">default (source code)</a></p>
 </dd>
 </dl>
 <p>SeaThru-NeRF dataset contains four underwater forward-facing scenes.</p>
@@ -670,7 +671,7 @@
 <dt class="field-even">ID<span class="colon">:</span></dt>
 <dd class="field-even">Tanks and Temples</dd>
 <dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/evaluation.py#L237-L277">default (source code)</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/evaluation.py#L237-L277">default (source code)</a></p>
 </dd>
 </dl>
 <p>Tanks and Temples is a benchmark for image-based 3D reconstruction. The benchmark sequences were acquired outside the lab, in realistic conditions. Ground-truth data was captured using an industrial laser scanner. The benchmark includes both outdoor scenes and indoor environments. The dataset is split into three subsets: training, intermediate, and advanced.</p>
@@ -690,7 +691,7 @@
 <dt class="field-even">ID<span class="colon">:</span></dt>
 <dd class="field-even">Zip-NeRF</dd>
 <dt class="field-odd">Evaluation protocol<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/8d5eed9/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/1570afc/nerfbaselines/evaluation.py#L280-L282">nerf (source code)</a></p>
 </dd>
 </dl>
 <p>ZipNeRF is a dataset with four large scenes: Berlin, Alameda, London, and NYC, (1000-2000 photos each) captured using fisheye cameras. This implementation uses undistorted images which are provided with the dataset and the downsampled resolutions are between 1392 × 793 and 2000 × 1140 depending on scene. It is recommended to use exposure modeling with this dataset if available.</p>
@@ -788,7 +789,7 @@
 </div><script src="_static/documentation_options.js?v=5929fcd5"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     <script src="_static/design-tabs.js?v=f930bc37"></script>
