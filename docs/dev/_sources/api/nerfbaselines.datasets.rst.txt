@@ -61,6 +61,15 @@ nerfbaselines.datasets.mipnerf360
    :undoc-members:
    :show-inheritance:
 
+nerfbaselines.datasets.mipnerf360\_sparse
+-----------------------------------------
+
+.. automodule:: nerfbaselines.datasets.mipnerf360_sparse
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 nerfbaselines.datasets.nerfonthego
 ----------------------------------
 
