@@ -538,14 +538,14 @@
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code></div>
 </dd>
 </dl>
-<p>2DGS adopts 2D oriented disks as surface elements and allows high-quality rendering with Gaussian Splatting. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks.</p>
+<p>2DGS adopts 2D oriented disks as surface elements and allows high-quality rendering with Gaussian Splatting. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for masks.</p>
 </section>
 <section id="3dgs-mcmc">
 <h2>3DGS-MCMC<a class="headerlink" href="#3dgs-mcmc" title="Link to this heading">¶</a></h2>
@@ -572,14 +572,14 @@
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code></div>
 </dd>
 </dl>
-<p>3DGS-MCMC reinterprets 3D Gaussian Splatting as MCMC sampling, introducing noise-based updates and removing heuristic cloning strategies, leading to improved rendering quality, efficient Gaussian use, and robustness to initialization. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks and web demos.</p>
+<p>3DGS-MCMC reinterprets 3D Gaussian Splatting as MCMC sampling, introducing noise-based updates and removing heuristic cloning strategies, leading to improved rendering quality, efficient Gaussian use, and robustness to initialization. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for masks and web demos.</p>
 </section>
 <section id="camp">
 <h2>CamP<a class="headerlink" href="#camp" title="Link to this heading">¶</a></h2>
@@ -602,7 +602,7 @@
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -636,11 +636,11 @@
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -677,7 +677,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -711,7 +711,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -745,7 +745,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -779,7 +779,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -813,14 +813,14 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code></div>
 </dd>
 </dl>
-<p>gsplat is an open-source library for CUDA accelerated rasterization of gaussians with python bindings. It is inspired by the 3DGS paper, but it is faster, more memory efficient, and with a growing list of new features. In NerfBaselines, the method was modified to enable appearance optimization, to support sampling masks, and to support setting background color (which is required for the Blender dataset).</p>
+<p>gsplat is an open-source library for CUDA accelerated rasterization of gaussians with python bindings. It is inspired by the 3DGS paper, but it is faster, more memory efficient, and with a growing list of new features. In NerfBaselines, the method was modified to enable appearance optimization, to support masks, and to support setting background color (which is required for the Blender dataset).</p>
 </section>
 <section id="hierarchical-3dgs">
 <h2>H3DGS<a class="headerlink" href="#hierarchical-3dgs" title="Link to this heading">¶</a></h2>
@@ -847,7 +847,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_error</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points2D_xy</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_error</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points2D_xy</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -891,7 +891,7 @@ be used - highest quality, but slowest performance.</p>
 <dd class="field-even">docker, conda, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -930,7 +930,7 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -964,7 +964,7 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -994,7 +994,7 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1030,7 +1030,7 @@ It is, however slower to train and render compared to other approaches.</p>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1064,7 +1064,7 @@ It is, however slower to train and render compared to other approaches.</p>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1095,7 +1095,7 @@ It is, however slower to train and render compared to other approaches.</p>
 <dd class="field-odd">conda, docker, apptainer, python</dd>
 <dt class="field-even">Camera models<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-odd">Required features<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1120,11 +1120,11 @@ It is, however slower to train and render compared to other approaches.</p>
 <dd class="field-odd">conda, docker, apptainer, python</dd>
 <dt class="field-even">Camera models<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-odd">Required features<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-even">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1158,7 +1158,7 @@ It is, however slower to train and render compared to other approaches.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1192,7 +1192,7 @@ It is, however slower to train and render compared to other approaches.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1226,14 +1226,14 @@ It is, however slower to train and render compared to other approaches.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
 <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 </dl>
-<p>Scaffold-GS uses anchor points to distribute local 3D Gaussians, and predicts their attributes on-the-fly based on viewing direction and distance within the view frustum. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks. Note, that we also implement a demo for the method, but it does not evaluate the MLP and the Gaussians are “baked” for specific viewing direction and appearance embedding (if enabled).</p>
+<p>Scaffold-GS uses anchor points to distribute local 3D Gaussians, and predicts their attributes on-the-fly based on viewing direction and distance within the view frustum. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for masks. Note, that we also implement a demo for the method, but it does not evaluate the MLP and the Gaussians are “baked” for specific viewing direction and appearance embedding (if enabled).</p>
 </section>
 <section id="seathru-nerf">
 <h2>SeaThru-NeRF<a class="headerlink" href="#seathru-nerf" title="Link to this heading">¶</a></h2>
@@ -1256,7 +1256,7 @@ It is, however slower to train and render compared to other approaches.</p>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1295,7 +1295,7 @@ It is based on MipNeRF 360 and was disagned for underwater scenes.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1329,7 +1329,7 @@ It is based on MipNeRF 360 and was disagned for underwater scenes.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1375,7 +1375,7 @@ However, at least –cap_max have to be tuned for each dataset.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1405,7 +1405,7 @@ However, at least –cap_max have to be tuned for each dataset.</p>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1439,11 +1439,11 @@ However, at least –cap_max have to be tuned for each dataset.</p>
 <dd class="field-even">docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1476,7 +1476,7 @@ from the paper.</p>
 </dd>
 <dt class="field-odd">Required features<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
 </dd>
 <dt class="field-even">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1506,7 +1506,7 @@ from the paper.</p>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
