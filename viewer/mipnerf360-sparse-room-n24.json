@@ -1,0 +1,154 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360-sparse",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "room-n24",
+      "downscale_factor": 2,
+      "type": "object-centric",
+      "expected_scene_scale": 5.248773860931396,
+      "name": "Mip-NeRF 360 Sparse",
+      "description": "Modified Mip-NeRF 360 dataset with small train set (12 or 24) views. The dataset is used to evaluate sparse-view NVS methods.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden-n12",
+          "name": "garden n12"
+        },
+        {
+          "id": "bicycle-n12",
+          "name": "bicycle n12"
+        },
+        {
+          "id": "flowers-n12",
+          "name": "flowers n12"
+        },
+        {
+          "id": "treehill-n12",
+          "name": "treehill n12"
+        },
+        {
+          "id": "stump-n12",
+          "name": "stump n12"
+        },
+        {
+          "id": "kitchen-n12",
+          "name": "kitchen n12"
+        },
+        {
+          "id": "bonsai-n12",
+          "name": "bonsai n12"
+        },
+        {
+          "id": "counter-n12",
+          "name": "counter n12"
+        },
+        {
+          "id": "room-n12",
+          "name": "room n12"
+        },
+        {
+          "id": "garden-n24",
+          "name": "garden n24"
+        },
+        {
+          "id": "bicycle-n24",
+          "name": "bicycle n24"
+        },
+        {
+          "id": "flowers-n24",
+          "name": "flowers n24"
+        },
+        {
+          "id": "treehill-n24",
+          "name": "treehill n24"
+        },
+        {
+          "id": "stump-n24",
+          "name": "stump n24"
+        },
+        {
+          "id": "kitchen-n24",
+          "name": "kitchen n24"
+        },
+        {
+          "id": "bonsai-n24",
+          "name": "bonsai n24"
+        },
+        {
+          "id": "counter-n24",
+          "name": "counter n24"
+        },
+        {
+          "id": "room-n24",
+          "name": "room n24"
+        }
+      ]
+    }
+  },
+  "viewer_transform": [
+    0.02530872466525129,
+    -0.08353710994924868,
+    0.15831069826854108,
+    0.05127528505937307,
+    -0.17898966851953443,
+    -0.010157351525260918,
+    0.02325480644077527,
+    0.09363763960156579,
+    -0.001850993340311933,
+    -0.15999887576985594,
+    -0.08413200365433827,
+    0.25611527567901204
+  ],
+  "viewer_initial_pose": [
+    -0.40229056958991527,
+    -0.36720593271935276,
+    0.8386429962044119,
+    -0.6719928615271644,
+    -0.9149756825261679,
+    0.1299102910787888,
+    -0.38202461502177515,
+    0.4308260912059211,
+    0.031333327913873756,
+    -0.921022899269967,
+    -0.38824618135340455,
+    0.24223219007503757
+  ],
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360-sparse/room-n24-nbv.json"
+  }
+}

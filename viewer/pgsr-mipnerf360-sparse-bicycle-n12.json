@@ -1,0 +1,315 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360-sparse",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "bicycle-n12",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.489276885986328,
+      "name": "Mip-NeRF 360 Sparse",
+      "description": "Modified Mip-NeRF 360 dataset with small train set (12 or 24) views. The dataset is used to evaluate sparse-view NVS methods.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden-n12",
+          "name": "garden n12"
+        },
+        {
+          "id": "bicycle-n12",
+          "name": "bicycle n12"
+        },
+        {
+          "id": "flowers-n12",
+          "name": "flowers n12"
+        },
+        {
+          "id": "treehill-n12",
+          "name": "treehill n12"
+        },
+        {
+          "id": "stump-n12",
+          "name": "stump n12"
+        },
+        {
+          "id": "kitchen-n12",
+          "name": "kitchen n12"
+        },
+        {
+          "id": "bonsai-n12",
+          "name": "bonsai n12"
+        },
+        {
+          "id": "counter-n12",
+          "name": "counter n12"
+        },
+        {
+          "id": "room-n12",
+          "name": "room n12"
+        },
+        {
+          "id": "garden-n24",
+          "name": "garden n24"
+        },
+        {
+          "id": "bicycle-n24",
+          "name": "bicycle n24"
+        },
+        {
+          "id": "flowers-n24",
+          "name": "flowers n24"
+        },
+        {
+          "id": "treehill-n24",
+          "name": "treehill n24"
+        },
+        {
+          "id": "stump-n24",
+          "name": "stump n24"
+        },
+        {
+          "id": "kitchen-n24",
+          "name": "kitchen n24"
+        },
+        {
+          "id": "bonsai-n24",
+          "name": "bonsai n24"
+        },
+        {
+          "id": "counter-n24",
+          "name": "counter n24"
+        },
+        {
+          "id": "room-n24",
+          "name": "room n24"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "pgsr",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "preload_img": true,
+        "ncc_scale": 1.0,
+        "multi_view_num": 8,
+        "multi_view_max_angle": 30,
+        "multi_view_min_dis": 0.01,
+        "multi_view_max_dis": 1.5,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.001,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "scale_loss_weight": 100.0,
+        "wo_image_weight": false,
+        "single_view_weight": 0.015,
+        "single_view_weight_from_iter": 7000,
+        "use_virtul_cam": false,
+        "virtul_cam_prob": 0.5,
+        "use_multi_view_trim": true,
+        "multi_view_ncc_weight": 0.15,
+        "multi_view_geo_weight": 0.03,
+        "multi_view_weight_from_iter": 7000,
+        "multi_view_patch_size": 3,
+        "multi_view_sample_num": 102400,
+        "multi_view_pixel_noise_th": 1.0,
+        "wo_use_geo_occ_aware": false,
+        "opacity_cull_threshold": 0.005,
+        "densify_abs_grad_threshold": 0.0002,
+        "abs_split_radii2D_threshold": 20,
+        "max_abs_split_points": 50000,
+        "max_all_points": 6000000,
+        "exposure_compensation": false,
+        "random_background": false,
+        "compute_cov3D_python": false,
+        "max_depth": 5.0,
+        "voxel_size": 0.002,
+        "num_images": 1600,
+        "num_cluster": 1,
+        "use_depth_filter": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "normal"
+      ],
+      "name": "PGSR",
+      "description": "Planar-based Gaussian Splatting Reconstruction representation for efficient and high-fidelity surface reconstruction from multi-view RGB images without any geometric prior (depth or normal from pre-trained model).",
+      "paper_title": "PGSR: Planar-based Gaussian Splatting for Efficient and High-Fidelity Surface Reconstruction",
+      "paper_authors": [
+        "Danpeng Chen",
+        "Hai Li",
+        "Weicai Ye",
+        "Yifan Wang",
+        "Weijian Xie",
+        "Shangjin Zhai",
+        "Nan Wang",
+        "Haomin Liu",
+        "Hujun Bao",
+        "Guofeng Zhang"
+      ],
+      "paper_link": "https://zju3dv.github.io/pgsr/paper/pgsr.pdf",
+      "link": "https://zju3dv.github.io/pgsr/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/zju3dv/PGSR/refs/heads/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "1.2.9.dev0+g09eaa2c.d20250222",
+      "num_iterations": 30000,
+      "total_train_time": 1342.28429,
+      "resources_utilization": {
+        "memory": 3365,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 5482
+      },
+      "datetime": "2025-07-29T20:41:47",
+      "config_overrides": {
+        "densify_abs_grad_threshold": 0.0002
+      },
+      "applied_presets": [
+        "mipnerf360"
+      ],
+      "dataset_metadata": {
+        "id": "mipnerf360-sparse",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "bicycle-n12",
+        "downscale_factor": 4,
+        "type": "object-centric",
+        "viewer_transform": [
+          0.100641,
+          -0.048408,
+          0.191749,
+          -0.036292,
+          -0.197547,
+          -0.034693,
+          0.094926,
+          0.040533,
+          0.009271,
+          -0.213758,
+          -0.058831,
+          0.123791
+        ],
+        "viewer_initial_pose": [
+          -0.429804,
+          0.21805,
+          0.876198,
+          -0.849136,
+          -0.899517,
+          -0.187606,
+          -0.394555,
+          0.374348,
+          0.078347,
+          -0.957736,
+          0.276774,
+          -0.135356
+        ],
+        "expected_scene_scale": 4.489277
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "4ad7b7a3da5b234333e21fba9fb20e71246516a34f3574311abb6e2d5f7806ec"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "normal": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      }
+    }
+  },
+  "viewer_transform": [
+    0.10064108212013094,
+    -0.04840836718565938,
+    0.1917486996869939,
+    -0.03629194924824735,
+    -0.19754742442924694,
+    -0.034693283737045756,
+    0.09492602672319235,
+    0.04053342038825885,
+    0.00927074962050647,
+    -0.21375819475562535,
+    -0.05883066643085887,
+    0.1237913555219098
+  ],
+  "viewer_initial_pose": [
+    -0.429803987832724,
+    0.21805036077027126,
+    0.8761977901643854,
+    -0.8491355049644806,
+    -0.8995166700608872,
+    -0.18760606432552596,
+    -0.39455506384145295,
+    0.37434796699962347,
+    0.07834715321928612,
+    -0.9577358831962588,
+    0.27677377530093317,
+    -0.13535608600366245
+  ],
+  "method_id": "pgsr",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/pgsr/mipnerf360-sparse/bicycle-n12_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360-sparse/bicycle-n12-nbv.json"
+  }
+}

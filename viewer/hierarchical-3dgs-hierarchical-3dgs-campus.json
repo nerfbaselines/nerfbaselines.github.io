@@ -5,7 +5,7 @@
       "color_space": "srgb",
       "evaluation_protocol": "nerf",
       "scene": "campus",
-      "expected_scene_scale": 32.817154,
+      "expected_scene_scale": 32.81715393066406,
       "name": "Hierarchical 3DGS",
       "description": "Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6\u20137km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset",
       "paper_title": "A Hierarchical 3D Gaussian Representation for Real-Time Rendering of Very Large Datasets",
@@ -216,37 +216,40 @@
     }
   },
   "viewer_transform": [
-    0.029244,
-    -2.4e-05,
-    -0.000346,
-    -0.392994,
-    -2.4e-05,
-    0.028967,
-    -0.004028,
-    -0.611346,
-    0.000346,
-    0.004028,
-    0.028965,
-    0.001965
+    0.0292440092677606,
+    -2.3916279583884665e-05,
+    -0.00034561325585909957,
+    -0.3929942795894381,
+    -2.3916279583884665e-05,
+    0.028967310960664888,
+    -0.004028201253228255,
+    -0.6113461962644042,
+    0.00034561325585909957,
+    0.004028201253228255,
+    0.028965259212996194,
+    0.001964768907709981
   ],
   "viewer_initial_pose": [
-    0.99227,
-    -0.102294,
-    0.070262,
-    0.155765,
-    -0.089187,
-    -0.194122,
-    0.976915,
-    0.085807,
-    -0.086293,
-    -0.975629,
-    -0.201744,
-    -0.001429
+    0.9922697656224088,
+    -0.10229364533836924,
+    0.07026212957895424,
+    0.15576527293608655,
+    -0.08918695498983094,
+    -0.19412159638566842,
+    0.9769147865407666,
+    0.08580682105527362,
+    -0.08629277661132849,
+    -0.9756294531709317,
+    -0.2017442495276588,
+    -0.0014287007813644597
   ],
   "method_id": "hierarchical-3dgs",
   "renderer": {
     "antialias_2D_kernel_size": 0.3,
     "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/hierarchical-3dgs/hierarchical-3dgs/campus_demo/scene.ksplat",
     "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/hierarchical-3dgs/campus-nbv.json"
   }
 }

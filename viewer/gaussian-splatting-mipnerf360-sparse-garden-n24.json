@@ -1,0 +1,265 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360-sparse",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "garden-n24",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.062445831298828,
+      "name": "Mip-NeRF 360 Sparse",
+      "description": "Modified Mip-NeRF 360 dataset with small train set (12 or 24) views. The dataset is used to evaluate sparse-view NVS methods.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden-n12",
+          "name": "garden n12"
+        },
+        {
+          "id": "bicycle-n12",
+          "name": "bicycle n12"
+        },
+        {
+          "id": "flowers-n12",
+          "name": "flowers n12"
+        },
+        {
+          "id": "treehill-n12",
+          "name": "treehill n12"
+        },
+        {
+          "id": "stump-n12",
+          "name": "stump n12"
+        },
+        {
+          "id": "kitchen-n12",
+          "name": "kitchen n12"
+        },
+        {
+          "id": "bonsai-n12",
+          "name": "bonsai n12"
+        },
+        {
+          "id": "counter-n12",
+          "name": "counter n12"
+        },
+        {
+          "id": "room-n12",
+          "name": "room n12"
+        },
+        {
+          "id": "garden-n24",
+          "name": "garden n24"
+        },
+        {
+          "id": "bicycle-n24",
+          "name": "bicycle n24"
+        },
+        {
+          "id": "flowers-n24",
+          "name": "flowers n24"
+        },
+        {
+          "id": "treehill-n24",
+          "name": "treehill n24"
+        },
+        {
+          "id": "stump-n24",
+          "name": "stump n24"
+        },
+        {
+          "id": "kitchen-n24",
+          "name": "kitchen n24"
+        },
+        {
+          "id": "bonsai-n24",
+          "name": "bonsai n24"
+        },
+        {
+          "id": "counter-n24",
+          "name": "counter n24"
+        },
+        {
+          "id": "room-n24",
+          "name": "room n24"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "gaussian-splatting",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 15000,
+        "densify_grad_threshold": 0.0002,
+        "random_background": false,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "Gaussian Splatting",
+      "description": "Official Gaussian Splatting implementation extended to support distorted camera models. It is fast to train (1 hous) and render (200 FPS).",
+      "paper_title": "3D Gaussian Splatting for Real-Time Radiance Field Rendering",
+      "paper_authors": [
+        "Bernhard Kerbl",
+        "Georgios Kopanas",
+        "Thomas Leimk\u00fchler",
+        "George Drettakis"
+      ],
+      "paper_link": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/3d_gaussian_splatting_low.pdf",
+      "link": "https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/graphdeco-inria/gaussian-splatting/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "0.1.dev2+g82c8880.d20250730",
+      "num_iterations": 30000,
+      "total_train_time": 1340.02774,
+      "resources_utilization": {
+        "memory": 3339,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 8856
+      },
+      "datetime": "2025-07-30T23:21:44",
+      "config_overrides": {},
+      "applied_presets": [],
+      "dataset_metadata": {
+        "id": "mipnerf360-sparse",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "garden-n24",
+        "downscale_factor": 4,
+        "type": "object-centric",
+        "viewer_transform": [
+          -0.062382,
+          0.116195,
+          -0.213547,
+          0.081561,
+          0.243107,
+          0.028286,
+          -0.055626,
+          -0.079967,
+          -0.001686,
+          -0.220667,
+          -0.119576,
+          0.459853
+        ],
+        "viewer_initial_pose": [
+          -0.054379,
+          0.206984,
+          -0.976832,
+          1.117785,
+          0.998485,
+          0.019543,
+          -0.051443,
+          0.064102,
+          0.008443,
+          -0.978149,
+          -0.207733,
+          0.185817
+        ],
+        "expected_scene_scale": 4.062446
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "905496eb6d64f0a0a592e4c76bc0d0ef0c2af790073850147d977c122408c8ca"
+    },
+    "outputs_configuration": {
+      "color": {}
+    }
+  },
+  "viewer_transform": [
+    -0.062381786462799384,
+    0.11619491115890204,
+    -0.2135470812354862,
+    0.08156141637421702,
+    0.24310651013184167,
+    0.028285687777970185,
+    -0.05562597795554482,
+    -0.07996737452486069,
+    -0.0016858527051146362,
+    -0.22066663625577893,
+    -0.11957631232784417,
+    0.45985257585122147
+  ],
+  "viewer_initial_pose": [
+    -0.054378552389099694,
+    0.20698411239116934,
+    -0.9768318895058448,
+    1.1177847653153992,
+    0.9984846926947308,
+    0.019543273065450166,
+    -0.05144284357570385,
+    0.06410215638531541,
+    0.008442637955600804,
+    -0.9781490909121793,
+    -0.20773316401815276,
+    0.1858166467568103
+  ],
+  "method_id": "gaussian-splatting",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/gaussian-splatting/mipnerf360-sparse/garden-n24_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360-sparse/garden-n24-nbv.json"
+  }
+}

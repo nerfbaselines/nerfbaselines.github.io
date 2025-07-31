@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+<title>NerfBaselines: Method SparseGS</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="256x256">
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.7.0/dist/tabler-icons.min.css" rel="stylesheet">
+    <script src="/scripts.js" defer></script>
+  </head>
+  <body class="main-container">
+    
+<main>
+  <div class="results-page__header">
+    <h1>
+      SparseGS<a class="text-blue" href="javascript:history.back()"><i class="ti ti-arrow-back-up"></i></a>
+    </h1>
+    <p class="text-justify">
+    SparseGS augments 3D Gaussian Splatting with depth-based priors, tailored depth rendering, a floater-pruning heuristic, and Unseen Viewpoint Regularization, letting it overcome “floaters” and background collapse when training views are scarce. Tested on Mip-NeRF360, LLFF, and DTU, it still trains quickly and renders in real time while reconstructing unbounded or forward-facing scenes from as few as 12 and 3 input images, respectively.
+    </p>
+    
+    <div cass="results-page__header-links">
+      
+      <div>Web: <a href="https://formycat.github.io/SparseGS-Real-Time-360-Sparse-View-Synthesis-using-Gaussian-Splatting/" class="text-blue link-underline">https://formycat.github.io/SparseGS-Real-Time-360-Sparse-View-Synthesis-using-Gaussian-Splatting/</a></div>
+      
+      
+      <div>Paper: <a href="https://arxiv.org/pdf/2312.00206.pdf" class="text-blue link-underline">SparseGS: Real-Time 360° Sparse View Synthesis using Gaussian Splatting</a></div>
+      
+      
+      <div>Authors: <span style="font-weight: normal;font-style: italic">Haolin Xiong, Sairisheek Muttukuru, Rishi Upadhyay, Pradyumna Chari, Achuta Kadambi</span></div>
+      
+    </div>
+    
+  </div>
+  
+  <div id=mipnerf360-sparse class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Mip-NeRF 360 Sparse
+      </h2>
+      <p class="text-justify">Modified Mip-NeRF 360 dataset with small train set (12 or 24) views. The dataset is used to evaluate sparse-view NVS methods.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/garden-n12.zip" title="Download checkpoint and predictions for scene garden n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-garden-n12.json" title="Online demo for scene garden n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="8" class="w120">garden n12</td>
+        
+        <td data-sort-value="44"><span class="table__allowcopy">19.26</span>
+
+</td>
+        
+        <td data-sort-value="80"><span class="table__allowcopy">0.553</span>
+
+</td>
+        
+        <td data-sort-value="75"><span class="table__allowcopy">0.367</span>
+
+</td>
+        
+        <td data-sort-value="110"><span class="table__allowcopy">32m 50s</span>
+
+</td>
+        <td data-sort-value="93"><span class="table__allowcopy">10.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/bicycle-n12.zip" title="Download checkpoint and predictions for scene bicycle n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-bicycle-n12.json" title="Online demo for scene bicycle n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="0" class="w120">bicycle n12</td>
+        
+        <td data-sort-value="39"><span class="table__allowcopy">17.10</span>
+
+</td>
+        
+        <td data-sort-value="73"><span class="table__allowcopy">0.342</span>
+
+</td>
+        
+        <td data-sort-value="84"><span class="table__allowcopy">0.495</span>
+
+</td>
+        
+        <td data-sort-value="109"><span class="table__allowcopy">31m 41s</span>
+
+</td>
+        <td data-sort-value="92"><span class="table__allowcopy">10.59 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/flowers-n12.zip" title="Download checkpoint and predictions for scene flowers n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-flowers-n12.json" title="Online demo for scene flowers n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="6" class="w120">flowers n12</td>
+        
+        <td data-sort-value="36"><span class="table__allowcopy">14.08</span>
+
+</td>
+        
+        <td data-sort-value="72"><span class="table__allowcopy">0.241</span>
+
+</td>
+        
+        <td data-sort-value="89"><span class="table__allowcopy">0.582</span>
+
+</td>
+        
+        <td data-sort-value="111"><span class="table__allowcopy">32m 51s</span>
+
+</td>
+        <td data-sort-value="91"><span class="table__allowcopy">10.45 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/treehill-n12.zip" title="Download checkpoint and predictions for scene treehill n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-treehill-n12.json" title="Online demo for scene treehill n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="16" class="w120">treehill n12</td>
+        
+        <td data-sort-value="37"><span class="table__allowcopy">15.46</span>
+
+</td>
+        
+        <td data-sort-value="75"><span class="table__allowcopy">0.344</span>
+
+</td>
+        
+        <td data-sort-value="88"><span class="table__allowcopy">0.577</span>
+
+</td>
+        
+        <td data-sort-value="112"><span class="table__allowcopy">32m 57s</span>
+
+</td>
+        <td data-sort-value="94"><span class="table__allowcopy">10.96 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/stump-n12.zip" title="Download checkpoint and predictions for scene stump n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-stump-n12.json" title="Online demo for scene stump n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="14" class="w120">stump n12</td>
+        
+        <td data-sort-value="41"><span class="table__allowcopy">18.15</span>
+
+</td>
+        
+        <td data-sort-value="74"><span class="table__allowcopy">0.343</span>
+
+</td>
+        
+        <td data-sort-value="87"><span class="table__allowcopy">0.542</span>
+
+</td>
+        
+        <td data-sort-value="108"><span class="table__allowcopy">28m 11s</span>
+
+</td>
+        <td data-sort-value="90"><span class="table__allowcopy">10.01 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/kitchen-n12.zip" title="Download checkpoint and predictions for scene kitchen n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-kitchen-n12.json" title="Online demo for scene kitchen n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="10" class="w120">kitchen n12</td>
+        
+        <td data-sort-value="48"><span class="table__allowcopy">20.80</span>
+
+</td>
+        
+        <td data-sort-value="84"><span class="table__allowcopy">0.739</span>
+
+</td>
+        
+        <td data-sort-value="74"><span class="table__allowcopy">0.338</span>
+
+</td>
+        
+        <td data-sort-value="121"><span class="table__allowcopy">47m 38s</span>
+
+</td>
+        <td data-sort-value="99"><span class="table__allowcopy">11.64 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/bonsai-n12.zip" title="Download checkpoint and predictions for scene bonsai n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-bonsai-n12.json" title="Online demo for scene bonsai n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="2" class="w120">bonsai n12</td>
+        
+        <td data-sort-value="42"><span class="table__allowcopy">18.23</span>
+
+</td>
+        
+        <td data-sort-value="82"><span class="table__allowcopy">0.685</span>
+
+</td>
+        
+        <td data-sort-value="81"><span class="table__allowcopy">0.443</span>
+
+</td>
+        
+        <td data-sort-value="118"><span class="table__allowcopy">42m 58s</span>
+
+</td>
+        <td data-sort-value="97"><span class="table__allowcopy">11.42 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/counter-n12.zip" title="Download checkpoint and predictions for scene counter n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-counter-n12.json" title="Online demo for scene counter n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="4" class="w120">counter n12</td>
+        
+        <td data-sort-value="40"><span class="table__allowcopy">18.05</span>
+
+</td>
+        
+        <td data-sort-value="81"><span class="table__allowcopy">0.643</span>
+
+</td>
+        
+        <td data-sort-value="82"><span class="table__allowcopy">0.465</span>
+
+</td>
+        
+        <td data-sort-value="120"><span class="table__allowcopy">46m 29s</span>
+
+</td>
+        <td data-sort-value="95"><span class="table__allowcopy">11.35 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/room-n12.zip" title="Download checkpoint and predictions for scene room n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-room-n12.json" title="Online demo for scene room n12" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="12" class="w120">room n12</td>
+        
+        <td data-sort-value="47"><span class="table__allowcopy">20.40</span>
+
+</td>
+        
+        <td data-sort-value="83"><span class="table__allowcopy">0.733</span>
+
+</td>
+        
+        <td data-sort-value="80"><span class="table__allowcopy">0.443</span>
+
+</td>
+        
+        <td data-sort-value="119"><span class="table__allowcopy">45m 35s</span>
+
+</td>
+        <td data-sort-value="96"><span class="table__allowcopy">11.41 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/garden-n24.zip" title="Download checkpoint and predictions for scene garden n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-garden-n24.json" title="Online demo for scene garden n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="9" class="w120">garden n24</td>
+        
+        <td data-sort-value="52"><span class="table__allowcopy">23.74</span>
+
+</td>
+        
+        <td data-sort-value="85"><span class="table__allowcopy">0.744</span>
+
+</td>
+        
+        <td data-sort-value="72"><span class="table__allowcopy">0.243</span>
+
+</td>
+        
+        <td data-sort-value="117"><span class="table__allowcopy">41m 2s</span>
+
+</td>
+        <td data-sort-value="105"><span class="table__allowcopy">12.36 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/bicycle-n24.zip" title="Download checkpoint and predictions for scene bicycle n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-bicycle-n24.json" title="Online demo for scene bicycle n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="1" class="w120">bicycle n24</td>
+        
+        <td data-sort-value="45"><span class="table__allowcopy">19.80</span>
+
+</td>
+        
+        <td data-sort-value="79"><span class="table__allowcopy">0.479</span>
+
+</td>
+        
+        <td data-sort-value="79"><span class="table__allowcopy">0.424</span>
+
+</td>
+        
+        <td data-sort-value="116"><span class="table__allowcopy">39m 57s</span>
+
+</td>
+        <td data-sort-value="107"><span class="table__allowcopy">12.54 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/flowers-n24.zip" title="Download checkpoint and predictions for scene flowers n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-flowers-n24.json" title="Online demo for scene flowers n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="7" class="w120">flowers n24</td>
+        
+        <td data-sort-value="38"><span class="table__allowcopy">16.39</span>
+
+</td>
+        
+        <td data-sort-value="76"><span class="table__allowcopy">0.344</span>
+
+</td>
+        
+        <td data-sort-value="86"><span class="table__allowcopy">0.530</span>
+
+</td>
+        
+        <td data-sort-value="115"><span class="table__allowcopy">39m 35s</span>
+
+</td>
+        <td data-sort-value="98"><span class="table__allowcopy">11.52 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/treehill-n24.zip" title="Download checkpoint and predictions for scene treehill n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-treehill-n24.json" title="Online demo for scene treehill n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="17" class="w120">treehill n24</td>
+        
+        <td data-sort-value="43"><span class="table__allowcopy">18.81</span>
+
+</td>
+        
+        <td data-sort-value="78"><span class="table__allowcopy">0.444</span>
+
+</td>
+        
+        <td data-sort-value="85"><span class="table__allowcopy">0.529</span>
+
+</td>
+        
+        <td data-sort-value="114"><span class="table__allowcopy">38m 29s</span>
+
+</td>
+        <td data-sort-value="100"><span class="table__allowcopy">11.79 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/stump-n24.zip" title="Download checkpoint and predictions for scene stump n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-stump-n24.json" title="Online demo for scene stump n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="15" class="w120">stump n24</td>
+        
+        <td data-sort-value="46"><span class="table__allowcopy">20.03</span>
+
+</td>
+        
+        <td data-sort-value="77"><span class="table__allowcopy">0.443</span>
+
+</td>
+        
+        <td data-sort-value="83"><span class="table__allowcopy">0.481</span>
+
+</td>
+        
+        <td data-sort-value="113"><span class="table__allowcopy">36m 19s</span>
+
+</td>
+        <td data-sort-value="102"><span class="table__allowcopy">12.22 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/kitchen-n24.zip" title="Download checkpoint and predictions for scene kitchen n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-kitchen-n24.json" title="Online demo for scene kitchen n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="11" class="w120">kitchen n24</td>
+        
+        <td data-sort-value="53"><span class="table__allowcopy">24.20</span>
+
+</td>
+        
+        <td data-sort-value="89"><span class="table__allowcopy">0.839</span>
+
+</td>
+        
+        <td data-sort-value="73"><span class="table__allowcopy">0.258</span>
+
+</td>
+        
+        <td data-sort-value="125"><span class="table__allowcopy">57m 15s</span>
+
+</td>
+        <td data-sort-value="104"><span class="table__allowcopy">12.31 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/bonsai-n24.zip" title="Download checkpoint and predictions for scene bonsai n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-bonsai-n24.json" title="Online demo for scene bonsai n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="3" class="w120">bonsai n24</td>
+        
+        <td data-sort-value="50"><span class="table__allowcopy">22.76</span>
+
+</td>
+        
+        <td data-sort-value="88"><span class="table__allowcopy">0.818</span>
+
+</td>
+        
+        <td data-sort-value="76"><span class="table__allowcopy">0.381</span>
+
+</td>
+        
+        <td data-sort-value="122"><span class="table__allowcopy">52m 36s</span>
+
+</td>
+        <td data-sort-value="106"><span class="table__allowcopy">12.52 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/counter-n24.zip" title="Download checkpoint and predictions for scene counter n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-counter-n24.json" title="Online demo for scene counter n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="5" class="w120">counter n24</td>
+        
+        <td data-sort-value="49"><span class="table__allowcopy">22.64</span>
+
+</td>
+        
+        <td data-sort-value="86"><span class="table__allowcopy">0.778</span>
+
+</td>
+        
+        <td data-sort-value="77"><span class="table__allowcopy">0.382</span>
+
+</td>
+        
+        <td data-sort-value="124"><span class="table__allowcopy">55m 36s</span>
+
+</td>
+        <td data-sort-value="101"><span class="table__allowcopy">12.13 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/sparsegs/mipnerf360-sparse/room-n24.zip" title="Download checkpoint and predictions for scene room n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=sparsegs-mipnerf360-sparse-room-n24.json" title="Online demo for scene room n24" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td data-sort-value="13" class="w120">room n24</td>
+        
+        <td data-sort-value="51"><span class="table__allowcopy">23.71</span>
+
+</td>
+        
+        <td data-sort-value="87"><span class="table__allowcopy">0.800</span>
+
+</td>
+        
+        <td data-sort-value="78"><span class="table__allowcopy">0.400</span>
+
+</td>
+        
+        <td data-sort-value="123"><span class="table__allowcopy">55m 29s</span>
+
+</td>
+        <td data-sort-value="103"><span class="table__allowcopy">12.23 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">19.65</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.573</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.438</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">42m 5s</span>
+
+</td>
+        <td><span class="table__allowcopy">11.56 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
+</main>
+
+  </body>
+</html>

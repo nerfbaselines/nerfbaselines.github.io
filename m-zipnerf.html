@@ -1747,6 +1747,602 @@ Instead of sampling along the ray it samples along a spiral path - approximating
     
   </div>
   
+  <div id=mipnerf360-sparse class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+        Mip-NeRF 360 Sparse
+      </h2>
+      <p class="text-justify">Modified Mip-NeRF 360 dataset with small train set (12 or 24) views. The dataset is used to evaluate sparse-view NVS methods.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by scene (ascending)">Scene <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/garden-n12.zip" title="Download checkpoint and predictions for scene garden n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="8" class="w120">garden n12</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">19.69</span>
+
+</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">0.521</span>
+
+</td>
+        
+        <td data-sort-value="128"><span class="table__allowcopy">0.372</span>
+
+</td>
+        
+        <td data-sort-value="134"><span class="table__allowcopy">5h 22m 55s</span>
+
+</td>
+        <td data-sort-value="134"><span class="table__allowcopy">29.28 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/bicycle-n12.zip" title="Download checkpoint and predictions for scene bicycle n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="0" class="w120">bicycle n12</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">14.23</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.183</span>
+
+</td>
+        
+        <td data-sort-value="141"><span class="table__allowcopy">0.644</span>
+
+</td>
+        
+        <td data-sort-value="132"><span class="table__allowcopy">5h 18m 11s</span>
+
+</td>
+        <td data-sort-value="128"><span class="table__allowcopy">29.08 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/flowers-n12.zip" title="Download checkpoint and predictions for scene flowers n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="6" class="w120">flowers n12</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">12.11</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.133</span>
+
+</td>
+        
+        <td data-sort-value="143"><span class="table__allowcopy">0.692</span>
+
+</td>
+        
+        <td data-sort-value="141"><span class="table__allowcopy">5h 54m 33s</span>
+
+</td>
+        <td data-sort-value="126"><span class="table__allowcopy">29.00 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/treehill-n12.zip" title="Download checkpoint and predictions for scene treehill n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="16" class="w120">treehill n12</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">15.73</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.307</span>
+
+</td>
+        
+        <td data-sort-value="133"><span class="table__allowcopy">0.554</span>
+
+</td>
+        
+        <td data-sort-value="139"><span class="table__allowcopy">5h 31m 58s</span>
+
+</td>
+        <td data-sort-value="132"><span class="table__allowcopy">29.19 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/stump-n12.zip" title="Download checkpoint and predictions for scene stump n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="14" class="w120">stump n12</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">17.11</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.239</span>
+
+</td>
+        
+        <td data-sort-value="139"><span class="table__allowcopy">0.623</span>
+
+</td>
+        
+        <td data-sort-value="130"><span class="table__allowcopy">5h 15m 30s</span>
+
+</td>
+        <td data-sort-value="130"><span class="table__allowcopy">29.10 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/kitchen-n12.zip" title="Download checkpoint and predictions for scene kitchen n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="10" class="w120">kitchen n12</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">13.47</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">0.397</span>
+
+</td>
+        
+        <td data-sort-value="140"><span class="table__allowcopy">0.635</span>
+
+</td>
+        
+        <td data-sort-value="142"><span class="table__allowcopy">5h 56m 43s</span>
+
+</td>
+        <td data-sort-value="140"><span class="table__allowcopy">30.69 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/bonsai-n12.zip" title="Download checkpoint and predictions for scene bonsai n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="2" class="w120">bonsai n12</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">14.37</span>
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">0.474</span>
+
+</td>
+        
+        <td data-sort-value="138"><span class="table__allowcopy">0.623</span>
+
+</td>
+        
+        <td data-sort-value="126"><span class="table__allowcopy">5h 11m 15s</span>
+
+</td>
+        <td data-sort-value="141"><span class="table__allowcopy">30.69 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/counter-n12.zip" title="Download checkpoint and predictions for scene counter n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="4" class="w120">counter n12</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">12.03</span>
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">0.379</span>
+
+</td>
+        
+        <td data-sort-value="142"><span class="table__allowcopy">0.685</span>
+
+</td>
+        
+        <td data-sort-value="135"><span class="table__allowcopy">5h 23m 6s</span>
+
+</td>
+        <td data-sort-value="136"><span class="table__allowcopy">30.69 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/room-n12.zip" title="Download checkpoint and predictions for scene room n12" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="12" class="w120">room n12</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">18.91</span>
+
+</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">0.711</span>
+
+</td>
+        
+        <td data-sort-value="130"><span class="table__allowcopy">0.430</span>
+
+</td>
+        
+        <td data-sort-value="143"><span class="table__allowcopy">5h 56m 45s</span>
+
+</td>
+        <td data-sort-value="137"><span class="table__allowcopy">30.69 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/garden-n24.zip" title="Download checkpoint and predictions for scene garden n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="9" class="w120">garden n24</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">24.47</span>
+
+</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">0.754</span>
+
+</td>
+        
+        <td data-sort-value="126"><span class="table__allowcopy">0.209</span>
+
+</td>
+        
+        <td data-sort-value="131"><span class="table__allowcopy">5h 15m 40s</span>
+
+</td>
+        <td data-sort-value="135"><span class="table__allowcopy">29.28 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/bicycle-n24.zip" title="Download checkpoint and predictions for scene bicycle n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="1" class="w120">bicycle n24</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">14.53</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.209</span>
+
+</td>
+        
+        <td data-sort-value="137"><span class="table__allowcopy">0.610</span>
+
+</td>
+        
+        <td data-sort-value="129"><span class="table__allowcopy">5h 14m 20s</span>
+
+</td>
+        <td data-sort-value="129"><span class="table__allowcopy">29.08 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/flowers-n24.zip" title="Download checkpoint and predictions for scene flowers n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="7" class="w120">flowers n24</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">13.77</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">0.239</span>
+
+</td>
+        
+        <td data-sort-value="135"><span class="table__allowcopy">0.593</span>
+
+</td>
+        
+        <td data-sort-value="128"><span class="table__allowcopy">5h 14m 16s</span>
+
+</td>
+        <td data-sort-value="127"><span class="table__allowcopy">29.00 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/treehill-n24.zip" title="Download checkpoint and predictions for scene treehill n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="17" class="w120">treehill n24</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">17.73</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.360</span>
+
+</td>
+        
+        <td data-sort-value="131"><span class="table__allowcopy">0.480</span>
+
+</td>
+        
+        <td data-sort-value="140"><span class="table__allowcopy">5h 41m 51s</span>
+
+</td>
+        <td data-sort-value="133"><span class="table__allowcopy">29.19 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/stump-n24.zip" title="Download checkpoint and predictions for scene stump n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="15" class="w120">stump n24</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">17.29</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">0.239</span>
+
+</td>
+        
+        <td data-sort-value="136"><span class="table__allowcopy">0.607</span>
+
+</td>
+        
+        <td data-sort-value="127"><span class="table__allowcopy">5h 13m 15s</span>
+
+</td>
+        <td data-sort-value="131"><span class="table__allowcopy">29.10 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/kitchen-n24.zip" title="Download checkpoint and predictions for scene kitchen n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="11" class="w120">kitchen n24</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">14.56</span>
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">0.516</span>
+
+</td>
+        
+        <td data-sort-value="132"><span class="table__allowcopy">0.541</span>
+
+</td>
+        
+        <td data-sort-value="133"><span class="table__allowcopy">5h 22m 22s</span>
+
+</td>
+        <td data-sort-value="142"><span class="table__allowcopy">30.69 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/bonsai-n24.zip" title="Download checkpoint and predictions for scene bonsai n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="3" class="w120">bonsai n24</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">17.48</span>
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">0.718</span>
+
+</td>
+        
+        <td data-sort-value="129"><span class="table__allowcopy">0.425</span>
+
+</td>
+        
+        <td data-sort-value="136"><span class="table__allowcopy">5h 24m 17s</span>
+
+</td>
+        <td data-sort-value="143"><span class="table__allowcopy">30.69 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/counter-n24.zip" title="Download checkpoint and predictions for scene counter n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="5" class="w120">counter n24</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">14.61</span>
+
+</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">0.517</span>
+
+</td>
+        
+        <td data-sort-value="134"><span class="table__allowcopy">0.584</span>
+
+</td>
+        
+        <td data-sort-value="138"><span class="table__allowcopy">5h 27m 33s</span>
+
+</td>
+        <td data-sort-value="138"><span class="table__allowcopy">30.69 GB</span>
+
+</td>
+      </tr>
+      
+      <tr>
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/zipnerf/mipnerf360-sparse/room-n24.zip" title="Download checkpoint and predictions for scene room n24" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td data-sort-value="13" class="w120">room n24</td>
+        
+        <td data-sort-value="16"><span class="table__allowcopy">24.28</span>
+
+</td>
+        
+        <td data-sort-value="17"><span class="table__allowcopy">0.816</span>
+
+</td>
+        
+        <td data-sort-value="127"><span class="table__allowcopy">0.332</span>
+
+</td>
+        
+        <td data-sort-value="137"><span class="table__allowcopy">5h 24m 56s</span>
+
+</td>
+        <td data-sort-value="139"><span class="table__allowcopy">30.69 GB</span>
+
+</td>
+      </tr>
+      
+    </tbody>
+    <tfoot>
+      <tr>
+        <td class="w70"></td>
+        <td class="w120">Average</td>
+        
+        <td><span class="table__allowcopy">16.47</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.428</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">0.535</span>
+
+</td>
+        
+        <td><span class="table__allowcopy">5h 27m 11s</span>
+
+</td>
+        <td><span class="table__allowcopy">29.82 GB</span>
+
+</td>
+      </tr>
+  </table>
+</div>
+    
+  </div>
+  
 </main>
 
   </body>

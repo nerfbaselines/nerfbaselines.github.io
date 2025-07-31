@@ -1,0 +1,272 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360-sparse",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "treehill-n24",
+      "downscale_factor": 4,
+      "type": "object-centric",
+      "expected_scene_scale": 4.31795105934143,
+      "name": "Mip-NeRF 360 Sparse",
+      "description": "Modified Mip-NeRF 360 dataset with small train set (12 or 24) views. The dataset is used to evaluate sparse-view NVS methods.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden-n12",
+          "name": "garden n12"
+        },
+        {
+          "id": "bicycle-n12",
+          "name": "bicycle n12"
+        },
+        {
+          "id": "flowers-n12",
+          "name": "flowers n12"
+        },
+        {
+          "id": "treehill-n12",
+          "name": "treehill n12"
+        },
+        {
+          "id": "stump-n12",
+          "name": "stump n12"
+        },
+        {
+          "id": "kitchen-n12",
+          "name": "kitchen n12"
+        },
+        {
+          "id": "bonsai-n12",
+          "name": "bonsai n12"
+        },
+        {
+          "id": "counter-n12",
+          "name": "counter n12"
+        },
+        {
+          "id": "room-n12",
+          "name": "room n12"
+        },
+        {
+          "id": "garden-n24",
+          "name": "garden n24"
+        },
+        {
+          "id": "bicycle-n24",
+          "name": "bicycle n24"
+        },
+        {
+          "id": "flowers-n24",
+          "name": "flowers n24"
+        },
+        {
+          "id": "treehill-n24",
+          "name": "treehill n24"
+        },
+        {
+          "id": "stump-n24",
+          "name": "stump n24"
+        },
+        {
+          "id": "kitchen-n24",
+          "name": "kitchen n24"
+        },
+        {
+          "id": "bonsai-n24",
+          "name": "bonsai n24"
+        },
+        {
+          "id": "counter-n24",
+          "name": "counter n24"
+        },
+        {
+          "id": "room-n24",
+          "name": "room n24"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "dropgaussian",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "n_views": 3,
+        "rand_pcd": false,
+        "scale_coords": null,
+        "init_type": "sfm",
+        "iterations": 10000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 10000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 10000,
+        "densify_grad_threshold": 0.0005,
+        "random_background": false,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "color"
+      ],
+      "name": "DropGaussian",
+      "description": "DropGaussian extends 3DGS with a simple regularization technique for sparse view novel view synthesis.",
+      "paper_title": "DropGaussian: Structural Regularization for Sparse-view Gaussian Splatting",
+      "paper_authors": [
+        "Hyunwoo Park",
+        "Gun Ryu",
+        "Wonjun Kim"
+      ],
+      "paper_venue": "CVPR 2025",
+      "paper_link": "https://openaccess.thecvf.com/content/CVPR2025/papers/Park_DropGaussian_Structural_Regularization_for_Sparse-view_Gaussian_Splatting_CVPR_2025_paper.pdf",
+      "link": "https://github.com/DCVL-3D/DropGaussian_release",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/DCVL-3D/DropGaussian_release/refs/heads/main/LICENSE_GAUSSIAN_SPLATTING.md"
+        },
+        {
+          "name": "Apache 2.0",
+          "url": "https://raw.githubusercontent.com/DCVL-3D/DropGaussian_release/refs/heads/main/LICENSE"
+        }
+      ],
+      "nb_version": "1.2.9.dev0+g09eaa2c.d20250222",
+      "num_iterations": 10000,
+      "total_train_time": 261.08639,
+      "resources_utilization": {
+        "memory": 3502,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 4434
+      },
+      "datetime": "2025-07-29T12:22:19",
+      "config_overrides": {},
+      "applied_presets": [],
+      "dataset_metadata": {
+        "id": "mipnerf360-sparse",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "treehill-n24",
+        "downscale_factor": 4,
+        "type": "object-centric",
+        "viewer_transform": [
+          0.12091,
+          -0.078347,
+          0.183821,
+          0.069648,
+          -0.199675,
+          -0.039146,
+          0.114653,
+          -0.038647,
+          -0.007651,
+          -0.216511,
+          -0.087247,
+          0.003699
+        ],
+        "viewer_initial_pose": [
+          -0.916359,
+          0.178095,
+          0.358565,
+          -0.263677,
+          -0.400247,
+          -0.386366,
+          -0.830978,
+          0.85951,
+          -0.009456,
+          -0.904988,
+          0.425332,
+          -0.283281
+        ],
+        "expected_scene_scale": 4.317951
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "47c9a0588b750251c1aa42eae96189b388b44768d814a181b966f939f4edb037"
+    },
+    "outputs_configuration": {
+      "color": {}
+    }
+  },
+  "viewer_transform": [
+    0.1209097567448788,
+    -0.0783468590182115,
+    0.18382133833083997,
+    0.06964764942687864,
+    -0.1996747030761264,
+    -0.03914598439414386,
+    0.11465292481731136,
+    -0.03864693937280436,
+    -0.00765058942325462,
+    -0.21651108042497322,
+    -0.08724738706152017,
+    0.003699305025225086
+  ],
+  "viewer_initial_pose": [
+    -0.9163586420837374,
+    0.1780949943642362,
+    0.3585651706317599,
+    -0.2636765539731453,
+    -0.40024670164462056,
+    -0.3863658462548571,
+    -0.8309777681787833,
+    0.8595097052397078,
+    -0.009455626862428259,
+    -0.904988180739589,
+    0.4253316058451147,
+    -0.2832814431065852
+  ],
+  "method_id": "dropgaussian",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/dropgaussian/mipnerf360-sparse/treehill-n24_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360-sparse/treehill-n24-nbv.json"
+  }
+}

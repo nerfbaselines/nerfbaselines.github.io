@@ -1,0 +1,291 @@
+{
+  "state": {
+    "dataset_info": {
+      "id": "mipnerf360-sparse",
+      "color_space": "srgb",
+      "evaluation_protocol": "nerf",
+      "scene": "room-n24",
+      "downscale_factor": 2,
+      "type": "object-centric",
+      "expected_scene_scale": 5.248773860931396,
+      "name": "Mip-NeRF 360 Sparse",
+      "description": "Modified Mip-NeRF 360 dataset with small train set (12 or 24) views. The dataset is used to evaluate sparse-view NVS methods.",
+      "paper_title": "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields",
+      "paper_authors": [
+        "Jonathan T. Barron",
+        "Ben Mildenhall",
+        "Dor Verbin",
+        "Pratul P. Srinivasan",
+        "Peter Hedman"
+      ],
+      "paper_link": "https://arxiv.org/pdf/2111.12077.pdf",
+      "link": "https://jonbarron.info/mipnerf360/",
+      "metrics": [
+        {
+          "id": "psnr",
+          "name": "PSNR",
+          "description": "Peak Signal to Noise Ratio. The higher the better.",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Peak_signal-to-noise_ratio"
+        },
+        {
+          "id": "ssim",
+          "name": "SSIM",
+          "description": "Structural Similarity Index. The higher the better. The implementation matches JAX's SSIM and torchmetrics's SSIM (with default parameters).",
+          "ascending": true,
+          "link": "https://en.wikipedia.org/wiki/Structural_similarity"
+        },
+        {
+          "id": "lpips_vgg",
+          "name": "LPIPS (VGG)",
+          "description": "Learned Perceptual Image Patch Similarity. The lower the better. The implementation uses VGG backbone and matches lpips pip package with checkpoint version 0.1",
+          "ascending": false,
+          "link": "https://richzhang.github.io/PerceptualSimilarity/"
+        }
+      ],
+      "default_metric": "psnr",
+      "scenes": [
+        {
+          "id": "garden-n12",
+          "name": "garden n12"
+        },
+        {
+          "id": "bicycle-n12",
+          "name": "bicycle n12"
+        },
+        {
+          "id": "flowers-n12",
+          "name": "flowers n12"
+        },
+        {
+          "id": "treehill-n12",
+          "name": "treehill n12"
+        },
+        {
+          "id": "stump-n12",
+          "name": "stump n12"
+        },
+        {
+          "id": "kitchen-n12",
+          "name": "kitchen n12"
+        },
+        {
+          "id": "bonsai-n12",
+          "name": "bonsai n12"
+        },
+        {
+          "id": "counter-n12",
+          "name": "counter n12"
+        },
+        {
+          "id": "room-n12",
+          "name": "room n12"
+        },
+        {
+          "id": "garden-n24",
+          "name": "garden n24"
+        },
+        {
+          "id": "bicycle-n24",
+          "name": "bicycle n24"
+        },
+        {
+          "id": "flowers-n24",
+          "name": "flowers n24"
+        },
+        {
+          "id": "treehill-n24",
+          "name": "treehill n24"
+        },
+        {
+          "id": "stump-n24",
+          "name": "stump n24"
+        },
+        {
+          "id": "kitchen-n24",
+          "name": "kitchen n24"
+        },
+        {
+          "id": "bonsai-n24",
+          "name": "bonsai n24"
+        },
+        {
+          "id": "counter-n24",
+          "name": "counter n24"
+        },
+        {
+          "id": "room-n24",
+          "name": "room n24"
+        }
+      ]
+    },
+    "render_resolution": 768,
+    "prerender_enabled": false,
+    "method_info": {
+      "method_id": "3dgs-mcmc",
+      "hparams": {
+        "sh_degree": 3,
+        "white_background": false,
+        "cap_max": 1500000,
+        "init_type": "sfm",
+        "scale_coords": null,
+        "iterations": 30000,
+        "position_lr_init": 0.00016,
+        "position_lr_final": 1.6e-06,
+        "position_lr_delay_mult": 0.01,
+        "position_lr_max_steps": 30000,
+        "feature_lr": 0.0025,
+        "opacity_lr": 0.05,
+        "scaling_lr": 0.005,
+        "rotation_lr": 0.001,
+        "percent_dense": 0.01,
+        "lambda_dssim": 0.2,
+        "densification_interval": 100,
+        "opacity_reset_interval": 3000,
+        "densify_from_iter": 500,
+        "densify_until_iter": 25000,
+        "densify_grad_threshold": 0.0002,
+        "random_background": false,
+        "noise_lr": 500000.0,
+        "scale_reg": 0.01,
+        "opacity_reg": 0.01,
+        "convert_SHs_python": false,
+        "compute_cov3D_python": false,
+        "debug": false
+      },
+      "supported_camera_models": [
+        "pinhole"
+      ],
+      "supported_outputs": [
+        "accumulation",
+        "color",
+        "depth",
+        "normal"
+      ],
+      "name": "3DGS-MCMC",
+      "description": "3DGS-MCMC reinterprets 3D Gaussian Splatting as MCMC sampling, introducing noise-based updates and removing heuristic cloning strategies, leading to improved rendering quality, efficient Gaussian use, and robustness to initialization. In NerfBaselines, we fixed bug with cx,cy, added appearance embedding optimization, and added support for sampling masks and web demos.",
+      "paper_title": "3D Gaussian Splatting as Markov Chain Monte Carlo",
+      "paper_authors": [
+        "Shakiba Kheradmand",
+        "Daniel Rebain",
+        "Gopal Sharma",
+        "Weiwei Sun",
+        "Yang-Che Tseng",
+        "Hossam Isack",
+        "Abhishek Kar",
+        "Andrea Tagliasacchi",
+        "Kwang Moo Yi"
+      ],
+      "paper_link": "https://ubc-vision.github.io/3dgs-mcmc/paper.pdf",
+      "link": "https://ubc-vision.github.io/3dgs-mcmc/",
+      "licenses": [
+        {
+          "name": "custom, research only",
+          "url": "https://raw.githubusercontent.com/ubc-vision/3dgs-mcmc/refs/heads/main/LICENSE.md"
+        }
+      ],
+      "nb_version": "1.2.9.dev0+g09eaa2c.d20250222",
+      "num_iterations": 30000,
+      "total_train_time": 2156.39179,
+      "resources_utilization": {
+        "memory": 3580,
+        "gpu_name": "NVIDIA A100-SXM4-40GB",
+        "gpu_memory": 13486
+      },
+      "datetime": "2025-07-29T20:34:43",
+      "config_overrides": {
+        "cap_max": 1500000
+      },
+      "applied_presets": [
+        "mipnerf360/room"
+      ],
+      "dataset_metadata": {
+        "id": "mipnerf360-sparse",
+        "color_space": "srgb",
+        "evaluation_protocol": "nerf",
+        "scene": "room-n24",
+        "downscale_factor": 2,
+        "type": "object-centric",
+        "viewer_transform": [
+          0.025309,
+          -0.083537,
+          0.158311,
+          0.051275,
+          -0.17899,
+          -0.010157,
+          0.023255,
+          0.093638,
+          -0.001851,
+          -0.159999,
+          -0.084132,
+          0.256115
+        ],
+        "viewer_initial_pose": [
+          -0.402291,
+          -0.367206,
+          0.838643,
+          -0.671993,
+          -0.914976,
+          0.12991,
+          -0.382025,
+          0.430826,
+          0.031333,
+          -0.921023,
+          -0.388246,
+          0.242232
+        ],
+        "expected_scene_scale": 5.248774
+      },
+      "evaluation_protocol": "nerf",
+      "checkpoint_sha256": "7f250badd36bfdb1baf51b5b51967207eefa2202de3dc5d4da64659eabab4710"
+    },
+    "outputs_configuration": {
+      "color": {},
+      "depth": {
+        "palette_enabled": true
+      },
+      "accumulation": {
+        "palette_enabled": true,
+        "range_min": 0,
+        "range_max": 1
+      },
+      "normal": {}
+    }
+  },
+  "viewer_transform": [
+    0.02530872466525129,
+    -0.08353710994924868,
+    0.15831069826854108,
+    0.05127528505937307,
+    -0.17898966851953443,
+    -0.010157351525260918,
+    0.02325480644077527,
+    0.09363763960156579,
+    -0.001850993340311933,
+    -0.15999887576985594,
+    -0.08413200365433827,
+    0.25611527567901204
+  ],
+  "viewer_initial_pose": [
+    -0.40229056958991527,
+    -0.36720593271935276,
+    0.8386429962044119,
+    -0.6719928615271644,
+    -0.9149756825261679,
+    0.1299102910787888,
+    -0.38202461502177515,
+    0.4308260912059211,
+    0.031333327913873756,
+    -0.921022899269967,
+    -0.38824618135340455,
+    0.24223219007503757
+  ],
+  "method_id": "3dgs-mcmc",
+  "renderer": {
+    "scene_url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-supplementary/resolve/main/3dgs-mcmc/mipnerf360-sparse/room-n24_demo/scene.ksplat",
+    "type": "3dgs"
+  },
+  "dataset": {
+    "url": "https://huggingface.co/datasets/nerfbaselines/nerfbaselines-data/resolve/main/mipnerf360-sparse/room-n24-nbv.json"
+  }
+}
