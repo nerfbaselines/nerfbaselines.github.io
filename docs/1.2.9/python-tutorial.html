@@ -1,0 +1,991 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="./">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta property="og:title" content="Python tutorial" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="python-tutorial.html" />
+<meta property="og:site_name" content="NerfBaselines" />
+<meta property="og:description" content="Apart from the CLI, NerfBaselines also provides a Python API that allows you to interact with the methods programmatically. This tutorial will guide you through the process of using the Python API ..." />
+<meta property="og:image:width" content="1146" />
+<meta property="og:image:height" content="600" />
+<meta property="og:image" content="_images/social_previews/summary_python-tutorial_1d8aa3bb.png" />
+<meta property="og:image:alt" content="Apart from the CLI, NerfBaselines also provides a Python API that allows you to interact with the methods programmatically. This tutorial will guide you through the process of using the Python API ..." />
+<meta name="description" content="Apart from the CLI, NerfBaselines also provides a Python API that allows you to interact with the methods programmatically. This tutorial will guide you through the process of using the Python API ..." />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Adding new methods" href="adding-new-methods.html" /><link rel="prev" title="Viewer" href="viewer.html" />
+        <link rel="prefetch" href="_static/logo.png" as="image" />
+
+    <!-- Generated with Sphinx 7.4.7 and Furo 2025.07.19 -->
+        <title>Python tutorial - NerfBaselines documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    <link rel="stylesheet" type="text/css" href="_static/styles.css?v=5124f2f6" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">NerfBaselines  documentation</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><div class="sidebar-scroll"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+    <span class="sidebar-brand-text">NerfBaselines  documentation
+    
+      <select class="sidebar-brand-version-active" onchange="window.location.href=this.value">
+      
+        
+        
+        
+        
+        <option  value="/docs/dev/">Version: dev</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/">Version: 1.2.10</option>
+        
+      
+        
+        
+          
+        
+        
+        
+        <option  selected value="/docs/1.2.9/">Version: 1.2.9</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.8/">Version: 1.2.8</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.7/">Version: 1.2.7</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.6/">Version: 1.2.6</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.5/">Version: 1.2.5</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.4/">Version: 1.2.4</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.3/">Version: 1.2.3</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.2/">Version: 1.2.2</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.1/">Version: 1.2.1</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.2.0/">Version: 1.2.0</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.1.0/">Version: 1.1.0</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.0.2/">Version: 1.0.2</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.0.1/">Version: 1.0.1</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/1.0.0/">Version: 1.0.0</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.15/">Version: 0.0.15</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.14/">Version: 0.0.14</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.13/">Version: 0.0.13</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.12/">Version: 0.0.12</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.11/">Version: 0.0.11</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.10/">Version: 0.0.10</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.9/">Version: 0.0.9</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.8/">Version: 0.0.8</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.7/">Version: 0.0.7</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.6/">Version: 0.0.6</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.5/">Version: 0.0.5</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.4/">Version: 0.0.4</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.3/">Version: 0.0.3</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.2/">Version: 0.0.2</option>
+        
+      
+        
+        
+        
+        
+        <option  value="/docs/0.0.1/">Version: 0.0.1</option>
+        
+      
+      </select>
+    
+    </span>
+  </div>
+  
+</a>
+<div class="sidebar-brand-links">
+  <a href="https://nerfbaselines.github.io/"><i class="ti ti-globe"></i> Website</a> &middot;
+  <a href="https://github.com/nerfbaselines/nerfbaselines"><i class="ti ti-brand-github-filled"></i> GitHub</a> &middot;
+  <a href="https://arxiv.org/pdf/2406.17345.pdf"><i class="ti ti-file-type-pdf"></i> Paper</a>
+</div><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using-custom-data.html">Using custom data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="viewer.html">Viewer</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Python tutorial</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="adding-new-methods.html">Adding new methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-dataset-loader.html">Custom dataset loader</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding-new-datasets.html">Adding new datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends.html">Isolated backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporting-demos.html">Creating web demos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporting-meshes.html">Exporting meshes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exporting-results-tables.html">Exporting results tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom-web.html">Custom web benchmark</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="methods.html">Methods</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli.html">CLI</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/modules.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.html">nerfbaselines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.backends.html">nerfbaselines.backends</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.cameras.html">nerfbaselines.cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.datasets.html">nerfbaselines.datasets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.evaluation.html">nerfbaselines.evaluation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.io.html">nerfbaselines.io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.logging.html">nerfbaselines.logging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.metrics.html">nerfbaselines.metrics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.results.html">nerfbaselines.results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.training.html">nerfbaselines.training</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.utils.html">nerfbaselines.utils</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.viewer.html">nerfbaselines.viewer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.web.html">nerfbaselines.web</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="python-tutorial">
+<h1>Python tutorial<a class="headerlink" href="#python-tutorial" title="Link to this heading">¶</a></h1>
+<p>Apart from the CLI, NerfBaselines also provides a Python API that allows you to interact with the methods programmatically. This tutorial will guide you through the process of using the Python API to train a method, evaluate it, and visualize the results.</p>
+<p class="sd-text-left"><a class="sd-sphinx-override sd-btn sd-text-wrap sd-btn-outline-primary reference external" href="https://colab.research.google.com/github/nerfbaselines/nerfbaselines/blob/main/docs/python-tutorial.ipynb"><span>Open in Colab</span></a></p>
+<section id="rendering-images">
+<h2>Rendering images<a class="headerlink" href="#rendering-images" title="Link to this heading">¶</a></h2>
+<p>In this section, we will demonstrate how to render custom images using the Python API. We assume you already have a checkpoint of your model obtained either by downloading the checkpoint from <a class="reference external" href="https://nerfbaselines.github.io">nerfbaselines.github.io</a>, by running the <code class="docutils literal notranslate"><span class="pre">nerfbaselines</span> <span class="pre">train</span></code> command, or by training the method using the Python API shown at the end of this tutorial.</p>
+<p>First of all, you need to start the backend and load the checkpoint. There is a utility function <a class="reference internal" href="api/nerfbaselines.html#nerfbaselines.load_checkpoint" title="nerfbaselines.load_checkpoint"><code class="xref py py-func docutils literal notranslate"><span class="pre">nerfbaselines.load_checkpoint()</span></code></a> that simplifies this process.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># We use the ExitStack to manage the context managers such that</span>
+<span class="c1"># we can persist the contexts between cells. This is rarely needed</span>
+<span class="c1"># in practice, but it is useful for this tutorial.</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExitStack</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="n">ExitStack</span><span class="p">()</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">pprint</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_checkpoint</span>
+
+<span class="c1"># We will load the official gaussian-splatting checkpoint </span>
+<span class="c1"># for mipnerf360/bicycle scene. Note, the checkpoint_path </span>
+<span class="c1"># can be a local path or a URL, and it can be a path within </span>
+<span class="c1"># a zip file. In that case, NerfBaselines will automatically </span>
+<span class="c1"># download/extract the file to a temporary directory to </span>
+<span class="c1"># load the checkpoint.</span>
+<span class="n">checkpoint_path</span> <span class="o">=</span> <span class="s2">&quot;https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/mipnerf360/garden.zip/checkpoint&quot;</span>
+
+<span class="c1"># Start the conda backend and load the checkpoint</span>
+<span class="n">model</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">enter_context</span><span class="p">(</span><span class="n">load_checkpoint</span><span class="p">(</span><span class="n">checkpoint_path</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s2">&quot;conda&quot;</span><span class="p">))</span>
+
+<span class="c1"># Print model information</span>
+<span class="n">pprint</span><span class="o">.</span><span class="n">pprint</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">get_info</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading: 100%|██████████| 5.85G/5.85G [02:54&lt;00:00, 33.4MiB/s]
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">info:</span> Connection accepted, protocol: shm-pickle5-buffers
+{&#39;hparams&#39;: {&#39;compute_cov3D_python&#39;: False,
+             &#39;convert_SHs_python&#39;: False,
+             &#39;debug&#39;: False,
+             &#39;densification_interval&#39;: 100,
+             &#39;densify_from_iter&#39;: 500,
+             &#39;densify_grad_threshold&#39;: 0.0002,
+             &#39;densify_until_iter&#39;: 15000,
+             &#39;feature_lr&#39;: 0.0025,
+             &#39;iterations&#39;: 30000,
+             &#39;lambda_dssim&#39;: 0.2,
+             &#39;opacity_lr&#39;: 0.05,
+             &#39;opacity_reset_interval&#39;: 3000,
+             &#39;percent_dense&#39;: 0.01,
+             &#39;position_lr_delay_mult&#39;: 0.01,
+             &#39;position_lr_final&#39;: 1.6e-06,
+             &#39;position_lr_init&#39;: 0.00016,
+             &#39;position_lr_max_steps&#39;: 30000,
+             &#39;random_background&#39;: False,
+             &#39;rotation_lr&#39;: 0.001,
+             &#39;scale_coords&#39;: None,
+             &#39;scaling_lr&#39;: 0.005,
+             &#39;sh_degree&#39;: 3,
+             &#39;white_background&#39;: False},
+ &#39;loaded_checkpoint&#39;: &#39;/tmp/tmpc47_m09g/checkpoint&#39;,
+ &#39;loaded_step&#39;: 30000,
+ &#39;method_id&#39;: &#39;gaussian-splatting&#39;,
+ &#39;num_iterations&#39;: 30000,
+ &#39;required_features&#39;: frozenset({&#39;color&#39;, &#39;points3D_xyz&#39;}),
+ &#39;supported_camera_models&#39;: frozenset({&#39;pinhole&#39;}),
+ &#39;supported_outputs&#39;: (&#39;color&#39;,)}
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<p>After loading the checkpoint, you can interact with the model to render custom images.
+Rendering is done by calling the <code class="docutils literal notranslate"><span class="pre">render</span></code> method of the model. The <code class="docutils literal notranslate"><span class="pre">render</span></code> method takes
+the following arguments:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">camera</span></code>: A single <a class="reference internal" href="api/nerfbaselines.html#nerfbaselines.Cameras" title="nerfbaselines.Cameras"><code class="xref py py-class docutils literal notranslate"><span class="pre">nerfbaselines.Cameras</span></code></a> object which can be created by using <a class="reference internal" href="api/nerfbaselines.html#nerfbaselines.new_cameras" title="nerfbaselines.new_cameras"><code class="xref py py-func docutils literal notranslate"><span class="pre">nerfbaselines.new_cameras()</span></code></a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">options</span></code>: A dictionary with rendering options. Some of the commonly supported options are:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">embedding</span></code>: Apperance embedding for the viewpoint (if supported).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">outputs</span></code>: A tuple of outputs to render. Commonly supported outputs are <code class="docutils literal notranslate"><span class="pre">rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">depth</span></code>, <code class="docutils literal notranslate"><span class="pre">accumulation</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code>, however, each method can support different outputs. You should call <code class="docutils literal notranslate"><span class="pre">model.get_info()[&quot;supported_outputs&quot;]</span></code> to get the list of supported outputs. Note, that this arguments only gives a hint to the method to render the specified outputs, but the method can decide to render additional outputs or ignore unsupported outputs.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">output_type_dtypes</span></code>: A dictionary with output types and dtypes. This is usually used to speed up the rendering process by specifying <code class="docutils literal notranslate"><span class="pre">{'color':</span> <span class="pre">'uint8'}</span></code> which will convert image to <code class="docutils literal notranslate"><span class="pre">uint8</span></code> before transmitting it through the communication channel.</p></li>
+</ul>
+</li>
+</ul>
+<p>The following code snippet demonstrates how to render an image using the loaded model:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines</span><span class="w"> </span><span class="kn">import</span> <span class="n">new_cameras</span><span class="p">,</span> <span class="n">camera_model_to_int</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c1"># Camera parameters </span>
+<span class="c1"># pose: a 3x4 matrix representing the camera pose as camera-to-world transformation</span>
+<span class="n">pose</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+    <span class="p">[</span> <span class="mf">0.981</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.026</span><span class="p">,</span>  <span class="mf">0.194</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.463</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mf">0.08</span><span class="p">,</span>   <span class="mf">0.958</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.275</span><span class="p">,</span>  <span class="mf">2.936</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mf">0.179</span><span class="p">,</span>  <span class="mf">0.286</span><span class="p">,</span>  <span class="mf">0.941</span><span class="p">,</span> <span class="o">-</span><span class="mf">3.12</span> <span class="p">]],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+<span class="c1"># Camera intrinsics</span>
+<span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span> <span class="o">=</span> <span class="mi">481</span><span class="p">,</span> <span class="mi">481</span><span class="p">,</span> <span class="mi">324</span><span class="p">,</span> <span class="mi">210</span>
+<span class="c1"># Image resolution</span>
+<span class="n">w</span><span class="p">,</span> <span class="n">h</span> <span class="o">=</span>  <span class="mi">648</span><span class="p">,</span> <span class="mi">420</span>
+
+<span class="c1"># Create camera object</span>
+<span class="n">camera</span> <span class="o">=</span> <span class="n">new_cameras</span><span class="p">(</span>
+    <span class="n">poses</span><span class="o">=</span><span class="n">pose</span><span class="p">,</span>
+    <span class="n">intrinsics</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">fx</span><span class="p">,</span> <span class="n">fy</span><span class="p">,</span> <span class="n">cx</span><span class="p">,</span> <span class="n">cy</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">),</span>
+    <span class="n">image_sizes</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">w</span><span class="p">,</span> <span class="n">h</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span>
+    <span class="n">camera_models</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">camera_model_to_int</span><span class="p">(</span><span class="s2">&quot;pinhole&quot;</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="c1"># Render the image</span>
+<span class="n">outputs</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">camera</span><span class="o">=</span><span class="n">camera</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;output_type_dtypes&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;uint8&quot;</span><span class="p">}})</span>
+
+<span class="c1"># Display the rendered image</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">outputs</span><span class="p">[</span><span class="s2">&quot;color&quot;</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/c9c9eab1968cb8240bd91e78e14c266970e0591ec24b607f508e862d7026b483.png" src="_images/c9c9eab1968cb8240bd91e78e14c266970e0591ec24b607f508e862d7026b483.png" />
+</div>
+</div>
+</section>
+<section id="training-a-method">
+<h2>Training a method<a class="headerlink" href="#training-a-method" title="Link to this heading">¶</a></h2>
+<p>To train a method using the Python API, you can either write your own training loop, or use the provided <a class="reference internal" href="api/nerfbaselines.training.html#nerfbaselines.training.Trainer" title="nerfbaselines.training.Trainer"><code class="xref py py-class docutils literal notranslate"><span class="pre">nerfbaselines.training.Trainer</span></code></a> class.
+First we show how training can be done with a custom training loop:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExitStack</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines</span><span class="w"> </span><span class="kn">import</span> <span class="n">backends</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines.datasets</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">build_method_class</span><span class="p">,</span>
+    <span class="n">get_method_spec</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines.training</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">get_presets_and_config_overrides</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># We will use the &quot;gaussian-splatting&quot; method and &quot;conda&quot; backend</span>
+<span class="n">method_name</span> <span class="o">=</span> <span class="s2">&quot;gaussian-splatting&quot;</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="s2">&quot;conda&quot;</span>
+
+<span class="c1"># We will write the output to directory &quot;output&quot;</span>
+<span class="n">output_path</span> <span class="o">=</span> <span class="s2">&quot;output&quot;</span>
+
+<span class="c1"># We will use the data from the &quot;mipnerf360/bicycle&quot; scene</span>
+<span class="n">data</span> <span class="o">=</span> <span class="s2">&quot;external://mipnerf360/bicycle&quot;</span>
+
+<span class="c1"># We use the exit stack to simplify the context management</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="n">ExitStack</span><span class="p">()</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>
+
+<span class="c1"># Prepare the output directory, and mount it if necessary (e.g., for docker backend)</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">enter_context</span><span class="p">(</span><span class="n">backends</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">))</span>
+
+<span class="c1"># Get the method specification for a registered method</span>
+<span class="n">method_spec</span> <span class="o">=</span> <span class="n">get_method_spec</span><span class="p">(</span><span class="n">method_name</span><span class="p">)</span>
+
+<span class="c1"># Build the method class and start the backend</span>
+<span class="n">method_cls</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">enter_context</span><span class="p">(</span><span class="n">build_method_class</span><span class="p">(</span><span class="n">method_spec</span><span class="p">,</span> <span class="n">backend</span><span class="p">))</span>
+
+<span class="c1"># Load train dataset</span>
+<span class="c1"># We use the method info to load the required features and supported camera models</span>
+<span class="n">method_info</span> <span class="o">=</span> <span class="n">method_cls</span><span class="o">.</span><span class="n">get_method_info</span><span class="p">()</span>
+<span class="n">train_dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> 
+                             <span class="n">split</span><span class="o">=</span><span class="s2">&quot;train&quot;</span><span class="p">,</span> 
+                             <span class="n">features</span><span class="o">=</span><span class="n">method_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;required_features&quot;</span><span class="p">),</span>
+                             <span class="n">supported_camera_models</span><span class="o">=</span><span class="n">method_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;supported_camera_models&quot;</span><span class="p">),</span>
+                             <span class="n">load_features</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Load eval dataset</span>
+<span class="n">test_dataset</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> 
+                            <span class="n">split</span><span class="o">=</span><span class="s2">&quot;test&quot;</span><span class="p">,</span> 
+                            <span class="n">features</span><span class="o">=</span><span class="n">method_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;required_features&quot;</span><span class="p">),</span>
+                            <span class="n">supported_camera_models</span><span class="o">=</span><span class="n">method_info</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;supported_camera_models&quot;</span><span class="p">),</span>
+                            <span class="n">load_features</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Each method can specify custom presets and config overrides</span>
+<span class="c1"># Apply config overrides for the train dataset</span>
+<span class="n">presets</span><span class="p">,</span> <span class="n">config_overrides</span> <span class="o">=</span> <span class="n">get_presets_and_config_overrides</span><span class="p">(</span>
+    <span class="n">method_spec</span><span class="p">,</span> <span class="n">train_dataset</span><span class="p">[</span><span class="s2">&quot;metadata&quot;</span><span class="p">])</span>
+
+<span class="c1"># Build the method</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">method_cls</span><span class="p">(</span>
+    <span class="n">train_dataset</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">,</span>
+    <span class="n">config_overrides</span><span class="o">=</span><span class="n">config_overrides</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Training loop</span>
+<span class="n">model_info</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">get_info</span><span class="p">()</span>
+
+<span class="c1"># In this example we override the total number of iterations</span>
+<span class="c1"># to make the training faster</span>
+<span class="n">model_info</span><span class="p">[</span><span class="s2">&quot;num_iterations&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="k">with</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">total</span><span class="o">=</span><span class="n">model_info</span><span class="p">[</span><span class="s2">&quot;num_iterations&quot;</span><span class="p">])</span> <span class="k">as</span> <span class="n">pbar</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">model_info</span><span class="p">[</span><span class="s2">&quot;num_iterations&quot;</span><span class="p">]):</span>
+        <span class="n">metrics</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">train_iteration</span><span class="p">(</span><span class="n">step</span><span class="p">)</span>
+        <span class="n">pbar</span><span class="o">.</span><span class="n">set_postfix</span><span class="p">({</span><span class="s2">&quot;psnr&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">metrics</span><span class="p">[</span><span class="s1">&#39;psnr&#39;</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">})</span>
+        <span class="n">pbar</span><span class="o">.</span><span class="n">update</span><span class="p">()</span>
+
+<span class="c1"># Save the model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">&quot;checkpoint&quot;</span><span class="p">)</span>
+<span class="c1"># Create a minimal nb-info.json file such that the model can be loaded</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;nb-info.json&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">{{</span><span class="s1">&quot;method&quot;: &quot;</span><span class="si">{</span><span class="n">method_name</span><span class="si">}</span><span class="s1">&quot;</span><span class="se">}}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># Close the stack. In real code, you should use the context manager</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Cyan">info:</span> Connection accepted, protocol: shm-pickle5-buffers
+loading images: 100%|██████████| 169/169 [00:01&lt;00:00, 95.06it/s]
+/scratch/project/open-28-73/jonas/repos/nerfbaselines/nerfbaselines/datasets/_common.py:312: UserWarning: Downscaled image sizes are not a multiple of camera sizes.
+  warnings.warn(&quot;Downscaled image sizes are not a multiple of camera sizes.&quot;)
+loading images: 100%|██████████| 25/25 [00:00&lt;00:00, 94.32it/s]
+Loading Training Cameras [22/09 22:13:43]
+Loading Test Cameras [22/09 22:13:51]
+Number of points at initialisation :  54275 [22/09 22:13:51]
+100%|██████████| 100/100 [00:08&lt;00:00, 11.27it/s, psnr=6.56]
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">info:</span> Backend worker finished
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="using-trainer-class">
+<h2>Using Trainer class<a class="headerlink" href="#using-trainer-class" title="Link to this heading">¶</a></h2>
+<p>The <code class="xref py py-class docutils literal notranslate"><span class="pre">Trainer</span></code> class provides a high-level interface for training a method, and it takes care of loading the dataset, creating the model, and saving the checkpoints. The following code snippet extends the previous example and optimizes the model using the <code class="xref py py-class docutils literal notranslate"><span class="pre">Trainer</span></code> class.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">contextlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">ExitStack</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines</span><span class="w"> </span><span class="kn">import</span> <span class="n">backends</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">build_method_class</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nerfbaselines.training</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <span class="n">Trainer</span><span class="p">,</span> 
+    <span class="n">Indices</span><span class="p">,</span> 
+    <span class="n">build_logger</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># We use the exit stack to simplify the context management</span>
+<span class="n">stack</span> <span class="o">=</span> <span class="n">ExitStack</span><span class="p">()</span><span class="o">.</span><span class="fm">__enter__</span><span class="p">()</span>
+
+<span class="c1"># Prepare the output directory, and mount it if necessary (e.g., for docker backend)</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">enter_context</span><span class="p">(</span><span class="n">backends</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">output_path</span><span class="p">))</span>
+
+<span class="c1"># Build the method class and start the backend</span>
+<span class="n">method_cls</span> <span class="o">=</span> <span class="n">stack</span><span class="o">.</span><span class="n">enter_context</span><span class="p">(</span><span class="n">build_method_class</span><span class="p">(</span><span class="n">method_spec</span><span class="p">,</span> <span class="n">backend</span><span class="p">))</span>
+
+<span class="c1"># Build the method</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">method_cls</span><span class="p">(</span>
+    <span class="n">train_dataset</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">,</span>
+    <span class="n">config_overrides</span><span class="o">=</span><span class="n">config_overrides</span><span class="p">,</span>
+<span class="p">)</span>
+
+<span class="c1"># Build the trainer</span>
+<span class="n">trainer</span> <span class="o">=</span> <span class="n">Trainer</span><span class="p">(</span>
+    <span class="n">train_dataset</span><span class="o">=</span><span class="n">train_dataset</span><span class="p">,</span>
+    <span class="n">test_dataset</span><span class="o">=</span><span class="n">test_dataset</span><span class="p">,</span>
+    <span class="n">method</span><span class="o">=</span><span class="n">model</span><span class="p">,</span>
+    <span class="n">output</span><span class="o">=</span><span class="n">output_path</span><span class="p">,</span>
+    <span class="n">save_iters</span><span class="o">=</span><span class="n">Indices</span><span class="o">.</span><span class="n">every_iters</span><span class="p">(</span><span class="mi">10_000</span><span class="p">,</span> <span class="n">zero</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>  <span class="c1"># Save the model every 10k iterations</span>
+    <span class="n">eval_few_iters</span><span class="o">=</span><span class="n">Indices</span><span class="o">.</span><span class="n">every_iters</span><span class="p">(</span><span class="mi">2_000</span><span class="p">),</span>  <span class="c1"># Eval on few images every 2k iterations</span>
+    <span class="n">eval_all_iters</span><span class="o">=</span><span class="n">Indices</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">]),</span>  <span class="c1"># Eval on all images at the end</span>
+    <span class="n">logger</span><span class="o">=</span><span class="n">build_logger</span><span class="p">((</span><span class="s2">&quot;tensorboard&quot;</span><span class="p">,)),</span>  <span class="c1"># We will log to tensorboard</span>
+    <span class="n">generate_output_artifact</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="n">config_overrides</span><span class="o">=</span><span class="n">config_overrides</span><span class="p">,</span>
+    <span class="n">applied_presets</span><span class="o">=</span><span class="nb">frozenset</span><span class="p">(</span><span class="n">presets</span><span class="p">),</span>
+<span class="p">)</span>
+
+<span class="c1"># In this example we override the total number of iterations</span>
+<span class="c1"># to make the training faster</span>
+<span class="n">trainer</span><span class="o">.</span><span class="n">num_iterations</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># Finally, we train the method</span>
+<span class="n">trainer</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+
+<span class="c1"># Close the stack. In real code, you should use the context manager</span>
+<span class="n">stack</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold -Color-Bold-Cyan">info:</span> Connection accepted, protocol: shm-pickle5-buffers
+Loading Training Cameras [22/09 22:15:11]
+Loading Test Cameras [22/09 22:15:18]
+Number of points at initialisation :  54275 [22/09 22:15:18]
+training: 100%|██████████| 100/100 [00:11&lt;00:00, 11.91it/s, train/psnr=14.4304]Rendering all images at step=100: 100%|██████████| 25/25 [00:19&lt;00:00,  1.30it/s]
+training: 100%|██████████| 100/100 [00:31&lt;00:00, 11.91it/s, train/psnr=14.4304]{&#39;applied_presets&#39;: [],
+ &#39;checkpoint_sha256&#39;: &#39;acf027e845ff29e9db9558bd0a1166c87d5a77ca07ddb46f609c68661cb228cc&#39;,
+ &#39;config_overrides&#39;: {},
+ &#39;dataset_metadata&#39;: {&#39;color_space&#39;: &#39;srgb&#39;,
+                      &#39;downscale_factor&#39;: 4,
+                      &#39;evaluation_protocol&#39;: &#39;nerf&#39;,
+                      &#39;expected_scene_scale&#39;: 4.299345,
+                      &#39;id&#39;: &#39;mipnerf360&#39;,
+                      &#39;scene&#39;: &#39;bicycle&#39;,
+                      &#39;type&#39;: &#39;object-centric&#39;,
+                      &#39;viewer_initial_pose&#39;: array([[-0.948501,  0.055669,  0.311843, -0.329421],
+       [-0.316162, -0.227448, -0.921037,  0.961329],
+       [ 0.019655, -0.972198,  0.233335, -0.144017]], dtype=float32),
+                      &#39;viewer_transform&#39;: array([[-0.075102, -0.051249,  0.210046, -0.007215],
+       [-0.216097,  0.024916, -0.071186,  0.102799],
+       [-0.006926, -0.221673, -0.056562,  0.084124]], dtype=float32)},
+ &#39;datetime&#39;: &#39;2024-09-22T20:15:59&#39;,
+ &#39;evaluation_protocol&#39;: &#39;nerf&#39;,
+ &#39;hparams&#39;: {&#39;compute_cov3D_python&#39;: False,
+             &#39;convert_SHs_python&#39;: False,
+             &#39;debug&#39;: False,
+             &#39;densification_interval&#39;: 100,
+             &#39;densify_from_iter&#39;: 500,
+             &#39;densify_grad_threshold&#39;: 0.0002,
+             &#39;densify_until_iter&#39;: 15000,
+             &#39;feature_lr&#39;: 0.0025,
+             &#39;iterations&#39;: 30000,
+             &#39;lambda_dssim&#39;: 0.2,
+             &#39;opacity_lr&#39;: 0.05,
+             &#39;opacity_reset_interval&#39;: 3000,
+             &#39;percent_dense&#39;: 0.01,
+             &#39;position_lr_delay_mult&#39;: 0.01,
+             &#39;position_lr_final&#39;: 1.6e-06,
+             &#39;position_lr_init&#39;: 0.00016,
+             &#39;position_lr_max_steps&#39;: 30000,
+             &#39;random_background&#39;: False,
+             &#39;rotation_lr&#39;: 0.001,
+             &#39;scale_coords&#39;: None,
+             &#39;scaling_lr&#39;: 0.005,
+             &#39;sh_degree&#39;: 3,
+             &#39;white_background&#39;: False},
+ &#39;method&#39;: &#39;gaussian-splatting&#39;,
+ &#39;nb_version&#39;: &#39;1.2.3.dev6+geacf155.d20240917&#39;,
+ &#39;num_iterations&#39;: 30000,
+ &#39;render_dataset_metadata&#39;: {&#39;color_space&#39;: &#39;srgb&#39;,
+                             &#39;downscale_factor&#39;: 4,
+                             &#39;evaluation_protocol&#39;: &#39;nerf&#39;,
+                             &#39;id&#39;: &#39;mipnerf360&#39;,
+                             &#39;scene&#39;: &#39;bicycle&#39;,
+                             &#39;type&#39;: &#39;object-centric&#39;},
+ &#39;render_datetime&#39;: &#39;2024-09-22T20:15:59&#39;,
+ &#39;render_version&#39;: &#39;1.2.3.dev6+geacf155.d20240917&#39;,
+ &#39;resources_utilization&#39;: {&#39;gpu_memory&#39;: 3324,
+                           &#39;gpu_name&#39;: &#39;NVIDIA A100-SXM4-40GB&#39;,
+                           &#39;memory&#39;: 3774},
+ &#39;total_train_time&#39;: 8.83263}
+evaluating all images at step=100: 100%|██████████| 25/25 [00:19&lt;00:00,  1.26it/s, psnr=18.5846]
+hashing predictions: 100%|██████████| 25/25 [00:00&lt;00:00, 236.86it/s]
+training: 100%|██████████| 100/100 [00:53&lt;00:00,  1.87it/s, train/psnr=14.4304]
+<span class=" -Color -Color-Bold -Color-Bold-Cyan">info:</span> Backend worker finished
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="adding-new-methods.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Adding new methods</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="viewer.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Viewer</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2024, Jonas Kulhanek
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            <div class="icons">
+              <a class="muted-link " href="https://github.com/nerfbaselines/nerfbaselines" aria-label="GitHub">
+            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+        </a>
+              <a class="muted-link " href="https://nerfbaselines.github.io" aria-label="Website">
+            <svg viewBox="2 2 21 21" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" /><path d="M3.6 9h16.8" /><path d="M3.6 15h16.8" /><path d="M11.5 3a17 17 0 0 0 0 18" /><path d="M12.5 3a17 17 0 0 1 0 18" />
+            </svg>
+        </a>
+              
+            </div>
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Python tutorial</a><ul>
+<li><a class="reference internal" href="#rendering-images">Rendering images</a></li>
+<li><a class="reference internal" href="#training-a-method">Training a method</a></li>
+<li><a class="reference internal" href="#using-trainer-class">Using Trainer class</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>
