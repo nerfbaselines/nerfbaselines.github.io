@@ -18541,177 +18541,6 @@
     
   </section>
   
-  <section id="dataset-hierarchical-3dgs" class="result-set-panel">
-    <div class="result-set-panel__header">
-      <h2>
-          <a href="/hierarchical-3dgs">Hierarchical 3DGS&nbsp;<i class="ti ti-external-link text-blue"></i></a>
-      </h2>
-      <p className="text-justify">Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6–7km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset</p>
-    </div>
-    
-      
-<div class="table-container">
-  <table class="table">
-    <thead class="table__header">
-      <th class="w70"></th>
-      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
-      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
-    </thead>
-    <tbody class="expand-root">
-      
-      <tr data-expand-id="hierarchical-3dgs">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="hierarchical-3dgs" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="0"><a href="/m-hierarchical-3dgs">H3DGS</a></td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">25.53</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's PSNR: 25.39</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.803</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's SSIM: 0.806</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.364</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">1h 23m 4s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">14.94 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="hierarchical-3dgs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/smallcity.zip" title="Download checkpoint and predictions for scene SmallCity" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-smallcity.json" title="Online demo for scene SmallCity" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="1">SmallCity</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">26.42</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's PSNR: 26.29</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.807</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's SSIM: 0.81</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.331</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">1h 16m 1s</span>
-
-</td>
-        <td data-sort-value="1"><span class="table__allowcopy">15.85 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="hierarchical-3dgs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/campus.zip" title="Download checkpoint and predictions for scene Campus" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-campus.json" title="Online demo for scene Campus" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="0">Campus</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">24.63</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's PSNR: 24.5</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.798</span>
-
-
-<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
-<div class="table__infobox table__infobox-note">
-  <span>Paper's SSIM: 0.801</span>
-  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.396</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">1h 30m 7s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">14.04 GB</span>
-
-</td>
-      </tr>
-      
-      
-    </tbody>
-  </table>
-</div>
-    
-  </section>
-  
   <section id="dataset-mipnerf360-sparse" class="result-set-panel">
     <div class="result-set-panel__header">
       <h2>
@@ -23532,1492 +23361,6 @@
     
   </section>
   
-  <section id="dataset-llff" class="result-set-panel">
-    <div class="result-set-panel__header">
-      <h2>
-          <a href="/llff">LLFF&nbsp;<i class="ti ti-external-link text-blue"></i></a>
-      </h2>
-      <p className="text-justify">LLFF is a dataset of forward-facing scenes with a small variation in camera pose. NeRF methods usually use NDC-space parametrization for the scene representation.</p>
-    </div>
-    
-      
-<div class="table-container">
-  <table class="table">
-    <thead class="table__header">
-      <th class="w70"></th>
-      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
-      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
-    </thead>
-    <tbody class="expand-root">
-      
-      <tr data-expand-id="mipnerf360">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="mipnerf360" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="0"><a href="/m-mipnerf360">Mip-NeRF 360</a></td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">26.59</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.846</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.168</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">9h 55m 23s</span>
-
-</td>
-        <td data-sort-value="1"><span class="table__allowcopy">104.98 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mipnerf360" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/fern.zip" title="Download checkpoint and predictions for scene Fern" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="0">Fern</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">24.59</span>
-
-</td>
-        
-        <td data-sort-value="10"><span class="table__allowcopy">0.820</span>
-
-</td>
-        
-        <td data-sort-value="5"><span class="table__allowcopy">0.210</span>
-
-</td>
-        
-        <td data-sort-value="12"><span class="table__allowcopy">7h 29m 8s</span>
-
-</td>
-        <td data-sort-value="11"><span class="table__allowcopy">129.06 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mipnerf360" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/flower.zip" title="Download checkpoint and predictions for scene Flower" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="1">Flower</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">27.56</span>
-
-</td>
-        
-        <td data-sort-value="11"><span class="table__allowcopy">0.867</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">0.140</span>
-
-</td>
-        
-        <td data-sort-value="15"><span class="table__allowcopy">14h 2m 26s</span>
-
-</td>
-        <td data-sort-value="8"><span class="table__allowcopy">64.85 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mipnerf360" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/fortress.zip" title="Download checkpoint and predictions for scene Fortress" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="2">Fortress</td>
-        
-        <td data-sort-value="6"><span class="table__allowcopy">31.34</span>
-
-</td>
-        
-        <td data-sort-value="12"><span class="table__allowcopy">0.900</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.117</span>
-
-</td>
-        
-        <td data-sort-value="13"><span class="table__allowcopy">14h 2m 6s</span>
-
-</td>
-        <td data-sort-value="9"><span class="table__allowcopy">64.85 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mipnerf360" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/horns.zip" title="Download checkpoint and predictions for scene Horns" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="3">Horns</td>
-        
-        <td data-sort-value="5"><span class="table__allowcopy">28.51</span>
-
-</td>
-        
-        <td data-sort-value="13"><span class="table__allowcopy">0.909</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.124</span>
-
-</td>
-        
-        <td data-sort-value="9"><span class="table__allowcopy">7h 26m 41s</span>
-
-</td>
-        <td data-sort-value="12"><span class="table__allowcopy">129.06 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mipnerf360" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/leaves.zip" title="Download checkpoint and predictions for scene Leaves" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="4">Leaves</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">19.84</span>
-
-</td>
-        
-        <td data-sort-value="9"><span class="table__allowcopy">0.721</span>
-
-</td>
-        
-        <td data-sort-value="6"><span class="table__allowcopy">0.231</span>
-
-</td>
-        
-        <td data-sort-value="10"><span class="table__allowcopy">7h 26m 52s</span>
-
-</td>
-        <td data-sort-value="13"><span class="table__allowcopy">129.06 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mipnerf360" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/orchids.zip" title="Download checkpoint and predictions for scene Orchids" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="5">Orchids</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">19.51</span>
-
-</td>
-        
-        <td data-sort-value="8"><span class="table__allowcopy">0.660</span>
-
-</td>
-        
-        <td data-sort-value="7"><span class="table__allowcopy">0.246</span>
-
-</td>
-        
-        <td data-sort-value="11"><span class="table__allowcopy">7h 27m 12s</span>
-
-</td>
-        <td data-sort-value="14"><span class="table__allowcopy">129.06 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mipnerf360" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/room.zip" title="Download checkpoint and predictions for scene Room" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="6">Room</td>
-        
-        <td data-sort-value="7"><span class="table__allowcopy">33.49</span>
-
-</td>
-        
-        <td data-sort-value="15"><span class="table__allowcopy">0.965</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.115</span>
-
-</td>
-        
-        <td data-sort-value="8"><span class="table__allowcopy">7h 26m 22s</span>
-
-</td>
-        <td data-sort-value="15"><span class="table__allowcopy">129.06 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mipnerf360" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/trex.zip" title="Download checkpoint and predictions for scene Trex" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="7">Trex</td>
-        
-        <td data-sort-value="4"><span class="table__allowcopy">27.86</span>
-
-</td>
-        
-        <td data-sort-value="14"><span class="table__allowcopy">0.927</span>
-
-</td>
-        
-        <td data-sort-value="4"><span class="table__allowcopy">0.158</span>
-
-</td>
-        
-        <td data-sort-value="14"><span class="table__allowcopy">14h 2m 15s</span>
-
-</td>
-        <td data-sort-value="10"><span class="table__allowcopy">64.85 GB</span>
-
-</td>
-      </tr>
-      
-      
-      <tr data-expand-id="tensorf">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="tensorf" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="1"><a href="/m-tensorf">TensoRF</a></td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">26.68</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 26.73</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.834</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.839</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.202</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.204</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">31m 32s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">20.38 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="tensorf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/fern.zip" title="Download checkpoint and predictions for scene Fern" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="0">Fern</td>
-        
-        <td data-sort-value="10"><span class="table__allowcopy">25.08</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 25.27</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.801</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.814</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="14"><span class="table__allowcopy">0.246</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.237</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="7"><span class="table__allowcopy">36m 6s</span>
-
-</td>
-        <td data-sort-value="2"><span class="table__allowcopy">18.28 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="tensorf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/flower.zip" title="Download checkpoint and predictions for scene Flower" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="1">Flower</td>
-        
-        <td data-sort-value="13"><span class="table__allowcopy">28.38</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 28.6</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">0.860</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.871</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="10"><span class="table__allowcopy">0.171</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.169</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="6"><span class="table__allowcopy">33m 33s</span>
-
-</td>
-        <td data-sort-value="6"><span class="table__allowcopy">23.74 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="tensorf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/fortress.zip" title="Download checkpoint and predictions for scene Fortress" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="2">Fortress</td>
-        
-        <td data-sort-value="14"><span class="table__allowcopy">31.48</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 31.36</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="5"><span class="table__allowcopy">0.898</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.897</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="8"><span class="table__allowcopy">0.141</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.148</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="4"><span class="table__allowcopy">32m 41s</span>
-
-</td>
-        <td data-sort-value="3"><span class="table__allowcopy">18.39 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="tensorf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/horns.zip" title="Download checkpoint and predictions for scene Horns" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="3">Horns</td>
-        
-        <td data-sort-value="12"><span class="table__allowcopy">28.33</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 28.14</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="4"><span class="table__allowcopy">0.882</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.877</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="11"><span class="table__allowcopy">0.180</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.196</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="5"><span class="table__allowcopy">33m 26s</span>
-
-</td>
-        <td data-sort-value="1"><span class="table__allowcopy">18.27 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="tensorf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/leaves.zip" title="Download checkpoint and predictions for scene Leaves" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="4">Leaves</td>
-        
-        <td data-sort-value="9"><span class="table__allowcopy">20.96</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 21.3</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.752</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="13"><span class="table__allowcopy">0.239</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.217</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">28m 21s</span>
-
-</td>
-        <td data-sort-value="4"><span class="table__allowcopy">20.11 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="tensorf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/orchids.zip" title="Download checkpoint and predictions for scene Orchids" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="5">Orchids</td>
-        
-        <td data-sort-value="8"><span class="table__allowcopy">19.85</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 19.87</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.644</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.649</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="15"><span class="table__allowcopy">0.279</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.278</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">32m 3s</span>
-
-</td>
-        <td data-sort-value="5"><span class="table__allowcopy">20.69 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="tensorf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/room.zip" title="Download checkpoint and predictions for scene Room" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="6">Room</td>
-        
-        <td data-sort-value="15"><span class="table__allowcopy">31.86</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 32.35</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="7"><span class="table__allowcopy">0.950</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.952</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="9"><span class="table__allowcopy">0.159</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.167</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">27m 20s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">16.38 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="tensorf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/trex.zip" title="Download checkpoint and predictions for scene Trex" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="7">Trex</td>
-        
-        <td data-sort-value="11"><span class="table__allowcopy">27.53</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 26.97</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="6"><span class="table__allowcopy">0.909</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.9</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="12"><span class="table__allowcopy">0.199</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS (VGG): 0.221</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">28m 46s</span>
-
-</td>
-        <td data-sort-value="7"><span class="table__allowcopy">27.20 GB</span>
-
-</td>
-      </tr>
-      
-      
-    </tbody>
-  </table>
-</div>
-    
-  </section>
-  
-  <section id="dataset-zipnerf" class="result-set-panel">
-    <div class="result-set-panel__header">
-      <h2>
-          <a href="/zipnerf">Zip-NeRF&nbsp;<i class="ti ti-external-link text-blue"></i></a>
-      </h2>
-      <p className="text-justify">ZipNeRF is a dataset with four large scenes: Berlin, Alameda, London, and NYC, (1000-2000 photos each) captured using fisheye cameras. This implementation uses undistorted images which are provided with the dataset and the downsampled resolutions are between 1392 × 793 and 2000 × 1140 depending on scene. It is recommended to use exposure modeling with this dataset if available.</p>
-    </div>
-    
-      
-<div class="table-container">
-  <table class="table">
-    <thead class="table__header">
-      <th class="w70"></th>
-      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
-      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
-    </thead>
-    <tbody class="expand-root">
-      
-      <tr data-expand-id="octree-gs">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="octree-gs" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="0"><a href="/m-octree-gs">Octree-GS</a></td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">22.33</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.762</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.473</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">44m 56s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">27.63 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="octree-gs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/alameda.zip" title="Download checkpoint and predictions for scene Alameda" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="0">Alameda</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">22.79</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.448</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">44m 25s</span>
-
-</td>
-        <td data-sort-value="2"><span class="table__allowcopy">28.68 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="octree-gs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/berlin.zip" title="Download checkpoint and predictions for scene Berlin" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="1">Berlin</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">13.64</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.669</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">0.640</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">1h 6m 40s</span>
-
-</td>
-        <td data-sort-value="3"><span class="table__allowcopy">34.85 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="octree-gs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/london.zip" title="Download checkpoint and predictions for scene London" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="2">London</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">25.76</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.807</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.433</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">33m 44s</span>
-
-</td>
-        <td data-sort-value="1"><span class="table__allowcopy">27.35 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="octree-gs" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/nyc.zip" title="Download checkpoint and predictions for scene NYC" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="3">NYC</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">27.13</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">0.841</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.372</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">34m 55s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">19.63 GB</span>
-
-</td>
-      </tr>
-      
-      
-    </tbody>
-  </table>
-</div>
-    
-  </section>
-  
-  <section id="dataset-seathru-nerf" class="result-set-panel">
-    <div class="result-set-panel__header">
-      <h2>
-          <a href="/seathru-nerf">SeaThru-NeRF&nbsp;<i class="ti ti-external-link text-blue"></i></a>
-      </h2>
-      <p className="text-justify">SeaThru-NeRF dataset contains four underwater forward-facing scenes.</p>
-    </div>
-    
-      
-<div class="table-container">
-  <table class="table">
-    <thead class="table__header">
-      <th class="w70"></th>
-      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by LPIPS (ascending)">LPIPS <i class="ti" /></span></th>
-      
-      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
-      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
-    </thead>
-    <tbody class="expand-root">
-      
-      <tr data-expand-id="gaussian-splatting">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="gaussian-splatting" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="0"><a href="/m-gaussian-splatting">Gaussian Splatting</a></td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">21.31</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.729</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.300</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">20m 9s</span>
-
-</td>
-        <td data-sort-value="1"><span class="table__allowcopy">6.49 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="gaussian-splatting" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/seathru-nerf/curasao.zip" title="Download checkpoint and predictions for scene Curasao" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=gaussian-splatting-seathru-nerf-curasao.json" title="Online demo for scene Curasao" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="0">Curasao</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">24.15</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.738</span>
-
-</td>
-        
-        <td data-sort-value="6"><span class="table__allowcopy">0.318</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">22m 26s</span>
-
-</td>
-        <td data-sort-value="7"><span class="table__allowcopy">9.30 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="gaussian-splatting" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/seathru-nerf/panama.zip" title="Download checkpoint and predictions for scene Panama" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=gaussian-splatting-seathru-nerf-panama.json" title="Online demo for scene Panama" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="3">Panama</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">23.68</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.749</span>
-
-</td>
-        
-        <td data-sort-value="5"><span class="table__allowcopy">0.250</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">22m 41s</span>
-
-</td>
-        <td data-sort-value="6"><span class="table__allowcopy">8.43 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="gaussian-splatting" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/seathru-nerf/iui3.zip" title="Download checkpoint and predictions for scene IUI3" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=gaussian-splatting-seathru-nerf-iui3.json" title="Online demo for scene IUI3" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="1">IUI3</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">18.86</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.677</span>
-
-</td>
-        
-        <td data-sort-value="7"><span class="table__allowcopy">0.390</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">18m 36s</span>
-
-</td>
-        <td data-sort-value="5"><span class="table__allowcopy">4.26 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="gaussian-splatting" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/seathru-nerf/japanese-gradens.zip" title="Download checkpoint and predictions for scene Japanese Gradens" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=gaussian-splatting-seathru-nerf-japanese-gradens.json" title="Online demo for scene Japanese Gradens" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="2">Japanese Gradens</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">18.54</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">0.752</span>
-
-</td>
-        
-        <td data-sort-value="4"><span class="table__allowcopy">0.242</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">16m 55s</span>
-
-</td>
-        <td data-sort-value="4"><span class="table__allowcopy">3.96 GB</span>
-
-</td>
-      </tr>
-      
-      
-      <tr data-expand-id="mip-splatting">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="mip-splatting" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="1"><a href="/m-mip-splatting">Mip-Splatting</a></td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">21.33</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.304</span>
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">20m 53s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">6.19 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mip-splatting" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mip-splatting/seathru-nerf/curasao.zip" title="Download checkpoint and predictions for scene Curasao" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=mip-splatting-seathru-nerf-curasao.json" title="Online demo for scene Curasao" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="0">Curasao</td>
-        
-        <td data-sort-value="7"><span class="table__allowcopy">24.41</span>
-
-</td>
-        
-        <td data-sort-value="5"><span class="table__allowcopy">0.739</span>
-
-</td>
-        
-        <td data-sort-value="10"><span class="table__allowcopy">0.316</span>
-
-</td>
-        
-        <td data-sort-value="7"><span class="table__allowcopy">23m 38s</span>
-
-</td>
-        <td data-sort-value="3"><span class="table__allowcopy">9.54 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mip-splatting" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mip-splatting/seathru-nerf/panama.zip" title="Download checkpoint and predictions for scene Panama" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=mip-splatting-seathru-nerf-panama.json" title="Online demo for scene Panama" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="3">Panama</td>
-        
-        <td data-sort-value="6"><span class="table__allowcopy">23.99</span>
-
-</td>
-        
-        <td data-sort-value="7"><span class="table__allowcopy">0.752</span>
-
-</td>
-        
-        <td data-sort-value="8"><span class="table__allowcopy">0.237</span>
-
-</td>
-        
-        <td data-sort-value="6"><span class="table__allowcopy">22m 42s</span>
-
-</td>
-        <td data-sort-value="2"><span class="table__allowcopy">6.85 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mip-splatting" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mip-splatting/seathru-nerf/iui3.zip" title="Download checkpoint and predictions for scene IUI3" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=mip-splatting-seathru-nerf-iui3.json" title="Online demo for scene IUI3" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="1">IUI3</td>
-        
-        <td data-sort-value="5"><span class="table__allowcopy">19.18</span>
-
-</td>
-        
-        <td data-sort-value="4"><span class="table__allowcopy">0.683</span>
-
-</td>
-        
-        <td data-sort-value="11"><span class="table__allowcopy">0.412</span>
-
-</td>
-        
-        <td data-sort-value="5"><span class="table__allowcopy">19m 32s</span>
-
-</td>
-        <td data-sort-value="1"><span class="table__allowcopy">4.26 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="mip-splatting" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mip-splatting/seathru-nerf/japanese-gradens.zip" title="Download checkpoint and predictions for scene Japanese Gradens" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-          <a href="/viewer/?p=mip-splatting-seathru-nerf-japanese-gradens.json" title="Online demo for scene Japanese Gradens" class="ti table__action ti-view-360-number ti-green"></a>
-          
-        </td>
-        <td class="w120" data-sort-value="2">Japanese Gradens</td>
-        
-        <td data-sort-value="4"><span class="table__allowcopy">17.75</span>
-
-</td>
-        
-        <td data-sort-value="6"><span class="table__allowcopy">0.747</span>
-
-</td>
-        
-        <td data-sort-value="9"><span class="table__allowcopy">0.253</span>
-
-</td>
-        
-        <td data-sort-value="4"><span class="table__allowcopy">17m 43s</span>
-
-</td>
-        <td data-sort-value="0"><span class="table__allowcopy">4.10 GB</span>
-
-</td>
-      </tr>
-      
-      
-      <tr data-expand-id="seathru-nerf">
-        <td class="w70">
-          <span class="table__expandtoggle table__action ti" data-expand-id="seathru-nerf" title="Expand"></span>
-        </td>
-        <td class="w120" data-sort-value="2"><a href="/m-seathru-nerf">SeaThru-NeRF</a></td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">26.37</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.815</span>
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.245</span>
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">2h 49m 9s</span>
-
-</td>
-        <td data-sort-value="2"><span class="table__allowcopy">127.55 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="seathru-nerf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/seathru-nerf/seathru-nerf/curasao.zip" title="Download checkpoint and predictions for scene Curasao" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="0">Curasao</td>
-        
-        <td data-sort-value="11"><span class="table__allowcopy">30.00</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 30.48</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="11"><span class="table__allowcopy">0.870</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.87</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="0"><span class="table__allowcopy">0.215</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS: 0.2</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="10"><span class="table__allowcopy">2h 48m 47s</span>
-
-</td>
-        <td data-sort-value="10"><span class="table__allowcopy">127.66 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="seathru-nerf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/seathru-nerf/seathru-nerf/panama.zip" title="Download checkpoint and predictions for scene Panama" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="3">Panama</td>
-        
-        <td data-sort-value="10"><span class="table__allowcopy">27.82</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 27.89</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="10"><span class="table__allowcopy">0.834</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.83</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="1"><span class="table__allowcopy">0.226</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS: 0.22</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="11"><span class="table__allowcopy">2h 54m 57s</span>
-
-</td>
-        <td data-sort-value="11"><span class="table__allowcopy">127.66 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="seathru-nerf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/seathru-nerf/seathru-nerf/iui3.zip" title="Download checkpoint and predictions for scene IUI3" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="1">IUI3</td>
-        
-        <td data-sort-value="9"><span class="table__allowcopy">25.92</span>
-
-</td>
-        
-        <td data-sort-value="9"><span class="table__allowcopy">0.787</span>
-
-</td>
-        
-        <td data-sort-value="3"><span class="table__allowcopy">0.294</span>
-
-</td>
-        
-        <td data-sort-value="9"><span class="table__allowcopy">2h 46m 50s</span>
-
-</td>
-        <td data-sort-value="8"><span class="table__allowcopy">127.44 GB</span>
-
-</td>
-      </tr>
-      
-      <tr data-expand-by="seathru-nerf" style="display: none">
-        <td class="w70">
-          
-          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/seathru-nerf/seathru-nerf/japanese-gradens.zip" title="Download checkpoint and predictions for scene Japanese Gradens" class="ti table__action ti-download ti-blue"></a>
-          
-          
-          
-        </td>
-        <td class="w120" data-sort-value="2">Japanese Gradens</td>
-        
-        <td data-sort-value="8"><span class="table__allowcopy">21.73</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's PSNR: 21.83</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="8"><span class="table__allowcopy">0.768</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's SSIM: 0.77</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="2"><span class="table__allowcopy">0.246</span>
-
-
-<i class="ti ti-info-circle table__infoicon"></i>
-<div class="table__infobox">
-  <span>Paper's LPIPS: 0.25</span>
-</div>
-
-
-</td>
-        
-        <td data-sort-value="8"><span class="table__allowcopy">2h 46m 1s</span>
-
-</td>
-        <td data-sort-value="9"><span class="table__allowcopy">127.44 GB</span>
-
-</td>
-      </tr>
-      
-      
-    </tbody>
-  </table>
-</div>
-    
-  </section>
-  
   <section id="dataset-phototourism" class="result-set-panel">
     <div class="result-set-panel__header">
       <h2>
@@ -25855,6 +24198,1663 @@
 
 </td>
         <td data-sort-value="6"><span class="table__allowcopy">7.83 GB</span>
+
+</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+    
+  </section>
+  
+  <section id="dataset-llff" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+          <a href="/llff">LLFF&nbsp;<i class="ti ti-external-link text-blue"></i></a>
+      </h2>
+      <p className="text-justify">LLFF is a dataset of forward-facing scenes with a small variation in camera pose. NeRF methods usually use NDC-space parametrization for the scene representation.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr data-expand-id="mipnerf360">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="mipnerf360" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="0"><a href="/m-mipnerf360">Mip-NeRF 360</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">26.59</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.846</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.168</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">9h 55m 23s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">104.98 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mipnerf360" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/fern.zip" title="Download checkpoint and predictions for scene Fern" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="0">Fern</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">24.59</span>
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">0.820</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">0.210</span>
+
+</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">7h 29m 8s</span>
+
+</td>
+        <td data-sort-value="11"><span class="table__allowcopy">129.06 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mipnerf360" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/flower.zip" title="Download checkpoint and predictions for scene Flower" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="1">Flower</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">27.56</span>
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">0.867</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.140</span>
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">14h 2m 26s</span>
+
+</td>
+        <td data-sort-value="8"><span class="table__allowcopy">64.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mipnerf360" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/fortress.zip" title="Download checkpoint and predictions for scene Fortress" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="2">Fortress</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">31.34</span>
+
+</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">0.900</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.117</span>
+
+</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">14h 2m 6s</span>
+
+</td>
+        <td data-sort-value="9"><span class="table__allowcopy">64.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mipnerf360" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/horns.zip" title="Download checkpoint and predictions for scene Horns" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="3">Horns</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">28.51</span>
+
+</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">0.909</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.124</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">7h 26m 41s</span>
+
+</td>
+        <td data-sort-value="12"><span class="table__allowcopy">129.06 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mipnerf360" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/leaves.zip" title="Download checkpoint and predictions for scene Leaves" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="4">Leaves</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">19.84</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">0.721</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.231</span>
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">7h 26m 52s</span>
+
+</td>
+        <td data-sort-value="13"><span class="table__allowcopy">129.06 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mipnerf360" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/orchids.zip" title="Download checkpoint and predictions for scene Orchids" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="5">Orchids</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">19.51</span>
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">0.660</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.246</span>
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">7h 27m 12s</span>
+
+</td>
+        <td data-sort-value="14"><span class="table__allowcopy">129.06 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mipnerf360" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/room.zip" title="Download checkpoint and predictions for scene Room" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="6">Room</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">33.49</span>
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">0.965</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.115</span>
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">7h 26m 22s</span>
+
+</td>
+        <td data-sort-value="15"><span class="table__allowcopy">129.06 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mipnerf360" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mipnerf360/llff/trex.zip" title="Download checkpoint and predictions for scene Trex" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="7">Trex</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">27.86</span>
+
+</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">0.927</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">0.158</span>
+
+</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">14h 2m 15s</span>
+
+</td>
+        <td data-sort-value="10"><span class="table__allowcopy">64.85 GB</span>
+
+</td>
+      </tr>
+      
+      
+      <tr data-expand-id="tensorf">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="tensorf" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="1"><a href="/m-tensorf">TensoRF</a></td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">26.68</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 26.73</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.834</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.839</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.202</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.204</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">31m 32s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">20.38 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="tensorf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/fern.zip" title="Download checkpoint and predictions for scene Fern" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="0">Fern</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">25.08</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 25.27</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.801</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.814</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">0.246</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.237</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">36m 6s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">18.28 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="tensorf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/flower.zip" title="Download checkpoint and predictions for scene Flower" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="1">Flower</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">28.38</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 28.6</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.860</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.871</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">0.171</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.169</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">33m 33s</span>
+
+</td>
+        <td data-sort-value="6"><span class="table__allowcopy">23.74 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="tensorf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/fortress.zip" title="Download checkpoint and predictions for scene Fortress" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="2">Fortress</td>
+        
+        <td data-sort-value="14"><span class="table__allowcopy">31.48</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 31.36</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">0.898</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.897</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">0.141</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.148</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">32m 41s</span>
+
+</td>
+        <td data-sort-value="3"><span class="table__allowcopy">18.39 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="tensorf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/horns.zip" title="Download checkpoint and predictions for scene Horns" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="3">Horns</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">28.33</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 28.14</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">0.882</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.877</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">0.180</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.196</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">33m 26s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">18.27 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="tensorf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/leaves.zip" title="Download checkpoint and predictions for scene Leaves" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="4">Leaves</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">20.96</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 21.3</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.752</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="13"><span class="table__allowcopy">0.239</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.217</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">28m 21s</span>
+
+</td>
+        <td data-sort-value="4"><span class="table__allowcopy">20.11 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="tensorf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/orchids.zip" title="Download checkpoint and predictions for scene Orchids" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="5">Orchids</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">19.85</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 19.87</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.644</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.649</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">0.279</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.278</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">32m 3s</span>
+
+</td>
+        <td data-sort-value="5"><span class="table__allowcopy">20.69 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="tensorf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/room.zip" title="Download checkpoint and predictions for scene Room" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="6">Room</td>
+        
+        <td data-sort-value="15"><span class="table__allowcopy">31.86</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 32.35</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.950</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.952</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">0.159</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.167</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">27m 20s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">16.38 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="tensorf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/tensorf/llff/trex.zip" title="Download checkpoint and predictions for scene Trex" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="7">Trex</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">27.53</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 26.97</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.909</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.9</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="12"><span class="table__allowcopy">0.199</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS (VGG): 0.221</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">28m 46s</span>
+
+</td>
+        <td data-sort-value="7"><span class="table__allowcopy">27.20 GB</span>
+
+</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+    
+  </section>
+  
+  <section id="dataset-hierarchical-3dgs" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+          <a href="/hierarchical-3dgs">Hierarchical 3DGS&nbsp;<i class="ti ti-external-link text-blue"></i></a>
+      </h2>
+      <p className="text-justify">Hierarchical 3DGS is a dataset released with H3DGS paper. We implement the two public single-chunks scenes (SmallCity, Campus) used for evaluation. To collect the dataset, authors used a bicycle helmet on which they mounted 6 GoPro HERO6 Black cameras (5 for the Campus scene). They collected SmallCity and BigCity captures on a bicycle, riding at around 6–7km/h, while Campus was captured on foot wearing the helmet. Poses were estimated using COLMAP with custom parameters and hierarchical mapper. Additinal per-chunk bundle adjustment was performed. It is recommended to use exposure modeling with this dataset</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr data-expand-id="hierarchical-3dgs">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="hierarchical-3dgs" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="0"><a href="/m-hierarchical-3dgs">H3DGS</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">25.53</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 25.39</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.803</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.806</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.364</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">1h 23m 4s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">14.94 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="hierarchical-3dgs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/smallcity.zip" title="Download checkpoint and predictions for scene SmallCity" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-smallcity.json" title="Online demo for scene SmallCity" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="1">SmallCity</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">26.42</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 26.29</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.807</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.81</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.331</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">1h 16m 1s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">15.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="hierarchical-3dgs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/hierarchical-3dgs/hierarchical-3dgs/campus.zip" title="Download checkpoint and predictions for scene Campus" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=hierarchical-3dgs-hierarchical-3dgs-campus.json" title="Online demo for scene Campus" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="0">Campus</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">24.63</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's PSNR: 24.5</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.798</span>
+
+
+<i class="ti ti-info-circle table__infoicon table__infoicon-with-note"></i>
+<div class="table__infobox table__infobox-note">
+  <span>Paper's SSIM: 0.801</span>
+  <p>Results in the paper were evaluated using different tau (0, 3, 6, 15), where tau=0 is the slowest, but highest quality. We choose tau=6 - consistent with most experiments in the paper, providing a good trade-off between quality and speed.</p>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.396</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">1h 30m 7s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">14.04 GB</span>
+
+</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+    
+  </section>
+  
+  <section id="dataset-seathru-nerf" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+          <a href="/seathru-nerf">SeaThru-NeRF&nbsp;<i class="ti ti-external-link text-blue"></i></a>
+      </h2>
+      <p className="text-justify">SeaThru-NeRF dataset contains four underwater forward-facing scenes.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (ascending)">LPIPS <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr data-expand-id="gaussian-splatting">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="gaussian-splatting" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="0"><a href="/m-gaussian-splatting">Gaussian Splatting</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">21.31</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.729</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.300</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">20m 9s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">6.49 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="gaussian-splatting" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/seathru-nerf/curasao.zip" title="Download checkpoint and predictions for scene Curasao" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=gaussian-splatting-seathru-nerf-curasao.json" title="Online demo for scene Curasao" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="0">Curasao</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">24.15</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.738</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.318</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">22m 26s</span>
+
+</td>
+        <td data-sort-value="7"><span class="table__allowcopy">9.30 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="gaussian-splatting" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/seathru-nerf/panama.zip" title="Download checkpoint and predictions for scene Panama" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=gaussian-splatting-seathru-nerf-panama.json" title="Online demo for scene Panama" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="3">Panama</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">23.68</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.749</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">0.250</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">22m 41s</span>
+
+</td>
+        <td data-sort-value="6"><span class="table__allowcopy">8.43 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="gaussian-splatting" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/seathru-nerf/iui3.zip" title="Download checkpoint and predictions for scene IUI3" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=gaussian-splatting-seathru-nerf-iui3.json" title="Online demo for scene IUI3" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="1">IUI3</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">18.86</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.677</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.390</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">18m 36s</span>
+
+</td>
+        <td data-sort-value="5"><span class="table__allowcopy">4.26 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="gaussian-splatting" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/gaussian-splatting/seathru-nerf/japanese-gradens.zip" title="Download checkpoint and predictions for scene Japanese Gradens" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=gaussian-splatting-seathru-nerf-japanese-gradens.json" title="Online demo for scene Japanese Gradens" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="2">Japanese Gradens</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">18.54</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.752</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">0.242</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">16m 55s</span>
+
+</td>
+        <td data-sort-value="4"><span class="table__allowcopy">3.96 GB</span>
+
+</td>
+      </tr>
+      
+      
+      <tr data-expand-id="mip-splatting">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="mip-splatting" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="1"><a href="/m-mip-splatting">Mip-Splatting</a></td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">21.33</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.304</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">20m 53s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">6.19 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mip-splatting" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mip-splatting/seathru-nerf/curasao.zip" title="Download checkpoint and predictions for scene Curasao" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=mip-splatting-seathru-nerf-curasao.json" title="Online demo for scene Curasao" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="0">Curasao</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">24.41</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">0.739</span>
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">0.316</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">23m 38s</span>
+
+</td>
+        <td data-sort-value="3"><span class="table__allowcopy">9.54 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mip-splatting" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mip-splatting/seathru-nerf/panama.zip" title="Download checkpoint and predictions for scene Panama" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=mip-splatting-seathru-nerf-panama.json" title="Online demo for scene Panama" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="3">Panama</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">23.99</span>
+
+</td>
+        
+        <td data-sort-value="7"><span class="table__allowcopy">0.752</span>
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">0.237</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">22m 42s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">6.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mip-splatting" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mip-splatting/seathru-nerf/iui3.zip" title="Download checkpoint and predictions for scene IUI3" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=mip-splatting-seathru-nerf-iui3.json" title="Online demo for scene IUI3" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="1">IUI3</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">19.18</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">0.683</span>
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">0.412</span>
+
+</td>
+        
+        <td data-sort-value="5"><span class="table__allowcopy">19m 32s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">4.26 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="mip-splatting" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/mip-splatting/seathru-nerf/japanese-gradens.zip" title="Download checkpoint and predictions for scene Japanese Gradens" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+          <a href="/viewer/?p=mip-splatting-seathru-nerf-japanese-gradens.json" title="Online demo for scene Japanese Gradens" class="ti table__action ti-view-360-number ti-green"></a>
+          
+        </td>
+        <td class="w120" data-sort-value="2">Japanese Gradens</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">17.75</span>
+
+</td>
+        
+        <td data-sort-value="6"><span class="table__allowcopy">0.747</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">0.253</span>
+
+</td>
+        
+        <td data-sort-value="4"><span class="table__allowcopy">17m 43s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">4.10 GB</span>
+
+</td>
+      </tr>
+      
+      
+      <tr data-expand-id="seathru-nerf">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="seathru-nerf" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="2"><a href="/m-seathru-nerf">SeaThru-NeRF</a></td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">26.37</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.815</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.245</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">2h 49m 9s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">127.55 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="seathru-nerf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/seathru-nerf/seathru-nerf/curasao.zip" title="Download checkpoint and predictions for scene Curasao" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="0">Curasao</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">30.00</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 30.48</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">0.870</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.87</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.215</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS: 0.2</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">2h 48m 47s</span>
+
+</td>
+        <td data-sort-value="10"><span class="table__allowcopy">127.66 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="seathru-nerf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/seathru-nerf/seathru-nerf/panama.zip" title="Download checkpoint and predictions for scene Panama" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="3">Panama</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">27.82</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 27.89</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="10"><span class="table__allowcopy">0.834</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.83</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.226</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS: 0.22</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="11"><span class="table__allowcopy">2h 54m 57s</span>
+
+</td>
+        <td data-sort-value="11"><span class="table__allowcopy">127.66 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="seathru-nerf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/seathru-nerf/seathru-nerf/iui3.zip" title="Download checkpoint and predictions for scene IUI3" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="1">IUI3</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">25.92</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">0.787</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.294</span>
+
+</td>
+        
+        <td data-sort-value="9"><span class="table__allowcopy">2h 46m 50s</span>
+
+</td>
+        <td data-sort-value="8"><span class="table__allowcopy">127.44 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="seathru-nerf" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/seathru-nerf/seathru-nerf/japanese-gradens.zip" title="Download checkpoint and predictions for scene Japanese Gradens" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="2">Japanese Gradens</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">21.73</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's PSNR: 21.83</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">0.768</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's SSIM: 0.77</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.246</span>
+
+
+<i class="ti ti-info-circle table__infoicon"></i>
+<div class="table__infobox">
+  <span>Paper's LPIPS: 0.25</span>
+</div>
+
+
+</td>
+        
+        <td data-sort-value="8"><span class="table__allowcopy">2h 46m 1s</span>
+
+</td>
+        <td data-sort-value="9"><span class="table__allowcopy">127.44 GB</span>
+
+</td>
+      </tr>
+      
+      
+    </tbody>
+  </table>
+</div>
+    
+  </section>
+  
+  <section id="dataset-zipnerf" class="result-set-panel">
+    <div class="result-set-panel__header">
+      <h2>
+          <a href="/zipnerf">Zip-NeRF&nbsp;<i class="ti ti-external-link text-blue"></i></a>
+      </h2>
+      <p className="text-justify">ZipNeRF is a dataset with four large scenes: Berlin, Alameda, London, and NYC, (1000-2000 photos each) captured using fisheye cameras. This implementation uses undistorted images which are provided with the dataset and the downsampled resolutions are between 1392 × 793 and 2000 × 1140 depending on scene. It is recommended to use exposure modeling with this dataset if available.</p>
+    </div>
+    
+      
+<div class="table-container">
+  <table class="table">
+    <thead class="table__header">
+      <th class="w70"></th>
+      <th class="w120"><span class="table__sortbutton" title="Sort by method name (ascending)">Method <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by PSNR (ascending)">PSNR <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by SSIM (ascending)">SSIM <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by LPIPS (VGG) (ascending)">LPIPS (VGG) <i class="ti" /></span></th>
+      
+      <th><span class="table__sortbutton" title="Sort by time (ascending)">Time <i class="ti" /></span></th>
+      <th><span class="table__sortbutton" title="Sort by GPU mem. (ascending)">GPU mem. <i class="ti" /></span></th>
+    </thead>
+    <tbody class="expand-root">
+      
+      <tr data-expand-id="octree-gs">
+        <td class="w70">
+          <span class="table__expandtoggle table__action ti" data-expand-id="octree-gs" title="Expand"></span>
+        </td>
+        <td class="w120" data-sort-value="0"><a href="/m-octree-gs">Octree-GS</a></td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">22.33</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.762</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.473</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">44m 56s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">27.63 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="octree-gs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/alameda.zip" title="Download checkpoint and predictions for scene Alameda" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="0">Alameda</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">22.79</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.730</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.448</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">44m 25s</span>
+
+</td>
+        <td data-sort-value="2"><span class="table__allowcopy">28.68 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="octree-gs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/berlin.zip" title="Download checkpoint and predictions for scene Berlin" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="1">Berlin</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">13.64</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.669</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.640</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">1h 6m 40s</span>
+
+</td>
+        <td data-sort-value="3"><span class="table__allowcopy">34.85 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="octree-gs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/london.zip" title="Download checkpoint and predictions for scene London" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="2">London</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">25.76</span>
+
+</td>
+        
+        <td data-sort-value="2"><span class="table__allowcopy">0.807</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">0.433</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">33m 44s</span>
+
+</td>
+        <td data-sort-value="1"><span class="table__allowcopy">27.35 GB</span>
+
+</td>
+      </tr>
+      
+      <tr data-expand-by="octree-gs" style="display: none">
+        <td class="w70">
+          
+          <a href="https://huggingface.co/nerfbaselines/nerfbaselines/resolve/main/octree-gs/zipnerf/nyc.zip" title="Download checkpoint and predictions for scene NYC" class="ti table__action ti-download ti-blue"></a>
+          
+          
+          
+        </td>
+        <td class="w120" data-sort-value="3">NYC</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">27.13</span>
+
+</td>
+        
+        <td data-sort-value="3"><span class="table__allowcopy">0.841</span>
+
+</td>
+        
+        <td data-sort-value="0"><span class="table__allowcopy">0.372</span>
+
+</td>
+        
+        <td data-sort-value="1"><span class="table__allowcopy">34m 55s</span>
+
+</td>
+        <td data-sort-value="0"><span class="table__allowcopy">19.63 GB</span>
 
 </td>
       </tr>
