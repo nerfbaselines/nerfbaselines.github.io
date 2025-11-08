@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en" data-content_root="../">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="nerfbaselines.logging" />
 <meta property="og:type" content="website" />
@@ -12,13 +12,13 @@
 <meta property="og:image" content="_images/social_previews/summary_api_nerfbaselines.logging_cf7bb9d8.png" />
 <meta property="og:image:alt" content="" />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="nerfbaselines.metrics" href="nerfbaselines.metrics.html" /><link rel="prev" title="nerfbaselines.io" href="nerfbaselines.io.html" />
-        <link rel="prefetch" href="../_static/logo.png" as="image" />
+<link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="nerfbaselines.metrics" href="nerfbaselines.metrics.html"><link rel="prev" title="nerfbaselines.io" href="nerfbaselines.io.html">
+        <link rel="prefetch" href="../_static/logo.png" as="image">
 
-    <!-- Generated with Sphinx 7.4.7 and Furo 2025.07.19 -->
+    <!-- Generated with Sphinx 7.4.7 and Furo 2025.09.25 -->
         <title>nerfbaselines.logging - NerfBaselines documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -36,14 +36,14 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #2b2b2b;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #2b2b2b;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
   
       }
     }
@@ -158,14 +158,10 @@
   </symbol>
 </svg>
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
 
 <a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
@@ -175,8 +171,7 @@
   <header class="mobile-header">
     <div class="header-left">
       <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
       </label>
     </div>
     <div class="header-center">
@@ -184,8 +179,7 @@
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
           <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
           <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -193,8 +187,7 @@
         </button>
       </div>
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
   </header>
@@ -481,7 +474,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../methods.html">Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../datasets.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../cli.html">CLI</a></li>
-<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">API</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">API</a><input aria-label="Toggle navigation of API" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="nerfbaselines.html">nerfbaselines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nerfbaselines.backends.html">nerfbaselines.backends</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nerfbaselines.cameras.html">nerfbaselines.cameras</a></li>
@@ -516,8 +509,7 @@
         </a>
         <div class="content-icon-container">
           <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -525,8 +517,7 @@
             </button>
           </div>
           <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
@@ -605,7 +596,7 @@
 <dd><p>Bases: <a class="reference internal" href="#nerfbaselines.logging.BaseLogger" title="nerfbaselines.logging.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nerfbaselines.logging.ConcatLogger.add_event">
-<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/a257b24/nerfbaselines/../../../opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/contextlib.py#L266-L274"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.logging.ConcatLogger.add_event" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/a257b24/nerfbaselines/../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/contextlib.py#L266-L274"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.logging.ConcatLogger.add_event" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -627,7 +618,7 @@
 <dd><p>Bases: <a class="reference internal" href="#nerfbaselines.logging.BaseLogger" title="nerfbaselines.logging.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nerfbaselines.logging.TensorboardLogger.add_event">
-<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/a257b24/nerfbaselines/../../../opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/contextlib.py#L706-L716"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.logging.TensorboardLogger.add_event" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/a257b24/nerfbaselines/../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/contextlib.py#L706-L716"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.logging.TensorboardLogger.add_event" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -683,7 +674,7 @@
 <dd><p>Bases: <a class="reference internal" href="#nerfbaselines.logging.BaseLogger" title="nerfbaselines.logging.BaseLogger"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseLogger</span></code></a></p>
 <dl class="py method">
 <dt class="sig sig-object py" id="nerfbaselines.logging.WandbLogger.add_event">
-<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/a257b24/nerfbaselines/../../../opt/hostedtoolcache/Python/3.13.7/x64/lib/python3.13/contextlib.py#L226-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.logging.WandbLogger.add_event" title="Link to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">add_event</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/nerfbaselines/nerfbaselines/blob/a257b24/nerfbaselines/../../../opt/hostedtoolcache/Python/3.14.0/x64/lib/python3.14/contextlib.py#L226-L230"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#nerfbaselines.logging.WandbLogger.add_event" title="Link to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">

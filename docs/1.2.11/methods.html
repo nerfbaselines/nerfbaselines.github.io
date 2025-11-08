@@ -1,7 +1,7 @@
 <!doctype html>
 <html class="no-js" lang="en" data-content_root="./">
-  <head><meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:title" content="Methods" />
 <meta property="og:type" content="website" />
@@ -14,13 +14,13 @@
 <meta property="og:image:alt" content="2D Gaussian Splatting: 2D Gaussian Splatting for Geometrically Accurate Radiance Fields Authors, Binbin Huang, Zehao Yu, Anpei Chen, Andreas Geiger, Shenghua Gao,, Paper, https://arxiv.org/pdf/2403..." />
 <meta name="description" content="2D Gaussian Splatting: 2D Gaussian Splatting for Geometrically Accurate Radiance Fields Authors, Binbin Huang, Zehao Yu, Anpei Chen, Andreas Geiger, Shenghua Gao,, Paper, https://arxiv.org/pdf/2403..." />
 <meta name="twitter:card" content="summary_large_image" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Datasets" href="datasets.html" /><link rel="prev" title="Custom web benchmark" href="custom-web.html" />
-        <link rel="prefetch" href="_static/logo.png" as="image" />
+<link rel="index" title="Index" href="genindex.html"><link rel="search" title="Search" href="search.html"><link rel="next" title="Datasets" href="datasets.html"><link rel="prev" title="Custom web benchmark" href="custom-web.html">
+        <link rel="prefetch" href="_static/logo.png" as="image">
 
-    <!-- Generated with Sphinx 7.4.7 and Furo 2025.07.19 -->
+    <!-- Generated with Sphinx 7.4.7 and Furo 2025.09.25 -->
         <title>Methods - NerfBaselines documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
@@ -38,14 +38,14 @@
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #2b2b2b;
-  --color-code-foreground: #f8f8f2;
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #2b2b2b;
-  --color-code-foreground: #f8f8f2;
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
   
       }
     }
@@ -160,14 +160,10 @@
   </symbol>
 </svg>
 
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
-<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
-<label class="overlay sidebar-overlay" for="__navigation">
-  <div class="visually-hidden">Hide navigation sidebar</div>
-</label>
-<label class="overlay toc-overlay" for="__toc">
-  <div class="visually-hidden">Hide table of contents sidebar</div>
-</label>
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
 
 <a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
 
@@ -177,8 +173,7 @@
   <header class="mobile-header">
     <div class="header-left">
       <label class="nav-overlay-icon" for="__navigation">
-        <div class="visually-hidden">Toggle site navigation sidebar</div>
-        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
       </label>
     </div>
     <div class="header-center">
@@ -186,8 +181,7 @@
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
-        <button class="theme-toggle">
-          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
           <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
           <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
           <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -195,8 +189,7 @@
         </button>
       </div>
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
-        <div class="visually-hidden">Toggle table of contents sidebar</div>
-        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
   </header>
@@ -483,7 +476,7 @@
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="datasets.html">Datasets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">CLI</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="api/modules.html">API</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of API</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/modules.html">API</a><input aria-label="Toggle navigation of API" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.html">nerfbaselines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.backends.html">nerfbaselines.backends</a></li>
 <li class="toctree-l2"><a class="reference internal" href="api/nerfbaselines.cameras.html">nerfbaselines.cameras</a></li>
@@ -518,8 +511,7 @@
         </a>
         <div class="content-icon-container">
           <div class="theme-toggle-container theme-toggle-content">
-            <button class="theme-toggle">
-              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
               <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
               <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
               <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
@@ -527,8 +519,7 @@
             </button>
           </div>
           <label class="toc-overlay-icon toc-content-icon" for="__toc">
-            <div class="visually-hidden">Toggle table of contents sidebar</div>
-            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
@@ -559,7 +550,7 @@
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -593,7 +584,7 @@
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -657,11 +648,11 @@
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -698,7 +689,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -732,7 +723,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -766,7 +757,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -800,7 +791,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -834,7 +825,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -868,7 +859,7 @@ Finally, either Delaunay or Poisson meshing is used to obtain a mesh from the po
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points2D_xy</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_error</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points2D_xy</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_error</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -951,7 +942,7 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">images_points3D_indices</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -985,7 +976,7 @@ This method trains very fast (~6 min) and renders also fast ~3 FPS.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1051,7 +1042,7 @@ It is, however slower to train and render compared to other approaches.</p>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1141,11 +1132,11 @@ It is, however slower to train and render compared to other approaches.</p>
 <dd class="field-odd">conda, docker, apptainer, python</dd>
 <dt class="field-even">Camera models<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-odd">Required features<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-even">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1179,7 +1170,7 @@ It is, however slower to train and render compared to other approaches.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1213,7 +1204,7 @@ It is, however slower to train and render compared to other approaches.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1247,7 +1238,7 @@ It is, however slower to train and render compared to other approaches.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1316,7 +1307,7 @@ It is based on MipNeRF 360 and was disagned for underwater scenes.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1350,7 +1341,7 @@ It is based on MipNeRF 360 and was disagned for underwater scenes.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1396,7 +1387,7 @@ However, at least –cap_max have to be tuned for each dataset.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1426,7 +1417,7 @@ However, at least –cap_max have to be tuned for each dataset.</p>
 <dd class="field-even">conda, docker, apptainer, python</dd>
 <dt class="field-odd">Camera models<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">full_opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv</span></code>, <code class="docutils literal notranslate"><span class="pre">pinhole</span></code>, <code class="docutils literal notranslate"><span class="pre">opencv_fisheye</span></code></div>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
@@ -1464,7 +1455,7 @@ However, at least –cap_max have to be tuned for each dataset.</p>
 </dd>
 <dt class="field-even">Required features<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_rgb</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-odd">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
@@ -1497,7 +1488,7 @@ from the paper.</p>
 </dd>
 <dt class="field-odd">Required features<span class="colon">:</span></dt>
 <dd class="field-odd"><div class="docutils container">
-<code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code>, <code class="docutils literal notranslate"><span class="pre">color</span></code></div>
+<code class="docutils literal notranslate"><span class="pre">color</span></code>, <code class="docutils literal notranslate"><span class="pre">points3D_xyz</span></code></div>
 </dd>
 <dt class="field-even">Supported outputs<span class="colon">:</span></dt>
 <dd class="field-even"><div class="docutils container">
